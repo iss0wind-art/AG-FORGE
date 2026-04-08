@@ -1,0 +1,78 @@
+"""
+AG-Forge LangGraph 그래프 조립 — agent_graph.py
+조건부 순환 그래프로 자율 에이전트 루프를 구현한다.
+"""
+from __future__ import annotations
+from langgraph.graph import StateGraph, END
+
+from scripts.brain_loader import LLMProvider
+from scripts.agent_state import AgentState, MAX_ATTEMPTS
+from scripts.agent_nodes import (
+    routing_node,
+    generation_node,
+    quality_check_node,
+    tool_node,
+    constitution_node,
+)
+
+
+def _route_after_quality(state: AgentState) -> str:
+    """quality_check 이후 분기 결정."""
+    if state["attempts"] >= MAX_ATTEMPTS:
+        return "abort"
+    if not state["quality_passed"]:
+        return "retry"
+    return "ok"
+
+
+def _route_after_constitution(state: AgentState) -> str:
+    """constitution 이후 분기 결정."""
+    if state["constitution_passed"]:
+        return "passed"
+    if state["attempts"] >= MAX_ATTEMPTS:
+        return "abort"
+    return "retry"
+
+
+def build_agent_graph(provider: LLMProvider):
+    """LangGraph 컴파일된 그래프를 반환한다."""
+    graph = StateGraph(AgentState)
+
+    # 노드 등록
+    graph.add_node("routing",       routing_node)
+    graph.add_node("generation",    lambda s: generation_node(s, provider))
+    graph.add_node("quality_check", quality_check_node)
+    graph.add_node("tool_call",     tool_node)
+    graph.add_node("constitution",  constitution_node)
+
+    # 진입점
+    graph.set_entry_point("routing")
+
+    # 정적 엣지
+    graph.add_edge("routing",    "generation")
+    graph.add_edge("generation", "quality_check")
+    graph.add_edge("tool_call",  "generation")
+
+    # 조건부 엣지: quality_check 결과에 따라 분기
+    graph.add_conditional_edges(
+        "quality_check",
+        _route_after_quality,
+        {
+            "retry":  "generation",
+            "ok":     "constitution",
+            "abort":  END,
+        },
+    )
+
+    # 조건부 엣지: constitution 결과에 따라 분기
+    graph.add_conditional_edges(
+        "constitution",
+        _route_after_constitution,
+        {
+            "passed": END,
+            "retry":  "generation",
+            "abort":  END,
+        },
+    )
+
+    return graph.compile()

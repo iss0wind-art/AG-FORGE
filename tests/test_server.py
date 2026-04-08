@@ -93,6 +93,24 @@ class TestMobileUI:
 
 class TestTaskEndpoint:
 
+    @pytest.fixture(autouse=True)
+    def mock_provider(self, monkeypatch):
+        """실제 Gemini API 호출 방지 — FakeProvider로 대체."""
+        from scripts.brain_loader import BrainResponse, LLMProvider
+
+        class _Fake(LLMProvider):
+            def generate(self, system_instruction, context_layers, task, model, thinking_budget):
+                return BrainResponse(
+                    text="충분히 긴 응답입니다. 이 응답은 품질 체크를 통과하기 위해 51자 이상입니다.",
+                    model=model,
+                    task_type="planning",
+                    tokens_used=100,
+                    cache_hit=False,
+                )
+
+        import server.api as api_module
+        monkeypatch.setattr(api_module, "_provider", _Fake())
+
     def test_task_returns_200(self, client, auth_headers):
         resp = client.post(
             "/api/task",

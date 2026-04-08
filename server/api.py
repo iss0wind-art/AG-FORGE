@@ -3,6 +3,8 @@ AG-Forge API 서버 — api.py
 모바일에서 뇌에 명령을 내리고 응답을 받는다.
 """
 from __future__ import annotations
+import asyncio
+import os
 import re
 from dotenv import load_dotenv
 load_dotenv()
@@ -40,7 +42,17 @@ class _InternalProvider(LLMProvider):
         )
 
 
-_provider = _InternalProvider()
+def _build_provider() -> LLMProvider:
+    gemini_key = os.environ.get("GEMINI_API_KEY", "")
+    if gemini_key:
+        try:
+            from scripts.brain_loader import GeminiProvider
+            return GeminiProvider(gemini_key)
+        except Exception:
+            pass
+    return _InternalProvider()
+
+_provider = _build_provider()
 
 
 # ── 스키마 ────────────────────────────────────────────────────────────────
@@ -73,7 +85,7 @@ async def submit_task(
     decision = route(request.task)
     layers = select_layers(decision)
 
-    brain_response = run(request.task, _provider)
+    brain_response = await asyncio.to_thread(run, request.task, _provider)
 
     # 헌법 게이트 통과 여부
     safe_output = gate(
