@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AG-Forge Brain</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0d0d0d; color: #e0e0e0;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    header {
+      padding: 16px 20px;
+      background: #1a1a1a;
+      border-bottom: 1px solid #333;
+      display: flex; align-items: center; gap: 12px;
+    }
+    header h1 { font-size: 18px; font-weight: 700; color: #fff; }
+    header span { font-size: 12px; color: #888; }
+    #chat {
+      flex: 1; overflow-y: auto; padding: 20px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .msg {
+      max-width: 85%; padding: 12px 16px;
+      border-radius: 12px; font-size: 14px; line-height: 1.6;
+    }
+    .msg.user {
+      align-self: flex-end;
+      background: #2563eb; color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+    .msg.brain {
+      align-self: flex-start;
+      background: #1e1e1e; border: 1px solid #333;
+      border-bottom-left-radius: 4px;
+    }
+    .msg.brain .meta {
+      font-size: 11px; color: #666; margin-bottom: 6px;
+    }
+    .msg.error { background: #3b1a1a; border-color: #7f1d1d; color: #fca5a5; }
+    #input-area {
+      padding: 16px 20px;
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+      display: flex; gap: 10px; align-items: flex-end;
+    }
+    textarea {
+      flex: 1; background: #2a2a2a; border: 1px solid #444;
+      color: #e0e0e0; border-radius: 10px;
+      padding: 10px 14px; font-size: 14px;
+      resize: none; min-height: 44px; max-height: 120px;
+      font-family: inherit;
+    }
+    textarea:focus { outline: none; border-color: #2563eb; }
+    button[type=submit] {
+      background: #2563eb; color: #fff;
+      border: none; border-radius: 10px;
+      width: 44px; height: 44px; font-size: 20px;
+      cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    button[type=submit]:disabled { background: #374151; cursor: not-allowed; }
+    #api-key-area {
+      padding: 20px; background: #111;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    #api-key-area input {
+      background: #1e1e1e; border: 1px solid #444; color: #e0e0e0;
+      border-radius: 8px; padding: 10px 14px; font-size: 14px;
+      width: 100%;
+    }
+    #api-key-area button {
+      background: #2563eb; color: #fff; border: none;
+      border-radius: 8px; padding: 10px; font-size: 14px; cursor: pointer;
+    }
+    .hidden { display: none !important; }
+    #status-bar {
+      padding: 6px 20px; font-size: 11px; color: #666;
+      background: #111; text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div id="api-key-area">
+    <h2 style="font-size:16px; color:#fff;">AG-Forge 접속</h2>
+    <input type="password" id="api-key-input" placeholder="API 키 입력">
+    <button onclick="saveKey()">접속</button>
+  </div>
+
+  <div id="main" class="hidden" style="display:flex;flex-direction:column;flex:1;">
+    <header>
+      <h1>🧠 AG-Forge</h1>
+      <span id="header-status">준비됨</span>
+    </header>
+    <div id="status-bar">로그 로딩 중...</div>
+    <div id="chat"></div>
+    <div id="input-area">
+      <textarea id="task-input" placeholder="명령을 입력하세요..." rows="1"
+        onkeydown="handleKey(event)"></textarea>
+      <button type="submit" id="send-btn" onclick="sendTask()">↑</button>
+    </div>
+  </div>
+
+  <script>
+    let apiKey = localStorage.getItem('ag_forge_key') || '';
+    if (apiKey) showMain();
+
+    function saveKey() {
+      apiKey = document.getElementById('api-key-input').value.trim();
+      if (!apiKey) return;
+      localStorage.setItem('ag_forge_key', apiKey);
+      showMain();
+    }
+
+    function showMain() {
+      document.getElementById('api-key-area').classList.add('hidden');
+      document.getElementById('main').style.display = 'flex';
+      loadStatus();
+    }
+
+    function handleKey(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendTask();
+      }
+    }
+
+    async function sendTask() {
+      const input = document.getElementById('task-input');
+      const task = input.value.trim();
+      if (!task) return;
+
+      addMessage(task, 'user');
+      input.value = '';
+      document.getElementById('send-btn').disabled = true;
+      document.getElementById('header-status').textContent = '처리 중...';
+
+      try {
+        const resp = await fetch('/api/task', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-API-Key': apiKey },
+          body: JSON.stringify({ task })
+        });
+
+        if (resp.status === 401) {
+          addMessage('API 키가 유효하지 않습니다.', 'error');
+          localStorage.removeItem('ag_forge_key');
+          return;
+        }
+
+        const data = await resp.json();
+        addBrainMessage(data);
+      } catch (e) {
+        addMessage('서버 연결 오류: ' + e.message, 'error');
+      } finally {
+        document.getElementById('send-btn').disabled = false;
+        document.getElementById('header-status').textContent = '준비됨';
+        loadStatus();
+      }
+    }
+
+    function addMessage(text, type) {
+      const chat = document.getElementById('chat');
+      const div = document.createElement('div');
+      div.className = `msg ${type}`;
+      div.textContent = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function addBrainMessage(data) {
+      const chat = document.getElementById('chat');
+      const div = document.createElement('div');
+      div.className = 'msg brain';
+      div.innerHTML = `
+        <div class="meta">
+          ${data.model || ''} ·
+          ${data.tokens_used || 0} tokens ·
+          $${(data.cost_usd || 0).toFixed(4)}
+          ${data.cache_hit ? ' · ⚡캐시' : ''}
+          ${data.constitution_passed ? ' · ✅헌법' : ' · ⛔차단'}
+        </div>
+        <div>${escapeHtml(data.response || data.text || '')}</div>
+      `;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    async function loadStatus() {
+      try {
+        const resp = await fetch('/api/logs', {
+          headers: { 'X-API-Key': apiKey }
+        });
+        if (!resp.ok) return;
+        const data = await resp.json();
+        document.getElementById('status-bar').textContent =
+          `총 ${data.total_requests}회 · $${data.total_cost_usd.toFixed(4)} · 캐시 ${(data.cache_hit_rate * 100).toFixed(0)}%`;
+      } catch {}
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+                .replace(/\n/g,'<br>');
+    }
+  </script>
+</body>
+</html>
