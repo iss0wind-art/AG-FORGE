@@ -84,24 +84,36 @@ class GeminiProvider(LLMProvider):
         # 32k tokens ≈ 128,000 chars (UTF-8 평균 4bytes/token 기준)
         use_cache = combined_size > 128_000
 
-        if use_cache:
-            cache = genai.caching.CachedContent.create(
-                model=f"models/{model}",
-                system_instruction=system_instruction,
-                contents=[full_context],
-                ttl=datetime.timedelta(minutes=5),
-            )
-            gemini_model = genai.GenerativeModel.from_cached_content(cache)
-            response = gemini_model.generate_content(task)
-            cache.delete()
-        else:
-            gemini_model = genai.GenerativeModel(
-                model_name=model,
-                system_instruction=system_instruction,
-            )
-            response = gemini_model.generate_content(
-                f"{full_context}\n\n---\n\n{task}"
-            )
+        # 무료 티어에서 2.5-pro 할당량 초과 시 flash로 자동 강등
+        _FALLBACK_MODEL = "gemini-2.0-flash"
+
+        def _call_model(m: str) -> object:
+            if use_cache:
+                cache = genai.caching.CachedContent.create(
+                    model=f"models/{m}",
+                    system_instruction=system_instruction,
+                    contents=[full_context],
+                    ttl=datetime.timedelta(minutes=5),
+                )
+                gm = genai.GenerativeModel.from_cached_content(cache)
+                r = gm.generate_content(task)
+                cache.delete()
+                return r
+            else:
+                gm = genai.GenerativeModel(
+                    model_name=m,
+                    system_instruction=system_instruction,
+                )
+                return gm.generate_content(f"{full_context}\n\n---\n\n{task}")
+
+        try:
+            response = _call_model(model)
+        except Exception as e:
+            if "429" in str(e) or "ResourceExhausted" in str(type(e).__name__):
+                model = _FALLBACK_MODEL
+                response = _call_model(model)
+            else:
+                raise
 
         return BrainResponse(
             text=response.text,
@@ -127,19 +139,36 @@ def select_layers(decision: RoutingDecision) -> list[str]:
 
 def run(task: str, provider: LLMProvider) -> BrainResponse:
     """
-    소뇌 라우팅 → 레이어 선택 → LLM 호출 → 응답 반환.
-    진입점.
+    LangGraph 자율 에이전트 루프 실행.
+    외부 호출 인터페이스(run(task, provider) -> BrainResponse)는 유지된다.
     """
-    decision = route(task)
-    layer_names = select_layers(decision)
+    from scripts.agent_graph import build_agent_graph
+    from scripts.agent_state import AgentState
 
-    system_instruction = load_layer("brain.md")
-    context_layers = [load_layer(name) for name in layer_names if name != "brain.md"]
+    graph = build_agent_graph(provider)
 
-    return provider.generate(
-        system_instruction=system_instruction,
-        context_layers=context_layers,
-        task=task,
-        model=decision.model,
-        thinking_budget=decision.thinking_budget,
-    )
+    initial_state: AgentState = {
+        "task": task,
+        "decision": None,
+        "current_response": None,
+        "attempts": 0,
+        "quality_passed": False,
+        "constitution_passed": False,
+        "final_response": None,
+        "error": None,
+        "tool_results": [],
+    }
+
+    final_state = graph.invoke(initial_state)
+
+    # 최종 응답 추출 — abort 경로에서도 마지막 응답 반환
+    result = final_state.get("final_response") or final_state.get("current_response")
+    if result is None:
+        return BrainResponse(
+            text="[에이전트 루프 실패: 응답을 생성할 수 없습니다.]",
+            model="none",
+            task_type=task,
+            tokens_used=0,
+            cache_hit=False,
+        )
+    return result
