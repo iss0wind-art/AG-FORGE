@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ag-forge": {
+      "command": "python",
+      "args": ["d:/Git/AG-Forge/mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "d:/Git/AG-Forge"
+      }
+    }
+  }
+}
