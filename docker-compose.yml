@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  brain:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      # 로그와 뇌 레이어 파일은 컨테이너 재시작 후에도 유지
+      - ./observability_log.jsonl:/app/observability_log.jsonl
+      - ./brain.md:/app/brain.md
+      - ./logic_rb.md:/app/logic_rb.md
+      - ./emotion_ui.md:/app/emotion_ui.md
+      - ./judgment.md:/app/judgment.md
+
+  # 선택: ngrok 터널 (외부 접속 필요 시)
+  ngrok:
+    image: ngrok/ngrok:latest
+    profiles: ["tunnel"]   # docker compose --profile tunnel up
+    command: http brain:8000
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    depends_on:
+      - brain
+    ports:
+      - "4040:4040"  # ngrok 대시보드
