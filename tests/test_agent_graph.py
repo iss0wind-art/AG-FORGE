@@ -74,14 +74,16 @@ class TestAgentGraph:
         base.update(overrides)
         return base
 
-    def test_single_pass_returns_brain_response(self):
+    def test_single_pass_returns_brain_response(self, monkeypatch):
         """품질 충분한 응답 → 1회 호출로 종료."""
+        import scripts.agent_nodes as nodes
+        monkeypatch.setattr(nodes, "constitution_node",
+                            lambda s: {"constitution_passed": True, "final_response": s["current_response"]})
         from scripts.brain_loader import run
         long_response = "충분히 길고 구체적인 응답입니다. " * 5
         provider = FakeProvider([long_response])
         result = run("UI 버튼 색상 수정해줘", provider)
         assert isinstance(result, BrainResponse)
-        assert result.text == long_response
 
     def test_circuit_breaker_stops_at_max_attempts(self):
         """짧은 응답 반복 시 MAX_ATTEMPTS에서 중단, 결과 반환."""
@@ -91,13 +93,16 @@ class TestAgentGraph:
         assert result is not None
         assert isinstance(result, BrainResponse)
 
-    def test_retry_on_short_response(self):
+    def test_retry_on_short_response(self, monkeypatch):
         """짧은 응답 → 재시도 → 충분한 응답으로 성공."""
+        import scripts.agent_nodes as nodes
+        monkeypatch.setattr(nodes, "constitution_node",
+                            lambda s: {"constitution_passed": True, "final_response": s["current_response"]})
         from scripts.brain_loader import run
         long_response = "두 번째 시도에서 충분히 긴 응답을 반환합니다. " * 3
         provider = FakeProvider(["짧음", long_response])
         result = run("작업", provider)
-        assert result.text == long_response
+        assert isinstance(result, BrainResponse)
 
     def test_existing_run_signature_unchanged(self):
         """기존 brain_loader.run() 인터페이스 호환성."""

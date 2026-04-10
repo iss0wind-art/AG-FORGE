@@ -43,3 +43,14 @@ _초기화됨._
 ---
 
 _마지막 갱신: 초기화_
+| 2026-04-09 22:45 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-09 22:45 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-09 22:45 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-09 22:45 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-10 01:10 | llama-3.3-70b-versatile | groq | quality:pass | constitution:pass | 2011 tokens |
+| 2026-04-10 01:14 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-10 01:14 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |

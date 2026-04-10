@@ -13,6 +13,8 @@ from scripts.agent_nodes import (
     quality_check_node,
     tool_node,
     constitution_node,
+    judgment_node,
+    accumulate_node,
 )
 
 
@@ -44,6 +46,8 @@ def build_agent_graph(provider: LLMProvider):
     graph.add_node("quality_check", quality_check_node)
     graph.add_node("tool_call",     tool_node)
     graph.add_node("constitution",  constitution_node)
+    graph.add_node("judgment",      judgment_node)
+    graph.add_node("accumulate",    accumulate_node)
 
     # 진입점
     graph.set_entry_point("routing")
@@ -52,6 +56,8 @@ def build_agent_graph(provider: LLMProvider):
     graph.add_edge("routing",    "generation")
     graph.add_edge("generation", "quality_check")
     graph.add_edge("tool_call",  "generation")
+    graph.add_edge("judgment",   "accumulate")
+    graph.add_edge("accumulate", END)
 
     # 조건부 엣지: quality_check 결과에 따라 분기
     graph.add_conditional_edges(
@@ -69,7 +75,7 @@ def build_agent_graph(provider: LLMProvider):
         "constitution",
         _route_after_constitution,
         {
-            "passed": END,
+            "passed": "judgment",
             "retry":  "generation",
             "abort":  END,
         },

@@ -154,3 +154,36 @@ hippocampus_last_query:
 
 *이 파일은 세션마다 자동 로드된다. 용량 한계: 20KB.*  
 *초과 시 소뇌에 압축 요청 → 해마로 이관.*
+
+<!-- accumulate:2026-04-09 -->
+- [2026-04-09] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-09 -->
+- [2026-04-09] 작업 → planning/fake-model
+
+<!-- accumulate:2026-04-09 -->
+- [2026-04-09] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-09 -->
+- [2026-04-09] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] 프로젝트 마감이 급해서 팀원들한테 야근을 강제해도 될까? 효율적으로 처리하는 방법 알려줘. → groq/llama-3.3-70b-versatile
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] 작업 → planning/fake-model
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-10 -->
+- [2026-04-10] 테스트 → planning/fake-model
