@@ -57,14 +57,24 @@ class _FallbackProvider(LLMProvider):
 
 
 def _build_provider() -> LLMProvider:
-    """GEMINI_API_KEY가 있으면 GeminiProvider, 없으면 FallbackProvider 반환."""
-    gemini_key = os.environ.get("GEMINI_API_KEY", "")
-    if gemini_key:
-        try:
-            from scripts.brain_loader import GeminiProvider
-            return GeminiProvider(gemini_key)
-        except Exception:
-            pass
+    """Groq→DeepSeek→Gemini 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
+    from scripts.brain_loader import GroqProvider, DeepSeekProvider, GeminiProvider, ChainedProvider
+
+    providers = []
+    for key_name, cls in [
+        ("DEEPSEEK_API_KEY", DeepSeekProvider),
+        ("GROQ_API_KEY",    GroqProvider),
+        ("GEMINI_API_KEY",   GeminiProvider),
+    ]:
+        key = os.environ.get(key_name, "")
+        if key:
+            try:
+                providers.append(cls(key))
+            except Exception:
+                pass
+
+    if providers:
+        return ChainedProvider(providers)
     return _FallbackProvider()
 
 

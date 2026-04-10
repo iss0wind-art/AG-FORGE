@@ -124,6 +124,118 @@ class GeminiProvider(LLMProvider):
         )
 
 
+class GroqProvider(LLMProvider):
+    """Groq OpenAI-호환 API 기반 구현. 무료 티어 llama-3.3-70b-versatile."""
+
+    _BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("Groq API 키가 필요합니다.")
+        self._api_key = api_key
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        import httpx
+
+        full_context = "\n\n---\n\n".join(context_layers)
+
+        payload = {
+            "model": "llama-3.3-70b-versatile",
+            "messages": [
+                {"role": "system", "content": f"{system_instruction}\n\n{full_context}"},
+                {"role": "user", "content": task},
+            ],
+            "max_tokens": 8192,
+        }
+
+        resp = httpx.post(
+            self._BASE_URL,
+            headers={
+                "Authorization": f"Bearer {self._api_key}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=120,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        text = data["choices"][0]["message"]["content"]
+        tokens = data.get("usage", {}).get("total_tokens", 0)
+
+        return BrainResponse(
+            text=text,
+            model="llama-3.3-70b-versatile",
+            task_type="groq",
+            tokens_used=tokens,
+            cache_hit=False,
+        )
+
+
+class DeepSeekProvider(LLMProvider):
+    """DeepSeek OpenAI-호환 API 기반 구현. httpx 사용."""
+
+    _BASE_URL = "https://api.deepseek.com/v1/chat/completions"
+
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("DeepSeek API 키가 필요합니다.")
+        self._api_key = api_key
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        import httpx
+
+        full_context = "\n\n---\n\n".join(context_layers)
+        # thinking_budget이 클수록 복잡한 작업 → deepseek-reasoner (R1)
+        ds_model = "deepseek-reasoner" if thinking_budget >= 8000 else "deepseek-chat"
+
+        payload = {
+            "model": ds_model,
+            "messages": [
+                {"role": "system", "content": f"{system_instruction}\n\n{full_context}"},
+                {"role": "user", "content": task},
+            ],
+            "max_tokens": 8192,
+        }
+
+        resp = httpx.post(
+            self._BASE_URL,
+            headers={
+                "Authorization": f"Bearer {self._api_key}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=120,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        text = data["choices"][0]["message"]["content"]
+        tokens = data.get("usage", {}).get("total_tokens", 0)
+
+        return BrainResponse(
+            text=text,
+            model=ds_model,
+            task_type="deepseek",
+            tokens_used=tokens,
+            cache_hit=False,
+        )
+
+
 def load_layer(name: str) -> str:
     """뇌 레이어 파일을 읽어 반환한다."""
     path = BRAIN_ROOT / name
@@ -135,6 +247,36 @@ def load_layer(name: str) -> str:
 def select_layers(decision: RoutingDecision) -> list[str]:
     """RoutingDecision에 따라 로드할 레이어 목록을 결정한다. brain.md는 항상 첫 번째."""
     return list(_LAYER_FILES[decision.task_type])
+
+
+class ChainedProvider(LLMProvider):
+    """429/쿼터 소진 시 다음 프로바이더로 자동 전환하는 체인 래퍼."""
+
+    def __init__(self, providers: list[LLMProvider]) -> None:
+        if not providers:
+            raise ValueError("프로바이더 목록이 비어있습니다.")
+        self._providers = providers
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        last_exc: Exception | None = None
+        for provider in self._providers:
+            try:
+                return provider.generate(
+                    system_instruction, context_layers, task, model, thinking_budget
+                )
+            except Exception as e:
+                if "429" in str(e) or "quota" in str(e).lower() or "rate" in str(e).lower():
+                    last_exc = e
+                    continue
+                raise
+        raise last_exc or RuntimeError("모든 프로바이더 쿼터 소진")
 
 
 def run(task: str, provider: LLMProvider) -> BrainResponse:
