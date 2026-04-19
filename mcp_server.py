@@ -1,17 +1,21 @@
 """
-AG-Forge MCP 서버 — mcp_server.py
-Claude Code에서 AG-Forge 뇌를 직접 MCP 툴로 호출한다.
+피지수(Piji-soo) MCP 서버 — mcp_server.py
+Claude Code에서 피지수 독립 뇌를 직접 호출한다.
 stdio 전송 방식 (Claude Code 표준).
 
 Claude Code settings.json 등록:
 {
   "mcpServers": {
-    "ag-forge": {
+    "piji-soo": {
       "command": "python",
       "args": ["d:/Git/AG-Forge/mcp_server.py"]
     }
   }
 }
+
+호출 방식:
+  Claude Code 채팅에서 자연스럽게 "피지수야 ..." 라고 호출하면 자동 응답
+  또는 @piji-soo 명령어로 명시적 호출도 가능
 """
 from __future__ import annotations
 import os
@@ -32,7 +36,7 @@ from scripts.brain_loader import BrainResponse, LLMProvider, run
 from scripts.router_agent import route
 from scripts.observability import summarize_session, LOG_PATH
 
-mcp = FastMCP("ag-forge")
+mcp = FastMCP("piji-soo")
 
 BRAIN_ROOT = _FORGE_ROOT
 
@@ -81,16 +85,19 @@ def _build_provider() -> LLMProvider:
 # ── 툴 1: ask_brain ───────────────────────────────────────────────────────────
 
 @mcp.tool()
-def ask_brain(task: str) -> str:
+def piji_soo(task: str) -> str:
     """
-    AG-Forge 뇌(LangGraph 루프)에 작업을 전달하고 응답을 반환한다.
+    피지수 독립 뇌에 작업을 전달하고 응답을 반환한다.
     헌법 게이트(CONSTITUTION.md)를 통과한 응답만 반환된다.
+
+    Claude Code에서 "피지수야" 라고 호출하면 자동으로 이 도구가 실행됨.
+    예: "피지수야 이 함수 최적화해줄 수 있어?"
 
     Args:
         task: 수행할 작업 또는 질문 (예: "이 코드 리뷰해줘", "아키텍처 설계해줘")
 
     Returns:
-        헌법 게이트를 통과한 뇌의 응답 텍스트
+        헌법 게이트를 통과한 피지수의 응답 텍스트
     """
     if not task.strip():
         return "[오류] task는 비어있을 수 없습니다."
@@ -107,15 +114,13 @@ def ask_brain(task: str) -> str:
 # ── 툴 2: get_brain_status ────────────────────────────────────────────────────
 
 @mcp.tool()
-def get_brain_status() -> dict:
+def piji_soo_status() -> dict:
     """
-    AG-Forge 뇌의 현재 상태를 반환한다.
+    피지수의 현재 상태를 반환한다.
     brain.md 요약과 마지막 라우팅 정보를 포함한다.
-
-    Returns:
-        brain_summary: brain.md 현재 작업 상태 요약
-        active_layer: 현재 활성 레이어
-        last_routing: judgment.md 마지막 라우팅 로그
+    
+    반환:
+        피지수 상태 정보 (뇌 활성화 상황, 마지막 작업 로그)
     """
     brain_path = BRAIN_ROOT / "brain.md"
     judgment_path = BRAIN_ROOT / "judgment.md"
@@ -144,14 +149,13 @@ def get_brain_status() -> dict:
 # ── 툴 3: get_brain_logs ──────────────────────────────────────────────────────
 
 @mcp.tool()
-def get_brain_logs() -> dict:
+def piji_soo_logs() -> dict:
     """
-    AG-Forge observability 세션 통계를 반환한다.
+    피지수의 observability 세션 통계를 반환한다.
+    총 요청 수, 누적 비용, 캐시 히트율 등.
 
     Returns:
-        total_requests: 총 요청 수
-        total_cost_usd: 누적 비용 (USD)
-        cache_hit_rate: 캐시 히트율 (0.0 ~ 1.0)
+        피지수 활동 리포트 (비용/캐시/성능)
     """
     return summarize_session(LOG_PATH)
 

@@ -54,3 +54,10 @@ _마지막 갱신: 초기화_
 | 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
 | 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
 | 2026-04-10 01:15 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-13 11:00 | llama-3.3-70b-versatile | groq | quality:pass | constitution:pass | 2514 tokens |
+| 2026-04-14 07:14 | llama-3.3-70b-versatile | groq | quality:pass | constitution:pass | 2941 tokens |
+| 2026-04-14 13:48 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4073 tokens |
+| 2026-04-14 13:55 | llama-3.3-70b-versatile | groq | quality:pass | constitution:pass | 3534 tokens |
+| 2026-04-14 13:59 | llama-3.3-70b-versatile | groq | quality:pass | constitution:pass | 3665 tokens |
+| 2026-04-15 07:21 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3325 tokens |
+| 2026-04-15 07:24 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3508 tokens |

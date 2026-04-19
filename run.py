@@ -1,20 +1,24 @@
 """
-AG-Forge 기동 스크립트 — run.py
-ngrok 터널 자동 개통 + FastAPI 서버 실행.
+피지수(Piji-soo) 기동 스크립트 — run.py
+ZROK 터널 자동 개통 + FastAPI 서버 실행.
 
 사용법:
   python run.py            # 로컬 실행 (http://localhost:8000)
-  python run.py --tunnel   # ngrok 터널 개통 (외부 접속 가능)
+  python run.py --zrok     # ZROK 터널 개통 (외부 접속 가능)
   python run.py --port 9000
+  python run.py --zrok --port 9000
+
+사전 요구:
+  ZROK 설치: https://docs.zrok.io/
+  ZROK 인증: zrok account create 또는 zrok account login
 """
 from __future__ import annotations
 import argparse
 import os
 import sys
+import subprocess
 from pathlib import Path
 from dotenv import load_dotenv
-
-from pyngrok import ngrok, conf
 
 load_dotenv()
 
@@ -26,29 +30,64 @@ def validate_env() -> list[str]:
     return [key for key in REQUIRED_ENV if not os.environ.get(key)]
 
 
-def open_ngrok_tunnel(port: int) -> str:
-    """ngrok 터널을 열고 공개 URL을 반환한다."""
-    token = os.environ.get("NGROK_AUTHTOKEN", "")
-    if token:
-        conf.get_default().auth_token = token
-
-    tunnel = ngrok.connect(port, "http")
-    return tunnel.public_url
+def open_zrok_tunnel(port: int) -> str:
+    """
+    ZROK 터널을 열고 공개 URL을 반환한다.
+    
+    zrok이 설치되고 인증되어 있어야 함.
+    """
+    try:
+        # ZROK 상태 확인
+        status = subprocess.run(["zrok", "status"], capture_output=True, text=True, timeout=5)
+        if status.returncode != 0:
+            raise RuntimeError("ZROK 미인증: zrok account login 실행 필요")
+        
+        # ZROK 터널 개통
+        result = subprocess.run(
+            ["zrok", "share", "http", str(port)],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+        
+        if result.returncode != 0:
+            raise RuntimeError(f"ZROK 터널 실패: {result.stderr}")
+        
+        # 출력에서 공개 URL 추출
+        # 일반적으로 형식: "Access server at: https://xxxxx.share.zrok.io"
+        for line in result.stdout.splitlines():
+            if "https://" in line and "zrok.io" in line:
+                # URL 추출 (예: "Access server at: https://xxxxx.share.zrok.io" → "https://xxxxx.share.zrok.io")
+                url = line.split()[-1].strip()
+                return url
+        
+        # URL을 못 찾으면 stderr도 확인
+        raise RuntimeError(f"ZROK 공개 URL을 찾을 수 없음\n{result.stdout}\n{result.stderr}")
+        
+    except FileNotFoundError:
+        raise RuntimeError("ZROK 명령어를 찾을 수 없습니다. https://docs.zrok.io/ 에서 설치하세요.")
+    except subprocess.TimeoutExpired:
+        raise RuntimeError("ZROK 터널 타임아웃")
+    except Exception as e:
+        raise RuntimeError(f"ZROK 오류: {e}")
 
 
 def print_access_info(url: str, port: int) -> None:
     """접속 정보를 출력한다."""
-    print("\n" + "=" * 50)
-    print("  AG-Forge Brain 서버가 시작되었습니다")
-    print("=" * 50)
+    print("\n" + "=" * 60)
+    print("  🧠 피지수(Piji-soo) 독립 뇌 서버 시작됨")
+    print("=" * 60)
     print(f"  로컬:    http://localhost:{port}")
     if url != f"http://localhost:{port}":
-        print(f"  외부:    {url}")
-        print(f"  모바일:  {url}")
-    print("=" * 50)
-    print("  API 키를 입력하여 뇌에 접속하세요")
+        print(f"  공개:    {url}")
+        print(f"  상태:    ✅ ZROK 터널 활성화")
+    else:
+        print(f"  상태:    로컬 모드 (외부 접속 불가)")
+    print("=" * 60)
+    print("  API 키를 입력하여 피지수에 접속하세요")
+    print("  또는 Claude Code에서 '피지수야 ...' 로 호출")
     print("  종료: Ctrl+C")
-    print("=" * 50 + "\n")
+    print("=" * 60 + "\n")
 
 
 def start_server(host: str, port: int) -> None:
@@ -64,8 +103,8 @@ def start_server(host: str, port: int) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="AG-Forge Brain Server")
-    parser.add_argument("--tunnel", action="store_true", help="ngrok 터널 개통")
+    parser = argparse.ArgumentParser(description="피지수(Piji-soo) 독립 뇌 서버")
+    parser.add_argument("--zrok", action="store_true", help="ZROK 터널 개통 (외부 접속 가능)")
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
     parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8000)))
     args = parser.parse_args()
@@ -79,13 +118,14 @@ def main() -> int:
 
     # 터널 개통
     public_url = f"http://localhost:{args.port}"
-    if args.tunnel:
+    if args.zrok:
         try:
-            public_url = open_ngrok_tunnel(args.port)
-            print(f"터널 개통: {public_url}")
+            public_url = open_zrok_tunnel(args.port)
+            print(f"✅ ZROK 터널 개통: {public_url}")
         except Exception as e:
-            print(f"ngrok 터널 실패: {e}")
-            print("로컬 모드로 계속합니다.")
+            print(f"❌ ZROK 터널 실패: {e}")
+            print("   로컬 모드로 계속합니다.")
+            print("   (ZROK 설치 & 인증: https://docs.zrok.io/)\n")
 
     print_access_info(public_url, args.port)
     start_server(args.host, args.port)
