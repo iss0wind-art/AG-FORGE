@@ -132,7 +132,7 @@ async def submit_task(
 async def get_status(_: str = Depends(verify_api_key)):
     """현재 brain.md 상태를 반환한다."""
     brain_path = BRAIN_ROOT / "brain.md"
-    content = brain_path.read_text(encoding="utf-8")
+    content = brain_path.read_text(encoding="utf-8", errors="replace")
 
     # 현재 작업 상태 섹션 추출
     summary_match = re.search(r"## 8\..*?```yaml(.*?)```", content, re.DOTALL)
