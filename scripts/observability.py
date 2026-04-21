@@ -1,92 +1,76 @@
 """
-관측성 레이어 — observability.py
-LangSmith 추적 + Gemini 비용 실시간 계산.
-LangSmith 없는 환경에서도 fallback으로 동작한다.
+세션 관측성 (Observability) — observability.py
+Physis의 지능 사용 비용, 토큰 효율성, 사고 로그를 추적한다.
 """
-from __future__ import annotations
+import os
 import json
-from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from pathlib import Path
-from scripts.brain_loader import BrainResponse
 
-# Gemini 가격표 (per 1M tokens, USD) — 2026년 4월 기준 추정치
-PRICING: dict[str, dict[str, float]] = {
-    "gemini-2.5-pro":   {"input": 1.25,  "output": 10.00},
-    "gemini-2.0-flash": {"input": 0.075, "output": 0.30},
+LOG_PATH = Path(__file__).parent.parent / "judgment.md"
+STATS_FILE = Path(__file__).parent.parent / ".physis_stats.json"
+
+# 모델별 비용 설정 (Input/Output per 1M tokens, USD) - 근사치
+COST_TABLE = {
+    "gemini-2.0-flash": {"in": 0.10, "out": 0.40},
+    "gemini-1.5-pro":   {"in": 1.25, "out": 5.00},
+    "deepseek-chat":    {"in": 0.14, "out": 0.28},
+    "deepseek-reasoner": {"in": 0.55, "out": 2.19},
+    "llama-3.3-70b-versatile": {"in": 0.59, "out": 0.79}, # Groq 추정치
+    "none": {"in": 0.0, "out": 0.0}
 }
 
-LOG_PATH = Path(__file__).parent.parent / "observability_log.jsonl"
+def calculate_cost(model: str, tokens: int) -> float:
+    """토큰 사용량에 따른 예상 비용(USD)을 계산한다."""
+    # 간단하게 Input/Output 1:1 비율 처리 (실제 사용량 데이터 보강 위함)
+    prices = COST_TABLE.get(model, {"in": 0.5, "out": 1.0})
+    avg_price = (prices["in"] + prices["out"]) / 2
+    return (tokens / 1_000_000) * avg_price
 
+def log_session(model: str, task: str, tokens: int, cost: float):
+    """세션 정보를 누적 기록한다."""
+    stats = {"total_requests": 0, "total_tokens": 0, "total_cost": 0.0, "history": []}
+    
+    if STATS_FILE.exists():
+        try:
+            stats = json.loads(STATS_FILE.read_text(encoding="utf-8"))
+        except:
+            pass
 
-@dataclass
-class TraceRecord:
-    timestamp: str
-    task: str
-    model: str
-    task_type: str
-    tokens_used: int
-    cache_hit: bool
-    cost_usd: float
-    layers_loaded: list[str] = field(default_factory=list)
-
-
-def calculate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
-    """모델과 토큰 수로 USD 비용을 계산한다."""
-    prices = PRICING[model]  # 알 수 없는 모델이면 KeyError 발생
-    input_cost  = (input_tokens  / 1_000_000) * prices["input"]
-    output_cost = (output_tokens / 1_000_000) * prices["output"]
-    return input_cost + output_cost
-
-
-def record_trace(response: BrainResponse, task: str, layers_loaded: list[str]) -> TraceRecord:
-    """BrainResponse를 TraceRecord로 변환한다."""
-    # tokens_used를 input/output 7:3 비율로 추정 (실측 불가 시)
-    estimated_input  = int(response.tokens_used * 0.7)
-    estimated_output = int(response.tokens_used * 0.3)
-
-    model = response.model
-    if model not in PRICING:
-        # 알 수 없는 모델은 pro 기준으로 fallback
-        model = "gemini-2.5-pro"
-
-    cost = calculate_cost(model, estimated_input, estimated_output)
-
-    return TraceRecord(
-        timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        task=task,
-        model=response.model,
-        task_type=response.task_type,
-        tokens_used=response.tokens_used,
-        cache_hit=response.cache_hit,
-        cost_usd=cost,
-        layers_loaded=layers_loaded,
-    )
-
-
-def append_log(record: TraceRecord) -> None:
-    """TraceRecord를 JSONL 형식으로 로그 파일에 추가한다."""
-    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with LOG_PATH.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(asdict(record), ensure_ascii=False) + "\n")
-
-
-def summarize_session(log_path: Path = LOG_PATH) -> dict:
-    """로그 파일에서 세션 통계를 집계한다."""
-    if not log_path.exists():
-        return {"total_requests": 0, "total_cost_usd": 0.0, "cache_hit_rate": 0.0}
-
-    lines = [l for l in log_path.read_text(encoding="utf-8").splitlines() if l.strip()]
-    if not lines:
-        return {"total_requests": 0, "total_cost_usd": 0.0, "cache_hit_rate": 0.0}
-
-    records = [json.loads(l) for l in lines]
-    total = len(records)
-    total_cost = sum(r["cost_usd"] for r in records)
-    cache_hits = sum(1 for r in records if r["cache_hit"])
-
-    return {
-        "total_requests":  total,
-        "total_cost_usd":  round(total_cost, 6),
-        "cache_hit_rate":  cache_hits / total,
+    stats["total_requests"] += 1
+    stats["total_tokens"] += tokens
+    stats["total_cost"] += cost
+    
+    # 최근 50건의 히스토리만 유지
+    session_data = {
+        "timestamp": datetime.now().isoformat(),
+        "model": model,
+        "tokens": tokens,
+        "cost": cost,
+        "task_summary": task[:50] + "..." if len(task) > 50 else task
     }
+    stats["history"].append(session_data)
+    stats["history"] = stats["history"][-50:]
+    
+    STATS_FILE.write_text(json.dumps(stats, indent=2, ensure_ascii=False), encoding="utf-8")
+
+def summarize_session(target_log_path: Path) -> dict:
+    """현재까지의 총 사용량을 요약하여 반환한다."""
+    if not STATS_FILE.exists():
+        return {"error": "통계 데이터가 아직 없습니다."}
+    
+    stats = json.loads(STATS_FILE.read_text(encoding="utf-8"))
+    return {
+        "총 요청 수": f"{stats['total_requests']}회",
+        "누적 토큰": f"{stats['total_tokens']:,} tokens",
+        "누적 예상 비용": f"${stats['total_cost']:.4f}",
+        "마지막 활동": stats["history"][-1]["timestamp"] if stats["history"] else "없음"
+    }
+
+if __name__ == "__main__":
+    # 명령어 실행 시 리포트 출력
+    report = summarize_session(LOG_PATH)
+    print("\n--- [📊 Physis 지능 운영 리포트] ---")
+    for k, v in report.items():
+        print(f"{k}: {v}")
+    print("-" * 35)

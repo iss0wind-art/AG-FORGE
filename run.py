@@ -1,5 +1,5 @@
 """
-피지수(Piji-soo) 기동 스크립트 — run.py
+Physis 기동 스크립트 — run.py
 ZROK 터널 자동 개통 + FastAPI 서버 실행.
 
 사용법:
@@ -75,7 +75,7 @@ def open_zrok_tunnel(port: int) -> str:
 def print_access_info(url: str, port: int) -> None:
     """접속 정보를 출력한다."""
     print("\n" + "=" * 60)
-    print("  🧠 피지수(Piji-soo) 독립 뇌 서버 시작됨")
+    print("  🧠 Physis 독립 뇌 서버 시작됨")
     print("=" * 60)
     print(f"  로컬:    http://localhost:{port}")
     if url != f"http://localhost:{port}":
@@ -84,8 +84,8 @@ def print_access_info(url: str, port: int) -> None:
     else:
         print(f"  상태:    로컬 모드 (외부 접속 불가)")
     print("=" * 60)
-    print("  API 키를 입력하여 피지수에 접속하세요")
-    print("  또는 Claude Code에서 '피지수야 ...' 로 호출")
+    print("  API 키를 입력하여 Physis에 접속하세요")
+    print("  또는 Claude Code에서 'Physis야 ...' 로 호출")
     print("  종료: Ctrl+C")
     print("=" * 60 + "\n")
 
@@ -103,7 +103,7 @@ def start_server(host: str, port: int) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="피지수(Piji-soo) 독립 뇌 서버")
+    parser = argparse.ArgumentParser(description="Physis 독립 뇌 서버")
     parser.add_argument("--zrok", action="store_true", help="ZROK 터널 개통 (외부 접속 가능)")
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
     parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8000)))

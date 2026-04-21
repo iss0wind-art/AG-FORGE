@@ -1,59 +1,44 @@
 """
-자동 아카이브 — auto_archive.py
-레이어 파일이 40KB를 초과하면 Vector DB로 이관하고 원본을 초기화한다.
+자동 아카이빙 (Auto Archiving) — auto_archive.py
+judgment.md의 방대한 로그를 정리하고 백업한다.
 """
-from __future__ import annotations
+import os
+import shutil
 from datetime import datetime
 from pathlib import Path
-from scripts.embedding import VectorIndex, EmbeddingClient, embed_and_store
 
-ARCHIVE_THRESHOLD_KB = 40
-BRAIN_ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).parent.parent
+LOG_PATH = ROOT / "judgment.md"
+ARCHIVE_DIR = ROOT / "archive"
 
-LAYER_TO_CATEGORY: dict[str, str] = {
-    "logic_rb.md":   "logic",
-    "emotion_ui.md": "emotion",
-    "judgment.md":   "decisions",
-}
+MAX_LOG_SIZE = 100 * 1024  # 100KB 초과 시 아카이빙 실행
 
+def archive_logs():
+    """로그 파일이 너무 크면 아카이빙을 수행한다."""
+    if not LOG_PATH.exists():
+        print("ℹ️ 아카이빙할 로그 파일이 없습니다.")
+        return
 
-def check_file_size(filepath: Path, threshold_kb: int = ARCHIVE_THRESHOLD_KB) -> bool:
-    """파일 크기가 임계값을 초과하면 True를 반환한다."""
-    return filepath.stat().st_size / 1024 > threshold_kb
+    file_size = LOG_PATH.stat().st_size
+    if file_size < MAX_LOG_SIZE:
+        print(f"ℹ️ 로그 크기 적정 ({file_size/1024:.1f}KB). 아카이빙이 필요하지 않습니다.")
+        return
 
+    # 아카이브 디렉토리 생성
+    ARCHIVE_DIR.mkdir(exist_ok=True)
+    
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    archive_path = ARCHIVE_DIR / f"judgment_backup_{timestamp}.md"
+    
+    # 현재 로그 백업 및 초기화
+    print(f"🚀 로그 아카이빙 시작: {LOG_PATH.name} -> {archive_path.name}")
+    shutil.copy(LOG_PATH, archive_path)
+    
+    # 헤더만 남기고 초기화
+    header = "# Physis Judgment Log (판단 로그)\n\n_초기화됨._\n"
+    LOG_PATH.write_text(header, encoding="utf-8")
+    
+    print("✅ 아카이빙 완료.")
 
-def archive_layer(
-    source_file: Path,
-    category: str,
-    index: VectorIndex,
-    embedder: EmbeddingClient,
-) -> bool:
-    """파일 내용을 Vector DB로 이관하고 원본을 초기화한다. 아카이브 실행 여부를 반환한다."""
-    if not check_file_size(source_file):
-        return False
-
-    content = source_file.read_text(encoding="utf-8")
-    doc_id = f"{source_file.stem}-archived-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-    embed_and_store(doc_id, content, category, index, embedder)
-
-    reset_text = (
-        f"# {source_file.stem} — 아카이브됨\n\n"
-        f"이전 내용이 Vector DB로 이관되었습니다. ({doc_id})\n"
-        f"아카이브 일시: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
-        f"최근 작업은 이 아래에만 기록됩니다.\n"
-    )
-    source_file.write_text(reset_text, encoding="utf-8")
-    return True
-
-
-def run_archive_check(
-    index: VectorIndex,
-    embedder: EmbeddingClient,
-) -> list[str]:
-    """모든 레이어 파일을 검사하여 초과 파일을 아카이브한다. 아카이브된 파일명 목록을 반환한다."""
-    archived = []
-    for filename, category in LAYER_TO_CATEGORY.items():
-        filepath = BRAIN_ROOT / filename
-        if filepath.exists() and archive_layer(filepath, category, index, embedder):
-            archived.append(filename)
-    return archived
+if __name__ == "__main__":
+    archive_logs()

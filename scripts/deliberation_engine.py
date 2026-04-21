@@ -25,20 +25,20 @@ def _call_llm(prompt: str, system: str) -> str:
 
     endpoints = []
 
-    groq_key = os.environ.get("GROQ_API_KEY", "")
-    if groq_key:
-        endpoints.append((
-            "https://api.groq.com/openai/v1/chat/completions",
-            groq_key,
-            "llama-3.3-70b-versatile",
-        ))
-
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
     if deepseek_key:
         endpoints.append((
             "https://api.deepseek.com/v1/chat/completions",
             deepseek_key,
             "deepseek-chat",
+        ))
+
+    groq_key = os.environ.get("GROQ_API_KEY", "")
+    if groq_key:
+        endpoints.append((
+            "https://api.groq.com/openai/v1/chat/completions",
+            groq_key,
+            "llama-3.3-70b-versatile",
         ))
 
     for url, key, model in endpoints:

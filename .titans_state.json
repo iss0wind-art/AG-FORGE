@@ -1,0 +1,100 @@
+{
+  "last_optimized": "2026-04-21T23:42:55.853753",
+  "consolidated_wisdom": [
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-14 13:55 | llama-3.3-70b-versatile | gro...",
+      "surprise_score": 0.5750162881041316
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-14 13:59 | llama-3.3-70b-versatile | gro...",
+      "surprise_score": 0.5803649743499653
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-15 07:21 | deepseek-chat | deepseek | qu...",
+      "surprise_score": 0.5493211382468352
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-15 07:24 | deepseek-chat | deepseek | qu...",
+      "surprise_score": 0.5519253049135018
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:19 | deepseek-reasoner | deepseek ...",
+      "surprise_score": 0.5394879593280606
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:27 | deepseek-reasoner | deepseek ...",
+      "surprise_score": 0.5428974735634114
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:36 | fake-model | planning | quali...",
+      "surprise_score": 0.551073828330508
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:36 | fake-model | planning | quali...",
+      "surprise_score": 0.551073828330508
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:36 | fake-model | planning | quali...",
+      "surprise_score": 0.551073828330508
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:36 | fake-model | planning | quali...",
+      "surprise_score": 0.551073828330508
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:40 | fake-model | planning | quali...",
+      "surprise_score": 0.5461694255119797
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:40 | fake-model | planning | quali...",
+      "surprise_score": 0.5461694255119797
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:40 | fake-model | planning | quali...",
+      "surprise_score": 0.5461694255119797
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:40 | fake-model | planning | quali...",
+      "surprise_score": 0.5461694255119797
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:44 | fake-model | planning | quali...",
+      "surprise_score": 0.5473307746590902
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:44 | fake-model | planning | quali...",
+      "surprise_score": 0.5473307746590902
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:44 | fake-model | planning | quali...",
+      "surprise_score": 0.5473307746590902
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 22:44 | fake-model | planning | quali...",
+      "surprise_score": 0.5473307746590902
+    },
+    {
+      "timestamp": "2026-04-21T23:42:55.853753",
+      "insight": "High Surprise Signal detected: | 2026-04-21 23:11 | deepseek-chat | deepseek | qu...",
+      "surprise_score": 0.5477564778662583
+    }
+  ]
+}

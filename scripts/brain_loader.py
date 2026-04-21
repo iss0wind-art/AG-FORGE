@@ -237,11 +237,20 @@ class DeepSeekProvider(LLMProvider):
 
 
 def load_layer(name: str) -> str:
-    """뇌 레이어 파일을 읽어 반환한다."""
+    """뇌 레이어 파일을 읽어 반환한다. 인코딩 오류에 대비하여 멀티 시도."""
     path = BRAIN_ROOT / name
     if not path.exists():
         raise FileNotFoundError(f"레이어 파일을 찾을 수 없습니다: {path}")
-    return path.read_text(encoding="utf-8")
+    
+    # 여러 인코딩 시도 (Windows/Linux 호환성 및 기존 파일 인코딩 대응)
+    for enc in ["utf-8", "cp949", "latin-1"]:
+        try:
+            return path.read_text(encoding=enc)
+        except UnicodeDecodeError:
+            continue
+    
+    # 모든 시도 실패 시 에러 무시하고 최대한 읽기
+    return path.read_text(encoding="utf-8", errors="replace")
 
 
 def select_layers(decision: RoutingDecision) -> list[str]:
@@ -272,11 +281,11 @@ class ChainedProvider(LLMProvider):
                     system_instruction, context_layers, task, model, thinking_budget
                 )
             except Exception as e:
-                if "429" in str(e) or "quota" in str(e).lower() or "rate" in str(e).lower():
-                    last_exc = e
-                    continue
-                raise
-        raise last_exc or RuntimeError("모든 프로바이더 쿼터 소진")
+                # 429(쿼터), 413(용량), 401(인증) 등 모든 예외에 대해 다음 프로바이더 시도
+                print(f"⚠️ {provider.__class__.__name__} 실패: {e}")
+                last_exc = e
+                continue
+        raise last_exc or RuntimeError("모든 프로바이더 실행 실패")
 
 
 def run(task: str, provider: LLMProvider) -> BrainResponse:
