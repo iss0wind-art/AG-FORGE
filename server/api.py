@@ -1,4 +1,4 @@
-"""
+﻿"""
 AG-Forge API 서버 — api.py
 모바일에서 뇌에 명령을 내리고 응답을 받는다.
 """
@@ -84,7 +84,23 @@ class TaskRequest(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def mobile_ui():
     """모바일 웹 UI."""
-    return HTMLResponse(UI_PATH.read_text(encoding="utf-8"))
+    if os.environ.get("AG_FORGE_HEADLESS") == "true":
+        return HTMLResponse(
+            content="<html><body><h1>AG-Forge Headless Mode</h1><p>UI is disabled. Use API endpoints.</p></body></html>",
+            status_code=403,
+            media_type="text/html; charset=utf-8"
+        )
+    
+    try:
+        # utf-8-sig를 사용하여 Windows BOM 문제 해결
+        ui_content = UI_PATH.read_text(encoding="utf-8-sig")
+    except Exception:
+        try:
+            ui_content = UI_PATH.read_text(encoding="utf-8")
+        except Exception:
+            ui_content = UI_PATH.read_text(encoding="cp949", errors="replace")
+            
+    return HTMLResponse(content=ui_content, media_type="text/html; charset=utf-8")
 
 
 @app.post("/api/task")
@@ -116,6 +132,7 @@ async def submit_task(
     record = record_trace(brain_response, request.task, layers)
     append_log(record)
 
+    # 응답 사전에 한글 깨짐 방지를 위한 조치 포함 가능
     return {
         "response": safe_output,
         "model": brain_response.model,
@@ -132,7 +149,13 @@ async def submit_task(
 async def get_status(_: str = Depends(verify_api_key)):
     """현재 brain.md 상태를 반환한다."""
     brain_path = BRAIN_ROOT / "brain.md"
-    content = brain_path.read_text(encoding="utf-8")
+    try:
+        content = brain_path.read_text(encoding="utf-8-sig")
+    except Exception:
+        try:
+            content = brain_path.read_text(encoding="utf-8")
+        except Exception:
+            content = brain_path.read_text(encoding="cp949", errors="replace")
 
     # 현재 작업 상태 섹션 추출
     summary_match = re.search(r"## 8\..*?```yaml(.*?)```", content, re.DOTALL)
@@ -140,7 +163,11 @@ async def get_status(_: str = Depends(verify_api_key)):
 
     # judgment.md에서 마지막 라우팅 로그 추출
     judgment_path = BRAIN_ROOT / "judgment.md"
-    judgment = judgment_path.read_text(encoding="utf-8")
+    try:
+        judgment = judgment_path.read_text(encoding="utf-8-sig")
+    except Exception:
+        judgment = judgment_path.read_text(encoding="utf-8", errors="replace")
+
     log_lines = [l for l in judgment.splitlines() if "|" in l and "gemini" in l.lower()]
     last_routing = log_lines[-1].strip() if log_lines else "없음"
 

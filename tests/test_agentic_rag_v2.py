@@ -1,4 +1,4 @@
-"""
+﻿"""
 Agentic RAG 강화 테스트 — 쿼리 재작성 + 자기 검증
 기존 test_phase4.py의 AgenticRAG 테스트는 유지되며, 이 파일은 신규 메서드만 검증한다.
 """

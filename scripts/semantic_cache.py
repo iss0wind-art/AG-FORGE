@@ -1,4 +1,4 @@
-"""
+﻿"""
 시맨틱 캐싱 레이어 — semantic_cache.py
 동일·유사 쿼리는 LLM 호출 없이 Redis에서 즉시 반환한다. (0원)
 임계값: similarity >= 0.95

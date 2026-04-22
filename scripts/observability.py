@@ -1,4 +1,4 @@
-"""
+﻿"""
 관측성 레이어 — observability.py
 LangSmith 추적 + Gemini 비용 실시간 계산.
 LangSmith 없는 환경에서도 fallback으로 동작한다.
@@ -76,7 +76,12 @@ def summarize_session(log_path: Path = LOG_PATH) -> dict:
     if not log_path.exists():
         return {"total_requests": 0, "total_cost_usd": 0.0, "cache_hit_rate": 0.0}
 
-    lines = [l for l in log_path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    try:
+        raw_text = log_path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        raw_text = log_path.read_text(encoding="cp949", errors="replace")
+    
+    lines = [l for l in raw_text.splitlines() if l.strip()]
     if not lines:
         return {"total_requests": 0, "total_cost_usd": 0.0, "cache_hit_rate": 0.0}
 

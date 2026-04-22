@@ -1,4 +1,4 @@
-# 우뇌 (Pathos) — emotion_ui.md
+﻿# 우뇌 (Pathos) — emotion_ui.md
 
 > **역할**: 감성·UX 처리 전담 레이어  
 > **전용 모델**: gemini-2.0-flash  

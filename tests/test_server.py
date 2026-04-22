@@ -1,4 +1,4 @@
-"""
+﻿"""
 API 서버 테스트 — TDD RED 단계
 FastAPI TestClient로 실제 HTTP 요청을 테스트한다.
 """

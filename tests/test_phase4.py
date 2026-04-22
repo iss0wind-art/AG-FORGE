@@ -1,4 +1,4 @@
-"""
+﻿"""
 Phase 4 테스트 — embedding / agentic_rag / auto_archive
 모든 외부 API(Pinecone, Google Embedding)는 mock 처리.
 """

@@ -1,4 +1,4 @@
-# 좌뇌 (Logos) — logic_rb.md
+﻿# 좌뇌 (Logos) — logic_rb.md
 
 > **역할**: 논리·기술 처리 전담 레이어  
 > **전용 모델**: gemini-2.5-pro  

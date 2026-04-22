@@ -1,4 +1,4 @@
-"""
+﻿"""
 deliberation_engine 테스트 — test_deliberation.py
 CEO→CTO→51% 추출 파이프라인 검증 (FakeLLM 사용).
 """

@@ -1,4 +1,4 @@
-"""
+﻿"""
 소뇌 (Cerebellum) — 라우터 에이전트
 작업 유형을 분류하고 Gemini 모델 + Thinking Budget을 동적 할당한다.
 """
@@ -83,6 +83,10 @@ def log_routing(decision: RoutingDecision, thinking_used: int, error_flags: str 
         f"{thinking_used}/{decision.thinking_budget} | "
         f"{error_flags}\n"
     )
-    content = JUDGMENT_PATH.read_text(encoding="utf-8")
+    try:
+        content = JUDGMENT_PATH.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        content = JUDGMENT_PATH.read_text(encoding="cp949", errors="replace")
+    
     updated = content.replace("_초기화됨._\n", log_line, 1) if "_초기화됨._" in content else content + log_line
-    JUDGMENT_PATH.write_text(updated, encoding="utf-8")
+    JUDGMENT_PATH.write_text(updated, encoding="utf-8", errors="replace")

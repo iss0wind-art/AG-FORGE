@@ -1,4 +1,4 @@
-"""
+﻿"""
 숙의 엔진 — deliberation_engine.py
 DREAM_FAC의 CEO→CTO→51% 추출 파이프라인을 AG-Forge에 이식한다.
 Groq llama-3.3-70b-versatile (무료 티어) 사용.

@@ -1,4 +1,4 @@
-"""
+﻿"""
 관측성 레이어 테스트 — TDD RED 단계
 """
 from __future__ import annotations

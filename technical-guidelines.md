@@ -1,4 +1,4 @@
-# AG-Forge: 4가지 기술적 통제 장치 (Technical Guidelines)
+﻿# AG-Forge: 4가지 기술적 통제 장치 (Technical Guidelines)
 
 ---
 

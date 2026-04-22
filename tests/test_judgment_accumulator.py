@@ -1,4 +1,4 @@
-"""
+﻿"""
 judgment_node + brain_accumulator 테스트
 """
 from __future__ import annotations

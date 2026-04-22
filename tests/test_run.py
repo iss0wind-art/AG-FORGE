@@ -1,4 +1,4 @@
-"""
+﻿"""
 run.py 기동 스크립트 테스트
 """
 from __future__ import annotations

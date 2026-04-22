@@ -1,4 +1,4 @@
-"""
+﻿"""
 AG-Forge LangGraph 상태 스키마 — agent_state.py
 모든 그래프 노드가 공유하는 불변 상태 구조.
 """

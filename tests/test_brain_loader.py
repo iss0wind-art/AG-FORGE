@@ -1,4 +1,4 @@
-"""
+﻿"""
 전두엽 로더 테스트 — TDD RED 단계
 Gemini API는 mock 처리. 실제 API 키 없이 실행 가능.
 """

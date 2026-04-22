@@ -1,4 +1,4 @@
-"""
+﻿"""
 해마 임베딩 파이프라인 — embedding.py
 문서를 청크로 분할하고 Google text-embedding-004로 벡터화하여 Pinecone에 저장한다.
 """

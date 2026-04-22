@@ -1,4 +1,4 @@
-"""
+﻿"""
 GroqProvider 테스트 — test_groq_provider.py
 FakeHTTP로 실제 Groq 호출 없이 검증한다.
 """

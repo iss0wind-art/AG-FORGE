@@ -1,4 +1,4 @@
-# AG-Forge Architecture Overview
+﻿# AG-Forge Architecture Overview
 
 ---
 

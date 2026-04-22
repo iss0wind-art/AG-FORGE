@@ -1,4 +1,4 @@
-"""
+﻿"""
 헌법 게이트웨이 — constitution_gate.py
 모든 AI 출력이 CONSTITUTION.md의 홍익인간 0원칙을 통과해야 한다.
 LLM-as-a-judge 방식으로 자동 심사한다.

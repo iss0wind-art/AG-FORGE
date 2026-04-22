@@ -1,4 +1,4 @@
-# AG-Forge: Multi-Layer Brain Architecture
+﻿# AG-Forge: Multi-Layer Brain Architecture
 
 **Version**: 1.0 (_기획팀 & 리팀장 전달용_)  
 **Date**: 2026년 4월 8일  

@@ -1,4 +1,4 @@
-"""
+﻿"""
 전두엽 로더 — brain_loader.py
 brain.md + 레이어 파일을 Gemini CachedContent API로 로드한다.
 LLMProvider 추상화로 추후 Claude 이식 가능.
@@ -236,12 +236,22 @@ class DeepSeekProvider(LLMProvider):
         )
 
 
-def load_layer(name: str) -> str:
-    """뇌 레이어 파일을 읽어 반환한다."""
-    path = BRAIN_ROOT / name
+def load_layer(layer_name: str) -> str:
+    """뇌 계층 파일을 로드한다."""
+    path = Path(__file__).parent.parent / layer_name
     if not path.exists():
-        raise FileNotFoundError(f"레이어 파일을 찾을 수 없습니다: {path}")
-    return path.read_text(encoding="utf-8")
+        return ""
+    try:
+        # utf-8-sig를 우선적으로 사용하여 BOM 처리
+        return path.read_text(encoding="utf-8-sig")
+    except Exception:
+        try:
+            return path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            try:
+                return path.read_text(encoding="cp949")
+            except Exception:
+                return path.read_text(encoding="utf-8", errors="replace")
 
 
 def select_layers(decision: RoutingDecision) -> list[str]:
