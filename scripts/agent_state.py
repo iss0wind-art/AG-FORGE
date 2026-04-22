@@ -23,3 +23,8 @@ class AgentState(TypedDict):
     final_response: BrainResponse | None               # 최종 확정 응답
     error: str | None                                  # 오류 메시지
     tool_results: Annotated[list[str], operator.add]   # 툴 결과 누적
+    
+    # [Phase 4] 자율성과 통제를 위한 필드 추가
+    pending_tool_call: str | None                      # 승인 대기 중인 툴 실행 내용 (예: "파일 쓰기: index.ts")
+    needs_approval: bool                               # 사용자의 최종 승인이 필요한지 여부
+    approved: bool                                     # 사용자에 의해 승인이 완료되었는지 여부

@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import pytest
 from unittest.mock import patch, MagicMock
-from run import validate_env, print_access_info, open_ngrok_tunnel
+from run import validate_env, print_access_info, open_zrok_tunnel
 
 
 class TestValidateEnv:
@@ -25,38 +25,47 @@ class TestValidateEnv:
         assert "AG_FORGE_API_KEY" in missing
 
 
-class TestOpenNgrokTunnel:
+class TestOpenZrokTunnel:
 
-    def test_returns_public_url(self, monkeypatch):
-        mock_tunnel = MagicMock()
-        mock_tunnel.public_url = "https://abc123.ngrok.io"
+    def test_returns_public_url(self):
+        mock_result = MagicMock()
+        mock_result.returncode = 0
+        mock_result.stdout = "Access server at: https://abc123.share.zrok.io"
+        mock_result.stderr = ""
 
-        with patch("run.ngrok") as mock_ngrok:
-            mock_ngrok.connect.return_value = mock_tunnel
-            url = open_ngrok_tunnel(8000)
+        mock_status = MagicMock()
+        mock_status.returncode = 0
 
-        assert url == "https://abc123.ngrok.io"
+        with patch("subprocess.run", side_effect=[mock_status, mock_result]):
+            url = open_zrok_tunnel(8000)
 
-    def test_uses_port(self, monkeypatch):
-        mock_tunnel = MagicMock()
-        mock_tunnel.public_url = "https://xyz.ngrok.io"
+        assert url == "https://abc123.share.zrok.io"
 
-        with patch("run.ngrok") as mock_ngrok:
-            mock_ngrok.connect.return_value = mock_tunnel
-            open_ngrok_tunnel(9000)
-            mock_ngrok.connect.assert_called_once_with(9000, "http")
+    def test_raises_when_zrok_not_installed(self):
+        import subprocess
+        with patch("subprocess.run", side_effect=FileNotFoundError):
+            with pytest.raises(RuntimeError, match="ZROK 명령어를 찾을 수 없습니다"):
+                open_zrok_tunnel(8000)
 
-    def test_sets_authtoken_when_provided(self, monkeypatch):
-        monkeypatch.setenv("NGROK_AUTHTOKEN", "my-token")
-        mock_tunnel = MagicMock()
-        mock_tunnel.public_url = "https://test.ngrok.io"
+    def test_raises_when_not_authenticated(self):
+        mock_status = MagicMock()
+        mock_status.returncode = 1
 
-        with patch("run.ngrok") as mock_ngrok, \
-             patch("run.conf") as mock_conf:
-            mock_conf.get_default.return_value = MagicMock()
-            mock_ngrok.connect.return_value = mock_tunnel
-            open_ngrok_tunnel(8000)
-            assert mock_conf.get_default().auth_token == "my-token"
+        with patch("subprocess.run", return_value=mock_status):
+            with pytest.raises(RuntimeError, match="ZROK 미인증"):
+                open_zrok_tunnel(8000)
+
+    def test_raises_when_tunnel_fails(self):
+        mock_status = MagicMock()
+        mock_status.returncode = 0
+
+        mock_result = MagicMock()
+        mock_result.returncode = 1
+        mock_result.stderr = "tunnel error"
+
+        with patch("subprocess.run", side_effect=[mock_status, mock_result]):
+            with pytest.raises(RuntimeError, match="ZROK 터널 실패"):
+                open_zrok_tunnel(8000)
 
 
 class TestPrintAccessInfo:
@@ -66,13 +75,13 @@ class TestPrintAccessInfo:
         out = capsys.readouterr().out
         assert "localhost:8000" in out
 
-    def test_prints_external_url_when_different(self, capsys):
-        print_access_info("https://abc.ngrok.io", 8000)
+    def test_prints_public_url_when_different(self, capsys):
+        print_access_info("https://abc.share.zrok.io", 8000)
         out = capsys.readouterr().out
-        assert "abc.ngrok.io" in out
-        assert "모바일" in out
+        assert "abc.share.zrok.io" in out
+        assert "ZROK" in out
 
-    def test_no_external_when_local(self, capsys):
+    def test_no_public_when_local(self, capsys):
         print_access_info("http://localhost:8000", 8000)
         out = capsys.readouterr().out
-        assert "모바일" not in out
+        assert "ZROK 터널 활성화" not in out

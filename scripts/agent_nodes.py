@@ -76,26 +76,70 @@ _BLOCKED_PATTERNS = re.compile(
 
 
 def tool_node(state: AgentState) -> dict:
-    """파일 읽기 툴 — 응답에서 경로를 추출해 읽는다.
-    .env 파일 및 시크릿 파일은 헌법 0원칙에 따라 차단한다."""
+    """파일 읽기/쓰기 및 명령어 실행 툴.
+    파일 쓰기 및 명령어 실행은 사용자의 명시적 승인이 있어야 실제 수행된다."""
     results: list[str] = []
     response = state["current_response"]
-    if response:
-        # "파일 읽기: /path/to/file" 패턴 감지
-        matches = re.findall(r"파일 읽기:\s*(\S+)", response.text)
-        for path_str in matches:
-            # 시크릿 파일 차단
-            if _BLOCKED_PATTERNS.search(path_str):
-                results.append(f"[차단] {path_str} — 보안 정책상 읽기 금지")
-                continue
-            path = Path(path_str)
-            if path.exists() and path.is_file():
-                try:
-                    content = path.read_text(encoding="utf-8")
-                    results.append(f"[{path.name}]\n{content[:2000]}")
-                except Exception:
-                    results.append(f"[{path.name}] 읽기 실패")
-    return {"tool_results": results}
+    if not response:
+        return {}
+
+    # 1. 시각적 도구 정의 파싱
+    read_matches = re.findall(r"파일 읽기:\s*(\S+)", response.text)
+    write_matches = re.findall(r"파일 쓰기:\s*(\S+)\s*\n내용:\s*(.*?)(?=\n\n|\n툴|\Z)", response.text, re.DOTALL)
+    run_matches = re.findall(r"명령어 실행:\s*(.*?)(?=\n\n|\n툴|\Z)", response.text)
+
+    # 2. 읽기 도구 (자율 실행 가능)
+    for path_str in read_matches:
+        if _BLOCKED_PATTERNS.search(path_str):
+            results.append(f"[차단] {path_str} — 보안 정책상 읽기 금지")
+            continue
+        path = Path(path_str)
+        if path.exists() and path.is_file():
+            try:
+                content = path.read_text(encoding="utf-8")
+                results.append(f"[읽기 결과: {path.name}]\n{content[:2000]}")
+            except Exception as e:
+                results.append(f"[읽기 실패: {path.name}] {e}")
+
+    # 3. 쓰기 및 실행 도구 (방부장 승인 필수)
+    needs_approval = False
+    pending_action = None
+
+    # 쓰기 시도 감지
+    if write_matches:
+        target_path, content = write_matches[0]
+        if _BLOCKED_PATTERNS.search(target_path):
+            results.append(f"[차단] {target_path} — 보안 정책상 쓰기 금지")
+        elif state.get("approved"):
+            try:
+                Path(target_path).write_text(content, encoding="utf-8")
+                results.append(f"[쓰기 성공: {target_path}]")
+            except Exception as e:
+                results.append(f"[쓰기 실패: {target_path}] {e}")
+        else:
+            needs_approval = True
+            pending_action = f"파일 쓰기: {target_path} (내용: {len(content)}자)"
+
+    # 명령어 실행 시도 감지
+    if run_matches:
+        cmd = run_matches[0]
+        if state.get("approved"):
+            import subprocess
+            try:
+                out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT, text=True, timeout=30)
+                results.append(f"[실행 결과: {cmd}]\n{out[:2000]}")
+            except Exception as e:
+                results.append(f"[실행 실패: {cmd}] {e}")
+        else:
+            needs_approval = True
+            pending_action = f"명령어 실행: {cmd}"
+
+    return {
+        "tool_results": results,
+        "needs_approval": needs_approval,
+        "pending_tool_call": pending_action,
+        "approved": False if needs_approval else state.get("approved", False)
+    }
 
 
 def judgment_node(state: AgentState) -> dict:

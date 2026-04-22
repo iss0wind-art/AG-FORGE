@@ -32,64 +32,64 @@ class TestAskBrain:
         monkeypatch.setattr(mcp_server, "_build_provider", lambda: FakeProvider())
 
     def test_returns_string(self):
-        from mcp_server import ask_brain
-        result = ask_brain("코드 리뷰해줘")
+        from mcp_server import physis
+        result = physis("코드 리뷰해줘")
         assert isinstance(result, str)
 
     def test_returns_non_empty(self):
-        from mcp_server import ask_brain
-        result = ask_brain("아키텍처 설계")
+        from mcp_server import physis
+        result = physis("아키텍처 설계")
         assert len(result) > 0
 
     def test_empty_task_returns_error(self):
-        from mcp_server import ask_brain
-        result = ask_brain("   ")
+        from mcp_server import physis
+        result = physis("   ")
         assert "오류" in result
 
     def test_exception_returns_error_string(self, monkeypatch):
         import mcp_server
         monkeypatch.setattr(mcp_server, "run", lambda t, p: (_ for _ in ()).throw(RuntimeError("API 실패")))
-        from mcp_server import ask_brain
-        result = ask_brain("테스트")
+        from mcp_server import physis
+        result = physis("테스트")
         assert "오류" in result or "AG-Forge" in result
 
 
 class TestGetBrainStatus:
 
     def test_returns_dict(self):
-        from mcp_server import get_brain_status
-        result = get_brain_status()
+        from mcp_server import physis_status
+        result = physis_status()
         assert isinstance(result, dict)
 
     def test_has_required_keys(self):
-        from mcp_server import get_brain_status
-        result = get_brain_status()
+        from mcp_server import physis_status
+        result = physis_status()
         assert "brain_summary" in result
         assert "active_layer" in result
         assert "last_routing" in result
 
     def test_brain_summary_not_empty(self):
-        from mcp_server import get_brain_status
-        result = get_brain_status()
+        from mcp_server import physis_status
+        result = physis_status()
         assert len(result["brain_summary"]) > 0
 
     def test_missing_brain_md_graceful(self, tmp_path, monkeypatch):
         import mcp_server
         monkeypatch.setattr(mcp_server, "BRAIN_ROOT", tmp_path)
-        result = mcp_server.get_brain_status()
+        result = mcp_server.physis_status()
         assert "brain.md 없음" in result["brain_summary"]
 
 
 class TestGetBrainLogs:
 
     def test_returns_dict(self):
-        from mcp_server import get_brain_logs
-        result = get_brain_logs()
+        from mcp_server import physis_logs
+        result = physis_logs()
         assert isinstance(result, dict)
 
     def test_has_summary_fields(self):
-        from mcp_server import get_brain_logs
-        result = get_brain_logs()
+        from mcp_server import physis_logs
+        result = physis_logs()
         assert "total_requests" in result
         assert "total_cost_usd" in result
         assert "cache_hit_rate" in result
@@ -97,7 +97,7 @@ class TestGetBrainLogs:
     def test_empty_log_returns_zeros(self, tmp_path, monkeypatch):
         import mcp_server
         monkeypatch.setattr(mcp_server, "LOG_PATH", tmp_path / "empty.jsonl")
-        result = mcp_server.get_brain_logs()
+        result = mcp_server.physis_logs()
         assert result["total_requests"] == 0
 
 

@@ -19,6 +19,23 @@ class EmbeddingClient(Protocol):
     def embed(self, text: str) -> list[float]: ...
 
 
+class GoogleEmbeddingClient:
+    """Google GenAI(v1) text-embedding-004 클라이언트."""
+
+    def __init__(self, api_key: str) -> None:
+        from google import genai
+        self.client = genai.Client(api_key=api_key)
+        self.model = "gemini-embedding-001"
+
+    def embed(self, text: str) -> list[float]:
+        result = self.client.models.embed_content(
+            model=self.model,
+            contents=text,
+            config=dict(task_type="RETRIEVAL_DOCUMENT")
+        )
+        return result.embeddings[0].values
+
+
 def chunk_document(text: str, chunk_size: int = 500, overlap: int = 50) -> list[str]:
     """텍스트를 겹침 있는 청크로 분할한다."""
     if not text:
@@ -76,6 +93,16 @@ def migrate_library(
     if not filepath.exists():
         raise FileNotFoundError(f"파일을 찾을 수 없습니다: {filepath}")
 
-    text = filepath.read_text(encoding="utf-8")
+    text = None
+    for enc in ["utf-8", "cp949", "latin-1"]:
+        try:
+            text = filepath.read_text(encoding=enc)
+            break
+        except UnicodeDecodeError:
+            continue
+            
+    if text is None:
+        text = filepath.read_text(encoding="utf-8", errors="replace")
+
     doc_id = f"{filepath.stem}-{datetime.now().strftime('%Y%m%d')}"
     return embed_and_store(doc_id, text, category, index, embedder)
