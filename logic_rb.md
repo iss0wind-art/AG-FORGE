@@ -1,4 +1,4 @@
-﻿# 좌뇌 (Logos) — logic_rb.md
+# 좌뇌 (Logos) — logic_rb.md
 
 > **역할**: 논리·기술 처리 전담 레이어  
 > **전용 모델**: gemini-2.5-pro  
@@ -70,5 +70,12 @@ _초기화됨._
 
 ---
 
-_마지막 갱신: 초기화_  
+### [서버 가동]
+- 상태: Physis API Server UP (localhost:8000)
+- 모델: Gemini 3 Flash
+- 적용 일자: 2026-04-23
+
+---
+
+_마지막 갱신: 2026-04-23_  
 _다음 레이어: emotion_ui.md (우뇌)_

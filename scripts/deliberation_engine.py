@@ -1,4 +1,4 @@
-﻿"""
+"""
 숙의 엔진 — deliberation_engine.py
 DREAM_FAC의 CEO→CTO→51% 추출 파이프라인을 AG-Forge에 이식한다.
 Groq llama-3.3-70b-versatile (무료 티어) 사용.
@@ -20,10 +20,26 @@ _FALLBACK_UNAVAILABLE = "__UNAVAILABLE__"
 
 
 def _call_llm(prompt: str, system: str) -> str:
-    """Groq → DeepSeek 순으로 시도. 전부 실패 시 __UNAVAILABLE__ 반환."""
+    """Claude → Qwen → DeepSeek → Groq 순으로 시도. 전부 실패 시 __UNAVAILABLE__ 반환."""
     import httpx
 
     endpoints = []
+
+    claude_key = os.environ.get("CLAUDE_API_KEY", "")
+    if claude_key:
+        endpoints.append((
+            "https://api.anthropic.com/v1/messages",
+            claude_key,
+            "claude-3-5-sonnet-20241022",
+        ))
+
+    qwen_key = os.environ.get("QWEN_API_KEY", "")
+    if qwen_key:
+        endpoints.append((
+            "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+            qwen_key,
+            "qwen-max",
+        ))
 
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
     if deepseek_key:
@@ -43,24 +59,39 @@ def _call_llm(prompt: str, system: str) -> str:
 
     for url, key, model in endpoints:
         try:
-            resp = httpx.post(
-                url,
-                headers={
-                    "Authorization": f"Bearer {key}",
+            headers = {
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+            }
+            if "anthropic" in url:
+                headers = {
+                    "x-api-key": key,
+                    "anthropic-version": "2023-06-01",
                     "Content-Type": "application/json",
-                },
-                json={
+                }
+                payload = {
+                    "model": model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "system": system,
+                    "max_tokens": 2048,
+                }
+            else:
+                payload = {
                     "model": model,
                     "messages": [
                         {"role": "system", "content": system},
                         {"role": "user", "content": prompt},
                     ],
                     "max_tokens": 2048,
-                },
-                timeout=60,
-            )
+                }
+
+            resp = httpx.post(url, headers=headers, json=payload, timeout=60)
             resp.raise_for_status()
-            return resp.json()["choices"][0]["message"]["content"]
+            data = resp.json()
+            
+            if "anthropic" in url:
+                return data["content"][0]["text"]
+            return data["choices"][0]["message"]["content"]
         except Exception:
             continue
 

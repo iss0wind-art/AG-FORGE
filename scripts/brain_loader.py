@@ -1,4 +1,4 @@
-﻿"""
+"""
 전두엽 로더 — brain_loader.py
 brain.md + 레이어 파일을 Gemini CachedContent API로 로드한다.
 LLMProvider 추상화로 추후 Claude 이식 가능.
@@ -232,6 +232,97 @@ class DeepSeekProvider(LLMProvider):
             model=ds_model,
             task_type="deepseek",
             tokens_used=tokens,
+            cache_hit=False,
+        )
+
+
+class ClaudeProvider(LLMProvider):
+    """Anthropic Claude API 기반 구현."""
+
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("Claude API 키가 필요합니다.")
+        import anthropic
+        self.client = anthropic.Anthropic(api_key=api_key)
+        self._api_key = api_key
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        full_context = "\n\n---\n\n".join(context_layers)
+        # 모델명 보정
+        claude_model = "claude-3-5-sonnet-20241022" 
+        
+        response = self.client.messages.create(
+            model=claude_model,
+            max_tokens=4096,
+            system=[
+                {"type": "text", "text": system_instruction},
+                {"type": "text", "text": full_context, "cache_control": {"type": "ephemeral"}}
+            ],
+            messages=[{"role": "user", "content": task}]
+        )
+        
+        return BrainResponse(
+            text=response.content[0].text,
+            model=claude_model,
+            task_type="claude",
+            tokens_used=response.usage.input_tokens + response.usage.output_tokens,
+            cache_hit=getattr(response.usage, 'cache_read_input_tokens', 0) > 0,
+        )
+
+
+class QwenProvider(LLMProvider):
+    """Alibaba Qwen (OpenAI-호환) API 기반 구현."""
+
+    _BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("Qwen API 키가 필요합니다.")
+        self._api_key = api_key
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        import httpx
+        full_context = "\n\n---\n\n".join(context_layers)
+        
+        payload = {
+            "model": "qwen-max",
+            "messages": [
+                {"role": "system", "content": f"{system_instruction}\n\n{full_context}"},
+                {"role": "user", "content": task},
+            ],
+        }
+
+        resp = httpx.post(
+            self._BASE_URL,
+            headers={
+                "Authorization": f"Bearer {self._api_key}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=120,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        return BrainResponse(
+            text=data["choices"][0]["message"]["content"],
+            model="qwen-max",
+            task_type="qwen",
+            tokens_used=data.get("usage", {}).get("total_tokens", 0),
             cache_hit=False,
         )
 

@@ -1,4 +1,4 @@
-﻿"""
+"""
 피지수(Physis) MCP 서버 — mcp_server.py
 Claude Code에서 피지수 독립 뇌를 직접 호출한다.
 stdio 전송 방식 (Claude Code 표준).
@@ -66,14 +66,18 @@ class _FallbackProvider(LLMProvider):
 
 
 def _build_provider() -> LLMProvider:
-    """Groq→DeepSeek→Gemini 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
-    from scripts.brain_loader import GroqProvider, DeepSeekProvider, GeminiProvider, ChainedProvider
+    """Claude→Qwen→DeepSeek→Gemini→Groq 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
+    from scripts.brain_loader import (
+        ClaudeProvider, QwenProvider, DeepSeekProvider, GeminiProvider, GroqProvider, ChainedProvider
+    )
 
     providers = []
     for key_name, cls in [
+        ("CLAUDE_API_KEY",   ClaudeProvider),
+        ("QWEN_API_KEY",    QwenProvider),
         ("DEEPSEEK_API_KEY", DeepSeekProvider),
-        ("GROQ_API_KEY",    GroqProvider),
         ("GEMINI_API_KEY",   GeminiProvider),
+        ("GROQ_API_KEY",    GroqProvider),
     ]:
         key = os.environ.get(key_name, "")
         if key:

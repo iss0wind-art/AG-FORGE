@@ -1,4 +1,4 @@
-﻿"""
+"""
 AG-Forge API 서버 — api.py
 모바일에서 뇌에 명령을 내리고 응답을 받는다.
 """
@@ -43,14 +43,18 @@ class _InternalProvider(LLMProvider):
 
 
 def _build_provider() -> LLMProvider:
-    """Groq→DeepSeek→Gemini 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
-    from scripts.brain_loader import GroqProvider, DeepSeekProvider, GeminiProvider, ChainedProvider
+    """Claude→Qwen→DeepSeek→Gemini→Groq 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
+    from scripts.brain_loader import (
+        ClaudeProvider, QwenProvider, DeepSeekProvider, GeminiProvider, GroqProvider, ChainedProvider
+    )
 
     providers = []
     for key_name, cls in [
-        ("GROQ_API_KEY",    GroqProvider),
+        ("CLAUDE_API_KEY",   ClaudeProvider),
+        ("QWEN_API_KEY",    QwenProvider),
         ("DEEPSEEK_API_KEY", DeepSeekProvider),
         ("GEMINI_API_KEY",   GeminiProvider),
+        ("GROQ_API_KEY",    GroqProvider),
     ]:
         key = os.environ.get(key_name, "")
         if key:

@@ -26,3 +26,6 @@ _초기화됨._
 | 2026-04-21 08:50 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4557 tokens |
 | 2026-04-22 23:30 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 4271 tokens |
 | 2026-04-22 23:42 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 5396 tokens |
+| 2026-04-23 23:00 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3189 tokens |
+| 2026-04-23 23:19 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3672 tokens |
+| 2026-04-23 23:21 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4812 tokens |
