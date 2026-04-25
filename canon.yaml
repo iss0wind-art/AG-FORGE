@@ -77,13 +77,30 @@ personas:
   count: 4
   rationale: "감정 차원은 별개의 횡단 차원이며 5번째 페르소나가 아니다."
 
+  # [단군 권고 채택 2026-04-25] system prompt 주입 시 XML 태그 형식 강제
+  prompt_injection_format: xml_tagged
+  required_tags:
+    - identity
+    - eight_essences        # 또는 six_essences (페르소나별 결 개수에 따라)
+    - tone_selection_rule
+    - speech_patterns       # historical + modern 양 어법
+    - voice_canon           # 결 ↔ 양 어법 정전 매핑
+    - judgment_priorities
+    - blind_spots
+    - conflict_resolution
+    - response_structure
+    - calibration
+
   list:
     - id: gongmu
       korean: 공무부장
       experience_years: 20
       domain: 전문건설업 실무
       role: 비용·물량·정산 검증
-      prompt_path: prompts/personas/gongmu.md  # 미구현, 방부장 콘텐츠 대기
+      prompt_path: prompts/personas/gongmu.md
+      inherits_from: 유성룡  # 방부장 칙령(2026-04-25): 과거 영웅 현대 재해석
+      essence_count: 8        # 6 결 + 선례 인지 + 권력 방향성 (격상 채택 2026-04-26)
+      state: layer1_speech_patterns   # 항목 1(말투/어휘) 봉안 완료, 항목 2~5 대기
 
     - id: coder
       korean: 코딩 전문가
@@ -91,6 +108,7 @@ personas:
       domain: Full-stack 아키텍처
       role: 기술 무결성·시스템 자동화
       prompt_path: prompts/personas/coder.md   # 미구현
+      state: pending_content
 
     - id: designer
       korean: 웹디자이너 본부장
@@ -98,6 +116,7 @@ personas:
       domain: UI/UX
       role: 비주얼 품질·사용자 경험
       prompt_path: prompts/personas/designer.md  # 미구현
+      state: pending_content
 
     - id: lawyer
       korean: 변리사·변호사
@@ -106,6 +125,7 @@ personas:
       role: 특허 보호·법률 리스크 관리
       aliases: ["개팀장"]   # 개팀장 = 변리사 페르소나의 호칭
       prompt_path: prompts/personas/lawyer.md  # 미구현
+      state: pending_content
 
   # 감정 차원: 페르소나가 아닌 횡단 속성
   emotional_dimension:
@@ -142,10 +162,15 @@ components:
     rationale: "필드 정의로 코드 호환성 확보, 활성화는 별도 결재 사안"
 
   persona_system:
-    state: documented_only
+    state: layer1_first_persona_authored
     code_implemented: false
-    blocking_on: "방부장 페르소나 콘텐츠 작성"
-    target_implementation: "Option A — prompt-based (system prompt 주입)"
+    layer1_persona: gongmu
+    layer1_completed_date: "2026-04-26"
+    blocking_on: "코드 배선 (router_agent + agent_nodes) + 나머지 3 페르소나 콘텐츠"
+    target_implementation: "Option A — prompt-based (system prompt 주입, XML 태그)"
+    progress:
+      - "공무부장 항목 1 (말투/어휘 양 어법 10어구씩) 봉안 완료"
+      - "코드 배선 + 나머지 항목(2~5) + 다른 3 페르소나 진행 중"
 
   deliberation_bridge:
     state: aspirational

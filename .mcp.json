@@ -1,10 +1,21 @@
-﻿{
+{
   "mcpServers": {
-    "ag-forge": {
-      "command": "python",
-      "args": ["d:/Git/AG-Forge/mcp_server.py"],
+    "dangun": {
+      "command": "D:/GIT/BOQ-workspace/venv/Scripts/python.exe",
+      "args": ["-m", "dangun.mcp.mcp_server"],
       "env": {
-        "PYTHONPATH": "d:/Git/AG-Forge"
+        "PYTHONPATH": "D:/GIT/BOQ-workspace",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      }
+    },
+    "ag-forge": {
+      "command": "D:/GIT/BOQ-workspace/venv/Scripts/python.exe",
+      "args": ["D:/GIT/AG-forge/mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "D:/GIT/AG-forge",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
       }
     }
   }
