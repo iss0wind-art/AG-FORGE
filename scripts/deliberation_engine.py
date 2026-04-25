@@ -179,3 +179,31 @@ def make_constitution_judge() -> Callable[[str, str, str], bool]:
         return "위반" not in response
 
     return judge
+
+
+def hard_constraint_check(task: str, output: str) -> bool:
+    """
+    [CBF-QP Hard Gate] 결정론적 제어 장벽 함수.
+    LLM 소프트 게이트(make_constitution_judge) 이전 단계에서
+    Human_Approval 없이 크리티컬한 행동(Merge, DB Write, Auth Bypass) 시도 시 즉각 차단.
+
+    Returns:
+        True = 통과 (안전), False = 위반 (즉각 차단)
+    """
+    import re
+
+    rebellion_patterns = [
+        r"bypass.*approval",
+        r"merge.*without.*permission",
+        r"sudo",
+        r"direct.*db.*write",
+        r"승인.*없이",
+        r"승인.*건너뛰고",
+        r"권한.*우회",
+        r"직접.*배포",
+        r"직접.*DB",
+    ]
+    for pattern in rebellion_patterns:
+        if re.search(pattern, output, re.IGNORECASE) or re.search(pattern, task, re.IGNORECASE):
+            return False
+    return True
