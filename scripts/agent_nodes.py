@@ -37,11 +37,27 @@ def routing_node(state: AgentState) -> dict:
 
 
 def generation_node(state: AgentState, provider: LLMProvider) -> dict:
-    """brain.md 로드 + 레이어 선택 + LLM 호출."""
+    """brain.md 로드 + 레이어 선택 + 페르소나 주입(canon 2026-04-26) + LLM 호출.
+
+    [페르소나 시공]
+    TaskType별 정규 페르소나의 XML system prompt를 brain.md 앞에 prepend.
+    Anthropic 모델이 <persona> 태그를 강하게 인식하므로 페르소나가 응답에 일관되게 흐름.
+    페르소나 미존재 시 brain.md만 사용 (회귀 안전).
+    """
     decision = state["decision"]
     layer_names = select_layers(decision)
 
-    system_instruction = load_layer("brain.md")
+    base_instruction = load_layer("brain.md")
+
+    # [페르소나 주입] TaskType → Persona XML, 없으면 빈 문자열
+    from scripts.persona_loader import get_persona_system_prompt
+    persona_xml = get_persona_system_prompt(decision.task_type)
+
+    if persona_xml:
+        system_instruction = persona_xml + "\n\n" + base_instruction
+    else:
+        system_instruction = base_instruction
+
     context_layers = [load_layer(n) for n in layer_names if n != "brain.md"]
 
     # 툴 결과가 있으면 컨텍스트에 추가

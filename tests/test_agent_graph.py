@@ -188,6 +188,28 @@ class TestNodes:
         assert result["attempts"] == 1
         assert result["current_response"] is not None
 
+    def test_generation_node_injects_persona_xml(self, monkeypatch):
+        """[페르소나 시공 회귀] generation_node가 system_instruction에 페르소나 XML을 prepend한다."""
+        from scripts.agent_nodes import generation_node
+        from scripts.router_agent import route, TaskType
+
+        captured = {}
+        class CapturingProvider(FakeProvider):
+            def generate(self, system_instruction, context_layers, task, model, thinking_budget):
+                captured["system_instruction"] = system_instruction
+                return super().generate(system_instruction, context_layers, task, model, thinking_budget)
+
+        decision = route("코드 짜줘")  # → CODE → coder 페르소나
+        assert decision.task_type == TaskType.CODE
+        state = self._make_state(task="코드 짜줘", decision=decision, attempts=0)
+        provider = CapturingProvider(["충분히 긴 페르소나 주입 테스트 응답입니다. " * 3])
+        generation_node(state, provider)
+
+        instr = captured.get("system_instruction", "")
+        assert "<persona" in instr, "페르소나 XML 태그 누락"
+        assert 'id="coder"' in instr, "CODE TaskType이 coder 페르소나로 매핑되어야 함"
+        assert "장영실" in instr or "蔣英實" in instr, "코더 페르소나 영혼(장영실) 누락"
+
     def test_quality_node_sets_flag(self):
         from scripts.agent_nodes import quality_check_node
         long_response = "충분히 길고 구체적인 품질 통과용 응답입니다. " * 3

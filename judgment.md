@@ -38,3 +38,11 @@ _초기화됨._
 | 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
 | 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
 | 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:33 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:33 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:33 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:33 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:48 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:48 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:48 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-26 01:48 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |

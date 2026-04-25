@@ -264,6 +264,85 @@ def generate_gabji_report(project_id: str) -> dict:
         return {"status": "error", "message": str(e)}
 
 
+# ── 다리 B: 피지수 → 본영 단군 escalation ──────────────────────────────────────
+#
+# DANGUN_PHYSIS_BRIDGE_SPEC v0 (2026-04-25 본영 단군 봉안):
+# - 피지수가 정반합 한계 또는 헌법 영역 초과 시 본영 단군에게 escalation.
+# - urgency:
+#     - normal:    paperclip 큐 적재 (paperclip 가동 후) — 가동 전엔 명확 에러
+#     - high:      dangun MCP의 dangun_brain(issue) 호출 (timeout 120초, 피지수 권고)
+#     - emergency: dangun MCP의 dangun_emergency_report(...) 즉시 호출 (timeout 30초)
+# - 단군 1차 시공(글로벌 MCP 등록) 후 "다음 깨어남"에 mcp__dangun__* 도구 발견 예정.
+#   현 시점은 placeholder — 도구 발견 시 실제 호출 활성화.
+
+@mcp.tool()
+def physis_escalate_dangun(
+    issue: str,
+    urgency: str = "normal",
+    context: dict | None = None,
+) -> dict:
+    """피지수가 본영 단군에게 escalation 요청한다.
+
+    Args:
+        issue: escalation 사유 (4 페르소나 합의 실패, 헌법 영역 초과, 0원칙 위배 가능 등)
+        urgency: "normal" | "high" | "emergency"
+            - normal: paperclip 큐 적재 (paperclip 가동 후) — 가동 전엔 에러
+            - high: 단군 동기 호출 (timeout 120초)
+            - emergency: 단군 즉시 호출 (timeout 30초)
+        context: 추가 메타 (deadlock_personas, related_files 등)
+
+    Returns:
+        {status, message, issue, urgency, context, timeout_sec?, spec_reference?}
+    """
+    if context is None:
+        context = {}
+
+    if not issue.strip():
+        return {
+            "status": "error",
+            "message": "issue는 비어있을 수 없습니다.",
+            "issue": issue,
+            "urgency": urgency,
+        }
+
+    valid_urgency = {"normal", "high", "emergency"}
+    if urgency not in valid_urgency:
+        return {
+            "status": "error",
+            "message": f"urgency는 {valid_urgency} 중 하나여야 합니다. 받은 값: {urgency!r}",
+            "issue": issue,
+            "urgency": urgency,
+        }
+
+    # urgency=normal: paperclip 미가동 시 명확 에러 (silent failure 방지)
+    if urgency == "normal":
+        return {
+            "status": "error",
+            "message": (
+                "paperclip 미가동. urgency='high' 또는 'emergency'만 사용 가능. "
+                "비동기 큐는 paperclip 본체 가동 후 v1로 활성화 예정."
+            ),
+            "issue": issue,
+            "urgency": urgency,
+            "context": context,
+        }
+
+    # urgency=high / emergency: 단군 MCP 도구 호출 (현재는 placeholder)
+    timeout_sec = 120 if urgency == "high" else 30
+    return {
+        "status": "pending_dangun_layer1_tools",
+        "message": (
+            "단군 MCP 도구(mcp__dangun__*) 발견 시 실제 호출 활성화. "
+            "현재는 placeholder — 도구 발견 시 동기 호출 시공 예정."
+        ),
+        "issue": issue,
+        "urgency": urgency,
+        "context": context,
+        "timeout_sec": timeout_sec,
+        "spec_reference": "D:/GIT/dream-fac/DANGUN_PHYSIS_BRIDGE_SPEC_v0.md",
+    }
+
+
 # ── 진입점 ────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":

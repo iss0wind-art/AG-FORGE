@@ -217,3 +217,27 @@ BOQ 거푸집 도포 알고리즘(수조 담그기, point-in-mesh)을 페인트 
 
 <!-- accumulate:2026-04-25 -->
 - [2026-04-25] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] 작업 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] 작업 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-26 -->
+- [2026-04-26] 테스트 → planning/fake-model

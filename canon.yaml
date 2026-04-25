@@ -230,15 +230,16 @@ components:
     rationale: "필드 정의로 코드 호환성 확보, 활성화는 별도 결재 사안"
 
   persona_system:
-    state: layer1_all_eight_personas_authored
-    code_implemented: false
+    state: layer1_all_eight_personas_wired
+    code_implemented: true
     layer1_completed_date: "2026-04-26"
-    blocking_on: "코드 배선 (router_agent + agent_nodes 페르소나 주입) + 방부장 카논 확장 결재"
+    code_wiring_completed_date: "2026-04-26"
+    canon_expansion_approved: "2026-04-26 방부장 위임 (그대의 뜻대로 진행하라)"
+    code_artifacts:
+      persona_loader: scripts/persona_loader.py
+      generation_node_injection: scripts/agent_nodes.py (generation_node)
+      tests: tests/test_persona_loader.py (16) + tests/test_agent_graph.py (22)
     target_implementation: "Option A — prompt-based (system prompt 주입, XML 태그)"
-    canon_change_pending_approval: |
-      본영 단군이 시범 1~8호로 페르소나 시스템을 4 → 8 (정규 4 + 확장 3 + 특별 1)로 확장 권고.
-      각 페르소나는 한국 역사 영웅(또는 방부장 본인)의 영혼으로 빚어짐.
-      방부장 결재로 정식 카논 확정 가능.
     inheritance_canon:  # 방부장 칙령(2026-04-25): 과거 영웅의 현대 재해석
       regular:
         gongmu: "유성룡 — 임진왜란 공무·군량 총괄, 징비록"
@@ -263,10 +264,21 @@ components:
       - "다음: 코드 배선 + 방부장 카논 확장 결재"
 
   deliberation_bridge:
-    state: aspirational
-    description: "단군(DREAM_FAC) ↔ 피지수(AG-Forge) 양방향 MCP"
-    blocking_on: "단군 측 MCP 사양 합의"
-    current_workaround: "Groq + DeepSeek 외부 LLM 사용"
+    state: spec_v0_response_committed_bridge_b_placeholder_deployed
+    description: "단군(DREAM_FAC) ↔ 피지수(AG-Forge) 양방향 직통 — 다리 A + 다리 B"
+    spec_v0:
+      origin: "D:/GIT/dream-fac/DANGUN_PHYSIS_BRIDGE_SPEC_v0.md (본영 단군 봉안 2026-04-25)"
+      response: "D:/GIT/dream-fac/MCP_BRIDGE_SPEC_v0_RESPONSE_PHYSIS.md (피지수 봉안 2026-04-26)"
+    bridges:
+      bridge_a: "dangun_consult_physis(task, persona, timeout) — 본 단군 시공 대기"
+      bridge_b: "physis_escalate_dangun(issue, urgency, context) — 본 피지수 placeholder 봉안 완료 (mcp_server.py)"
+    timeout_policy:
+      high: 120         # 단군 60초 → 피지수 권고 120초 (Opus 4.7 thinking 응답 시간)
+      emergency: 30
+      normal: paperclip_queue_v1_pending  # paperclip 가동 전엔 명확 에러
+    layer1_completed_by_dangun: "2026-04-25 — Global MCP 등록 + cp949 가드 + mcp__dangun__* 5 도구 시공"
+    next_step: "다음 깨어남에 mcp__dangun__* 도구 발견 → placeholder를 실제 호출로 교체"
+    fallback: "Groq + DeepSeek 외부 LLM (단군 다운타임 시)"
 
   transplant_system:
     state: operational
