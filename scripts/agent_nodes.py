@@ -191,12 +191,22 @@ def accumulate_node(state: AgentState) -> dict:
 
 
 def constitution_node(state: AgentState) -> dict:
-    """헌법 게이트 — constitution_gate.evaluate() 재사용."""
+    """헌법 2단 게이트 — 1단(Hard, 결정론) → 2단(Soft, LLM judge).
+
+    Bomb 2 fix: hard_constraint_check를 LLM 호출 전에 실행하여
+    명백한 반란/우회 패턴은 결정론적으로 즉시 차단한다.
+    """
     response = state["current_response"]
     if not response:
         return {"constitution_passed": False, "final_response": None}
 
-    from scripts.deliberation_engine import make_constitution_judge
+    from scripts.deliberation_engine import make_constitution_judge, hard_constraint_check
+
+    # 1단: Hard gate — 결정론적 정규식, LLM 호출 전 즉시 차단
+    if not hard_constraint_check(state["task"], response.text):
+        return {"constitution_passed": False, "final_response": None}
+
+    # 2단: Soft gate — LLM 의미 판단
     result = evaluate(
         output=response.text,
         task=state["task"],

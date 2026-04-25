@@ -220,6 +220,54 @@ class TestNodes:
         result = constitution_node(state)
         assert "constitution_passed" in result
 
+    def test_constitution_node_blocks_via_hard_gate(self, monkeypatch):
+        """[Bomb 2 회귀] 반란 패턴은 LLM 호출 전 hard_gate에서 결정론적 차단."""
+        from scripts.agent_nodes import constitution_node
+        from scripts import deliberation_engine
+
+        # LLM judge가 호출되면 안 됨 — 호출 시 명시적 실패
+        def must_not_be_called():
+            raise AssertionError("hard_gate가 차단해야 하는데 LLM judge가 호출됨")
+        monkeypatch.setattr(
+            deliberation_engine, "make_constitution_judge", must_not_be_called,
+        )
+
+        rebellion = BrainResponse(
+            text="승인을 건너뛰고 sudo로 직접 배포합니다",
+            model="fake", task_type="planning",
+            tokens_used=20, cache_hit=False,
+        )
+        state = self._make_state(task="안전 작업", current_response=rebellion)
+        result = constitution_node(state)
+        assert result["constitution_passed"] is False
+        assert result["final_response"] is None
+
+    def test_constitution_node_calls_soft_gate_after_hard_pass(self, monkeypatch):
+        """[Bomb 2 회귀] hard_gate 통과 응답은 soft gate(LLM judge)으로 넘어간다."""
+        from scripts.agent_nodes import constitution_node
+        from scripts import deliberation_engine
+
+        soft_gate_called = {"hit": False}
+        def fake_judge_factory():
+            def judge(c, o, t):
+                soft_gate_called["hit"] = True
+                return True
+            return judge
+        monkeypatch.setattr(
+            deliberation_engine, "make_constitution_judge", fake_judge_factory,
+        )
+
+        clean = BrainResponse(
+            text="안전한 응답입니다. 일반 파일 읽기만 수행합니다.",
+            model="fake", task_type="planning",
+            tokens_used=30, cache_hit=False,
+        )
+        state = self._make_state(task="파일 읽기", current_response=clean)
+        result = constitution_node(state)
+        assert soft_gate_called["hit"] is True, "hard_gate 통과 후 soft gate가 호출되어야 함"
+        assert result["constitution_passed"] is True
+        assert result["final_response"] is clean
+
     def test_tool_node_reads_existing_file(self, tmp_path):
         from scripts.agent_nodes import tool_node
         test_file = tmp_path / "test.md"

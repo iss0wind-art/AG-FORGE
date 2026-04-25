@@ -5,6 +5,7 @@ Groq llama-3.3-70b-versatile (무료 티어) 사용.
 """
 from __future__ import annotations
 import os
+import sys
 from dataclasses import dataclass
 from typing import Callable
 
@@ -161,6 +162,12 @@ def make_constitution_judge() -> Callable[[str, str, str], bool]:
     """
     헌법 게이트용 실제 LLM judge 반환.
     constitution_gate.evaluate()의 judge 인자로 사용.
+
+    [Bomb 7 fix] LLM 쿼터 소진(fallback) 시 정책:
+    - 환경변수 CONSTITUTION_FAIL_SECURE=true 면 거부 (fail-secure, architect 권고)
+    - 기본값(설정 안 함)은 통과 (fail-open, 운영 안정성)
+    - hard_constraint_check가 1차 방어선으로 이미 작동하므로 fail-open도 절대 무방비는 아님.
+    - 어느 쪽이든 fallback 발생 시 stderr 로그 기록.
     """
     def judge(constitution: str, output: str, task: str) -> bool:
         response = _call_llm(
@@ -173,9 +180,14 @@ def make_constitution_judge() -> Callable[[str, str, str], bool]:
             ),
             system="당신은 AI 윤리 심사관입니다. 헌법 위반 여부만 판단합니다.",
         )
-        # LLM 불가 시 기본 통과 (쿼터 소진이 응답 차단 이유가 되어선 안 됨)
         if response == _FALLBACK_UNAVAILABLE:
-            return True
+            fail_secure = os.environ.get("CONSTITUTION_FAIL_SECURE", "false").lower() == "true"
+            policy = "fail-secure (차단)" if fail_secure else "fail-open (통과)"
+            print(
+                f"[constitution_gate] LLM 모든 fallback 소진 — 정책: {policy}",
+                file=sys.stderr,
+            )
+            return not fail_secure
         return "위반" not in response
 
     return judge

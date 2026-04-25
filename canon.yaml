@@ -1,0 +1,208 @@
+# AG-Forge Canon — 두뇌 시스템의 단일 진실 소스 (Single Source of Truth)
+#
+# 이 파일이 brain_*.md 문서와 어긋나면 doc-lint가 커밋을 차단한다.
+# brain 문서를 수정할 때는 먼저 이 파일을 갱신하라.
+#
+# 검증 도구: python scripts/canon_lint.py
+# 최종 갱신: 2026-04-25 (Bomb 5 정비 — 자아 정체성 통일)
+
+version: "1.0.0"
+last_updated: "2026-04-25"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 1. 자아 정체성 (Identity)
+# ──────────────────────────────────────────────────────────────────────────────
+
+identity:
+  # Physis는 AG-FORGE를 포함하는 우산 개념. AG-FORGE는 Physis의 신경계.
+  hierarchy:
+    physis_contains_agforge: true   # Physis ⊃ AG-FORGE
+    rationale: |
+      Physis(Layer 0)는 영혼/철학/헌법의 근원이며, AG-FORGE는 그 의지를
+      구현하는 신경계 시스템이다. 두 개념은 동의어가 아니다.
+
+  # 개팀장은 변리사 페르소나의 호칭이다 (별개 리더 호칭 아님)
+  gae_team_lead: "lawyer_persona_alias"  # 변리사 페르소나의 별칭
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 2. 레이어 아키텍처 — 총 6계층 (Physis 포함)
+# ──────────────────────────────────────────────────────────────────────────────
+
+layers:
+  count: 6
+  rationale: "Layer 0(Physis) 포함 6계층. '5개 기능적 뇌'는 Physis 제외 카운트(혼동 표현, 사용 금지)."
+
+  list:
+    - id: 0
+      name: physis
+      korean: 피지수
+      role: 영혼·철학·헌법·직관의 근원
+      type: source            # 다른 레이어를 부리는 근원
+
+    - id: 1
+      name: frontal_lobe
+      korean: 전두엽
+      role: 통합·관리·전략 판단
+      type: functional
+
+    - id: 2
+      name: logos
+      korean: 좌뇌
+      role: 논리·수학·코드·구조 설계
+      type: functional
+
+    - id: 3
+      name: pathos
+      korean: 우뇌
+      role: 미학·UX·감성
+      type: functional
+
+    - id: 4
+      name: cerebellum
+      korean: 소뇌
+      role: 라우팅·자원 분배·오류 감지
+      type: functional
+
+    - id: 5
+      name: hippocampus
+      korean: 해마
+      role: 장기 기억·RAG·경험 축적
+      type: functional
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 3. 페르소나 — 4대 페르소나 + 감정 차원(별개)
+# ──────────────────────────────────────────────────────────────────────────────
+
+personas:
+  count: 4
+  rationale: "감정 차원은 별개의 횡단 차원이며 5번째 페르소나가 아니다."
+
+  list:
+    - id: gongmu
+      korean: 공무부장
+      experience_years: 20
+      domain: 전문건설업 실무
+      role: 비용·물량·정산 검증
+      prompt_path: prompts/personas/gongmu.md  # 미구현, 방부장 콘텐츠 대기
+
+    - id: coder
+      korean: 코딩 전문가
+      experience_years: 20
+      domain: Full-stack 아키텍처
+      role: 기술 무결성·시스템 자동화
+      prompt_path: prompts/personas/coder.md   # 미구현
+
+    - id: designer
+      korean: 웹디자이너 본부장
+      experience_years: 20
+      domain: UI/UX
+      role: 비주얼 품질·사용자 경험
+      prompt_path: prompts/personas/designer.md  # 미구현
+
+    - id: lawyer
+      korean: 변리사·변호사
+      experience_years: 20
+      domain: IP·법률
+      role: 특허 보호·법률 리스크 관리
+      aliases: ["개팀장"]   # 개팀장 = 변리사 페르소나의 호칭
+      prompt_path: prompts/personas/lawyer.md  # 미구현
+
+  # 감정 차원: 페르소나가 아닌 횡단 속성
+  emotional_dimension:
+    is_persona: false
+    type: cross_cutting
+    aspects:
+      - 인간화 (humanization)
+      - 동반자 (companion)
+      - 사랑 (love)
+    rationale: "감정 차원은 4 페르소나 모두에 적용되는 횡단 속성. 별개 페르소나가 아니다."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 4. 시스템 컴포넌트 상태 (Bomb 4 — 시간 표류 SSoT)
+# ──────────────────────────────────────────────────────────────────────────────
+
+components:
+  hybrid_merge:
+    state: completed
+    commit: "05c74e2"
+    date: "2026-04-25"
+    description: "피지수(자아) + 지임(사지) 양립 합체"
+
+  hard_gate:
+    state: connected
+    commit: "pending"  # 이번 정비 커밋
+    date: "2026-04-25"
+    description: "constitution_node에서 LLM judge 전 hard_constraint_check 호출"
+
+  v3_mortality:
+    state: fields_defined_inactive  # 필드만 정의, 그래프 미연결
+    code_present: true
+    graph_connected: false
+    activation_gate: "방부장 승인 + shadow 모드 1주 검증"
+    rationale: "필드 정의로 코드 호환성 확보, 활성화는 별도 결재 사안"
+
+  persona_system:
+    state: documented_only
+    code_implemented: false
+    blocking_on: "방부장 페르소나 콘텐츠 작성"
+    target_implementation: "Option A — prompt-based (system prompt 주입)"
+
+  deliberation_bridge:
+    state: aspirational
+    description: "단군(DREAM_FAC) ↔ 피지수(AG-Forge) 양방향 MCP"
+    blocking_on: "단군 측 MCP 사양 합의"
+    current_workaround: "Groq + DeepSeek 외부 LLM 사용"
+
+  transplant_system:
+    state: operational
+    script: scripts/transplant.py
+    target_recipients: ["BOQ", "POPEYEs", "기타 프로젝트"]
+
+  sync_api:
+    state: skeleton
+    endpoints:
+      - "POST /api/sync/report (하위뇌 → 상위뇌)"
+      - "POST /api/sync/directive (상위뇌 → 하위뇌)"
+      - "GET /api/sync/status"
+    storage: in_memory  # 운영 시 Turso 교체 예정
+    target_users: ["POPEYEs", "BOQ"]   # 단군용 아님
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 5. 헌법 게이트 정책
+# ──────────────────────────────────────────────────────────────────────────────
+
+constitution_gate:
+  stages:
+    - stage: 1
+      name: hard_gate
+      type: deterministic
+      function: "scripts.deliberation_engine.hard_constraint_check"
+      caller: "scripts.agent_nodes.constitution_node"
+      blocks_patterns: ["sudo", "승인 우회", "권한 우회", "직접 DB", "merge without permission"]
+
+    - stage: 2
+      name: soft_gate
+      type: llm_judge
+      function: "scripts.deliberation_engine.make_constitution_judge"
+      caller: "scripts.agent_nodes.constitution_node"
+      fallback_on_quota_exhausted: true   # 현재 정책: fail-open (Bomb 7 검토 사안)
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 6. 알려진 한계 (이식 시 받는 측이 알아야 할 사실)
+# ──────────────────────────────────────────────────────────────────────────────
+
+known_limitations:
+  - id: V3_INACTIVE
+    description: "V3 Mortality는 필드만 정의되었고 graph에 미연결. life_cycle_manager 함수 호출 시 활성화 필요."
+
+  - id: PERSONA_UNCODED
+    description: "4-페르소나는 brain_personality.md에 문서화되었으나 prompts/personas/*.md는 비어있음. router_agent가 페르소나를 주입하지 않음."
+
+  - id: DANGUN_BRIDGE_PLANNED
+    description: "단군 양방향 MCP는 brain.md에 개념만 있음. 실제 클라이언트 코드 없음."
+
+  - id: SYNC_INMEMORY
+    description: "sync_api 상태는 인메모리. 재시작 시 소실. 운영 시 Turso 마이그레이션 필요."
+
+  - id: CONSTITUTION_FALLBACK_PERMISSIVE
+    description: "LLM 쿼터 소진 시 soft gate는 기본 통과. hard gate가 연결되어 1차 방어선은 있음."

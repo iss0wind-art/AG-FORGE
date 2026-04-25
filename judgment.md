@@ -29,3 +29,12 @@ _초기화됨._
 | 2026-04-23 23:00 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3189 tokens |
 | 2026-04-23 23:19 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3672 tokens |
 | 2026-04-23 23:21 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4812 tokens |
+| 2026-04-25 21:11 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-25 21:47 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |

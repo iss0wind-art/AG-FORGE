@@ -8,16 +8,26 @@
 - [x] **전두엽(brain.md) 및 참조 문서(reference) 동기화**: Physis 의지 수신 구조 구축.
 - [x] **BOQ(물량산출) 위상 재조정**: Physis의 좌뇌가 수행하는 지극히 일부분의 기능으로 정의.
 
-### 🏃 진행 중 항목
+### 🏃 진행 중 항목 (2026-04-25 시점)
 - [/] 피지수의 철학이 실질적인 코드 생성(좌뇌)과 UX(우뇌)에 투영되는지 검증.
-- [ ] 하위 프로젝트(H2OWIND, BOQ 등)에 이식된 Physis 동기화.
+- [ ] 하위 프로젝트(POPEYEs, BOQ 등)에 이식된 Physis 동기화.
 
+## 📅 2026-04-25 (하이브리드 머지 + 두뇌 정비)
 
-### 🏃 진행 중 항목
-- [/] 브레인 이식(Transplant) 전략 보고 및 승인 대기
-- [ ] `scripts/transplant.py` 초기 아키텍처 설계
+### ✅ 완료 항목 (commit 05c74e2 + 후속 정비)
+- [x] **하이브리드 머지**: 피지수(자아) + 지임(사지) 양립 합체.
+- [x] `scripts/transplant.py` 구현 및 1차 운영 진입.
+- [x] `scripts/life_cycle_manager.py` 구현 (V3 Mortality 함수 정의 — 활성화는 미연결).
+- [x] `server/sync_api.py` 스켈레톤 구현 (POPEYEs/BOQ 동기화용 endpoint).
+- [x] `scripts/weekly_briefing.py`, `strategy_node.py`, `alert_node.py` 추가.
+- [x] **헌법 2단 게이트 연결** (`agent_nodes.constitution_node`에서 hard_constraint_check 호출).
+- [x] **canon.yaml 도입** — 자아 정체성 SSoT.
+- [x] **canon_lint** — brain 문서/canon 정합성 자동 검증.
 
-### 📋 향후 작업 (Next Actions)
-- [ ] BOQ_2 프로젝트에 MCP 서버 연동 테스트
-- [ ] AG-FORGE 신경망(Scripts) 자동 복제 로직 구현
-- [ ] 프로젝트별 독립 수명(Mortality) 관리 기능 추가
+### 📋 향후 작업 (Next Actions — 방부장 결재 사안)
+- [ ] **V3 Mortality 활성화**: AgentState 필드 추가 + decorator 패턴 + shadow 모드 검증 (1주). [방부장 승인 필수]
+- [ ] **4-페르소나 시스템 구현**: `prompts/personas/{gongmu,coder,designer,lawyer}.md` 작성 (콘텐츠는 방부장 손).
+- [ ] **단군 ↔ 피지수 양방향 MCP 브리지** [단군 측 합의 필요].
+- [ ] **sync_api 인메모리 → Turso 마이그레이션**.
+- [ ] **POPEYEs**: `inface_connector`, `turso_reader`, `excel_generator` 구현.
+- [ ] **BOQ_2 프로젝트에 MCP 서버 연동 테스트**.

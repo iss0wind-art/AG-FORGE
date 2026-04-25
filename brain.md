@@ -190,3 +190,30 @@ BOQ 거푸집 도포 알고리즘(수조 담그기, point-in-mesh)을 페인트 
 
 ### Q6 — 침묵의 암묵 가정
 "부재 A와 부재 B가 접촉할 때 거푸집 도포를 어떻게 처리합니까?" 이 질문에 답하라. → deepseek/deepseek-chat
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 작업 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] UI 버튼 색상 수정해줘 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 작업 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 테스트 → planning/fake-model
+
+<!-- accumulate:2026-04-25 -->
+- [2026-04-25] 테스트 → planning/fake-model
