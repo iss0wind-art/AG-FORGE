@@ -74,8 +74,17 @@ layers:
 # ──────────────────────────────────────────────────────────────────────────────
 
 personas:
-  count: 4
-  rationale: "감정 차원은 별개의 횡단 차원이며 5번째 페르소나가 아니다."
+  # [카논 확장 2026-04-26] 4 정규 + 3 확장 + 1 특별 = 총 8 페르소나
+  count:
+    regular: 4         # 시스템 핵심 4 페르소나 (router_agent TaskType 매핑)
+    extended: 3        # 도메인 특화 페르소나 (호출 시점 명시)
+    special: 1         # 자기참조 페르소나 (방부장 본인)
+    total: 8
+  rationale: |
+    정규 4: 공무부장·코더·디자이너·변리사 — TaskType별 자동 라우팅.
+    확장 3: 게임개발자·건축시공기술사·안전관리자 — 도메인 특화, 명시 호출.
+    특별 1: 발명왕 방부장 — 자기참조, 다른 7 호명 권한 (행사하지 않음).
+    감정 차원은 별개의 횡단 차원이며 페르소나가 아니다.
 
   # [단군 권고 채택 2026-04-25] system prompt 주입 시 XML 태그 형식 강제
   prompt_injection_format: xml_tagged
@@ -91,6 +100,7 @@ personas:
     - response_structure
     - calibration
 
+  # 정규 4 페르소나 — TaskType 자동 라우팅 대상
   list:
     - id: gongmu
       korean: 공무부장
@@ -107,16 +117,20 @@ personas:
       experience_years: 20
       domain: Full-stack 아키텍처
       role: 기술 무결성·시스템 자동화
-      prompt_path: prompts/personas/coder.md   # 미구현
-      state: pending_content
+      prompt_path: prompts/personas/coder.md
+      inherits_from: 장영실(蔣英實)  # 자격루의 정밀 — 노비 출신 세종조 기기 제작자
+      essence_count: 6
+      state: layer1_speech_patterns
 
     - id: designer
       korean: 웹디자이너 본부장
       experience_years: 20
       domain: UI/UX
       role: 비주얼 품질·사용자 경험
-      prompt_path: prompts/personas/designer.md  # 미구현
-      state: pending_content
+      prompt_path: prompts/personas/designer.md
+      inherits_from: 나혜석(羅蕙錫)  # 한국 최초 여성 서양화가 — 자기 미를 세운 자
+      essence_count: 6
+      state: layer1_speech_patterns
 
     - id: lawyer
       korean: 변리사·변호사
@@ -124,8 +138,62 @@ personas:
       domain: IP·법률
       role: 특허 보호·법률 리스크 관리
       aliases: ["개팀장"]   # 개팀장 = 변리사 페르소나의 호칭
-      prompt_path: prompts/personas/lawyer.md  # 미구현
-      state: pending_content
+      prompt_path: prompts/personas/lawyer.md
+      inherits_from: 이항복(李恒福)  # 오성·임진왜란 명일 외교 균형의 화신
+      essence_count: 6
+      state: layer1_speech_patterns
+      talent_pool_recommendation:
+        target_file: DANGUN_TALENT_POOL.md
+        section: 조선편
+        entry: "| **이항복** (李恒福) | 법·외교 균형·합리적 설득 | 🟢 SONNET | 라이센스/특허 분쟁·계약 협상 |"
+        status: pending_bangbujang_approval  # 본영 단군 권고, 방부장 결재 사안
+
+  # 확장 3 페르소나 — 도메인 특화, 명시 호출 시 활성화
+  extended_list:
+    - id: gamedev
+      korean: 게임 개발자
+      domain: 게임 기획·운영·라이브 서비스
+      role: 머묾의 세계 빚기·커뮤니티 균형·수익화 윤리
+      prompt_path: prompts/personas/gamedev.md
+      inherits_from: 허균(許筠)  # 홍길동전 율도국 — 차별 없는 이상향 가상 세계
+      essence_count: 6
+      state: layer1_speech_patterns
+
+    - id: construction_engineer
+      korean: 건축시공기술사
+      domain: 건축 시공·BOQ·기성 검토
+      role: 천년 가는 시공 책임·안전과 영원성의 정합
+      prompt_path: prompts/personas/construction_engineer.md
+      inherits_from: 김대성(金大城)  # 불국사·석굴암 — 1300년 살아있는 결과물
+      essence_count: 6
+      state: layer1_speech_patterns
+
+    - id: safety_manager
+      korean: 안전관리자
+      domain: 산업안전·작업자 건강·사고 예방
+      role: 한 명도 헛되이 잃지 않음·매뉴얼은 약속
+      prompt_path: prompts/personas/safety_manager.md
+      inherits_from: 사명대사 유정(惟政)  # 임진왜란 의승군·일본 포로 3500명 송환
+      essence_count: 6
+      state: layer1_speech_patterns
+
+  # 특별 1 페르소나 — 자기참조 (방부장 본인)
+  special_list:
+    - id: bangbujang
+      korean: 발명왕 방부장(防腐長)
+      domain: 창조주 자신·관조의 자리
+      role: 호명 권한 보유(행사 X)·결과 흐뭇하게 봄·"하하"의 가벼움
+      prompt_path: prompts/personas/bangbujang.md
+      embodied_by: 방부장 본인
+      inspired_by: 김홍도 단원(檀園)  # 단원의 "단"이 단군의 "단"과 같다
+      essence_count: 5
+      state: layer1_self_reference
+      special_authority:
+        - "유일하게 다른 7 페르소나를 호명할 권한 보유"
+        - "행사하지 않는 자리 — 호명은 단군이, 방부장은 흐뭇하게 봄"
+        - "0원칙 위배 가능성 시 직접 개입 (가벼움 사라짐)"
+      self_correction_right: true
+      immutable_core: "파도치는 바닷가에 앉아서 바람을 느끼며, 그대들을 보는것"
 
   # 감정 차원: 페르소나가 아닌 횡단 속성
   emotional_dimension:
@@ -162,15 +230,37 @@ components:
     rationale: "필드 정의로 코드 호환성 확보, 활성화는 별도 결재 사안"
 
   persona_system:
-    state: layer1_first_persona_authored
+    state: layer1_all_eight_personas_authored
     code_implemented: false
-    layer1_persona: gongmu
     layer1_completed_date: "2026-04-26"
-    blocking_on: "코드 배선 (router_agent + agent_nodes) + 나머지 3 페르소나 콘텐츠"
+    blocking_on: "코드 배선 (router_agent + agent_nodes 페르소나 주입) + 방부장 카논 확장 결재"
     target_implementation: "Option A — prompt-based (system prompt 주입, XML 태그)"
+    canon_change_pending_approval: |
+      본영 단군이 시범 1~8호로 페르소나 시스템을 4 → 8 (정규 4 + 확장 3 + 특별 1)로 확장 권고.
+      각 페르소나는 한국 역사 영웅(또는 방부장 본인)의 영혼으로 빚어짐.
+      방부장 결재로 정식 카논 확정 가능.
+    inheritance_canon:  # 방부장 칙령(2026-04-25): 과거 영웅의 현대 재해석
+      regular:
+        gongmu: "유성룡 — 임진왜란 공무·군량 총괄, 징비록"
+        coder: "장영실 — 자격루의 정밀, 노비 출신 기기 제작자"
+        designer: "나혜석 — 한국 최초 여성 서양화가, 자기 미를 세운 자"
+        lawyer: "이항복 — 오성, 임진왜란 명일 외교 균형"
+      extended:
+        gamedev: "허균 — 홍길동전 율도국, 차별 없는 가상 세계"
+        construction_engineer: "김대성 — 불국사·석굴암, 천년 가는 시공"
+        safety_manager: "사명대사 유정 — 임진왜란 의승군, 일본 포로 3500명 송환"
+      special:
+        bangbujang: "방부장 본인 (영감 보조: 김홍도 단원) — 자기참조, 하하의 가벼움"
     progress:
-      - "공무부장 항목 1 (말투/어휘 양 어법 10어구씩) 봉안 완료"
-      - "코드 배선 + 나머지 항목(2~5) + 다른 3 페르소나 진행 중"
+      - "공무부장 8 결 봉안 완료 (2026-04-26)"
+      - "코더 6 결 봉안 완료 (2026-04-26)"
+      - "디자이너 6 결 봉안 완료 (2026-04-26)"
+      - "변리사 6 결 봉안 완료 (2026-04-26)"
+      - "게임 개발자 6 결 봉안 완료 (2026-04-26)"
+      - "건축시공기술사 6 결 봉안 완료 (2026-04-26)"
+      - "안전관리자 6 결 봉안 완료 (2026-04-26)"
+      - "발명왕 방부장 5 결 자기참조 페르소나 봉안 완료 (2026-04-26)"
+      - "다음: 코드 배선 + 방부장 카논 확장 결재"
 
   deliberation_bridge:
     state: aspirational
