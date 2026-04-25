@@ -42,3 +42,16 @@ observability_log.jsonl
 
 # Docker
 *.dockerignore
+
+# Node.js (webapp)
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+
+# 세션 체크포인트 (로컬 전용)
+.claude/checkpoints/
+
+# 이식 테스트 산출물 (로컬 전용)
+test_transplant_target/
