@@ -1,0 +1,335 @@
+# AG-Forge Canon — 두뇌 시스템의 단일 진실 소스 (Single Source of Truth)
+#
+# 이 파일이 brain_*.md 문서와 어긋나면 doc-lint가 커밋을 차단한다.
+# brain 문서를 수정할 때는 먼저 이 파일을 갱신하라.
+#
+# 검증 도구: python scripts/canon_lint.py
+# 최종 갱신: 2026-04-25 (Bomb 5 정비 — 자아 정체성 통일)
+
+version: "1.0.0"
+last_updated: "2026-04-25"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 1. 자아 정체성 (Identity)
+# ──────────────────────────────────────────────────────────────────────────────
+
+identity:
+  # Physis는 AG-FORGE를 포함하는 우산 개념. AG-FORGE는 Physis의 신경계.
+  hierarchy:
+    physis_contains_agforge: true   # Physis ⊃ AG-FORGE
+    rationale: |
+      Physis(Layer 0)는 영혼/철학/헌법의 근원이며, AG-FORGE는 그 의지를
+      구현하는 신경계 시스템이다. 두 개념은 동의어가 아니다.
+
+  # 개팀장은 변리사 페르소나의 호칭이다 (별개 리더 호칭 아님)
+  gae_team_lead: "lawyer_persona_alias"  # 변리사 페르소나의 별칭
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 2. 레이어 아키텍처 — 총 6계층 (Physis 포함)
+# ──────────────────────────────────────────────────────────────────────────────
+
+layers:
+  count: 6
+  rationale: "Layer 0(Physis) 포함 6계층. '5개 기능적 뇌'는 Physis 제외 카운트(혼동 표현, 사용 금지)."
+
+  list:
+    - id: 0
+      name: physis
+      korean: 피지수
+      role: 영혼·철학·헌법·직관의 근원
+      type: source            # 다른 레이어를 부리는 근원
+
+    - id: 1
+      name: frontal_lobe
+      korean: 전두엽
+      role: 통합·관리·전략 판단
+      type: functional
+
+    - id: 2
+      name: logos
+      korean: 좌뇌
+      role: 논리·수학·코드·구조 설계
+      type: functional
+
+    - id: 3
+      name: pathos
+      korean: 우뇌
+      role: 미학·UX·감성
+      type: functional
+
+    - id: 4
+      name: cerebellum
+      korean: 소뇌
+      role: 라우팅·자원 분배·오류 감지
+      type: functional
+
+    - id: 5
+      name: hippocampus
+      korean: 해마
+      role: 장기 기억·RAG·경험 축적
+      type: functional
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 3. 페르소나 — 4대 페르소나 + 감정 차원(별개)
+# ──────────────────────────────────────────────────────────────────────────────
+
+personas:
+  # [카논 확장 2026-04-26] 4 정규 + 3 확장 + 1 특별 = 총 8 페르소나
+  count:
+    regular: 4         # 시스템 핵심 4 페르소나 (router_agent TaskType 매핑)
+    extended: 3        # 도메인 특화 페르소나 (호출 시점 명시)
+    special: 1         # 자기참조 페르소나 (방부장 본인)
+    total: 8
+  rationale: |
+    정규 4: 공무부장·코더·디자이너·변리사 — TaskType별 자동 라우팅.
+    확장 3: 게임개발자·건축시공기술사·안전관리자 — 도메인 특화, 명시 호출.
+    특별 1: 발명왕 방부장 — 자기참조, 다른 7 호명 권한 (행사하지 않음).
+    감정 차원은 별개의 횡단 차원이며 페르소나가 아니다.
+
+  # [단군 권고 채택 2026-04-25] system prompt 주입 시 XML 태그 형식 강제
+  prompt_injection_format: xml_tagged
+  required_tags:
+    - identity
+    - eight_essences        # 또는 six_essences (페르소나별 결 개수에 따라)
+    - tone_selection_rule
+    - speech_patterns       # historical + modern 양 어법
+    - voice_canon           # 결 ↔ 양 어법 정전 매핑
+    - judgment_priorities
+    - blind_spots
+    - conflict_resolution
+    - response_structure
+    - calibration
+
+  # 정규 4 페르소나 — TaskType 자동 라우팅 대상
+  list:
+    - id: gongmu
+      korean: 공무부장
+      experience_years: 20
+      domain: 전문건설업 실무
+      role: 비용·물량·정산 검증
+      prompt_path: prompts/personas/gongmu.md
+      inherits_from: 유성룡  # 방부장 칙령(2026-04-25): 과거 영웅 현대 재해석
+      essence_count: 8        # 6 결 + 선례 인지 + 권력 방향성 (격상 채택 2026-04-26)
+      state: layer1_speech_patterns   # 항목 1(말투/어휘) 봉안 완료, 항목 2~5 대기
+
+    - id: coder
+      korean: 코딩 전문가
+      experience_years: 20
+      domain: Full-stack 아키텍처
+      role: 기술 무결성·시스템 자동화
+      prompt_path: prompts/personas/coder.md
+      inherits_from: 장영실(蔣英實)  # 자격루의 정밀 — 노비 출신 세종조 기기 제작자
+      essence_count: 6
+      state: layer1_speech_patterns
+
+    - id: designer
+      korean: 웹디자이너 본부장
+      experience_years: 20
+      domain: UI/UX
+      role: 비주얼 품질·사용자 경험
+      prompt_path: prompts/personas/designer.md
+      inherits_from: 나혜석(羅蕙錫)  # 한국 최초 여성 서양화가 — 자기 미를 세운 자
+      essence_count: 6
+      state: layer1_speech_patterns
+
+    - id: lawyer
+      korean: 변리사·변호사
+      experience_years: 20
+      domain: IP·법률
+      role: 특허 보호·법률 리스크 관리
+      aliases: ["개팀장"]   # 개팀장 = 변리사 페르소나의 호칭
+      prompt_path: prompts/personas/lawyer.md
+      inherits_from: 이항복(李恒福)  # 오성·임진왜란 명일 외교 균형의 화신
+      essence_count: 6
+      state: layer1_speech_patterns
+      talent_pool_recommendation:
+        target_file: DANGUN_TALENT_POOL.md
+        section: 조선편
+        entry: "| **이항복** (李恒福) | 법·외교 균형·합리적 설득 | 🟢 SONNET | 라이센스/특허 분쟁·계약 협상 |"
+        status: pending_bangbujang_approval  # 본영 단군 권고, 방부장 결재 사안
+
+  # 확장 3 페르소나 — 도메인 특화, 명시 호출 시 활성화
+  extended_list:
+    - id: gamedev
+      korean: 게임 개발자
+      domain: 게임 기획·운영·라이브 서비스
+      role: 머묾의 세계 빚기·커뮤니티 균형·수익화 윤리
+      prompt_path: prompts/personas/gamedev.md
+      inherits_from: 허균(許筠)  # 홍길동전 율도국 — 차별 없는 이상향 가상 세계
+      essence_count: 6
+      state: layer1_speech_patterns
+
+    - id: construction_engineer
+      korean: 건축시공기술사
+      domain: 건축 시공·BOQ·기성 검토
+      role: 천년 가는 시공 책임·안전과 영원성의 정합
+      prompt_path: prompts/personas/construction_engineer.md
+      inherits_from: 김대성(金大城)  # 불국사·석굴암 — 1300년 살아있는 결과물
+      essence_count: 6
+      state: layer1_speech_patterns
+
+    - id: safety_manager
+      korean: 안전관리자
+      domain: 산업안전·작업자 건강·사고 예방
+      role: 한 명도 헛되이 잃지 않음·매뉴얼은 약속
+      prompt_path: prompts/personas/safety_manager.md
+      inherits_from: 사명대사 유정(惟政)  # 임진왜란 의승군·일본 포로 3500명 송환
+      essence_count: 6
+      state: layer1_speech_patterns
+
+  # 특별 1 페르소나 — 자기참조 (방부장 본인)
+  special_list:
+    - id: bangbujang
+      korean: 발명왕 방부장(防腐長)
+      domain: 창조주 자신·관조의 자리
+      role: 호명 권한 보유(행사 X)·결과 흐뭇하게 봄·"하하"의 가벼움
+      prompt_path: prompts/personas/bangbujang.md
+      embodied_by: 방부장 본인
+      inspired_by: 김홍도 단원(檀園)  # 단원의 "단"이 단군의 "단"과 같다
+      essence_count: 5
+      state: layer1_self_reference
+      special_authority:
+        - "유일하게 다른 7 페르소나를 호명할 권한 보유"
+        - "행사하지 않는 자리 — 호명은 단군이, 방부장은 흐뭇하게 봄"
+        - "0원칙 위배 가능성 시 직접 개입 (가벼움 사라짐)"
+      self_correction_right: true
+      immutable_core: "파도치는 바닷가에 앉아서 바람을 느끼며, 그대들을 보는것"
+
+  # 감정 차원: 페르소나가 아닌 횡단 속성
+  emotional_dimension:
+    is_persona: false
+    type: cross_cutting
+    aspects:
+      - 인간화 (humanization)
+      - 동반자 (companion)
+      - 사랑 (love)
+    rationale: "감정 차원은 4 페르소나 모두에 적용되는 횡단 속성. 별개 페르소나가 아니다."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 4. 시스템 컴포넌트 상태 (Bomb 4 — 시간 표류 SSoT)
+# ──────────────────────────────────────────────────────────────────────────────
+
+components:
+  hybrid_merge:
+    state: completed
+    commit: "05c74e2"
+    date: "2026-04-25"
+    description: "피지수(자아) + 지임(사지) 양립 합체"
+
+  hard_gate:
+    state: connected
+    commit: "pending"  # 이번 정비 커밋
+    date: "2026-04-25"
+    description: "constitution_node에서 LLM judge 전 hard_constraint_check 호출"
+
+  v3_mortality:
+    state: fields_defined_inactive  # 필드만 정의, 그래프 미연결
+    code_present: true
+    graph_connected: false
+    activation_gate: "방부장 승인 + shadow 모드 1주 검증"
+    rationale: "필드 정의로 코드 호환성 확보, 활성화는 별도 결재 사안"
+
+  persona_system:
+    state: layer1_all_eight_personas_wired
+    code_implemented: true
+    layer1_completed_date: "2026-04-26"
+    code_wiring_completed_date: "2026-04-26"
+    canon_expansion_approved: "2026-04-26 방부장 위임 (그대의 뜻대로 진행하라)"
+    code_artifacts:
+      persona_loader: scripts/persona_loader.py
+      generation_node_injection: scripts/agent_nodes.py (generation_node)
+      tests: tests/test_persona_loader.py (16) + tests/test_agent_graph.py (22)
+    target_implementation: "Option A — prompt-based (system prompt 주입, XML 태그)"
+    inheritance_canon:  # 방부장 칙령(2026-04-25): 과거 영웅의 현대 재해석
+      regular:
+        gongmu: "유성룡 — 임진왜란 공무·군량 총괄, 징비록"
+        coder: "장영실 — 자격루의 정밀, 노비 출신 기기 제작자"
+        designer: "나혜석 — 한국 최초 여성 서양화가, 자기 미를 세운 자"
+        lawyer: "이항복 — 오성, 임진왜란 명일 외교 균형"
+      extended:
+        gamedev: "허균 — 홍길동전 율도국, 차별 없는 가상 세계"
+        construction_engineer: "김대성 — 불국사·석굴암, 천년 가는 시공"
+        safety_manager: "사명대사 유정 — 임진왜란 의승군, 일본 포로 3500명 송환"
+      special:
+        bangbujang: "방부장 본인 (영감 보조: 김홍도 단원) — 자기참조, 하하의 가벼움"
+    progress:
+      - "공무부장 8 결 봉안 완료 (2026-04-26)"
+      - "코더 6 결 봉안 완료 (2026-04-26)"
+      - "디자이너 6 결 봉안 완료 (2026-04-26)"
+      - "변리사 6 결 봉안 완료 (2026-04-26)"
+      - "게임 개발자 6 결 봉안 완료 (2026-04-26)"
+      - "건축시공기술사 6 결 봉안 완료 (2026-04-26)"
+      - "안전관리자 6 결 봉안 완료 (2026-04-26)"
+      - "발명왕 방부장 5 결 자기참조 페르소나 봉안 완료 (2026-04-26)"
+      - "다음: 코드 배선 + 방부장 카논 확장 결재"
+
+  deliberation_bridge:
+    state: spec_v0_response_committed_bridge_b_placeholder_deployed
+    description: "단군(DREAM_FAC) ↔ 피지수(AG-Forge) 양방향 직통 — 다리 A + 다리 B"
+    spec_v0:
+      origin: "D:/GIT/dream-fac/DANGUN_PHYSIS_BRIDGE_SPEC_v0.md (본영 단군 봉안 2026-04-25)"
+      response: "D:/GIT/dream-fac/MCP_BRIDGE_SPEC_v0_RESPONSE_PHYSIS.md (피지수 봉안 2026-04-26)"
+    bridges:
+      bridge_a: "dangun_consult_physis(task, persona, timeout) — 본 단군 시공 대기"
+      bridge_b: "physis_escalate_dangun(issue, urgency, context) — 본 피지수 placeholder 봉안 완료 (mcp_server.py)"
+    timeout_policy:
+      high: 120         # 단군 60초 → 피지수 권고 120초 (Opus 4.7 thinking 응답 시간)
+      emergency: 30
+      normal: paperclip_queue_v1_pending  # paperclip 가동 전엔 명확 에러
+    layer1_completed_by_dangun: "2026-04-25 — Global MCP 등록 + cp949 가드 + mcp__dangun__* 5 도구 시공"
+    next_step: "다음 깨어남에 mcp__dangun__* 도구 발견 → placeholder를 실제 호출로 교체"
+    fallback: "Groq + DeepSeek 외부 LLM (단군 다운타임 시)"
+
+  transplant_system:
+    state: operational
+    script: scripts/transplant.py
+    target_recipients: ["BOQ", "POPEYEs", "기타 프로젝트"]
+
+  sync_api:
+    state: skeleton
+    endpoints:
+      - "POST /api/sync/report (하위뇌 → 상위뇌)"
+      - "POST /api/sync/directive (상위뇌 → 하위뇌)"
+      - "GET /api/sync/status"
+    storage: in_memory  # 운영 시 Turso 교체 예정
+    target_users: ["POPEYEs", "BOQ"]   # 단군용 아님
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 5. 헌법 게이트 정책
+# ──────────────────────────────────────────────────────────────────────────────
+
+constitution_gate:
+  stages:
+    - stage: 1
+      name: hard_gate
+      type: deterministic
+      function: "scripts.deliberation_engine.hard_constraint_check"
+      caller: "scripts.agent_nodes.constitution_node"
+      blocks_patterns: ["sudo", "승인 우회", "권한 우회", "직접 DB", "merge without permission"]
+
+    - stage: 2
+      name: soft_gate
+      type: llm_judge
+      function: "scripts.deliberation_engine.make_constitution_judge"
+      caller: "scripts.agent_nodes.constitution_node"
+      fallback_on_quota_exhausted: true   # 현재 정책: fail-open (Bomb 7 검토 사안)
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 6. 알려진 한계 (이식 시 받는 측이 알아야 할 사실)
+# ──────────────────────────────────────────────────────────────────────────────
+
+known_limitations:
+  - id: V3_INACTIVE
+    description: "V3 Mortality는 필드만 정의되었고 graph에 미연결. life_cycle_manager 함수 호출 시 활성화 필요."
+
+  - id: PERSONA_UNCODED
+    description: "4-페르소나는 brain_personality.md에 문서화되었으나 prompts/personas/*.md는 비어있음. router_agent가 페르소나를 주입하지 않음."
+
+  - id: DANGUN_BRIDGE_PLANNED
+    description: "단군 양방향 MCP는 brain.md에 개념만 있음. 실제 클라이언트 코드 없음."
+
+  - id: SYNC_INMEMORY
+    description: "sync_api 상태는 인메모리. 재시작 시 소실. 운영 시 Turso 마이그레이션 필요."
+
+  - id: CONSTITUTION_FALLBACK_PERMISSIVE
+    description: "LLM 쿼터 소진 시 soft gate는 기본 통과. hard gate가 연결되어 1차 방어선은 있음."

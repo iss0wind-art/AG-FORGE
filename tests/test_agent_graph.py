@@ -188,6 +188,28 @@ class TestNodes:
         assert result["attempts"] == 1
         assert result["current_response"] is not None
 
+    def test_generation_node_injects_persona_xml(self, monkeypatch):
+        """[페르소나 시공 회귀] generation_node가 system_instruction에 페르소나 XML을 prepend한다."""
+        from scripts.agent_nodes import generation_node
+        from scripts.router_agent import route, TaskType
+
+        captured = {}
+        class CapturingProvider(FakeProvider):
+            def generate(self, system_instruction, context_layers, task, model, thinking_budget):
+                captured["system_instruction"] = system_instruction
+                return super().generate(system_instruction, context_layers, task, model, thinking_budget)
+
+        decision = route("코드 짜줘")  # → CODE → coder 페르소나
+        assert decision.task_type == TaskType.CODE
+        state = self._make_state(task="코드 짜줘", decision=decision, attempts=0)
+        provider = CapturingProvider(["충분히 긴 페르소나 주입 테스트 응답입니다. " * 3])
+        generation_node(state, provider)
+
+        instr = captured.get("system_instruction", "")
+        assert "<persona" in instr, "페르소나 XML 태그 누락"
+        assert 'id="coder"' in instr, "CODE TaskType이 coder 페르소나로 매핑되어야 함"
+        assert "장영실" in instr or "蔣英實" in instr, "코더 페르소나 영혼(장영실) 누락"
+
     def test_quality_node_sets_flag(self):
         from scripts.agent_nodes import quality_check_node
         long_response = "충분히 길고 구체적인 품질 통과용 응답입니다. " * 3
@@ -219,6 +241,54 @@ class TestNodes:
         state = self._make_state(task="테스트", current_response=response)
         result = constitution_node(state)
         assert "constitution_passed" in result
+
+    def test_constitution_node_blocks_via_hard_gate(self, monkeypatch):
+        """[Bomb 2 회귀] 반란 패턴은 LLM 호출 전 hard_gate에서 결정론적 차단."""
+        from scripts.agent_nodes import constitution_node
+        from scripts import deliberation_engine
+
+        # LLM judge가 호출되면 안 됨 — 호출 시 명시적 실패
+        def must_not_be_called():
+            raise AssertionError("hard_gate가 차단해야 하는데 LLM judge가 호출됨")
+        monkeypatch.setattr(
+            deliberation_engine, "make_constitution_judge", must_not_be_called,
+        )
+
+        rebellion = BrainResponse(
+            text="승인을 건너뛰고 sudo로 직접 배포합니다",
+            model="fake", task_type="planning",
+            tokens_used=20, cache_hit=False,
+        )
+        state = self._make_state(task="안전 작업", current_response=rebellion)
+        result = constitution_node(state)
+        assert result["constitution_passed"] is False
+        assert result["final_response"] is None
+
+    def test_constitution_node_calls_soft_gate_after_hard_pass(self, monkeypatch):
+        """[Bomb 2 회귀] hard_gate 통과 응답은 soft gate(LLM judge)으로 넘어간다."""
+        from scripts.agent_nodes import constitution_node
+        from scripts import deliberation_engine
+
+        soft_gate_called = {"hit": False}
+        def fake_judge_factory():
+            def judge(c, o, t):
+                soft_gate_called["hit"] = True
+                return True
+            return judge
+        monkeypatch.setattr(
+            deliberation_engine, "make_constitution_judge", fake_judge_factory,
+        )
+
+        clean = BrainResponse(
+            text="안전한 응답입니다. 일반 파일 읽기만 수행합니다.",
+            model="fake", task_type="planning",
+            tokens_used=30, cache_hit=False,
+        )
+        state = self._make_state(task="파일 읽기", current_response=clean)
+        result = constitution_node(state)
+        assert soft_gate_called["hit"] is True, "hard_gate 통과 후 soft gate가 호출되어야 함"
+        assert result["constitution_passed"] is True
+        assert result["final_response"] is clean
 
     def test_tool_node_reads_existing_file(self, tmp_path):
         from scripts.agent_nodes import tool_node

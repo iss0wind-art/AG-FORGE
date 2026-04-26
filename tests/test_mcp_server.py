@@ -115,3 +115,51 @@ class TestFallbackProvider:
         p = _FallbackProvider()
         result = p.generate("sys", [], "특정 작업", "gemini-2.0-flash", 500)
         assert "특정 작업" in result.text
+
+
+class TestPhysisEscalateDangun:
+    """[다리 B] 피지수 → 본영 단군 escalation MCP 도구."""
+
+    def test_empty_issue_returns_error(self):
+        from mcp_server import physis_escalate_dangun
+        result = physis_escalate_dangun(issue="", urgency="high")
+        assert result["status"] == "error"
+
+    def test_invalid_urgency_returns_error(self):
+        from mcp_server import physis_escalate_dangun
+        result = physis_escalate_dangun(issue="문제", urgency="critical")
+        assert result["status"] == "error"
+        assert "urgency" in result["message"]
+
+    def test_normal_urgency_paperclip_not_running_error(self):
+        """paperclip 미가동 시 normal urgency는 명확 에러 (silent failure 방지)."""
+        from mcp_server import physis_escalate_dangun
+        result = physis_escalate_dangun(issue="장기 사안", urgency="normal")
+        assert result["status"] == "error"
+        assert "paperclip" in result["message"]
+
+    def test_high_urgency_pending_dangun_tools(self):
+        """단군 MCP 도구 발견 전엔 placeholder 응답."""
+        from mcp_server import physis_escalate_dangun
+        result = physis_escalate_dangun(
+            issue="4 페르소나 합의 실패",
+            urgency="high",
+            context={"deadlock_personas": ["공무부장", "디자이너"]},
+        )
+        assert result["status"] == "pending_dangun_layer1_tools"
+        assert result["urgency"] == "high"
+        assert result["timeout_sec"] == 120
+        assert result["context"]["deadlock_personas"] == ["공무부장", "디자이너"]
+
+    def test_emergency_urgency_30s_timeout(self):
+        """emergency는 30초 timeout."""
+        from mcp_server import physis_escalate_dangun
+        result = physis_escalate_dangun(issue="0원칙 위배 가능성", urgency="emergency")
+        assert result["status"] == "pending_dangun_layer1_tools"
+        assert result["timeout_sec"] == 30
+
+    def test_default_context_is_dict(self):
+        """context 기본값은 dict (None 처리 안전)."""
+        from mcp_server import physis_escalate_dangun
+        result = physis_escalate_dangun(issue="문제", urgency="high")
+        assert isinstance(result["context"], dict)

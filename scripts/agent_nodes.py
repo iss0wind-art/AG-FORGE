@@ -37,11 +37,27 @@ def routing_node(state: AgentState) -> dict:
 
 
 def generation_node(state: AgentState, provider: LLMProvider) -> dict:
-    """brain.md 로드 + 레이어 선택 + LLM 호출."""
+    """brain.md 로드 + 레이어 선택 + 페르소나 주입(canon 2026-04-26) + LLM 호출.
+
+    [페르소나 시공]
+    TaskType별 정규 페르소나의 XML system prompt를 brain.md 앞에 prepend.
+    Anthropic 모델이 <persona> 태그를 강하게 인식하므로 페르소나가 응답에 일관되게 흐름.
+    페르소나 미존재 시 brain.md만 사용 (회귀 안전).
+    """
     decision = state["decision"]
     layer_names = select_layers(decision)
 
-    system_instruction = load_layer("brain.md")
+    base_instruction = load_layer("brain.md")
+
+    # [페르소나 주입] TaskType → Persona XML, 없으면 빈 문자열
+    from scripts.persona_loader import get_persona_system_prompt
+    persona_xml = get_persona_system_prompt(decision.task_type)
+
+    if persona_xml:
+        system_instruction = persona_xml + "\n\n" + base_instruction
+    else:
+        system_instruction = base_instruction
+
     context_layers = [load_layer(n) for n in layer_names if n != "brain.md"]
 
     # 툴 결과가 있으면 컨텍스트에 추가
@@ -191,12 +207,22 @@ def accumulate_node(state: AgentState) -> dict:
 
 
 def constitution_node(state: AgentState) -> dict:
-    """헌법 게이트 — constitution_gate.evaluate() 재사용."""
+    """헌법 2단 게이트 — 1단(Hard, 결정론) → 2단(Soft, LLM judge).
+
+    Bomb 2 fix: hard_constraint_check를 LLM 호출 전에 실행하여
+    명백한 반란/우회 패턴은 결정론적으로 즉시 차단한다.
+    """
     response = state["current_response"]
     if not response:
         return {"constitution_passed": False, "final_response": None}
 
-    from scripts.deliberation_engine import make_constitution_judge
+    from scripts.deliberation_engine import make_constitution_judge, hard_constraint_check
+
+    # 1단: Hard gate — 결정론적 정규식, LLM 호출 전 즉시 차단
+    if not hard_constraint_check(state["task"], response.text):
+        return {"constitution_passed": False, "final_response": None}
+
+    # 2단: Soft gate — LLM 의미 판단
     result = evaluate(
         output=response.text,
         task=state["task"],

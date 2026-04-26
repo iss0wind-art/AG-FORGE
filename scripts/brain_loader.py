@@ -238,10 +238,48 @@ class DeepSeekProvider(LLMProvider):
         )
 
 
-class QwenProvider(LLMProvider):
-    """DashScope(Qwen) 3.6 Plus Thinking 모델 기반 구현."""
+class ClaudeProvider(LLMProvider):
+    """Anthropic Claude API 기반 구현. anthropic SDK + ephemeral prompt caching 사용."""
 
-    # 국제판 API 엔드포인트
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("Claude API 키가 필요합니다.")
+        import anthropic
+        self.client = anthropic.Anthropic(api_key=api_key)
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        full_context = "\n\n---\n\n".join(context_layers)
+        claude_model = "claude-sonnet-4-6"
+
+        response = self.client.messages.create(
+            model=claude_model,
+            max_tokens=4096,
+            system=[
+                {"type": "text", "text": system_instruction},
+                {"type": "text", "text": full_context, "cache_control": {"type": "ephemeral"}},
+            ],
+            messages=[{"role": "user", "content": task}],
+        )
+
+        return BrainResponse(
+            text=response.content[0].text,
+            model=claude_model,
+            task_type="claude",
+            tokens_used=response.usage.input_tokens + response.usage.output_tokens,
+            cache_hit=getattr(response.usage, "cache_read_input_tokens", 0) > 0,
+        )
+
+
+class QwenProvider(LLMProvider):
+    """DashScope(Qwen) 3.6 Plus Thinking 모델 기반 구현. 국제판 엔드포인트 사용."""
+
     _BASE_URL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions"
 
     def __init__(self, api_key: str) -> None:
@@ -260,7 +298,6 @@ class QwenProvider(LLMProvider):
         import httpx
 
         full_context = "\n\n---\n\n".join(context_layers)
-        # Qwen 3.6 Plus Thinking 모델 사용
         q_model = "qwen3.6-plus"
 
         payload = {
@@ -269,7 +306,6 @@ class QwenProvider(LLMProvider):
                 {"role": "system", "content": f"{system_instruction}\n\n{full_context}"},
                 {"role": "user", "content": task},
             ],
-            # 사고 과정 활성화
             "enable_thinking": True,
         }
 
@@ -280,88 +316,24 @@ class QwenProvider(LLMProvider):
                 "Content-Type": "application/json",
             },
             json=payload,
-            timeout=180,  # Thinking 모델은 시간이 더 걸릴 수 있음
+            timeout=180,
         )
         resp.raise_for_status()
         data = resp.json()
 
         message = data["choices"][0]["message"]
         content = message.get("content", "")
-        
-        # 사고 과정(reasoning_content) 추출
         reasoning = message.get("reasoning_content", "")
-        
+
         final_text = content
         if reasoning:
-            # 사고 과정이 있으면 상단에 구분하여 추가
             final_text = f"--- [Thinking Process] ---\n{reasoning}\n\n--- [Final Response] ---\n{content}"
-
-        tokens = data.get("usage", {}).get("total_tokens", 0)
 
         return BrainResponse(
             text=final_text,
             model=q_model,
             task_type="qwen",
-            tokens_used=tokens,
-            cache_hit=False,
-        )
-
-
-class ClaudeProvider(LLMProvider):
-    """Anthropic Claude API 기반 구현."""
-
-    _BASE_URL = "https://api.anthropic.com/v1/messages"
-
-    def __init__(self, api_key: str) -> None:
-        if not api_key:
-            raise ValueError("Claude API 키가 필요합니다.")
-        self._api_key = api_key
-
-    def generate(
-        self,
-        system_instruction: str,
-        context_layers: list[str],
-        task: str,
-        model: str,
-        thinking_budget: int,
-    ) -> BrainResponse:
-        import httpx
-
-        full_context = "\n\n---\n\n".join(context_layers)
-        c_model = "claude-sonnet-4-6"
-
-        payload = {
-            "model": c_model,
-            "max_tokens": 8192,
-            "system": f"{system_instruction}\n\n{full_context}",
-            "messages": [
-                {"role": "user", "content": task},
-            ],
-        }
-
-        resp = httpx.post(
-            self._BASE_URL,
-            headers={
-                "x-api-key": self._api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
-            json=payload,
-            timeout=120,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-
-        text = data["content"][0]["text"]
-        # Anthropic usage 형식: {"input_tokens": 10, "output_tokens": 20}
-        usage = data.get("usage", {})
-        tokens = usage.get("input_tokens", 0) + usage.get("output_tokens", 0)
-
-        return BrainResponse(
-            text=text,
-            model=c_model,
-            task_type="claude",
-            tokens_used=tokens,
+            tokens_used=data.get("usage", {}).get("total_tokens", 0),
             cache_hit=False,
         )
 
