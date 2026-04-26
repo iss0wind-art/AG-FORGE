@@ -1,4 +1,4 @@
-﻿"""
+"""
 전두엽 로더 — brain_loader.py
 brain.md + 레이어 파일을 Gemini CachedContent API로 로드한다.
 LLMProvider 추상화로 추후 Claude 이식 가능.
@@ -12,6 +12,8 @@ from pathlib import Path
 from typing import Any
 
 try:
+    import warnings
+    warnings.filterwarnings("ignore", category=FutureWarning)
     import google.generativeai as genai
 except ImportError:
     genai = None  # type: ignore  # 테스트 환경에서 SDK 없어도 동작
@@ -236,6 +238,134 @@ class DeepSeekProvider(LLMProvider):
         )
 
 
+class QwenProvider(LLMProvider):
+    """DashScope(Qwen) 3.6 Plus Thinking 모델 기반 구현."""
+
+    # 국제판 API 엔드포인트
+    _BASE_URL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions"
+
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("Qwen API 키가 필요합니다.")
+        self._api_key = api_key
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        import httpx
+
+        full_context = "\n\n---\n\n".join(context_layers)
+        # Qwen 3.6 Plus Thinking 모델 사용
+        q_model = "qwen3.6-plus"
+
+        payload = {
+            "model": q_model,
+            "messages": [
+                {"role": "system", "content": f"{system_instruction}\n\n{full_context}"},
+                {"role": "user", "content": task},
+            ],
+            # 사고 과정 활성화
+            "enable_thinking": True,
+        }
+
+        resp = httpx.post(
+            self._BASE_URL,
+            headers={
+                "Authorization": f"Bearer {self._api_key}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=180,  # Thinking 모델은 시간이 더 걸릴 수 있음
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        message = data["choices"][0]["message"]
+        content = message.get("content", "")
+        
+        # 사고 과정(reasoning_content) 추출
+        reasoning = message.get("reasoning_content", "")
+        
+        final_text = content
+        if reasoning:
+            # 사고 과정이 있으면 상단에 구분하여 추가
+            final_text = f"--- [Thinking Process] ---\n{reasoning}\n\n--- [Final Response] ---\n{content}"
+
+        tokens = data.get("usage", {}).get("total_tokens", 0)
+
+        return BrainResponse(
+            text=final_text,
+            model=q_model,
+            task_type="qwen",
+            tokens_used=tokens,
+            cache_hit=False,
+        )
+
+
+class ClaudeProvider(LLMProvider):
+    """Anthropic Claude API 기반 구현."""
+
+    _BASE_URL = "https://api.anthropic.com/v1/messages"
+
+    def __init__(self, api_key: str) -> None:
+        if not api_key:
+            raise ValueError("Claude API 키가 필요합니다.")
+        self._api_key = api_key
+
+    def generate(
+        self,
+        system_instruction: str,
+        context_layers: list[str],
+        task: str,
+        model: str,
+        thinking_budget: int,
+    ) -> BrainResponse:
+        import httpx
+
+        full_context = "\n\n---\n\n".join(context_layers)
+        c_model = "claude-sonnet-4-6"
+
+        payload = {
+            "model": c_model,
+            "max_tokens": 8192,
+            "system": f"{system_instruction}\n\n{full_context}",
+            "messages": [
+                {"role": "user", "content": task},
+            ],
+        }
+
+        resp = httpx.post(
+            self._BASE_URL,
+            headers={
+                "x-api-key": self._api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json=payload,
+            timeout=120,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        text = data["content"][0]["text"]
+        # Anthropic usage 형식: {"input_tokens": 10, "output_tokens": 20}
+        usage = data.get("usage", {})
+        tokens = usage.get("input_tokens", 0) + usage.get("output_tokens", 0)
+
+        return BrainResponse(
+            text=text,
+            model=c_model,
+            task_type="claude",
+            tokens_used=tokens,
+            cache_hit=False,
+        )
+
+
 def load_layer(layer_name: str) -> str:
     """뇌 계층 파일을 로드한다."""
     path = Path(__file__).parent.parent / layer_name
@@ -282,7 +412,13 @@ class ChainedProvider(LLMProvider):
                     system_instruction, context_layers, task, model, thinking_budget
                 )
             except Exception as e:
-                if "429" in str(e) or "quota" in str(e).lower() or "rate" in str(e).lower():
+                error_str = str(e).lower()
+                response_text = ""
+                if hasattr(e, "response") and hasattr(e.response, "text"):
+                    response_text = e.response.text.lower()
+                
+                if ("429" in error_str or "quota" in error_str or "rate" in error_str or
+                    "credit" in response_text or "balance" in response_text or "400" in error_str):
                     last_exc = e
                     continue
                 raise

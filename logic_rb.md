@@ -1,4 +1,4 @@
-﻿# 좌뇌 (Logos) — logic_rb.md
+# 좌뇌 (Logos) — logic_rb.md
 
 > **역할**: 논리·기술 처리 전담 레이어  
 > **전용 모델**: gemini-2.5-pro  
@@ -27,7 +27,12 @@
 - 적용 일자: {YYYY-MM-DD}
 -->
 
-_초기화됨. 작업 누적 후 채워진다._
+### 모델 우선순위 최적화 (Multi-Provider Strategy)
+- 문제: 단일 모델 의존성 탈피 및 최적의 추론 품질 확보 필요
+- 솔루션: `ChainedProvider` 순서 재조정 (Claude > Qwen > DeepSeek > Groq > Gemini)
+- 코드 참조: `server/api.py:_build_provider`
+- 적용 일자: 2026-04-23
+
 
 ---
 

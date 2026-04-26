@@ -26,3 +26,12 @@ _초기화됨._
 | 2026-04-21 08:50 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4557 tokens |
 | 2026-04-22 23:30 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 4271 tokens |
 | 2026-04-22 23:42 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 5396 tokens |
+| 2026-04-23 08:49 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 5901 tokens |
+| 2026-04-23 11:21 | deepseek-chat | deepseek | quality:pass | constitution:pass | 7132 tokens |
+| 2026-04-23 12:46 | deepseek-chat | deepseek | quality:pass | constitution:pass | 7772 tokens |
+| 2026-04-23 12:48 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 9561 tokens |
+| 2026-04-23 13:57 | deepseek-reasoner | deepseek | quality:pass | constitution:pass | 10864 tokens |
+| 2026-04-23 22:17 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 9700 tokens |
+| 2026-04-23 22:19 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 10000 tokens |
+| 2026-04-23 22:21 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 9338 tokens |
+| 2026-04-23 22:21 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 9051 tokens |

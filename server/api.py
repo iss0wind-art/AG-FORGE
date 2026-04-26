@@ -1,4 +1,4 @@
-﻿"""
+"""
 AG-Forge API 서버 — api.py
 모바일에서 뇌에 명령을 내리고 응답을 받는다.
 """
@@ -12,6 +12,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, field_validator
 from pathlib import Path
+from fastapi.middleware.cors import CORSMiddleware
 
 from server.auth import verify_api_key
 from scripts.router_agent import route
@@ -22,6 +23,15 @@ from scripts.observability import (
 )
 
 app = FastAPI(title="AG-Forge Brain API", version="1.0")
+
+# CORS 설정: 꿈공장 대시보드(보통 3000) 접근 허용
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 실무에선 ["http://localhost:3000"] 등으로 제한 권장
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 BRAIN_ROOT = Path(__file__).parent.parent
 UI_PATH = Path(__file__).parent / "static" / "index.html"
@@ -43,21 +53,29 @@ class _InternalProvider(LLMProvider):
 
 
 def _build_provider() -> LLMProvider:
-    """Groq→DeepSeek→Gemini 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
-    from scripts.brain_loader import GroqProvider, DeepSeekProvider, GeminiProvider, ChainedProvider
+    """Claude→Qwen→DeepSeek→Groq→Gemini 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
+    from scripts.brain_loader import (
+        GroqProvider, DeepSeekProvider, GeminiProvider, 
+        QwenProvider, ClaudeProvider, ChainedProvider
+    )
 
     providers = []
-    for key_name, cls in [
-        ("GROQ_API_KEY",    GroqProvider),
+    # 방부장 지령: Claude(최우선) > Qwen > DeepSeek > Groq > Gemini
+    priority_keys = [
+        ("CLAUDE_API_KEY",   ClaudeProvider),
+        ("QWEN_API_KEY",     QwenProvider),
         ("DEEPSEEK_API_KEY", DeepSeekProvider),
-        ("GEMINI_API_KEY",   GeminiProvider),
-    ]:
+        ("GROQ_API_KEY",      GroqProvider),
+        ("GEMINI_API_KEY",    GeminiProvider),
+    ]
+
+    for key_name, cls in priority_keys:
         key = os.environ.get(key_name, "")
-        if key:
+        if key and key.strip():
             try:
                 providers.append(cls(key))
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"[Warn] Failed to init provider {key_name}: {e}")
 
     if providers:
         return ChainedProvider(providers)
@@ -175,6 +193,39 @@ async def get_status(_: str = Depends(verify_api_key)):
         "brain_summary": summary,
         "active_layer": "brain.md",
         "last_routing": last_routing,
+    }
+
+
+@app.get("/api/physis/status")
+async def get_physis_status():
+    """PHYSIS.md의 실시간 상태를 파싱하여 반환한다."""
+    physis_path = BRAIN_ROOT / "PHYSIS.md"
+    if not physis_path.exists():
+        return {"status": "offline", "mission": "상황판 파일 없음", "last_update": "-"}
+
+    content = physis_path.read_text(encoding="utf-8")
+    
+    # 간단한 파싱
+    mission = "미션 없음"
+    m = re.search(r"## 🎯 현재 미션 \(Current Mission\)\n(.*?)\n\n", content, re.DOTALL)
+    if m:
+        mission = m.group(1).strip()
+
+    update_time = "알 수 없음"
+    ut = re.search(r"> \*\*최종 갱신\*\*: (.*?)  ", content)
+    if ut:
+        update_time = ut.group(1).strip()
+
+    state = "UNKNOWN"
+    st = re.search(r"> \*\*현재 상태\*\*: (.*?) ", content)
+    if st:
+        state = st.group(1).strip()
+
+    return {
+        "status": state,
+        "mission": mission,
+        "last_update": update_time,
+        "raw_markdown": content
     }
 
 
