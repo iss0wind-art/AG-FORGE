@@ -36,6 +36,15 @@ NEURO_SCRIPTS = [
     "agentic_rag.py",
 ]
 
+# 이식할 현장 도구들 (scripts/tools/ 서브디렉토리)
+TOOL_SCRIPTS = [
+    "tools/__init__.py",
+    "tools/inface_connector.py",
+    "tools/turso_reader.py",
+    "tools/turso_writer.py",
+    "tools/excel_generator.py",
+]
+
 RUN_DAILY_REPORT_TEMPLATE = '''"""
 피지수(Physis) 현장 뇌 — 일일 공사일보 자동화 진입점
 매일 07:30 Windows 작업 스케줄러가 이 파일을 실행한다.
@@ -61,7 +70,7 @@ if __name__ == "__main__":
 '''
 
 
-def transplant(target_path: str, role: str = "field_brain", master: str = ""):
+def transplant(target_path: str, role: str = "field_brain", master: str = "", site_name: str = ""):
     import json
     target_root = Path(target_path).resolve()
     source_root = Path(__file__).parent.parent.resolve()
@@ -99,12 +108,27 @@ def transplant(target_path: str, role: str = "field_brain", master: str = ""):
     for s_name in NEURO_SCRIPTS:
         src_s = source_root / "scripts" / s_name
         dst_s = scripts_dir / s_name
-        
+
         if src_s.exists():
             shutil.copy2(src_s, dst_s)
             print(f"  ✅ 신경세포 주입: {s_name}")
         else:
             print(f"  ⚠️ 주의: 원본 신경세포를 찾을 수 없음: {s_name}")
+
+    # 2-1. 현장 도구 이식 (scripts/tools/)
+    tools_dir = scripts_dir / "tools"
+    tools_dir.mkdir(parents=True, exist_ok=True)
+    print(f"📂 현장 도구 경로 생성: {tools_dir}")
+
+    for t_name in TOOL_SCRIPTS:
+        src_t = source_root / "scripts" / t_name
+        dst_t = scripts_dir / t_name
+
+        if src_t.exists():
+            shutil.copy2(src_t, dst_t)
+            print(f"  ✅ 현장 도구 주입: {t_name}")
+        else:
+            print(f"  ⚠️ 주의: 현장 도구를 찾을 수 없음: {t_name}")
 
     # 3. 환경 변수 초기화 (.env 파일 체크)
     env_example = source_root / ".env.example"
@@ -114,14 +138,17 @@ def transplant(target_path: str, role: str = "field_brain", master: str = ""):
         print(f"  🔑 환경 변수 템플릿 복제 완료 (.env 수정 필요)")
 
     # 4. 역할 설정 (physis_config.json)
+    jiim_name = f"Jiim-{site_name}" if site_name else "Jiim"
     config = {
         "role": role,
         "master_url": master,
         "source": "ag-forge",
+        "site_name": site_name,
+        "jiim_name": jiim_name,
     }
     config_path = brain_dir / "physis_config.json"
     config_path.write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"  ⚙️  역할 설정 완료: {role} (상위 뇌: {master or '미설정'})")
+    print(f"  ⚙️  역할 설정 완료: {role} → 이식체명: {jiim_name} (상위 뇌: {master or '미설정'})")
 
     # 5. 진입점 스크립트 생성 (현장 뇌 전용)
     if role == "field_brain":
@@ -137,6 +164,7 @@ if __name__ == "__main__":
     parser.add_argument("--target", required=True, help="타겟 프로젝트의 절대 경로")
     parser.add_argument("--role", default="field_brain", help="이식 역할 (field_brain)")
     parser.add_argument("--master", default="", help="상위 뇌 AG-FORGE 서버 주소")
+    parser.add_argument("--site-name", default="", help="현장명 (예: h2owind) — Jiim-{site_name}으로 자동 명명")
     args = parser.parse_args()
 
-    transplant(args.target, role=args.role, master=args.master)
+    transplant(args.target, role=args.role, master=args.master, site_name=args.site_name)
