@@ -28,7 +28,7 @@ _fallback_directives: list[dict] = []
 
 def _get_db():
     """libsql_client 클라이언트를 반환한다. 미설정 시 None."""
-    url = os.environ.get("TURSO_DATABASE_URL", "")
+    url = os.environ.get("TURSO_DATABASE_URL", "").replace("libsql://", "https://")
     token = os.environ.get("TURSO_AUTH_TOKEN", "")
     if not url:
         return None
@@ -42,24 +42,8 @@ def _get_db():
 
 def _ensure_tables(db) -> None:
     """brain_states, directives 테이블이 없으면 생성한다."""
-    db.execute("""
-        CREATE TABLE IF NOT EXISTS brain_states (
-            source      TEXT PRIMARY KEY,
-            last_report TEXT NOT NULL,
-            status      TEXT NOT NULL,
-            last_data   TEXT NOT NULL
-        )
-    """)
-    db.execute("""
-        CREATE TABLE IF NOT EXISTS directives (
-            id        INTEGER PRIMARY KEY AUTOINCREMENT,
-            target    TEXT NOT NULL,
-            type      TEXT NOT NULL,
-            message   TEXT NOT NULL,
-            priority  TEXT NOT NULL,
-            issued_at TEXT NOT NULL
-        )
-    """)
+    db.execute("CREATE TABLE IF NOT EXISTS brain_states (source TEXT PRIMARY KEY, last_report TEXT NOT NULL, status TEXT NOT NULL, last_data TEXT NOT NULL)")
+    db.execute("CREATE TABLE IF NOT EXISTS directives (id INTEGER PRIMARY KEY AUTOINCREMENT, target TEXT NOT NULL, type TEXT NOT NULL, message TEXT NOT NULL, priority TEXT NOT NULL, issued_at TEXT NOT NULL)")
 
 
 # ── 스키마 ────────────────────────────────────────────────────────────────────
