@@ -8,9 +8,10 @@ from unittest.mock import patch, MagicMock
 
 
 @pytest.fixture
-def client():
+def client(monkeypatch):
+    monkeypatch.setenv("AG_FORGE_API_KEY", "test-key")
     from server.sync_api import app
-    return TestClient(app)
+    return TestClient(app, headers={"X-API-Key": "test-key"})
 
 
 SAMPLE_REPORT = {

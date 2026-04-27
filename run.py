@@ -55,32 +55,31 @@ def open_zrok_tunnel(port: int) -> subprocess.Popen:
     ZROK 터널을 백그라운드에서 열고 프로세스 객체를 반환한다.
     """
     zrok_cmd = get_zrok_command()
+
     try:
-        # ZROK 상태 확인
         subprocess.run([zrok_cmd, "status"], capture_output=True, text=True, timeout=5, check=True)
-        
-        print(f"[Info] '{zrok_cmd}'를 통해 페이퍼 클립(터널) 가동 중...")
-        
-        # Popen을 사용하여 백그라운드 실행 (서버 시작을 막지 않음)
-        process = subprocess.Popen(
-            [zrok_cmd, "share", "public", f"http://localhost:{port}", "--headless"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding='utf-8',
-            errors='replace'
-        )
-        
-        # 터널 프로세스가 즉시 죽지 않는지 살짝 확인
-        time.sleep(2)
-        if process.poll() is not None:
-            _, stderr = process.communicate()
-            raise RuntimeError(f"ZROK 실행 즉시 종료됨: {stderr}")
-            
-        return process
-        
-    except Exception as e:
-        raise RuntimeError(f"ZROK 실행 실패: {e}")
+    except FileNotFoundError:
+        raise RuntimeError("ZROK 명령어를 찾을 수 없습니다")
+    except subprocess.CalledProcessError:
+        raise RuntimeError("ZROK 미인증")
+
+    print(f"[Info] '{zrok_cmd}'를 통해 페이퍼 클립(터널) 가동 중...")
+
+    process = subprocess.Popen(
+        [zrok_cmd, "share", "public", f"http://localhost:{port}", "--headless"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+
+    time.sleep(2)
+    if process.poll() is not None:
+        _, stderr = process.communicate()
+        raise RuntimeError(f"ZROK 터널 실패: {stderr}")
+
+    return process
 
 
 def print_access_info(url: str, port: int, headless: bool = False) -> None:

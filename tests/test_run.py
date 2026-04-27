@@ -27,45 +27,42 @@ class TestValidateEnv:
 
 class TestOpenZrokTunnel:
 
-    def test_returns_public_url(self):
-        mock_result = MagicMock()
-        mock_result.returncode = 0
-        mock_result.stdout = "Access server at: https://abc123.share.zrok.io"
-        mock_result.stderr = ""
+    def test_returns_popen(self):
+        import subprocess as sp
 
-        mock_status = MagicMock()
-        mock_status.returncode = 0
+        mock_process = MagicMock(spec=sp.Popen)
+        mock_process.poll.return_value = None
 
-        with patch("subprocess.run", side_effect=[mock_status, mock_result]):
-            url = open_zrok_tunnel(8000)
+        with patch("subprocess.run"):
+            with patch("subprocess.Popen", return_value=mock_process):
+                with patch("time.sleep"):
+                    result = open_zrok_tunnel(8000)
 
-        assert url == "https://abc123.share.zrok.io"
+        assert result is mock_process
 
     def test_raises_when_zrok_not_installed(self):
-        import subprocess
         with patch("subprocess.run", side_effect=FileNotFoundError):
             with pytest.raises(RuntimeError, match="ZROK 명령어를 찾을 수 없습니다"):
                 open_zrok_tunnel(8000)
 
     def test_raises_when_not_authenticated(self):
-        mock_status = MagicMock()
-        mock_status.returncode = 1
-
-        with patch("subprocess.run", return_value=mock_status):
+        import subprocess as sp
+        with patch("subprocess.run", side_effect=sp.CalledProcessError(1, "zrok")):
             with pytest.raises(RuntimeError, match="ZROK 미인증"):
                 open_zrok_tunnel(8000)
 
     def test_raises_when_tunnel_fails(self):
-        mock_status = MagicMock()
-        mock_status.returncode = 0
+        import subprocess as sp
 
-        mock_result = MagicMock()
-        mock_result.returncode = 1
-        mock_result.stderr = "tunnel error"
+        mock_process = MagicMock(spec=sp.Popen)
+        mock_process.poll.return_value = 1
+        mock_process.communicate.return_value = ("", "tunnel error")
 
-        with patch("subprocess.run", side_effect=[mock_status, mock_result]):
-            with pytest.raises(RuntimeError, match="ZROK 터널 실패"):
-                open_zrok_tunnel(8000)
+        with patch("subprocess.run"):
+            with patch("subprocess.Popen", return_value=mock_process):
+                with patch("time.sleep"):
+                    with pytest.raises(RuntimeError, match="ZROK 터널 실패"):
+                        open_zrok_tunnel(8000)
 
 
 class TestPrintAccessInfo:

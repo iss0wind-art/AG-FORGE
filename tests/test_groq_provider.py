@@ -77,6 +77,8 @@ class TestGroqProvider:
     def test_build_provider_uses_groq_when_no_gemini_deepseek(self, monkeypatch):
         import mcp_server
         from scripts.brain_loader import ChainedProvider
+        monkeypatch.setenv("CLAUDE_API_KEY", "")
+        monkeypatch.setenv("QWEN_API_KEY", "")
         monkeypatch.setenv("GEMINI_API_KEY", "")
         monkeypatch.setenv("DEEPSEEK_API_KEY", "")
         monkeypatch.setenv("GROQ_API_KEY", "test-groq-key")

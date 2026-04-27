@@ -4,10 +4,6 @@ import argparse
 import sys
 from pathlib import Path
 
-# Windows 환경에서 인코딩 문제 방지
-if sys.platform == "win32":
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 # --- AG-FORGE 브레인 트랜스플랜트 구성 ---
 

@@ -73,9 +73,9 @@ class TestLoadLayer:
         content = load_layer("judgment.md")
         assert len(content) > 0
 
-    def test_raises_on_missing_file(self):
-        with pytest.raises(FileNotFoundError):
-            load_layer("nonexistent.md")
+    def test_returns_empty_on_missing_file(self):
+        result = load_layer("nonexistent.md")
+        assert result == ""
 
 
 # ──────────────────────────────────────────

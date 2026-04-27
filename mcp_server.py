@@ -269,6 +269,55 @@ def generate_gabji_report(project_id: str) -> dict:
         return {"status": "error", "message": str(e)}
 
 
+# ── 툴 7: 본영 단군 escalation (다리 B placeholder) ───────────────────────────
+
+_VALID_URGENCIES = {"normal", "high", "emergency"}
+_URGENCY_TIMEOUT = {"high": 120, "emergency": 30}
+
+
+def physis_escalate_dangun(
+    issue: str,
+    urgency: str,
+    context: dict | None = None,
+) -> dict:
+    """
+    피지수 → 본영 단군 escalation 요청.
+    단군 MCP 도구 연결 전 placeholder — 연결 후 실제 호출로 교체 예정.
+
+    Args:
+        issue: 에스컬레이션 사안 (비어있으면 오류)
+        urgency: "normal" | "high" | "emergency"
+        context: 추가 맥락 딕셔너리 (기본값 {})
+
+    Returns:
+        status 필드를 포함한 딕셔너리
+    """
+    if context is None:
+        context = {}
+
+    if not issue.strip():
+        return {"status": "error", "message": "issue는 비어있을 수 없습니다."}
+
+    if urgency not in _VALID_URGENCIES:
+        return {
+            "status": "error",
+            "message": f"urgency는 {_VALID_URGENCIES} 중 하나여야 합니다.",
+        }
+
+    if urgency == "normal":
+        return {
+            "status": "error",
+            "message": "paperclip 미가동 상태에서는 normal urgency 처리를 할 수 없습니다.",
+        }
+
+    return {
+        "status": "pending_dangun_layer1_tools",
+        "urgency": urgency,
+        "timeout_sec": _URGENCY_TIMEOUT[urgency],
+        "context": context,
+    }
+
+
 # ── 진입점 ────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
