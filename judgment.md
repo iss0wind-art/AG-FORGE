@@ -58,3 +58,13 @@ _초기화됨._
 | 2026-04-27 10:04 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 17104 tokens |
 | 2026-04-27 18:09 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 15631 tokens |
 | 2026-04-27 18:30 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 15484 tokens |
+| 2026-04-27 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:12 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:12 | deepseek-chat | deepseek | quality:pass | constitution:pass | 15444 tokens |
+| 2026-04-27 21:19 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:19 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:19 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:19 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
+| 2026-04-27 21:19 | deepseek-chat | deepseek | quality:pass | constitution:pass | 15381 tokens |
