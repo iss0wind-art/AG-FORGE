@@ -7,7 +7,8 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Literal
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
+from server.auth import verify_api_key
 from pydantic import BaseModel, field_validator
 
 from scripts.strategy_node import analyze_report
@@ -60,7 +61,7 @@ class SyncDirective(BaseModel):
 # ── 라우트 ────────────────────────────────────────────────────────────────────
 
 @app.post("/api/sync/report")
-def receive_report(report: SyncReport):
+def receive_report(report: SyncReport, _: str = Depends(verify_api_key)):
     """하위 뇌의 일일 보고를 수신하고 전략 분석을 반환한다."""
     _brain_states[report.source] = {
         "last_report": datetime.now().isoformat(),
@@ -80,7 +81,7 @@ def receive_report(report: SyncReport):
 
 
 @app.post("/api/sync/directive")
-def send_directive(directive: SyncDirective):
+def send_directive(directive: SyncDirective, _: str = Depends(verify_api_key)):
     """상위 뇌가 하위 뇌에 지시를 전달한다."""
     entry = {
         **directive.model_dump(),
@@ -91,6 +92,6 @@ def send_directive(directive: SyncDirective):
 
 
 @app.get("/api/sync/status")
-def get_status():
+def get_status(_: str = Depends(verify_api_key)):
     """모든 하위 뇌의 현재 상태를 반환한다."""
     return {"brains": _brain_states}

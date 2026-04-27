@@ -50,7 +50,8 @@ def optimize_memory():
     if TITANS_STATE.exists():
         try:
             state = json.loads(TITANS_STATE.read_text(encoding="utf-8"))
-        except: pass
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            import sys; print(f"[titans_memory] 로드 실패: {e}", file=sys.stderr)
 
     # 2. judgment.md 분석 (샘플링)
     if not JUDGMENT_LOG.exists(): return

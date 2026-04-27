@@ -62,7 +62,7 @@ def generation_node(state: AgentState, provider: LLMProvider) -> dict:
 
     # 툴 결과가 있으면 컨텍스트에 추가
     if state["tool_results"]:
-        context_layers.append("[툴 실행 결과]\n" + "\n".join(state["tool_results"]))
+        context_layers = [*context_layers, "[툴 실행 결과]\n" + "\n".join(state["tool_results"])]
 
     response = provider.generate(
         system_instruction=system_instruction,
