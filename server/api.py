@@ -17,7 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from server.auth import verify_api_key
 from scripts.router_agent import route
 from scripts.brain_loader import BrainResponse, LLMProvider, run, select_layers
-from scripts.constitution_gate import gate
+from scripts.cma_gate import cma_gate as gate
 from scripts.observability import (
     record_trace, append_log, summarize_session, calculate_cost, LOG_PATH
 )
@@ -150,12 +150,14 @@ async def submit_task(
         except Exception:
             return False  # 판단 불가 시 차단 (fail-closed)
 
-    safe_output = gate(
-        brain_response.text,
-        request.task,
+    from scripts.cma_gate import cma_evaluate, ViolationLevel
+    cma_result = cma_evaluate(
+        task=request.task,
+        output=brain_response.text,
         judge=_llm_judge,
     )
-    constitution_passed = safe_output == brain_response.text
+    constitution_passed = cma_result.level != ViolationLevel.BLOCK
+    safe_output = cma_result.safe_output if constitution_passed else ""
 
     # 비용 계산 및 로그
     cost = calculate_cost(

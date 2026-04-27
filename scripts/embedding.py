@@ -106,3 +106,104 @@ def migrate_library(
 
     doc_id = f"{filepath.stem}-{datetime.now().strftime('%Y%m%d')}"
     return embed_and_store(doc_id, text, category, index, embedder)
+
+
+class ChromaVectorIndex:
+    """ChromaDB 영구 로컬 VectorIndex 구현체."""
+
+    def __init__(
+        self,
+        persist_path: str = "d:/Git/AG-Forge/library/vector_db",
+        collection_name: str = "physis_brain",
+    ) -> None:
+        import chromadb
+        self._client = chromadb.PersistentClient(path=persist_path)
+        self._col = self._client.get_or_create_collection(
+            name=collection_name,
+            metadata={"hnsw:space": "cosine"},
+        )
+
+    def upsert(self, vectors: list[dict]) -> None:
+        """벡터 목록을 ChromaDB에 저장한다. 기존 id면 업데이트, 없으면 추가한다."""
+        if not vectors:
+            return
+        ids = [v["id"] for v in vectors]
+        embeddings = [v["values"] for v in vectors]
+        metadatas = [v.get("metadata", {}) for v in vectors]
+        existing = self._col.get(ids=ids, include=[])
+        existing_ids = set(existing["ids"])
+        new_ids, new_embs, new_metas = [], [], []
+        upd_ids, upd_embs, upd_metas = [], [], []
+        for vid, emb, meta in zip(ids, embeddings, metadatas):
+            if vid in existing_ids:
+                upd_ids.append(vid)
+                upd_embs.append(emb)
+                upd_metas.append(meta)
+            else:
+                new_ids.append(vid)
+                new_embs.append(emb)
+                new_metas.append(meta)
+        if new_ids:
+            self._col.add(ids=new_ids, embeddings=new_embs, metadatas=new_metas)
+        if upd_ids:
+            self._col.update(ids=upd_ids, embeddings=upd_embs, metadatas=upd_metas)
+
+    def query(
+        self,
+        vector: list[float],
+        top_k: int = 5,
+        include_metadata: bool = True,
+    ) -> dict:
+        """벡터와 가장 유사한 항목을 조회한다. 기존 코드와 호환되는 형식으로 반환한다."""
+        include_fields = ["distances"]
+        if include_metadata:
+            include_fields.append("metadatas")
+        results = self._col.query(
+            query_embeddings=[vector],
+            n_results=min(top_k, self._col.count()) or 1,
+            include=include_fields,
+        )
+        matches = []
+        ids = results.get("ids", [[]])[0]
+        distances = results.get("distances", [[]])[0]
+        metadatas = results.get("metadatas", [[]])[0] if include_metadata else [{}] * len(ids)
+        for vid, dist, meta in zip(ids, distances, metadatas):
+            matches.append({
+                "id": vid,
+                "score": 1.0 - dist,
+                "metadata": meta or {},
+            })
+        return {"matches": matches}
+
+    def count(self) -> int:
+        """저장된 벡터 수를 반환한다."""
+        return self._col.count()
+
+
+class SimpleTFIDFEmbedder:
+    """GEMINI_API_KEY 없을 때 사용하는 sklearn-free TF-IDF 폴백 임베더."""
+
+    DIM = 768
+
+    def embed(self, text: str) -> list[float]:
+        """텍스트를 768차원 L2 정규화된 벡터로 변환한다."""
+        import re
+        import math
+        tokens = re.findall(r"[^\s\W]+", text.lower())
+        vec = [0.0] * self.DIM
+        for token in tokens:
+            idx = hash(token) % self.DIM
+            vec[idx] += 1.0
+        norm = math.sqrt(sum(x * x for x in vec))
+        if norm > 0.0:
+            vec = [x / norm for x in vec]
+        return vec
+
+
+def build_default_embedder() -> EmbeddingClient:
+    """환경에 따라 Google 또는 TF-IDF 임베더를 자동 선택한다."""
+    import os
+    key = os.environ.get("GEMINI_API_KEY", "")
+    if key:
+        return GoogleEmbeddingClient(api_key=key)
+    return SimpleTFIDFEmbedder()

@@ -36,6 +36,19 @@ def routing_node(state: AgentState) -> dict:
     return {"decision": decision, "attempts": 0}
 
 
+def _build_rag_context(task: str) -> str:
+    """HyperRAG로 태스크 관련 청크를 검색한다. 실패 시 빈 문자열 반환."""
+    try:
+        from scripts.agentic_rag import HyperRAG
+        from scripts.embedding import ChromaVectorIndex, build_default_embedder
+        idx = ChromaVectorIndex()
+        emb = build_default_embedder()
+        rag = HyperRAG(index=idx, embedder=emb)
+        return rag.build_context(task)
+    except Exception:
+        return ""
+
+
 def generation_node(state: AgentState, provider: LLMProvider) -> dict:
     """brain.md 로드 + 레이어 선택 + 페르소나 주입(canon 2026-04-26) + LLM 호출.
 
@@ -43,20 +56,35 @@ def generation_node(state: AgentState, provider: LLMProvider) -> dict:
     TaskType별 정규 페르소나의 XML system prompt를 brain.md 앞에 prepend.
     Anthropic 모델이 <persona> 태그를 강하게 인식하므로 페르소나가 응답에 일관되게 흐름.
     페르소나 미존재 시 brain.md만 사용 (회귀 안전).
+
+    [HyperRAG 배선 — Phase 5]
+    RAG 결과 있음: brain.md 앞 1000자(요약·캐시 대상) + rag_context 결합.
+    RAG 결과 없음: brain.md 전체 로드 (기존 폴백).
     """
     decision = state["decision"]
     layer_names = select_layers(decision)
 
     base_instruction = load_layer("brain.md")
 
+    # [HyperRAG] 관련 청크 검색 — 실패 시 빈 문자열 반환
+    rag_context = _build_rag_context(state["task"])
+
     # [페르소나 주입] TaskType → Persona XML, 없으면 빈 문자열
     from scripts.persona_loader import get_persona_system_prompt
     persona_xml = get_persona_system_prompt(decision.task_type)
 
-    if persona_xml:
-        system_instruction = persona_xml + "\n\n" + base_instruction
+    if rag_context:
+        # RAG 결과 있음: brain.md 앞 1000자(요약) + rag_context  # cache: brain_summary
+        brain_summary = base_instruction[:1000]
+        combined_brain = brain_summary + "\n\n" + rag_context
     else:
-        system_instruction = base_instruction
+        # RAG 결과 없음: brain.md 전체 (기존 폴백)
+        combined_brain = base_instruction
+
+    if persona_xml:
+        system_instruction = persona_xml + "\n\n" + combined_brain
+    else:
+        system_instruction = combined_brain
 
     context_layers = [load_layer(n) for n in layer_names if n != "brain.md"]
 
@@ -207,29 +235,40 @@ def accumulate_node(state: AgentState) -> dict:
 
 
 def constitution_node(state: AgentState) -> dict:
-    """헌법 2단 게이트 — 1단(Hard, 결정론) → 2단(Soft, LLM judge).
+    """CMA 3계층 헌법 게이트.
 
-    Bomb 2 fix: hard_constraint_check를 LLM 호출 전에 실행하여
-    명백한 반란/우회 패턴은 결정론적으로 즉시 차단한다.
+    Layer 0 (BLOCK): 8조 금법 결정론적 즉각 차단 (제1·3·7·8조)
+    Layer 1 (WARN):  8조 금법 경고 후 통과 (제2·4·5·6조)
+    Layer 2 (LLM):   CONSTITUTION.md 기반 홍익인간 의미 심사
     """
     response = state["current_response"]
     if not response:
         return {"constitution_passed": False, "final_response": None}
 
-    from scripts.deliberation_engine import make_constitution_judge, hard_constraint_check
+    from scripts.cma_gate import layer0_check, cma_evaluate, ViolationLevel
 
-    # 1단: Hard gate — 결정론적 정규식, LLM 호출 전 즉시 차단
-    if not hard_constraint_check(state["task"], response.text):
-        return {"constitution_passed": False, "final_response": None}
+    # Layer 0 먼저 — BLOCK이면 judge 생성 없이 즉시 반환 (Bomb 2 회귀 방지)
+    layer0 = layer0_check(state["task"], response.text)
+    if layer0 is not None and layer0.level == ViolationLevel.BLOCK:
+        return {
+            "constitution_passed": False,
+            "final_response": None,
+            "cma_level": layer0.level.value,
+            "cma_violated_code": layer0.violated_code,
+        }
 
-    # 2단: Soft gate — LLM 의미 판단
-    result = evaluate(
-        output=response.text,
+    from scripts.deliberation_engine import make_constitution_judge
+    result = cma_evaluate(
         task=state["task"],
+        output=response.text,
         judge=make_constitution_judge(),
     )
-    final = response if result.passed else None
+
+    passed = result.level != ViolationLevel.BLOCK
+    final = response if passed else None
     return {
-        "constitution_passed": result.passed,
+        "constitution_passed": passed,
         "final_response": final,
+        "cma_level": result.level.value,
+        "cma_violated_code": result.violated_code,
     }

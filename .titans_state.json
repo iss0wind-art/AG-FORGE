@@ -95,6 +95,55 @@
       "timestamp": "2026-04-21T23:42:55.853753",
       "insight": "High Surprise Signal detected: | 2026-04-21 23:11 | deepseek-chat | deepseek | qu...",
       "surprise_score": 0.5477564778662583
+    },
+    {
+      "id": "mem-20260428075920034134",
+      "timestamp": "2026-04-28T07:59:20.043001",
+      "category": "test",
+      "insight": "테스트 내용입니다",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428075944756264",
+      "timestamp": "2026-04-28T07:59:44.801666",
+      "category": "test",
+      "insight": "테스트 내용입니다",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428080148131152",
+      "timestamp": "2026-04-28T08:01:48.139597",
+      "category": "boq",
+      "insight": "BOQ 공종 콘크리트 타설 단가 150000원",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428080202529306",
+      "timestamp": "2026-04-28T08:02:02.538653",
+      "category": "boq",
+      "insight": "BOQ 공종 콘크리트 타설 단가 150000원",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428080211515342",
+      "timestamp": "2026-04-28T08:02:11.525390",
+      "category": "boq",
+      "insight": "BOQ boq concrete unit price 150000",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428080407115002",
+      "timestamp": "2026-04-28T08:04:07.123551",
+      "category": "boq",
+      "insight": "건설 공종 철근 가공 단가",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428084410454448",
+      "timestamp": "2026-04-28T08:44:10.498131",
+      "category": "boq",
+      "insight": "BOQ 콘크리트 타설 단가 150000원",
+      "surprise_score": 1.0
     }
   ]
 }

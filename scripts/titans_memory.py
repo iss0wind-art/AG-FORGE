@@ -1,86 +1,206 @@
 """
 Titans 머신러닝 엔진 — titans_memory.py
-망각을 통한 기억의 완성: Surprise Metric 기반 엔트로피 제어.
+Memora 아키텍처 기반: ChromaVectorIndex + Surprise Metric(코사인 유사도).
+망각을 통한 기억의 완성 — 진짜 벡터 유사도로 Surprise를 계산한다.
 """
 import os
+import sys
 import json
-import math
 from datetime import datetime
 from pathlib import Path
+
+from scripts.embedding import ChromaVectorIndex, build_default_embedder
 
 ROOT = Path(__file__).parent.parent
 JUDGMENT_LOG = ROOT / "judgment.md"
 TITANS_STATE = ROOT / ".titans_state.json"
 
-# 지능 방정식 2.0 상수
-SURVIVAL_WEIGHT = 1.0  # 홍익인간 헌법 직결 가중치
-FORGETTING_THRESHOLD = 0.3  # 놀람 지표가 이보다 낮으면 '노이즈'로 판단
+# 환경변수로 런타임 조정 가능
+FORGETTING_THRESHOLD = float(os.environ.get("SURPRISE_THRESHOLD", "0.3"))
 
-def calculate_surprise(content: str, context: str = "") -> float:
-    """
-    내용의 의외성(Surprise Metric)을 계산한다.
-    실전에서는 LLM을 통해 '예측 오차'를 계산하지만, 
-    여기서는 정보 밀도와 엔트로피 수식으로 근사한다.
-    """
-    if not content: return 0.0
-    
-    # 단순 정보 엔트로피 근사: 중복성 제거 후의 기여도
-    # (실제 구현 시 이전 기억과의 코사인 유사도 반비례 값 사용)
-    char_freq = {}
-    for char in content:
-        char_freq[char] = char_freq.get(char, 0) + 1
-    
-    entropy = 0
-    length = len(content)
-    for count in char_freq.values():
-        p = count / length
-        entropy -= p * math.log2(p)
-        
-    return entropy / 8.0  # 0~1 사이로 정규화 시도
+# 홍익인간 헌법 직결 가중치 (기존 인터페이스 호환)
+SURVIVAL_WEIGHT = 1.0
 
-def optimize_memory():
+
+def calculate_surprise(content: str, index: ChromaVectorIndex, embedder) -> float:
     """
-    기존 로그와 지식을 스캔하여 Surprise Metric이 낮은(예측 가능한) 노이즈를 식별한다.
-    ΔS_system = ΔS_production - ΔS_automation < 0 수식을 실현하는 핵심 루프.
+    Memora Surprise Metric: 1 - max_cosine_similarity.
+
+    인덱스가 비어있으면 1.0(완전히 새로운 정보).
+    기존 기억과 유사할수록 0에 가까워진다.
     """
-    print("🧠 [Titans Engine] 기억 최적화 루프 가동...")
-    
-    # 1. 상태 로드
-    state = {"last_optimized": None, "consolidated_wisdom": []}
+    if not content:
+        return 0.0
+
+    if index.count() == 0:
+        return 1.0
+
+    vector = embedder.embed(content)
+    result = index.query(vector=vector, top_k=1, include_metadata=False)
+    matches = result.get("matches", [])
+
+    if not matches:
+        return 1.0
+
+    max_similarity = matches[0].get("score", 0.0)
+    # ChromaDB cosine 공간: score = 1 - distance.
+    # 부동소수점 오차로 동일 벡터 score가 1.0을 미세하게 초과할 수 있으므로 클램핑.
+    return float(max(0.0, 1.0 - min(max_similarity, 1.0)))
+
+
+def _reinforce_existing(content: str, index: ChromaVectorIndex, embedder) -> None:
+    """
+    기존 가장 유사한 항목의 reinforced_count를 +1 증가시킨다.
+    ChromaDB update로 metadata를 갱신한다.
+    """
+    vector = embedder.embed(content)
+    result = index.query(vector=vector, top_k=1, include_metadata=True)
+    matches = result.get("matches", [])
+
+    if not matches:
+        return
+
+    best = matches[0]
+    vid = best.get("id")
+    meta = best.get("metadata", {}) or {}
+
+    if not vid:
+        return
+
+    meta["reinforced_count"] = int(meta.get("reinforced_count", 0)) + 1
+    meta["last_reinforced"] = datetime.now().isoformat()
+
+    # ChromaDB 내부 컬렉션에 직접 업데이트
+    try:
+        index._col.update(ids=[vid], metadatas=[meta])
+    except Exception as e:
+        print(f"[titans_memory] reinforce 실패: {e}", file=sys.stderr)
+
+
+def store_memory(
+    content: str,
+    category: str,
+    index: ChromaVectorIndex,
+    embedder,
+) -> bool:
+    """
+    Memora 저장 파이프라인.
+
+    surprise > FORGETTING_THRESHOLD → ChromaDB 신규 저장 + .titans_state.json 기록 → True
+    surprise ≤ FORGETTING_THRESHOLD → 기존 항목 reinforced_count +1 → False
+    """
+    surprise = calculate_surprise(content, index, embedder)
+
+    if surprise <= FORGETTING_THRESHOLD:
+        # 노이즈: 신규 저장 대신 기존 기억 강화
+        _reinforce_existing(content, index, embedder)
+        return False
+
+    # 신규 저장
+    vector = embedder.embed(content)
+    doc_id = f"mem-{datetime.now().strftime('%Y%m%d%H%M%S%f')}"
+    vectors = [
+        {
+            "id": doc_id,
+            "values": vector,
+            "metadata": {
+                "category": category,
+                "text": content[:200],
+                "surprise_score": surprise,
+                "stored_at": datetime.now().isoformat(),
+                "reinforced_count": 0,
+            },
+        }
+    ]
+    index.upsert(vectors=vectors)
+
+    # .titans_state.json 동기 기록
+    _sync_state(doc_id, content, category, surprise)
+
+    return True
+
+
+def _sync_state(doc_id: str, content: str, category: str, surprise: float) -> None:
+    """ChromaDB 저장 후 .titans_state.json에도 동일 레코드를 기록한다."""
+    state: dict = {"last_optimized": None, "consolidated_wisdom": []}
     if TITANS_STATE.exists():
         try:
             state = json.loads(TITANS_STATE.read_text(encoding="utf-8"))
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            import sys; print(f"[titans_memory] 로드 실패: {e}", file=sys.stderr)
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"[titans_memory] state 로드 실패: {e}", file=sys.stderr)
 
-    # 2. judgment.md 분석 (샘플링)
-    if not JUDGMENT_LOG.exists(): return
-    
-    logs = JUDGMENT_LOG.read_text(encoding="utf-8").split("\n")
-    new_insights = []
-    
-    for line in logs[-20:]:  # 최근 20건 분석
-        if "|" not in line: continue
-        
-        surprise = calculate_surprise(line)
-        
-        # 놀람 지표가 높을 때만 '기억할 가치'가 있는 데이터로 간주
-        if surprise > FORGETTING_THRESHOLD:
-            new_insights.append({
-                "timestamp": datetime.now().isoformat(),
-                "insight": f"High Surprise Signal detected: {line[:50]}...",
-                "surprise_score": surprise
-            })
+    state.setdefault("consolidated_wisdom", []).append(
+        {
+            "id": doc_id,
+            "timestamp": datetime.now().isoformat(),
+            "category": category,
+            "insight": content[:100],
+            "surprise_score": surprise,
+        }
+    )
+    # 최근 100개 유지
+    state["consolidated_wisdom"] = state["consolidated_wisdom"][-100:]
 
-    # 3. 브레인 가중치 융합 (Consolidation) 시뮬레이션
+    try:
+        TITANS_STATE.write_text(
+            json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+    except OSError as e:
+        print(f"[titans_memory] state 저장 실패: {e}", file=sys.stderr)
+
+
+def optimize_memory(
+    index: ChromaVectorIndex | None = None,
+    embedder=None,
+) -> None:
+    """
+    기존 시그니처 유지 (하위 호환).
+    judgment.md + .titans_state.json을 순회하며 Surprise가 낮은 항목을 merge 처리한다.
+    """
+    print("[Titans Engine] 기억 최적화 루프 가동...")
+
+    if index is None:
+        index = ChromaVectorIndex()
+    if embedder is None:
+        embedder = build_default_embedder()
+
+    # 1. .titans_state.json 로드
+    state: dict = {"last_optimized": None, "consolidated_wisdom": []}
+    if TITANS_STATE.exists():
+        try:
+            state = json.loads(TITANS_STATE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"[titans_memory] state 로드 실패: {e}", file=sys.stderr)
+
+    # 2. judgment.md 처리 (최근 20줄)
+    new_insights: list[dict] = []
+    if JUDGMENT_LOG.exists():
+        lines = JUDGMENT_LOG.read_text(encoding="utf-8").split("\n")
+        for line in lines[-20:]:
+            if "|" not in line:
+                continue
+            stored = store_memory(line, "judgment", index, embedder)
+            if stored:
+                new_insights.append(
+                    {
+                        "timestamp": datetime.now().isoformat(),
+                        "insight": line[:80],
+                        "surprise_score": calculate_surprise(line, index, embedder),
+                    }
+                )
+
+    # 3. 상태 갱신
     state["last_optimized"] = datetime.now().isoformat()
-    state["consolidated_wisdom"].extend(new_insights)
-    state["consolidated_wisdom"] = state["consolidated_wisdom"][-100:]  # 100개 제한
-    
-    TITANS_STATE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
-    
-    processed_count = len(new_insights)
-    print(f"✅ 최적화 완료: {processed_count}개의 고밀도 신호가 가중치로 용해되었습니다.")
+
+    try:
+        TITANS_STATE.write_text(
+            json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+    except OSError as e:
+        print(f"[titans_memory] state 저장 실패: {e}", file=sys.stderr)
+
+    print(f"최적화 완료: {len(new_insights)}개의 고밀도 신호가 가중치로 용해되었습니다.")
+
 
 if __name__ == "__main__":
     optimize_memory()
