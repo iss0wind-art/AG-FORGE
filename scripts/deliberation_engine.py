@@ -93,7 +93,8 @@ def _call_llm(prompt: str, system: str) -> str:
             if "anthropic" in url:
                 return data["content"][0]["text"]
             return data["choices"][0]["message"]["content"]
-        except Exception:
+        except Exception as e:
+            print(f"[deliberation] {model} 실패: {type(e).__name__}: {e}", file=sys.stderr)
             continue
 
     return _FALLBACK_UNAVAILABLE

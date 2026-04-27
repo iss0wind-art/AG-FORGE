@@ -87,8 +87,8 @@ def _build_provider() -> LLMProvider:
         if key and key.strip():
             try:
                 providers.append(cls(key))
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"[physis] {key_name} 초기화 실패: {e}", file=sys.stderr)
 
     if providers:
         return ChainedProvider(providers)
@@ -121,7 +121,8 @@ def physis(task: str) -> str:
         result: BrainResponse = run(task.strip(), provider)
         return result.text
     except Exception as exc:
-        return f"[AG-Forge 오류] {exc}"
+        print(f"[physis] run 실패: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return "[AG-Forge 오류] 뇌 응답 중 문제가 발생했습니다. 로그를 확인하세요."
 
 
 # ── 툴 2: get_brain_status ────────────────────────────────────────────────────

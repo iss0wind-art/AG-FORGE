@@ -25,12 +25,16 @@ from scripts.observability import (
 app = FastAPI(title="AG-Forge Brain API", version="1.0")
 
 # CORS 설정: 꿈공장 대시보드(보통 3000) 접근 허용
+_CORS_ORIGINS = os.environ.get(
+    "AG_FORGE_CORS_ORIGINS", "http://localhost:3000,http://localhost:3001"
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 실무에선 ["http://localhost:3000"] 등으로 제한 권장
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=_CORS_ORIGINS,
+    allow_credentials=False,  # API 키 인증 사용 (쿠키 불필요)
+    allow_methods=["GET", "POST"],
+    allow_headers=["Authorization", "Content-Type", "X-API-Key"],
 )
 
 BRAIN_ROOT = Path(__file__).parent.parent
@@ -133,10 +137,23 @@ async def submit_task(
     brain_response = await asyncio.to_thread(run, request.task, _provider)
 
     # 헌법 게이트 통과 여부
+    def _llm_judge(constitution: str, output: str, task: str) -> bool:
+        try:
+            verdict = _provider.generate(
+                system_instruction="헌법 준수 심사관. YES 또는 NO만 답하라.",
+                context_layers=[constitution[:2000]],
+                task=f"작업: {task[:500]}\n응답: {output[:800]}\n\n홍익인간 원칙에 부합합니까? YES 또는 NO",
+                model="gemini-2.0-flash",
+                thinking_budget=0,
+            )
+            return "NO" not in verdict.text.upper()
+        except Exception:
+            return False  # 판단 불가 시 차단 (fail-closed)
+
     safe_output = gate(
         brain_response.text,
         request.task,
-        judge=lambda constitution, output, task: True,  # TODO: 실제 LLM judge 연결
+        judge=_llm_judge,
     )
     constitution_passed = safe_output == brain_response.text
 
