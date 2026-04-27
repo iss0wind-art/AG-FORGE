@@ -269,11 +269,27 @@ def generate_gabji_report(project_id: str) -> dict:
         return {"status": "error", "message": str(e)}
 
 
-# ── 툴 7: 본영 단군 escalation (다리 B placeholder) ───────────────────────────
+# ── 단군 브리지 내부 유틸 ────────────────────────────────────────────────────
 
+_DANGUN_ROOT = Path("D:/Git/DREAM_FAC")
 _VALID_URGENCIES = {"normal", "high", "emergency"}
 _URGENCY_TIMEOUT = {"high": 120, "emergency": 30}
 
+
+def _call_dangun_brain(issue: str) -> str:
+    """단군 Python 패키지를 직접 임포트해 dangun_brain을 호출한다."""
+    if str(_DANGUN_ROOT) not in sys.path:
+        sys.path.insert(0, str(_DANGUN_ROOT))
+    try:
+        from dangun.agents_init import init_dangun_empire, run_issue  # type: ignore
+        empire = init_dangun_empire()
+        return run_issue(empire, issue)
+    except Exception as e:
+        print(f"[physis→dangun] 단군 호출 실패: {type(e).__name__}: {e}", file=sys.stderr)
+        return f"[단군/연결오류] {e}"
+
+
+# ── 툴 7: 본영 단군 escalation (다리 B — 실제 연결) ─────────────────────────
 
 def physis_escalate_dangun(
     issue: str,
@@ -281,8 +297,7 @@ def physis_escalate_dangun(
     context: dict | None = None,
 ) -> dict:
     """
-    피지수 → 본영 단군 escalation 요청.
-    단군 MCP 도구 연결 전 placeholder — 연결 후 실제 호출로 교체 예정.
+    피지수 → 본영 단군 escalation 요청. 단군 Python 브레인 직접 호출.
 
     Args:
         issue: 에스컬레이션 사안 (비어있으면 오류)
@@ -290,7 +305,7 @@ def physis_escalate_dangun(
         context: 추가 맥락 딕셔너리 (기본값 {})
 
     Returns:
-        status 필드를 포함한 딕셔너리
+        단군 응답 또는 오류 dict
     """
     if context is None:
         context = {}
@@ -310,12 +325,38 @@ def physis_escalate_dangun(
             "message": "paperclip 미가동 상태에서는 normal urgency 처리를 할 수 없습니다.",
         }
 
+    prompt = f"[{urgency.upper()} 에스컬레이션] {issue.strip()}"
+    if context:
+        import json as _json
+        prompt += f"\n맥락: {_json.dumps(context, ensure_ascii=False)}"
+
+    response = _call_dangun_brain(prompt)
     return {
-        "status": "pending_dangun_layer1_tools",
+        "status": "escalated",
         "urgency": urgency,
         "timeout_sec": _URGENCY_TIMEOUT[urgency],
         "context": context,
+        "dangun_response": response,
     }
+
+
+# ── 툴 8: 단군에게 일반 질의 (피지수→단군) ───────────────────────────────────
+
+@mcp.tool()
+def physis_ask_dangun(question: str) -> str:
+    """
+    피지수가 본영 단군에게 일반 질의를 보낸다.
+    에스컬레이션이 아닌 일반 판단·자문 요청에 사용.
+
+    Args:
+        question: 단군에게 전달할 질문 또는 요청
+
+    Returns:
+        단군 정반합 응답 텍스트
+    """
+    if not question.strip():
+        return "[오류] question은 비어있을 수 없습니다."
+    return _call_dangun_brain(question.strip())
 
 
 # ── 진입점 ────────────────────────────────────────────────────────────────────

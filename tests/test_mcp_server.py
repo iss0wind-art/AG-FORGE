@@ -138,24 +138,29 @@ class TestPhysisEscalateDangun:
         assert result["status"] == "error"
         assert "paperclip" in result["message"]
 
-    def test_high_urgency_pending_dangun_tools(self):
-        """단군 MCP 도구 발견 전엔 placeholder 응답."""
+    def test_high_urgency_escalated_to_dangun(self):
+        """high urgency → 단군 호출 후 escalated 반환."""
+        from unittest.mock import patch
         from mcp_server import physis_escalate_dangun
-        result = physis_escalate_dangun(
-            issue="4 페르소나 합의 실패",
-            urgency="high",
-            context={"deadlock_personas": ["공무부장", "디자이너"]},
-        )
-        assert result["status"] == "pending_dangun_layer1_tools"
+        with patch("mcp_server._call_dangun_brain", return_value="단군 응답"):
+            result = physis_escalate_dangun(
+                issue="4 페르소나 합의 실패",
+                urgency="high",
+                context={"deadlock_personas": ["공무부장", "디자이너"]},
+            )
+        assert result["status"] == "escalated"
         assert result["urgency"] == "high"
         assert result["timeout_sec"] == 120
         assert result["context"]["deadlock_personas"] == ["공무부장", "디자이너"]
+        assert result["dangun_response"] == "단군 응답"
 
     def test_emergency_urgency_30s_timeout(self):
         """emergency는 30초 timeout."""
+        from unittest.mock import patch
         from mcp_server import physis_escalate_dangun
-        result = physis_escalate_dangun(issue="0원칙 위배 가능성", urgency="emergency")
-        assert result["status"] == "pending_dangun_layer1_tools"
+        with patch("mcp_server._call_dangun_brain", return_value="단군 응답"):
+            result = physis_escalate_dangun(issue="0원칙 위배 가능성", urgency="emergency")
+        assert result["status"] == "escalated"
         assert result["timeout_sec"] == 30
 
     def test_default_context_is_dict(self):
