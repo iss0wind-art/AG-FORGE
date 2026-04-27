@@ -16,6 +16,14 @@ from scripts.agent_nodes import (
     judgment_node,
     accumulate_node,
 )
+from scripts.life_cycle_manager import v3_life_guard
+
+
+def _route_after_generation(state: AgentState) -> str:
+    """generation 이후 V3 enforce 모드 정지 여부 분기."""
+    if state.get("is_suspended") and state.get("v3_mode") == "enforce":
+        return "suspended"
+    return "quality_check"
 
 
 def _route_after_quality(state: AgentState) -> str:
@@ -42,7 +50,7 @@ def build_agent_graph(provider: LLMProvider):
 
     # 노드 등록
     graph.add_node("routing",       routing_node)
-    graph.add_node("generation",    lambda s: generation_node(s, provider))
+    graph.add_node("generation",    lambda s: v3_life_guard(generation_node, s, provider))
     graph.add_node("quality_check", quality_check_node)
     graph.add_node("tool_call",     tool_node)
     graph.add_node("constitution",  constitution_node)
@@ -53,9 +61,15 @@ def build_agent_graph(provider: LLMProvider):
     graph.set_entry_point("routing")
 
     # 정적 엣지
-    graph.add_edge("routing",    "generation")
-    graph.add_edge("generation", "quality_check")
-    graph.add_edge("tool_call",  "generation")
+    graph.add_edge("routing",   "generation")
+    graph.add_edge("tool_call", "generation")
+
+    # V3 Life Guard 분기: enforce 정지 시 END, 아니면 quality_check
+    graph.add_conditional_edges(
+        "generation",
+        _route_after_generation,
+        {"quality_check": "quality_check", "suspended": END},
+    )
     graph.add_edge("judgment",   "accumulate")
     graph.add_edge("accumulate", END)
 

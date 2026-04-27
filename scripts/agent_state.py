@@ -29,9 +29,9 @@ class AgentState(TypedDict):
     needs_approval: bool                               # 사용자의 최종 승인이 필요한지 여부
     approved: bool                                     # 사용자에 의해 승인이 완료되었는지 여부
 
-    # [V3 Mortality] 인공 생존 본능 필드 — life_cycle_manager.py가 사용
-    # 현재는 정의만 되어있고 graph에 미연결 (canon: fields_defined_inactive).
-    # 활성화는 방부장 승인 + shadow 모드 1주 검증 후. 활성화 전까지 모든 필드 NotRequired.
+    # [V3 Mortality] 인공 생존 본능 필드 — life_cycle_manager.v3_life_guard가 사용
+    # generation_node를 v3_life_guard로 감싸 연결됨 (2026-04-28, 방부장 승인).
+    # v3_mode="shadow"(기본) → 감쇠 로그만, "enforce" → 실제 정지 (환생 시스템 연동 후 전환).
     timer_hours: NotRequired[float]                    # 잔여 수명 (초기 24h)
     disappointment_score: NotRequired[int]             # 누적 실망 지수 (품질 실패 누적)
     decay_multiplier: NotRequired[float]               # 감쇠 배율 (1x → 2x → 4x → 8x)

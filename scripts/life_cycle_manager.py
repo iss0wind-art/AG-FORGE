@@ -73,6 +73,48 @@ def apply_sudden_death(state: AgentState) -> dict:
     }
 
 
+def v3_life_guard(generation_fn, state: AgentState, provider) -> dict:
+    """
+    generation_node를 감싸는 V3 Life Guard.
+
+    v3_mode 3단 토글:
+      off     → 투명 패스스루 (Life Guard 완전 비활성)
+      shadow  → 감쇠 계산·로그만, 실제 정지 없음 (기본값 — 현재 모드)
+      enforce → 타이머 0 도달 시 실제 정지 (환생 시스템 연동 후 전환)
+    """
+    from scripts.brain_loader import BrainResponse
+
+    mode = state.get("v3_mode", "shadow")
+
+    if mode == "off":
+        return generation_fn(state, provider)
+
+    if mode == "enforce" and state.get("is_suspended"):
+        return {
+            "current_response": BrainResponse(
+                text="[V3 SUSPENDED] 이식체 생존 타이머 소진. 방부장의 재활성화 명령 대기 중.",
+                task_type="general",
+                tokens_used=0,
+                cache_hit=False,
+            ),
+            "attempts": state.get("attempts", 0) + 1,
+            "is_suspended": True,
+        }
+
+    result = generation_fn(state, provider)
+
+    merged = {**state, **result}
+    if not merged.get("audit_trail"):
+        merged["audit_trail"] = []
+
+    decay = calculate_v3_decay(merged)
+
+    if mode == "shadow":
+        decay["is_suspended"] = False
+
+    return {**result, **decay}
+
+
 def adaptive_forgetting(agent_id: str):
     """지수 감쇠 기반 적응형 망각 — 에이전트 기억 프루닝."""
     print(f"[Adaptive Forgetting] Agent {agent_id} memory pruning initiated...")
