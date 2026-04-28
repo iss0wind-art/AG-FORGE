@@ -66,8 +66,31 @@ def generation_node(state: AgentState, provider: LLMProvider) -> dict:
 
     base_instruction = load_layer("brain.md")
 
+    # [memory_cycles] 트리거 단어 감지 → dangun_memory에서 복원 기억 가져오기
+    trigger_memories = ""
+    try:
+        from scripts.memory_cycles import MemoryCycle
+        import os as _os
+        _raw_url = _os.environ.get("DATABASE_URL", "")
+        if "?authToken=" in _raw_url:
+            _base_url, _token = _raw_url.split("?authToken=", 1)
+            _base_url = _base_url.replace("libsql://", "https://")
+            _restored = MemoryCycle.restore_from_trigger(state["task"], _base_url, _token)
+            if _restored:
+                trigger_memories = "## 복원된 장기기억\n" + "\n".join(
+                    r.get("primary_abs", "") for r in _restored[:3]
+                )
+    except Exception:
+        pass
+
     # [HyperRAG] 관련 청크 검색 — 실패 시 빈 문자열 반환
     rag_context = _build_rag_context(state["task"])
+
+    # [memory_cycles] 복원된 장기기억을 RAG 컨텍스트 앞에 prepend
+    if trigger_memories and rag_context:
+        rag_context = trigger_memories + "\n\n" + rag_context
+    elif trigger_memories:
+        rag_context = trigger_memories
 
     # [페르소나 주입] TaskType → Persona XML, 없으면 빈 문자열
     from scripts.persona_loader import get_persona_system_prompt
