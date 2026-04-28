@@ -65,3 +65,6 @@ test_transplant_target/
 # 피지수 학습용 감시 폴더 (방부장 업로드 엑셀·로컬 전용)
 watch/
 learn_log.jsonl
+
+# 코드베이스 증분 학습 상태 (로컬 전용)
+learn_state.json
