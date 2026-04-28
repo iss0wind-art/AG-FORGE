@@ -115,6 +115,7 @@ class ChromaVectorIndex:
         self,
         persist_path: str = "d:/Git/AG-Forge/library/vector_db",
         collection_name: str = "physis_brain",
+        expected_dim: int | None = None,
     ) -> None:
         import chromadb
         self._client = chromadb.PersistentClient(path=persist_path)
@@ -122,6 +123,28 @@ class ChromaVectorIndex:
             name=collection_name,
             metadata={"hnsw:space": "cosine"},
         )
+        # 임베더 차원이 기존 컬렉션과 다르면 컬렉션을 재생성한다.
+        if expected_dim is not None and self._col.count() > 0:
+            try:
+                existing = self._col.get(limit=1, include=["embeddings"])
+                embs = existing.get("embeddings")
+                if embs is not None and len(embs) > 0:
+                    stored_dim = len(embs[0])
+                    if stored_dim != expected_dim:
+                        import sys as _sys
+                        print(
+                            f"[ChromaVectorIndex] 차원 불일치 감지 "
+                            f"(저장:{stored_dim} vs 신규:{expected_dim}). "
+                            f"컬렉션 재생성.",
+                            file=_sys.stderr,
+                        )
+                        self._client.delete_collection(collection_name)
+                        self._col = self._client.get_or_create_collection(
+                            name=collection_name,
+                            metadata={"hnsw:space": "cosine"},
+                        )
+            except Exception:
+                pass  # 확인 실패 시 그대로 진행
 
     def upsert(self, vectors: list[dict]) -> None:
         """벡터 목록을 ChromaDB에 저장한다. 기존 id면 업데이트, 없으면 추가한다."""
