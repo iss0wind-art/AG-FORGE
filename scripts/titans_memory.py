@@ -117,6 +117,19 @@ def store_memory(
     # .titans_state.json 동기 기록
     _sync_state(doc_id, content, category, surprise)
 
+    # memory_cycles 연동: consolidated_wisdom 80개 이상이면 compress 실행
+    try:
+        from scripts.memory_cycles import MemoryCycle
+        import os as _os
+        _raw_url = _os.environ.get("DATABASE_URL", "")
+        _db_url, _db_token = ("", "")
+        if "?authToken=" in _raw_url:
+            _db_url, _db_token = _raw_url.split("?authToken=", 1)
+            _db_url = _db_url.replace("libsql://", "https://")
+        MemoryCycle.check_and_compress(TITANS_STATE, index, embedder, _db_url, _db_token)
+    except ImportError:
+        pass  # memory_cycles 없으면 skip
+
     return True
 
 
