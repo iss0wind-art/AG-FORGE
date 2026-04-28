@@ -122,3 +122,8 @@ _초기화됨._
 | 2026-04-28 11:18 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
 | 2026-04-28 11:18 | fake-model | planning | quality:pass | constitution:pass | 100 tokens |
 | 2026-04-28 11:18 | deepseek-chat | deepseek | quality:pass | constitution:pass | 17392 tokens |
+| 2026-04-28 15:10 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18691 tokens |
+| 2026-04-28 15:10 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 17698 tokens |
+| 2026-04-28 15:11 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18807 tokens |
+| 2026-04-28 15:13 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 19011 tokens |
+| 2026-04-28 15:15 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 19326 tokens |
