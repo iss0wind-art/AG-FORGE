@@ -66,11 +66,11 @@ CODEBASE_TARGETS: dict[str, dict] = {
 # ──────────────────────────────────────────────────────────────────────────────
 API_ENDPOINTS: dict[str, list[tuple[str, str]]] = {
     "H2OWIND_2": [
-        ("GET", "http://localhost:3000/api/stats/dashboard-summary"),
-        ("GET", "http://localhost:3000/api/boq"),
+        ("GET", "https://h2owind.iss0wind.kr/api/stats/dashboard-summary"),
+        ("GET", "https://h2owind.iss0wind.kr/api/boq"),
     ],
     "BOQ_2": [
-        ("GET", "http://localhost:3001/api/boq"),
+        ("GET", "http://localhost:3001/api/boq"),  # BOQ_2 배포 후 업데이트 필요
     ],
 }
 
