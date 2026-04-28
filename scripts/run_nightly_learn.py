@@ -266,6 +266,68 @@ def learn_api_health(index: ChromaVectorIndex, embedder) -> dict:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# 보고 — 텔레그램(이상 시) + 집현전 Paperclip(정상 시)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _send_telegram(text: str) -> None:
+    """텔레그램 방부장 직보. 환경변수 없으면 silent skip."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_OWNER_CHAT_ID", "")
+    if not token or not chat_id:
+        return
+    payload = json.dumps({"chat_id": chat_id, "text": text, "parse_mode": "HTML"}).encode()
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(req, timeout=10)
+    except Exception:
+        pass
+
+
+def _create_paperclip_issue(title: str, description: str) -> None:
+    """집현전 이슈 생성. Paperclip 오프라인이면 silent skip."""
+    payload = json.dumps({"title": title, "description": description, "priority": "low"}).encode()
+    req = urllib.request.Request(
+        "http://localhost:3100/api/issues",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(req, timeout=5)
+    except Exception:
+        pass
+
+
+def _detect_anomalies(results: dict) -> list[str]:
+    """결과에서 이상 징후를 추출한다."""
+    issues = []
+    if results.get("turso", {}).get("status") == "error":
+        issues.append(f"Turso DB 오류: {results['turso'].get('error', '')[:80]}")
+    api = results.get("api_health", {})
+    if api.get("status") == "error":
+        issues.append("API 헬스체크 섹션 오류")
+    return issues
+
+
+def _build_summary(results: dict) -> str:
+    t = results.get("turso", {})
+    c = results.get("codebase", {})
+    a = results.get("api_health", {})
+    lines = [
+        f"📅 {results['date']} 피지수 야간학습 완료",
+        f"• Turso: {t.get('fetched',0)}건 수집, {t.get('stored',0)}건 저장",
+        f"• 코드베이스: {', '.join(c.get('learned', ['없음'])) or '변경 없음'}",
+        f"• API 헬스체크: {a.get('checked',0)}개 확인",
+    ]
+    return "\n".join(lines)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # 섹션 4: 통합 실행
 # ──────────────────────────────────────────────────────────────────────────────
 def _safe_run_section(fn, *args) -> dict:
@@ -278,7 +340,6 @@ def _safe_run_section(fn, *args) -> dict:
 
 def run() -> None:
     embedder = build_default_embedder()
-    # 임베더 차원을 미리 탐지해 컬렉션 차원 불일치를 자동 재생성으로 처리한다.
     try:
         _probe_dim = len(embedder.embed("probe"))
     except Exception:
@@ -296,6 +357,21 @@ def run() -> None:
 
     with open(LOG, "a", encoding="utf-8") as f:
         f.write(json.dumps(results, ensure_ascii=False) + "\n")
+
+    # ── 보고 ──────────────────────────────────────────────────────────────────
+    anomalies = _detect_anomalies(results)
+    summary = _build_summary(results)
+
+    if anomalies:
+        # 이상 감지 → 텔레그램 방부장 직보
+        alert = f"⚠️ <b>피지수 야간학습 이상 감지</b>\n" + "\n".join(f"• {a}" for a in anomalies)
+        _send_telegram(alert)
+    else:
+        # 정상 완료 → 집현전 이슈 생성
+        _create_paperclip_issue(
+            title=f"[피지수] 야간학습 완료 — {today}",
+            description=summary,
+        )
 
     print(json.dumps(results, ensure_ascii=False, indent=2))
 
