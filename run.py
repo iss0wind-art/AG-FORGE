@@ -1,16 +1,15 @@
 ﻿"""
 피지수(Physis) 기동 스크립트 — run.py
-ZROK 터널 자동 개통 + FastAPI 서버 실행.
+Cloudflare 터널 자동 개통 + FastAPI 서버 실행.
 
 사용법:
-  python run.py            # 로컬 실행 (http://localhost:8010)
-  python run.py --zrok     # ZROK 터널 개통 (외부 접속 가능)
+  python run.py             # 로컬 실행 (http://localhost:8010)
+  python run.py --tunnel    # Cloudflare 터널 개통 (외부 접속 가능)
   python run.py --port 9000
-  python run.py --zrok --port 9000
+  python run.py --tunnel --port 9000
 
 사전 요구:
-  ZROK 설치: https://docs.zrok.io/
-  ZROK 인증: zrok account create 또는 zrok account login
+  cloudflared 설치: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
 """
 from __future__ import annotations
 import argparse
@@ -18,7 +17,6 @@ import os
 import sys
 import subprocess
 import time
-from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -31,42 +29,20 @@ def validate_env() -> list[str]:
     return [key for key in REQUIRED_ENV if not os.environ.get(key)]
 
 
-def get_zrok_command() -> str:
-    """zrok 명령의 경로를 반환한다. PATH에 없으면 사용자 문서 폴더를 확인한다."""
+def open_cloudflare_tunnel(port: int) -> subprocess.Popen:
+    """
+    Cloudflare 퀵 터널을 백그라운드에서 열고 프로세스 객체를 반환한다.
+    cloudflared가 출력하는 .trycloudflare.com URL을 표준 에러로 출력한다.
+    """
     import shutil
-    cmd = shutil.which("zrok")
-    if cmd:
-        return cmd
-    
-    # 사용자 문서 및 전용 폴더 확인 (방부장님 환경 전용)
-    fallbacks = [
-        Path(os.environ.get("USERPROFILE", "C:/Users/USER")) / "Documents" / "zrok.exe",
-        Path(os.environ.get("USERPROFILE", "C:/Users/USER")) / "zrok" / "bin" / "zrok2.exe"
-    ]
-    for fb in fallbacks:
-        if fb.exists():
-            return str(fb)
-    
-    return "zrok"  # 기본값으로 시도
+    cmd = shutil.which("cloudflared")
+    if not cmd:
+        raise RuntimeError("cloudflared 명령어를 찾을 수 없습니다. 설치 후 재시도하세요.")
 
-
-def open_zrok_tunnel(port: int) -> subprocess.Popen:
-    """
-    ZROK 터널을 백그라운드에서 열고 프로세스 객체를 반환한다.
-    """
-    zrok_cmd = get_zrok_command()
-
-    try:
-        subprocess.run([zrok_cmd, "status"], capture_output=True, text=True, timeout=5, check=True)
-    except FileNotFoundError:
-        raise RuntimeError("ZROK 명령어를 찾을 수 없습니다")
-    except subprocess.CalledProcessError:
-        raise RuntimeError("ZROK 미인증")
-
-    print(f"[Info] '{zrok_cmd}'를 통해 페이퍼 클립(터널) 가동 중...")
+    print(f"[Info] Cloudflare 터널 개통 중 (localhost:{port})...")
 
     process = subprocess.Popen(
-        [zrok_cmd, "share", "public", f"http://localhost:{port}", "--headless"],
+        [cmd, "tunnel", "--url", f"http://localhost:{port}"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
@@ -74,10 +50,10 @@ def open_zrok_tunnel(port: int) -> subprocess.Popen:
         errors="replace",
     )
 
-    time.sleep(2)
+    time.sleep(3)
     if process.poll() is not None:
         _, stderr = process.communicate()
-        raise RuntimeError(f"ZROK 터널 실패: {stderr}")
+        raise RuntimeError(f"Cloudflare 터널 실패: {stderr}")
 
     return process
 
@@ -127,7 +103,7 @@ def start_server(host: str, port: int) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="피지수(Physis) 독립 뇌 서버")
-    parser.add_argument("--zrok", action="store_true", help="ZROK 터널 개통 (외부 접속 가능)")
+    parser.add_argument("--tunnel", action="store_true", help="Cloudflare 터널 개통 (외부 접속 가능)")
     parser.add_argument("--headless", action="store_true", help="UI 없이 API 전용 모드로 실행")
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
     parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8010)))
@@ -147,12 +123,12 @@ def main() -> int:
     tunnel_proc = None
     public_url = f"http://localhost:{args.port}"
     
-    if args.zrok:
+    if args.tunnel:
         try:
-            tunnel_proc = open_zrok_tunnel(args.port)
-            print(f"[OK] 페이퍼 클립(zrok) 백그라운드 가동 시작")
+            tunnel_proc = open_cloudflare_tunnel(args.port)
+            print(f"[OK] Cloudflare 터널 백그라운드 가동 시작")
         except Exception as e:
-            print(f"[Error] 페이퍼 클립 가동 실패: {e}")
+            print(f"[Error] Cloudflare 터널 가동 실패: {e}")
             print("   로컬 모드로 계속합니다.\n")
 
     try:
