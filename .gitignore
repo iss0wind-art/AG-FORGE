@@ -61,3 +61,7 @@ out/
 
 # 이식 테스트 산출물 (로컬 전용)
 test_transplant_target/
+
+# 피지수 학습용 감시 폴더 (방부장 업로드 엑셀·로컬 전용)
+watch/
+learn_log.jsonl
