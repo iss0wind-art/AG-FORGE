@@ -1,0 +1,34 @@
+version: "3.9"
+
+# 피지수 NAS 배포용 (Synology Container Manager)
+# 사용법: docker compose -f docker-compose.nas.yml up -d
+
+services:
+  physis:
+    build: .
+    container_name: physis-brain
+    ports:
+      - "8010:8000"       # NAS 외부포트:컨테이너 내부포트
+    env_file:
+      - .env.nas          # NAS 전용 환경변수 파일
+    restart: always       # NAS 재시작 후 자동 기동
+    volumes:
+      # 뇌 레이어 (재시작 후 유지)
+      - ./brain.md:/app/brain.md
+      - ./brain_personality.md:/app/brain_personality.md
+      - ./judgment.md:/app/judgment.md
+      - ./observability_log.jsonl:/app/observability_log.jsonl
+      # HyperRAG ChromaDB 영구 저장 (핵심 — 학습 데이터 보존)
+      - physis-chromadb:/app/library/vector_db
+      # CMA 감사 로그
+      - physis-audit:/app/.cma_audit.jsonl
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/physis/status')"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  physis-chromadb:    # HyperRAG 벡터 DB 영구 저장
+  physis-audit:       # CMA 감사 로그 영구 저장

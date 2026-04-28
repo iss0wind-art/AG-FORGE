@@ -359,6 +359,59 @@ def physis_ask_dangun(question: str) -> str:
     return _call_dangun_brain(question.strip())
 
 
+# ── 툴 9: POPEYEs 현장 데이터 학습 ──────────────────────────────────────────
+
+@mcp.tool()
+def physis_learn_from_popeys(date: str) -> dict:
+    """
+    피지수가 POPEYEs 현장 데이터를 학습한다.
+    지정 날짜의 TeamReport + MasterReport를 읽어 HyperRAG(ChromaVectorIndex)에 저장한다.
+
+    Args:
+        date: 학습할 날짜 (YYYY-MM-DD)
+
+    Returns:
+        {"learned": int, "date": str, "summary": str} 또는 {"error": str}
+    """
+    import asyncio
+    from scripts.turso_reader import fetch_popeys_daily
+    from scripts.embedding import ChromaVectorIndex, build_default_embedder
+    from scripts.cma import memory_store
+
+    if not date.strip():
+        return {"error": "date는 비어있을 수 없습니다."}
+
+    # 1. POPEYEs 데이터 읽기
+    try:
+        data = asyncio.run(fetch_popeys_daily(date.strip()))
+    except Exception as e:
+        return {"error": f"Turso 읽기 실패: {e}"}
+
+    if not data.get("team_reports"):
+        return {"error": f"{date} 데이터 없음"}
+
+    # 2. HyperRAG에 학습 (CMA memory_store)
+    idx = ChromaVectorIndex()
+    emb = build_default_embedder()
+    learned = 0
+
+    for report in data["team_reports"]:
+        content = f"[{date}][{report['team']}] 작업: {report['content']} / 인원: {report['worker_count']}명"
+        result = memory_store(content, "popeys_daily", idx, emb)
+        if result["status"] in ("stored", "merged"):
+            learned += 1
+
+    # 마스터 요약도 저장
+    if data.get("master_summary"):
+        memory_store(f"[{date}][마스터일보] {data['master_summary']}", "popeys_master", idx, emb)
+
+    return {
+        "learned": learned,
+        "date": date,
+        "summary": f"{date} 팀별 보고 {len(data['team_reports'])}건, {learned}건 학습 완료 (총 {data['total_workers']}명)"
+    }
+
+
 # ── 진입점 ────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
