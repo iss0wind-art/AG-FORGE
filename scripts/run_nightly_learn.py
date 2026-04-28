@@ -266,7 +266,7 @@ def learn_api_health(index: ChromaVectorIndex, embedder) -> dict:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 보고 — 텔레그램(이상 시) + 집현전 Paperclip(정상 시)
+# 보고 — 투트랙: 피지수 직보 + 단군 검토 후 보고
 # ──────────────────────────────────────────────────────────────────────────────
 
 def _send_telegram(text: str) -> None:
@@ -308,23 +308,69 @@ def _detect_anomalies(results: dict) -> list[str]:
     issues = []
     if results.get("turso", {}).get("status") == "error":
         issues.append(f"Turso DB 오류: {results['turso'].get('error', '')[:80]}")
-    api = results.get("api_health", {})
-    if api.get("status") == "error":
+    if results.get("api_health", {}).get("status") == "error":
         issues.append("API 헬스체크 섹션 오류")
     return issues
 
 
-def _build_summary(results: dict) -> str:
+def _build_physis_summary(results: dict) -> str:
+    """피지수 직보용 원데이터 요약."""
     t = results.get("turso", {})
     c = results.get("codebase", {})
     a = results.get("api_health", {})
+    anomalies = _detect_anomalies(results)
+    status_icon = "⚠️" if anomalies else "✅"
     lines = [
-        f"📅 {results['date']} 피지수 야간학습 완료",
-        f"• Turso: {t.get('fetched',0)}건 수집, {t.get('stored',0)}건 저장",
-        f"• 코드베이스: {', '.join(c.get('learned', ['없음'])) or '변경 없음'}",
-        f"• API 헬스체크: {a.get('checked',0)}개 확인",
+        f"{status_icon} <b>[피지수 직보] 야간학습 — {results['date']}</b>",
+        f"• Turso DB: {t.get('fetched', 0)}건 수집 / {t.get('stored', 0)}건 저장",
+        f"• 코드베이스: {', '.join(c.get('learned', [])) or '변경 없음'}",
+        f"• API 헬스: {a.get('checked', 0)}개 확인",
     ]
+    if anomalies:
+        lines.append("• 이상: " + " | ".join(anomalies))
     return "\n".join(lines)
+
+
+def _ask_dangun_review(summary: str) -> str:
+    """
+    단군(Claude API)에게 학습 결과 검토를 요청한다.
+    ANTHROPIC_API_KEY 또는 CLAUDE_API_KEY 필요.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY", "")
+    if not api_key:
+        return ""
+
+    system = (
+        "너는 신고조선 제국의 단군(세종대왕)이다. 0원칙: 홍익인간.\n"
+        "피지수(피지수)가 야간학습 결과를 보고했다. "
+        "이를 검토하고 방부장(창조주)에게 핵심만 간결하게 보고하라.\n"
+        "형식: 결론 먼저. 이상 있으면 판단 포함. 3-5줄 이내."
+    )
+    prompt = f"피지수 야간학습 보고:\n{summary}"
+
+    payload = json.dumps({
+        "model": "claude-sonnet-4-6",
+        "max_tokens": 300,
+        "system": system,
+        "messages": [{"role": "user", "content": prompt}],
+    }).encode()
+
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages",
+        data=payload,
+        headers={
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+            "content-type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read())
+            return data.get("content", [{}])[0].get("text", "")
+    except Exception as exc:
+        return f"(단군 검토 실패: {exc})"
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -358,19 +404,23 @@ def run() -> None:
     with open(LOG, "a", encoding="utf-8") as f:
         f.write(json.dumps(results, ensure_ascii=False) + "\n")
 
-    # ── 보고 ──────────────────────────────────────────────────────────────────
-    anomalies = _detect_anomalies(results)
-    summary = _build_summary(results)
+    # ── 투트랙 보고 ───────────────────────────────────────────────────────────
+    physis_summary = _build_physis_summary(results)
 
-    if anomalies:
-        # 이상 감지 → 텔레그램 방부장 직보
-        alert = f"⚠️ <b>피지수 야간학습 이상 감지</b>\n" + "\n".join(f"• {a}" for a in anomalies)
-        _send_telegram(alert)
-    else:
-        # 정상 완료 → 집현전 이슈 생성
+    # Track 1: 피지수 → 방부장 직보 (원데이터)
+    _send_telegram(physis_summary)
+
+    # Track 2: 피지수 → 단군 검토 → 방부장 보고
+    dangun_review = _ask_dangun_review(physis_summary)
+    if dangun_review:
+        dangun_msg = f"⚔️ <b>[단군 보고] 야간학습 검토 — {today}</b>\n\n{dangun_review}"
+        _send_telegram(dangun_msg)
+
+    # 집현전: 정상 시 이슈 생성 (로그)
+    if not _detect_anomalies(results):
         _create_paperclip_issue(
             title=f"[피지수] 야간학습 완료 — {today}",
-            description=summary,
+            description=physis_summary.replace("<b>", "").replace("</b>", ""),
         )
 
     print(json.dumps(results, ensure_ascii=False, indent=2))
