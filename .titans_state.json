@@ -144,6 +144,13 @@
       "category": "boq",
       "insight": "BOQ 콘크리트 타설 단가 150000원",
       "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260428151112307687",
+      "timestamp": "2026-04-28T15:11:12.332934",
+      "category": "api_health:H2OWIND_2",
+      "insight": "[API헬스체크][H2OWIND_2][http://localhost:3000/api/stats/dashboard-summary] 오류:TimeoutError:timed out",
+      "surprise_score": 1.0
     }
   ]
 }
