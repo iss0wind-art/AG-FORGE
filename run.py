@@ -3,7 +3,7 @@
 ZROK 터널 자동 개통 + FastAPI 서버 실행.
 
 사용법:
-  python run.py            # 로컬 실행 (http://localhost:8000)
+  python run.py            # 로컬 실행 (http://localhost:8010)
   python run.py --zrok     # ZROK 터널 개통 (외부 접속 가능)
   python run.py --port 9000
   python run.py --zrok --port 9000
@@ -130,7 +130,7 @@ def main() -> int:
     parser.add_argument("--zrok", action="store_true", help="ZROK 터널 개통 (외부 접속 가능)")
     parser.add_argument("--headless", action="store_true", help="UI 없이 API 전용 모드로 실행")
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
-    parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8000)))
+    parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8010)))
     args = parser.parse_args()
 
     if args.headless:
