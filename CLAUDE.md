@@ -22,7 +22,7 @@
 - Python 3.x, FastAPI, LangGraph
 - LLM: ChainedProvider (Groq → DeepSeek → Gemini 폴백)
 - MCP: FastMCP (`mcp_server.py`)
-- 터널: ZROK (`python run.py --zrok`)
+- 터널: Cloudflare (`python run.py --tunnel`)
 - DB: Turso (LibSQL, 현장 뇌 연결 예정)
 - 메모리: Titans (Surprise Metric 기반 망각·통합)
 - 학습: 벡터DB (`library/vector_db/`, ChromaDB)
@@ -30,8 +30,8 @@
 ## 필수 명령어
 
 ```bash
-python run.py                                              # API 서버 시작 (포트 8000)
-python run.py --zrok                                       # ZROK 터널 포함
+python run.py                                              # API 서버 시작 (포트 8010)
+python run.py --tunnel                                     # Cloudflare 터널 포함
 python -m pytest tests/                                    # 전체 테스트
 python scripts/transplant.py --target PATH --role field_brain --master URL  # 사지 이식
 python scripts/setup_vector_db.py                          # 자아 학습 DB 셋업

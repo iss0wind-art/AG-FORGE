@@ -41,7 +41,7 @@
 | 영구 DB | Turso (LibSQL) |
 | 메모리 | Titans Surprise Metric |
 | MCP | FastMCP (`mcp_server.py`) |
-| 터널 | ZROK |
+| 터널 | Cloudflare |
 
 ---
 
@@ -147,7 +147,7 @@ AG-Forge/
 ```bash
 # 서버 시작
 python run.py                    # API 서버 (포트 8000)
-python run.py --zrok             # ZROK 터널 포함
+python run.py --tunnel    # Cloudflare 터널 포함
 
 # 테스트
 python -m pytest tests/ -q       # 전체 (298 passed)
