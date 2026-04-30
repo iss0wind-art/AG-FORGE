@@ -18,6 +18,7 @@ Claude Code settings.json 등록:
   또는 @physis 명령어로 명시적 호출도 가능
 """
 from __future__ import annotations
+import io
 import os
 import re
 import sys
@@ -25,6 +26,12 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 load_dotenv()
+
+# Windows cp949 환경에서 이모지 포함 출력 시 인코딩 오류 방지
+if hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "buffer"):
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 from mcp.server.fastmcp import FastMCP
 
@@ -73,13 +80,13 @@ def _build_provider() -> LLMProvider:
     )
 
     providers = []
-    # 방부장 지령 최신 서열 적용
+    # 2026-04-30: DeepSeek R1 최우선 (Claude 크레딧 소진)
     priority_keys = [
-        ("CLAUDE_API_KEY",   ClaudeProvider),
-        ("QWEN_API_KEY",     QwenProvider),
         ("DEEPSEEK_API_KEY", DeepSeekProvider),
-        ("GEMINI_API_KEY",    GeminiProvider),
-        ("GROQ_API_KEY",      GroqProvider),
+        ("QWEN_API_KEY",     QwenProvider),
+        ("GROQ_API_KEY",     GroqProvider),
+        ("GEMINI_API_KEY",   GeminiProvider),
+        ("CLAUDE_API_KEY",   ClaudeProvider),
     ]
 
     for key_name, cls in priority_keys:
@@ -283,10 +290,13 @@ def _call_dangun_brain(issue: str) -> str:
     try:
         from dangun.agents_init import init_dangun_empire, run_issue  # type: ignore
         empire = init_dangun_empire()
-        return run_issue(empire, issue)
+        result = run_issue(empire, issue)
+        # 결과가 str이 아닐 경우 안전하게 변환
+        return str(result) if result is not None else "[단군/응답없음]"
     except Exception as e:
-        print(f"[physis→dangun] 단군 호출 실패: {type(e).__name__}: {e}", file=sys.stderr)
-        return f"[단군/연결오류] {e}"
+        err_msg = str(e).encode("utf-8", errors="replace").decode("utf-8")
+        print(f"[physis→dangun] 단군 호출 실패: {type(e).__name__}: {err_msg}", file=sys.stderr)
+        return f"[단군/연결오류] {err_msg}"
 
 
 # ── 툴 7: 본영 단군 escalation (다리 B — 실제 연결) ─────────────────────────
