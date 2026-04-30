@@ -64,13 +64,13 @@ def _build_provider() -> LLMProvider:
     )
 
     providers = []
-    # 방부장 지령: Claude(최우선) > Qwen > DeepSeek > Groq > Gemini
+    # 2026-04-30 방부장 지령: DeepSeek R1(최우선) > Qwen > Groq > Gemini (Claude 크레딧 소진)
     priority_keys = [
-        ("CLAUDE_API_KEY",   ClaudeProvider),
-        ("QWEN_API_KEY",     QwenProvider),
         ("DEEPSEEK_API_KEY", DeepSeekProvider),
-        ("GROQ_API_KEY",      GroqProvider),
-        ("GEMINI_API_KEY",    GeminiProvider),
+        ("QWEN_API_KEY",     QwenProvider),
+        ("GROQ_API_KEY",     GroqProvider),
+        ("GEMINI_API_KEY",   GeminiProvider),
+        ("CLAUDE_API_KEY",   ClaudeProvider),
     ]
 
     for key_name, cls in priority_keys:
