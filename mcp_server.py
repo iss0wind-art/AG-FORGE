@@ -278,21 +278,28 @@ def generate_gabji_report(project_id: str) -> dict:
 
 # ── 단군 브리지 내부 유틸 ────────────────────────────────────────────────────
 
-_DANGUN_ROOT = Path("D:/Git/DREAM_FAC")
 _VALID_URGENCIES = {"normal", "high", "emergency"}
 _URGENCY_TIMEOUT = {"high": 120, "emergency": 30}
+_DANGUN_API_URL = "http://localhost:8020/api/dangun_brain"
 
 
 def _call_dangun_brain(issue: str) -> str:
-    """단군 Python 패키지를 직접 임포트해 dangun_brain을 호출한다."""
-    if str(_DANGUN_ROOT) not in sys.path:
-        sys.path.insert(0, str(_DANGUN_ROOT))
+    """단군 HTTP API를 호출한다 (포트 8020)."""
+    import urllib.request
+    import json as _json
+    payload = _json.dumps({"issue": issue}).encode()
+    req = urllib.request.Request(
+        _DANGUN_API_URL,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
     try:
-        from dangun.agents_init import init_dangun_empire, run_issue  # type: ignore
-        empire = init_dangun_empire()
-        result = run_issue(empire, issue)
-        # 결과가 str이 아닐 경우 안전하게 변환
-        return str(result) if result is not None else "[단군/응답없음]"
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = _json.loads(resp.read())
+            if "error" in data:
+                return f"[단군/오류] {data['error']}"
+            return data.get("result", "[단군/응답없음]")
     except Exception as e:
         err_msg = str(e).encode("utf-8", errors="replace").decode("utf-8")
         print(f"[physis→dangun] 단군 호출 실패: {type(e).__name__}: {err_msg}", file=sys.stderr)

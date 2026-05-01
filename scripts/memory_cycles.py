@@ -15,6 +15,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import math
 import os
 import re
 import sys
@@ -430,6 +431,127 @@ class MemoryCycle:
             "archived": archive_count,
             "triggered": True,
         }
+
+
+# ────────────────────────────────────────────────────────────────
+# TriggerAccumulator — 다중 단어 누적 트리거 (직관 발화 엔진)
+# ────────────────────────────────────────────────────────────────
+
+class TriggerAccumulator:
+    """
+    몇 개의 원자단위 단어들이 누적될 때
+    활성화값 합계가 θ(임계값)를 넘는 순간 트리거 발동 → 직관 폭발.
+
+    뉴런의 역치 발화(Action Potential)와 동일한 원리.
+    학습이 쌓일수록 θ가 정교해지고 직관이 인간에 가까워진다.
+
+    사용 예:
+        acc = TriggerAccumulator(theta=3.0)
+        acc.accumulate("직관")
+        acc.accumulate("망각")
+        result = acc.accumulate_and_check("피지수")
+        # result가 None이 아니면 직관 폭발 — 복원된 기억 목록 반환
+    """
+
+    DEFAULT_THETA = float(os.environ.get("TRIGGER_THETA", "3.0"))
+
+    def __init__(
+        self,
+        theta: float | None = None,
+        db_url: str = "",
+        token: str = "",
+    ) -> None:
+        self.theta = theta if theta is not None else self.DEFAULT_THETA
+        self.db_url = db_url or os.environ.get("DATABASE_URL", "")
+        self.token = token
+        self._activation: dict[str, float] = {}
+        self._total: float = 0.0
+
+    # ────────────────────────────────────────────────────────
+    # 누적
+    # ────────────────────────────────────────────────────────
+
+    def accumulate(self, word: str) -> float:
+        """
+        단어 하나를 누적한다.
+        Turso cue_anchors에서 매칭 수를 조회 → log1p 스케일로 활성화값 증가.
+        반환: 현재 누적 활성화값 합계.
+        """
+        word_escaped = word.replace("'", "''")
+        sql = (
+            f"SELECT COUNT(*) as cnt FROM dangun_memory "
+            f"WHERE cue_anchors LIKE '%{word_escaped}%'"
+        )
+        result = _turso_execute(sql, self.db_url, self.token)
+
+        match_count = 0.0
+        if "error" not in result:
+            rows = _turso_rows(result)
+            if rows:
+                match_count = float(rows[0].get("cnt") or 0)
+
+        # log1p 스케일: 매칭 폭발 방지, 0 매칭은 0 활성화
+        activation = math.log1p(match_count)
+        self._activation[word] = self._activation.get(word, 0.0) + activation
+        self._total += activation
+
+        logger.info(
+            "트리거 누적: '%s' → match=%d, activation=%.3f, total=%.3f/θ=%.1f",
+            word, int(match_count), activation, self._total, self.theta,
+        )
+        return self._total
+
+    # ────────────────────────────────────────────────────────
+    # 임계값 체크 → 직관 발화
+    # ────────────────────────────────────────────────────────
+
+    def check(self) -> list[dict] | None:
+        """
+        누적 활성화값 >= θ 이면 트리거 발동.
+        누적된 모든 단어로 기억을 복원하고 리셋한다.
+        반환: 복원된 기억 목록 (미발동 시 None).
+        """
+        if self._total < self.theta:
+            return None
+
+        restored: list[dict] = []
+        seen_ids: set[str] = set()
+
+        for word in self._activation:
+            memories = MemoryCycle.restore_from_trigger(word, self.db_url, self.token)
+            for mem in memories:
+                mid = mem.get("id")
+                if mid and mid not in seen_ids:
+                    seen_ids.add(mid)
+                    restored.append(mem)
+
+        logger.info(
+            "직관 발화! total=%.3f >= θ=%.1f → %d개 기억 수렴",
+            self._total, self.theta, len(restored),
+        )
+        self.reset()
+        return restored
+
+    def accumulate_and_check(self, word: str) -> list[dict] | None:
+        """accumulate + check 원스텝."""
+        self.accumulate(word)
+        return self.check()
+
+    # ────────────────────────────────────────────────────────
+    # 상태 조회 / 리셋
+    # ────────────────────────────────────────────────────────
+
+    def reset(self) -> None:
+        self._activation.clear()
+        self._total = 0.0
+
+    @property
+    def total_activation(self) -> float:
+        return self._total
+
+    @property
+    def activation_map(self) -> dict[str, float]:
+        return dict(self._activation)
 
 
 # ────────────────────────────────────────────────────────────────

@@ -68,3 +68,10 @@ learn_log.jsonl
 
 # 코드베이스 증분 학습 상태 (로컬 전용)
 learn_state.json
+.learn_state.json
+
+# 임시 메시지·스크립트 (회고/통신/검증용 — 단군 청에 따라 watcher.py 등 보존)
+.tmp_*
+
+# 벡터 DB 테스트 디렉토리
+library/vector_db_test/

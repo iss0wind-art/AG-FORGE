@@ -151,6 +151,20 @@
       "category": "api_health:H2OWIND_2",
       "insight": "[API헬스체크][H2OWIND_2][http://localhost:3000/api/stats/dashboard-summary] 오류:TimeoutError:timed out",
       "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260429183241838465",
+      "timestamp": "2026-04-29T18:32:41.893422",
+      "category": "api_health:H2OWIND_2",
+      "insight": "[API헬스체크][H2OWIND_2][https://h2owind.iss0wind.kr/api/stats/dashboard-summary] 오류:HTTP Error 403: For",
+      "surprise_score": 1.0
+    },
+    {
+      "id": "mem-20260429183430642132",
+      "timestamp": "2026-04-29T18:34:30.692219",
+      "category": "code:H2OWIND_2",
+      "insight": "[H2OWIND_2][app\\api\\archive\\route.ts][L1]\n﻿import { NextRequest, NextResponse } from 'next/server';\n",
+      "surprise_score": 1.0
     }
   ]
 }

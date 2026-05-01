@@ -17,6 +17,10 @@
         "PYTHONIOENCODING": "utf-8",
         "PYTHONUTF8": "1"
       }
+    },
+    "mobile-editor": {
+      "type": "sse",
+      "url": "https://ais-dev-sqtiova6raofncq5t5fozx-431730858523.asia-northeast1.run.app/api/mcp/sse"
     }
   }
 }
