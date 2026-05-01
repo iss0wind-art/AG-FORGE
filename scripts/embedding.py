@@ -28,12 +28,18 @@ class GoogleEmbeddingClient:
         self.model = "gemini-embedding-001"
 
     def embed(self, text: str) -> list[float]:
-        result = self.client.models.embed_content(
-            model=self.model,
-            contents=text,
-            config=dict(task_type="RETRIEVAL_DOCUMENT")
-        )
-        return result.embeddings[0].values
+        try:
+            result = self.client.models.embed_content(
+                model=self.model,
+                contents=text,
+                config=dict(task_type="RETRIEVAL_DOCUMENT")
+            )
+            return result.embeddings[0].values
+        except Exception as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                # Gemini 쿼터 초과 → TF-IDF 폴백
+                return SimpleTFIDFEmbedder().embed(text)
+            raise
 
 
 def chunk_document(text: str, chunk_size: int = 500, overlap: int = 50) -> list[str]:
@@ -224,9 +230,17 @@ class SimpleTFIDFEmbedder:
 
 
 def build_default_embedder() -> EmbeddingClient:
-    """환경에 따라 Google 또는 TF-IDF 임베더를 자동 선택한다."""
+    """환경에 따라 Google 또는 TF-IDF 임베더를 자동 선택한다.
+    Gemini 쿼터 초과 시 TF-IDF로 고정 (차원 불일치 방지).
+    """
     import os
     key = os.environ.get("GEMINI_API_KEY", "")
     if key:
-        return GoogleEmbeddingClient(api_key=key)
+        try:
+            client = GoogleEmbeddingClient(api_key=key)
+            # 쿼터 사전 확인 — 실패 시 TF-IDF 사용
+            client.embed("probe")
+            return client
+        except Exception:
+            pass
     return SimpleTFIDFEmbedder()

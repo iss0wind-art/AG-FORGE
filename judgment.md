@@ -127,3 +127,16 @@ _초기화됨._
 | 2026-04-28 15:11 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18807 tokens |
 | 2026-04-28 15:13 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 19011 tokens |
 | 2026-04-28 15:15 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 19326 tokens |
+| 2026-04-28 17:10 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18596 tokens |
+| 2026-04-28 17:36 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18655 tokens |
+| 2026-04-28 17:37 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18389 tokens |
+| 2026-04-28 21:59 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 4095 tokens |
+| 2026-04-29 07:31 | qwen3.6-plus | qwen | quality:pass | constitution:pass | 18110 tokens |
+| 2026-04-30 15:47 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3878 tokens |
+| 2026-04-30 16:11 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4135 tokens |
+| 2026-04-30 23:09 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3974 tokens |
+| 2026-05-01 01:50 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4028 tokens |
+| 2026-05-01 01:50 | deepseek-chat | deepseek | quality:pass | constitution:pass | 3995 tokens |
+| 2026-05-01 01:51 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4046 tokens |
+| 2026-05-01 01:59 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4000 tokens |
+| 2026-05-01 01:59 | deepseek-chat | deepseek | quality:pass | constitution:pass | 4031 tokens |

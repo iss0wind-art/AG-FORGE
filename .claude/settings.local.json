@@ -1,5 +1,9 @@
-﻿{
+{
   "disabledMcpjsonServers": [
     "ag-forge"
+  ],
+  "enabledMcpjsonServers": [
+    "dangun",
+    "mobile-editor"
   ]
 }
