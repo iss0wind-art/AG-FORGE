@@ -75,3 +75,8 @@ learn_state.json
 
 # 벡터 DB 테스트 디렉토리
 library/vector_db_test/
+
+# 야간학습 자동 갱신 파일 (단군 권고 b — baseline은 commit 91e670e에 박혀 있음)
+.titans_state.json
+brain.md
+judgment.md
