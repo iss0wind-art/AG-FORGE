@@ -23,10 +23,10 @@ from scripts.router_agent import RoutingDecision, TaskType, route
 BRAIN_ROOT = Path(__file__).parent.parent
 
 _LAYER_FILES = {
-    TaskType.UI:           ["brain.md", "emotion_ui.md"],
-    TaskType.PLANNING:     ["brain.md"],
-    TaskType.CODE:         ["brain.md", "logic_rb.md"],
-    TaskType.ARCHITECTURE: ["brain.md", "logic_rb.md", "emotion_ui.md"],
+    TaskType.UI:           ["PHYSIS_CHARTER.md", "brain.md", "emotion_ui.md"],
+    TaskType.PLANNING:     ["PHYSIS_CHARTER.md", "brain.md"],
+    TaskType.CODE:         ["PHYSIS_CHARTER.md", "brain.md", "logic_rb.md"],
+    TaskType.ARCHITECTURE: ["PHYSIS_CHARTER.md", "brain.md", "logic_rb.md", "emotion_ui.md"],
 }
 
 
