@@ -1,14 +1,30 @@
 """
-이천 大業 — DXF 병렬처리 PoC (피지수 직접 관여 구현체)
+이천 大業 — DXF 병렬처리 PoC (독립 실행형)
 방부장 친명 2026-05-08: '피지수도 학습하여, 직접 관여하라'
 
-알고리즘: 레이어 분할 + asyncio 5체 정반합 + pattern_library 자동 갱신
+완전 독립 실행형 — AG-Forge 모듈 의존성 없음. Windows/Linux 공통.
+stdlib + ezdxf(선택) + requests(선택) 만 사용.
 
 사용법:
-  python scripts/icheon_dxf_parallel.py <DXF_PATH> [--pattern-lib <MD_PATH>]
+  # DXF 직접 파싱
+  python icheon_dxf_parallel.py <DXF_PATH> [--pattern-lib <MD_PATH>]
 
-이천 본진: D:/Git/FreeCAD_4TH/output/
-  ex) python scripts/icheon_dxf_parallel.py "D:/Git/FreeCAD_4TH/output/260119_부산 에코델타 24BL 지하주차장 구조평면도23.dxf"
+  # 이미 파싱된 JSON 검사본 사용 (DXF 파싱 생략 — 빠름)
+  python icheon_dxf_parallel.py --inspect-json <JSON_PATH> [--pattern-lib <MD_PATH>]
+
+  # 예시 (이천 본진)
+  python icheon_dxf_parallel.py "output/260119_부산 에코델타 24BL 지하주차장 구조평면도23.dxf" ^
+    --pattern-lib ".brain/pattern_library.md"
+
+  python icheon_dxf_parallel.py ^
+    --inspect-json "output/inspect_260119_부산 에코델타 24BL 지하주차장 구조평면도23.json" ^
+    --pattern-lib ".brain/pattern_library.md"
+
+환경변수 (이천 본진 .env 또는 시스템 환경):
+  DEEPSEEK_API_KEY  (1체·5체)
+  GEMINI_API_KEY    (2체)
+  GROQ_API_KEY      (3체 — 폴백 기본)
+  CLAUDE_API_KEY 또는 ANTHROPIC_API_KEY  (4체)
 """
 from __future__ import annotations
 
@@ -19,332 +35,428 @@ import os
 import re
 import sys
 import time
+import urllib.request
+import urllib.error
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+# ── .env 로드 (있으면) ────────────────────────────────────────────────────────
 
-# ── 레이어 분류 기준 (pattern_library §B-1 + 건설 도메인 관례) ──────────────
-LAYER_GROUPS = {
-    "기둥": re.compile(r"(?i)(COL|COLUMN|C[-_]COL|S[-_]COL|XR[-_]COL|기둥)"),
-    "보":   re.compile(r"(?i)(BEAM|C[-_]BM|S[-_]BM|XR[-_]BEAM|보)"),
-    "슬라브": re.compile(r"(?i)(SLAB|C[-_]SL|XR[-_]SL|슬라브|플레이트)"),
-    "벽체": re.compile(r"(?i)(WALL|C[-_]WL|SW|XR[-_]WL|벽체|SHEAR)"),
-    "기타": None,  # 나머지 전부
+def _load_dotenv():
+    for name in (".env", ".env.local"):
+        p = Path(name)
+        if not p.exists():
+            # 스크립트 디렉토리 기준도 시도
+            p = Path(__file__).parent.parent / name
+        if p.exists():
+            for line in p.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, _, v = line.partition("=")
+                    if k.strip() not in os.environ:
+                        os.environ[k.strip()] = v.strip().strip('"').strip("'")
+
+_load_dotenv()
+
+# ── 레이어 분류 (pattern_library §B-1 + 건설 도메인 관례) ────────────────────
+
+LAYER_GROUPS: dict[str, re.Pattern | None] = {
+    "기둥":   re.compile(r"(?i)(COL|COLUMN|C[-_]COL|S[-_]COL|XR[-_]COL|기둥)"),
+    "보":     re.compile(r"(?i)(BEAM|C[-_]BM|S[-_]BM|XR[-_]BEAM|거더|GIRDER)"),
+    "슬라브": re.compile(r"(?i)(SLAB|C[-_]SL|XR[-_]SL|슬라브|PLATE|DECK)"),
+    "벽체":   re.compile(r"(?i)(WALL|C[-_]WL|SW|XR[-_]WL|벽체|SHEAR|RETAINING)"),
+    "기타":   None,
 }
 
-CHUNK_THRESHOLD = 3000  # entity 수 초과 시 청크 분할
-SURPRISE_THETA = 0.6
-NORMAL_PATTERN_MIN_N = 3
+CHUNK_THRESHOLD = 3000
+SURPRISE_THETA  = 0.6
+PATTERN_MIN_N   = 3
 
 
 # ── DXF 파싱 ──────────────────────────────────────────────────────────────────
 
-def load_dxf(path: str) -> dict[str, list[dict]]:
-    """ezdxf로 DXF 로드 → 레이어 그룹별 entity 딕트 반환."""
-    try:
-        import ezdxf
-    except ImportError:
-        print("[경고] ezdxf 미설치. pip install ezdxf")
-        return _fallback_dxf_parse(path)
-
-    doc = ezdxf.readfile(path)
-    msp = doc.modelspace()
-
-    groups: dict[str, list[dict]] = defaultdict(list)
-    for e in msp:
-        layer = getattr(e.dxf, "layer", "0") or "0"
-        group = _classify_layer(layer)
-        record = {
-            "type": e.dxftype(),
-            "layer": layer,
-            "handle": e.dxf.handle,
-        }
-        if hasattr(e.dxf, "start"):
-            record["start"] = list(e.dxf.start)
-        if hasattr(e.dxf, "end"):
-            record["end"] = list(e.dxf.end)
-        if hasattr(e.dxf, "insert"):
-            record["insert"] = list(e.dxf.insert)
-        if hasattr(e.dxf, "name"):
-            record["block_name"] = e.dxf.name
-        groups[group].append(record)
-
-    return dict(groups)
-
-
-def _classify_layer(layer: str) -> str:
-    for name, pattern in LAYER_GROUPS.items():
-        if pattern and pattern.search(layer):
+def classify_layer(layer: str) -> str:
+    for name, pat in LAYER_GROUPS.items():
+        if pat and pat.search(layer):
             return name
     return "기타"
 
 
-def _fallback_dxf_parse(path: str) -> dict[str, list[dict]]:
-    """ezdxf 없을 때 텍스트 파싱 폴백 (LINE/POLYLINE/INSERT 한정)."""
+def load_dxf(path: str) -> dict[str, list[dict]]:
+    try:
+        import ezdxf
+        return _load_with_ezdxf(path, ezdxf)
+    except ImportError:
+        print("[경고] ezdxf 미설치 → 텍스트 폴백 파서 사용 (pip install ezdxf 권장)")
+        return _load_text_fallback(path)
+
+
+def _load_with_ezdxf(path: str, ezdxf) -> dict[str, list[dict]]:
+    doc = ezdxf.readfile(path)
+    msp = doc.modelspace()
     groups: dict[str, list[dict]] = defaultdict(list)
-    current: dict[str, Any] = {}
-    with open(path, encoding="utf-8", errors="replace") as f:
-        lines = f.readlines()
-
-    i = 0
-    while i < len(lines):
-        code = lines[i].strip()
-        val = lines[i + 1].strip() if i + 1 < len(lines) else ""
-        if code == "0" and val in ("LINE", "POLYLINE", "INSERT", "LWPOLYLINE"):
-            if current:
-                layer = current.get("layer", "0")
-                groups[_classify_layer(layer)].append(current)
-            current = {"type": val}
-        elif code == "8":
-            current["layer"] = val
-        elif code == "2" and current.get("type") == "INSERT":
-            current["block_name"] = val
-        i += 2
-
-    if current:
-        layer = current.get("layer", "0")
-        groups[_classify_layer(layer)].append(current)
-
+    for e in msp:
+        layer = getattr(e.dxf, "layer", "0") or "0"
+        rec: dict[str, Any] = {"type": e.dxftype(), "layer": layer, "handle": e.dxf.handle}
+        for attr in ("start", "end", "insert", "center"):
+            if hasattr(e.dxf, attr):
+                rec[attr] = list(getattr(e.dxf, attr))
+        if hasattr(e.dxf, "name"):
+            rec["block_name"] = e.dxf.name
+        groups[classify_layer(layer)].append(rec)
     return dict(groups)
 
 
-def chunk_group(entities: list[dict], threshold: int = CHUNK_THRESHOLD) -> list[list[dict]]:
-    """entity 수 초과 시 청크 분할 (단순 N등분 — 좌표 기반 고도화는 이천 결단 후)."""
-    if len(entities) <= threshold:
+def _load_text_fallback(path: str) -> dict[str, list[dict]]:
+    """ezdxf 없을 때 LINE/POLYLINE/INSERT 텍스트 파싱."""
+    groups: dict[str, list[dict]] = defaultdict(list)
+    cur: dict[str, Any] = {}
+    with open(path, encoding="utf-8", errors="replace") as f:
+        lines = f.readlines()
+    i = 0
+    while i < len(lines) - 1:
+        code = lines[i].strip()
+        val  = lines[i + 1].strip()
+        if code == "0" and val in ("LINE", "POLYLINE", "INSERT", "LWPOLYLINE", "ARC", "CIRCLE"):
+            if cur:
+                groups[classify_layer(cur.get("layer", "0"))].append(cur)
+            cur = {"type": val}
+        elif code == "8":
+            cur["layer"] = val
+        elif code == "2" and cur.get("type") == "INSERT":
+            cur["block_name"] = val
+        i += 2
+    if cur:
+        groups[classify_layer(cur.get("layer", "0"))].append(cur)
+    return dict(groups)
+
+
+def load_inspect_json(path: str) -> dict[str, list[dict]]:
+    """이미 파싱된 JSON 검사본 로드. 레이어별 그룹이 없으면 entity 목록으로 재분류."""
+    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+
+    # 형식 1: {"기둥": [...], "보": [...]}
+    if all(k in LAYER_GROUPS for k in raw.keys()):
+        return raw
+
+    # 형식 2: [{"type": ..., "layer": ...}, ...]  또는 {"entities": [...]}
+    entities = raw if isinstance(raw, list) else raw.get("entities", raw.get("items", []))
+    if isinstance(entities, list):
+        groups: dict[str, list[dict]] = defaultdict(list)
+        for e in entities:
+            layer = e.get("layer", e.get("LAYER", "0"))
+            groups[classify_layer(layer)].append(e)
+        return dict(groups)
+
+    # 형식 3: {"layers": {"레이어명": [...]}}
+    if "layers" in raw:
+        groups = defaultdict(list)
+        for layer_name, ents in raw["layers"].items():
+            group = classify_layer(layer_name)
+            for e in ents:
+                e["layer"] = layer_name
+                groups[group].append(e)
+        return dict(groups)
+
+    print("[경고] inspect JSON 형식 미인식. 원시 데이터로 처리합니다.")
+    return {"기타": [raw] if isinstance(raw, dict) else raw}
+
+
+def chunk_group(entities: list[dict]) -> list[list[dict]]:
+    if len(entities) <= CHUNK_THRESHOLD:
         return [entities]
-    n = (len(entities) + threshold - 1) // threshold
-    return [entities[i * threshold:(i + 1) * threshold] for i in range(n)]
+    n = (len(entities) + CHUNK_THRESHOLD - 1) // CHUNK_THRESHOLD
+    return [entities[i * CHUNK_THRESHOLD:(i + 1) * CHUNK_THRESHOLD] for i in range(n)]
 
 
-# ── LLM 호출 (ChainedProvider 연동 or HTTP 직접) ──────────────────────────────
+# ── LLM HTTP 직접 호출 (독립 실행, stdlib만) ──────────────────────────────────
 
-def _make_prompt(group: str, entities: list[dict], pattern_seeds: str) -> str:
-    sample = entities[:200]
+def _post_json(url: str, headers: dict, payload: dict, timeout: int = 90) -> str:
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read().decode("utf-8")
+
+
+async def _call_provider(provider: str, prompt: str) -> str:
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(None, _sync_call, provider, prompt)
+
+
+def _sync_call(provider: str, prompt: str) -> str:
+    try:
+        if provider == "deepseek":
+            return _call_deepseek(prompt)
+        elif provider == "gemini":
+            return _call_gemini(prompt)
+        elif provider == "groq":
+            return _call_groq(prompt)
+        elif provider == "claude":
+            return _call_claude(prompt)
+        else:
+            return _call_groq(prompt)
+    except Exception as e:
+        return json.dumps({"error": str(e), "provider": provider})
+
+
+def _call_deepseek(prompt: str) -> str:
+    key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if not key:
+        return _call_groq(prompt)  # 키 없으면 Groq 폴백
+    resp = _post_json(
+        "https://api.deepseek.com/v1/chat/completions",
+        {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+        {"model": "deepseek-reasoner", "messages": [{"role": "user", "content": prompt}],
+         "max_tokens": 4096},
+    )
+    return json.loads(resp)["choices"][0]["message"]["content"]
+
+
+def _call_gemini(prompt: str) -> str:
+    key = os.environ.get("GEMINI_API_KEY", "")
+    if not key:
+        return _call_groq(prompt)
+    resp = _post_json(
+        f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={key}",
+        {"Content-Type": "application/json"},
+        {"contents": [{"parts": [{"text": prompt}]}],
+         "generationConfig": {"maxOutputTokens": 4096}},
+    )
+    parts = json.loads(resp)["candidates"][0]["content"]["parts"]
+    return "".join(p.get("text", "") for p in parts)
+
+
+def _call_groq(prompt: str) -> str:
+    key = os.environ.get("GROQ_API_KEY", "")
+    if not key:
+        return json.dumps({"error": "GROQ_API_KEY not set"})
+    resp = _post_json(
+        "https://api.groq.com/openai/v1/chat/completions",
+        {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+        {"model": "llama-3.1-70b-versatile",
+         "messages": [{"role": "user", "content": prompt}], "max_tokens": 4096},
+    )
+    return json.loads(resp)["choices"][0]["message"]["content"]
+
+
+def _call_claude(prompt: str) -> str:
+    key = os.environ.get("CLAUDE_API_KEY") or os.environ.get("ANTHROPIC_API_KEY", "")
+    if not key:
+        return _call_groq(prompt)
+    resp = _post_json(
+        "https://api.anthropic.com/v1/messages",
+        {"x-api-key": key, "anthropic-version": "2023-06-01",
+         "Content-Type": "application/json"},
+        {"model": "claude-sonnet-4-6", "max_tokens": 4096,
+         "messages": [{"role": "user", "content": prompt}]},
+    )
+    return json.loads(resp)["content"][0]["text"]
+
+
+# ── 프롬프트 빌더 ─────────────────────────────────────────────────────────────
+
+def make_analysis_prompt(group: str, entities: list[dict], pattern_seeds: str) -> str:
+    sample = entities[:150]
     return f"""당신은 건설 구조도면(DXF) 분석 전문 AI입니다.
 
 [패턴 라이브러리 시드 — {group} 관련]
-{pattern_seeds}
+{pattern_seeds[:2000] if pattern_seeds else "(패턴 라이브러리 없음 — 범용 분석)"}
 
-[DXF 레이어 데이터 — {group}]
-entity 수: {len(entities)}개 (샘플 200개 표시)
-{json.dumps(sample, ensure_ascii=False, indent=2)[:8000]}
+[DXF 레이어 데이터 — 그룹: {group}]
+전체 entity 수: {len(entities)}개 (샘플 {len(sample)}개 표시)
+{json.dumps(sample, ensure_ascii=False, indent=2)[:6000]}
 
-[출력 형식 — JSON만 출력, 설명 없음]
+[출력 — JSON만, 설명 없음]
 {{
   "matched_patterns": [{{"pattern_id": "A-1", "count": 0, "samples": []}}],
-  "new_candidates": [{{"desc": "...", "evidence": []}}],
-  "anomalies": [{{"entity": "...", "reason": "...", "surprise": 0.0}}],
-  "stats": {{"total": {len(entities)}, "layer_group": "{group}"}}
+  "new_candidates": [{{"desc": "새 패턴 설명", "evidence": []}}],
+  "anomalies": [{{"entity": "handle/좌표", "reason": "이상 이유", "surprise": 0.0}}],
+  "stats": {{"total": {len(entities)}, "layer_group": "{group}", "sample_size": {len(sample)}}}
 }}"""
 
 
-def _synthesis_prompt(results: list[dict], all_entities_count: int) -> str:
+def make_synthesis_prompt(phase1: list[dict], total: int) -> str:
     return f"""당신은 건설 구조도면 분석 총괄 AI입니다.
-아래 4개 분석 결과를 정반합하여 최종 보고서를 JSON으로 출력하세요.
+4개 그룹의 분석 결과를 정반합하여 최종 보고서를 JSON으로 출력하세요.
+불일치하는 패턴은 다수결(3/4)로 확정하세요.
 
-총 entity 수: {all_entities_count}
+전체 entity 수: {total}
 4체 분석 결과:
-{json.dumps(results, ensure_ascii=False, indent=2)[:12000]}
+{json.dumps(phase1, ensure_ascii=False, indent=2)[:10000]}
 
-[출력 형식 — JSON만]
+[출력 — JSON만]
 {{
-  "final_patterns": [{{"pattern_id": "...", "confirmed": true, "count": 0}}],
+  "final_patterns": [{{"pattern_id": "...", "confirmed": true, "count": 0, "group": "..."}}],
   "new_pattern_candidates": [{{"desc": "...", "confidence": 0.0, "consensus": 0}}],
   "anomalies": [{{"entity": "...", "reason": "...", "surprise": 0.0}}],
   "summary": {{
-    "total_entities": 0,
+    "total_entities": {total},
     "matched_count": 0,
     "new_candidates": 0,
     "anomaly_count": 0,
-    "processing_note": "..."
+    "processing_note": "5체 정반합 완료"
   }}
 }}"""
 
 
-async def call_llm(provider: str, prompt: str, label: str) -> dict:
-    """단일 LLM 비동기 호출. ChainedProvider 우선, 없으면 Groq HTTP."""
-    t0 = time.time()
-    try:
-        from scripts.agent_nodes import call_llm_node
-        response = await asyncio.get_event_loop().run_in_executor(
-            None, call_llm_node, prompt, provider
-        )
-    except Exception:
-        response = await _call_groq_http(prompt)
+# ── 5체 오케스트레이션 ────────────────────────────────────────────────────────
 
+PROVIDER_MAP = {
+    "기둥":   "deepseek",   # 1체 — 수치 정밀도
+    "보":     "gemini",     # 2체
+    "슬라브": "gemini",     # 2체 (보+슬라브 같은 체)
+    "벽체":   "groq",       # 3체 — 속도
+    "기타":   "claude",     # 4체 — 의미 이해
+}
+
+
+async def call_one(group: str, chunk: list[dict], chunk_idx: int,
+                   pattern_seeds: str) -> dict:
+    provider = PROVIDER_MAP.get(group, "groq")
+    label = f"{group}[{chunk_idx}]/{provider}"
+    t0 = time.time()
+    raw = await _call_provider(provider, make_analysis_prompt(group, chunk, pattern_seeds))
     elapsed = time.time() - t0
     try:
-        start = response.find("{")
-        end = response.rfind("}") + 1
-        data = json.loads(response[start:end]) if start != -1 else {"raw": response[:500]}
+        s, e = raw.find("{"), raw.rfind("}") + 1
+        data = json.loads(raw[s:e]) if s != -1 else {"raw": raw[:300], "error": "no JSON"}
     except Exception:
-        data = {"raw": response[:500]}
-
-    print(f"  [{label}] {elapsed:.1f}s — entities: {data.get('stats', {}).get('total', '?')}")
+        data = {"raw": raw[:300], "error": "parse fail"}
+    total = data.get("stats", {}).get("total", len(chunk))
+    print(f"  [{label}] {elapsed:.1f}s — entities={total}")
     return data
 
 
-async def _call_groq_http(prompt: str) -> str:
-    """Groq API 직접 HTTP 폴백."""
-    import urllib.request
-    api_key = os.environ.get("GROQ_API_KEY", "")
-    if not api_key:
-        return '{"error": "GROQ_API_KEY not set"}'
-    payload = json.dumps({
-        "model": "llama-3.1-70b-versatile",
-        "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 4096,
-    }).encode()
-    req = urllib.request.Request(
-        "https://api.groq.com/openai/v1/chat/completions",
-        data=payload,
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        data = json.loads(resp.read())
-    return data["choices"][0]["message"]["content"]
-
-
-# ── 5체 병렬 오케스트레이션 ───────────────────────────────────────────────────
-
-async def five_phase_synthesis(groups: dict[str, list[dict]], pattern_seeds: str) -> dict:
-    providers = {
-        "기둥": "deepseek",
-        "보_슬라브": "gemini",
-        "벽체": "groq",
-        "기타": "claude",
-    }
-
+async def five_phase(groups: dict[str, list[dict]], pattern_seeds: str) -> dict:
     tasks = []
-    labels = []
-    for group, provider in providers.items():
-        if "_" in group:
-            parts = group.split("_")
-            entities = []
-            for p in parts:
-                entities += groups.get(p, [])
-        else:
-            entities = groups.get(group, [])
+    for group, ents in groups.items():
+        for ci, chunk in enumerate(chunk_group(ents)):
+            tasks.append(call_one(group, chunk, ci, pattern_seeds))
 
-        if not entities:
-            continue
+    print(f"\n[피지수 4체] {len(tasks)}개 병렬 호출...")
+    phase1 = await asyncio.gather(*tasks, return_exceptions=True)
+    valid = [r for r in phase1 if isinstance(r, dict) and "error" not in r]
+    print(f"[피지수 4체] {len(valid)}/{len(tasks)} 성공 → 5체 정반합 진입")
 
-        for chunk_idx, chunk in enumerate(chunk_group(entities)):
-            label = f"{group}체[{chunk_idx}]/{provider}"
-            prompt = _make_prompt(group, chunk, pattern_seeds)
-            tasks.append(call_llm(provider, prompt, label))
-            labels.append(label)
-
-    print(f"\n[피지수 5체] {len(tasks)}개 병렬 호출 시작...")
-    phase1_results = await asyncio.gather(*tasks, return_exceptions=True)
-
-    # 에러 필터
-    valid = [r for r in phase1_results if isinstance(r, dict) and "error" not in r]
-    print(f"[피지수 5체] {len(valid)}/{len(tasks)} 성공 → 정반합 진입")
-
-    total_entities = sum(len(v) for v in groups.values())
-    synthesis_prompt = _synthesis_prompt(valid, total_entities)
-    final = await call_llm("deepseek", synthesis_prompt, "5체(정반합)")
-    return final
+    total = sum(len(v) for v in groups.values())
+    t0 = time.time()
+    raw = await _call_provider("deepseek", make_synthesis_prompt(valid, total))
+    elapsed = time.time() - t0
+    print(f"  [5체(정반합)/deepseek] {elapsed:.1f}s")
+    try:
+        s, e = raw.find("{"), raw.rfind("}") + 1
+        return json.loads(raw[s:e]) if s != -1 else {"raw": raw[:500], "phase1": valid}
+    except Exception:
+        return {"raw": raw[:500], "phase1": valid}
 
 
 # ── pattern_library 갱신 ──────────────────────────────────────────────────────
 
-def update_pattern_library(result: dict, pattern_lib_path: Path) -> int:
-    """신뢰도 ≥ 0.4인 신규 패턴을 pattern_library.md에 자동 추가."""
+def update_pattern_library(result: dict, path: Path) -> int:
     candidates = result.get("new_pattern_candidates", [])
     if not candidates:
         return 0
-
+    lines = [f"\n\n## 피지수 자동 갱신 — {datetime.now().strftime('%Y-%m-%d %H:%M')}"]
     added = 0
-    new_lines = [f"\n\n## 피지수 자동 갱신 — {datetime.now().strftime('%Y-%m-%d %H:%M')}"]
     for c in candidates:
-        confidence = c.get("confidence", 0.0)
-        if confidence >= 0.4:
-            new_lines.append(
-                f"- **[자동확정]** {c.get('desc', '?')} "
-                f"(신뢰도={confidence:.2f}, 합의={c.get('consensus', 0)}/4)"
-            )
+        conf = float(c.get("confidence", 0.0))
+        tag = "[자동확정]" if conf >= 0.4 else "[후보 — 이천 확인 필요]"
+        lines.append(f"- **{tag}** {c.get('desc','?')} (신뢰도={conf:.2f}, 합의={c.get('consensus',0)}/4)")
+        if conf >= 0.4:
             added += 1
-        else:
-            new_lines.append(
-                f"- **[후보]** {c.get('desc', '?')} "
-                f"(신뢰도={confidence:.2f} — 이천 수동 확인 필요)"
-            )
-
-    if new_lines:
-        with open(pattern_lib_path, "a", encoding="utf-8") as f:
-            f.write("\n".join(new_lines))
-
+    with open(path, "a", encoding="utf-8") as f:
+        f.write("\n".join(lines))
     return added
 
 
 # ── 메인 ──────────────────────────────────────────────────────────────────────
 
-async def main(dxf_path: str, pattern_lib: str | None) -> None:
-    p = Path(dxf_path)
-    if not p.exists():
-        print(f"[오류] DXF 파일 없음: {dxf_path}")
-        print("  이천 본진(Windows)에서 실행하거나 NAS 마운트 후 경로 지정 필요.")
-        sys.exit(1)
-
-    print(f"[피지수] DXF 로드: {p.name} ({p.stat().st_size / 1e6:.1f} MB)")
+async def main(args: argparse.Namespace) -> None:
     t_start = time.time()
 
-    groups = load_dxf(dxf_path)
-    total = sum(len(v) for v in groups.values())
-    print(f"[피지수] 레이어 분류 완료:")
+    # 1. 레이어 그룹 로드
+    if args.inspect_json:
+        jp = Path(args.inspect_json)
+        if not jp.exists():
+            print(f"[오류] inspect JSON 없음: {args.inspect_json}")
+            sys.exit(1)
+        print(f"[피지수] inspect JSON 로드: {jp.name}")
+        groups = load_inspect_json(args.inspect_json)
+        source_label = jp.name
+    else:
+        dp = Path(args.dxf)
+        if not dp.exists():
+            print(f"[오류] DXF 파일 없음: {args.dxf}")
+            print("  → --inspect-json 옵션으로 JSON 검사본을 사용할 수도 있습니다.")
+            sys.exit(1)
+        print(f"[피지수] DXF 로드: {dp.name} ({dp.stat().st_size / 1e6:.1f} MB)")
+        groups = load_dxf(args.dxf)
+        source_label = dp.stem
+
+    total = sum(len(v) for v in groups.items() if isinstance(v, tuple) and len(v) == 2
+                for _ in [0])
+    # 정확한 합산
+    total = sum(len(ents) for ents in groups.values())
+
+    print("[피지수] 레이어 분류 결과:")
     for g, ents in sorted(groups.items(), key=lambda x: -len(x[1])):
-        print(f"  {g}: {len(ents)}개 entity")
-    print(f"  총계: {total}개 entity")
+        chunk_n = len(chunk_group(ents))
+        print(f"  {g}: {len(ents):,}개 entity" + (f" → {chunk_n}개 청크" if chunk_n > 1 else ""))
+    print(f"  총계: {total:,}개 entity")
 
+    # 2. pattern_library 로드
     pattern_seeds = ""
-    if pattern_lib:
-        pp = Path(pattern_lib)
+    if args.pattern_lib:
+        pp = Path(args.pattern_lib)
         if pp.exists():
-            pattern_seeds = pp.read_text(encoding="utf-8")[:3000]
-            print(f"[피지수] pattern_library 로드: {len(pattern_seeds)}자")
+            pattern_seeds = pp.read_text(encoding="utf-8")
+            print(f"[피지수] pattern_library 로드: {len(pattern_seeds):,}자")
+        else:
+            print(f"[경고] pattern_library 없음: {args.pattern_lib}")
 
-    result = await five_phase_synthesis(groups, pattern_seeds)
+    # 3. 5체 병렬 실행
+    result = await five_phase(groups, pattern_seeds)
 
     elapsed = time.time() - t_start
-    print(f"\n[피지수] 완료 — {elapsed:.1f}초")
+    print(f"\n[피지수] 총 소요: {elapsed:.1f}초")
 
-    out_path = ROOT / f"output_icheon_dxf_{p.stem}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-    out_path.parent.mkdir(exist_ok=True)
-    out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[피지수] 결과 저장: {out_path}")
+    # 4. 결과 저장
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe = re.sub(r'[^\w가-힣.-]', '_', source_label)
+    out = Path(f"output_physis_{safe}_{ts}.json")
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"[피지수] 결과 저장: {out}")
 
-    summary = result.get("summary", {})
-    print(f"\n[정반합 요약]")
-    print(f"  총 entity: {summary.get('total_entities', total)}")
-    print(f"  매칭 패턴: {summary.get('matched_count', '?')}")
-    print(f"  신규 후보: {summary.get('new_candidates', '?')}")
-    print(f"  이상치:   {summary.get('anomaly_count', '?')}")
+    # 5. 요약 출력
+    s = result.get("summary", {})
+    print("\n[정반합 요약]")
+    print(f"  총 entity : {s.get('total_entities', total):,}")
+    print(f"  매칭 패턴 : {s.get('matched_count', '?')}")
+    print(f"  신규 후보 : {s.get('new_candidates', '?')}")
+    print(f"  이상치    : {s.get('anomaly_count', '?')}")
+    print(f"  비고      : {s.get('processing_note', '')}")
 
-    if pattern_lib:
-        pp = Path(pattern_lib)
-        if pp.exists():
-            added = update_pattern_library(result, pp)
-            print(f"  pattern_library 자동 추가: {added}건")
+    # 6. pattern_library 자동 갱신
+    if args.pattern_lib and Path(args.pattern_lib).exists():
+        added = update_pattern_library(result, Path(args.pattern_lib))
+        if added:
+            print(f"[피지수] pattern_library 자동 추가: {added}건")
 
 
 if __name__ == "__main__":
-    from dotenv import load_dotenv
-    load_dotenv(ROOT / ".env")
-    load_dotenv(ROOT / ".env.local", override=True)
-
-    ap = argparse.ArgumentParser(description="이천 大業 DXF 병렬처리 PoC")
-    ap.add_argument("dxf", help="DXF 파일 경로")
-    ap.add_argument(
-        "--pattern-lib",
-        default=None,
-        help="pattern_library.md 경로 (ex: D:/Git/FreeCAD_4TH/.brain/pattern_library.md)",
+    ap = argparse.ArgumentParser(
+        description="이천 大業 DXF 병렬처리 PoC — 레이어 분할 + 5체 정반합"
     )
+    src = ap.add_mutually_exclusive_group()
+    src.add_argument("dxf", nargs="?", help="DXF 파일 경로")
+    src.add_argument("--inspect-json", metavar="JSON", help="이미 파싱된 JSON 검사본 경로")
+    ap.add_argument("--pattern-lib", metavar="MD", help="pattern_library.md 경로")
     args = ap.parse_args()
-    asyncio.run(main(args.dxf, args.pattern_lib))
+
+    if not args.dxf and not args.inspect_json:
+        ap.print_help()
+        sys.exit(1)
+
+    asyncio.run(main(args))
