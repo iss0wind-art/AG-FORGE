@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no 100.108.177.88 \"dir D:\\\\\\\\Git\\\\\\\\FreeCAD_4TH\\\\\\\\.brain\\\\\\\\\")",
+      "Bash(smbclient //100.108.177.88/\"동우건설 공유폴더\" -N -c \"ls\")"
+    ]
+  }
+}

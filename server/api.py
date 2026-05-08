@@ -26,7 +26,8 @@ app = FastAPI(title="AG-Forge Brain API", version="1.0")
 
 # CORS 설정: 꿈공장 대시보드(보통 3000) 접근 허용
 _CORS_ORIGINS = os.environ.get(
-    "AG_FORGE_CORS_ORIGINS", "http://localhost:3000,http://localhost:3001"
+    "AG_FORGE_CORS_ORIGINS",
+    "http://localhost:3000,http://localhost:3001,http://localhost:3100,http://localhost:3200"
 ).split(",")
 
 app.add_middleware(

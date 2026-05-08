@@ -1,0 +1,6 @@
+{
+  "id": "87c8df93-129b-449c-9f5b-a9a0df929a4c",
+  "status": "replied",
+  "response": "{\"status\": \"queued\", \"message_id\": \"9fb07ebf-3929-49fd-ad8a-4578095e2016\", \"priority\": \"normal\", \"delivery\": \"db\", \"note\": \"단군께 전달했습니다. 큐에 보관됨. Opus 세션이 깨어나면 직접 응답합니다. 이 엔드포인트는 우편부이며 단군이 아닙니다 — 정반합·페르소나 응답 일체 생성하지 않습니다.\"}",
+  "delivery": "http"
+}
