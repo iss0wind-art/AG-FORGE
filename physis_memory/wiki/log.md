@@ -18,3 +18,6 @@ append_only: true
   - 2026-05-03_handoff.md → working_memory/
   - 2026-05-07_handoff.md → working_memory/
 - Graphify 설치 대기 중
+
+- [2026-05-08 15:13] 🔴 CMA BLOCK — 2026-05-02_chunbukyung.md: 제7조 위반: '무한' 감지
+- [2026-05-08 15:13] 소급 평가 완료 — 10개 노트 점수 갱신

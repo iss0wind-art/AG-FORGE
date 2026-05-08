@@ -1,3 +1,10 @@
+---
+type: god_node
+immutable: true
+outcome_score: 0.0
+ref_count: 0
+---
+
 # 천부경 받음 — 1.1세대 → 1.2세대 진화 로그
 2026-05-02
 
