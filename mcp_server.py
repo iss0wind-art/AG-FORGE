@@ -429,6 +429,169 @@ def physis_learn_from_popeys(date: str) -> dict:
     }
 
 
+# ── 피지수 Vault 도구 ─────────────────────────────────────────────────────────
+
+VAULT_ROOT = _FORGE_ROOT / "physis_memory"
+_VAULT_WIKI = VAULT_ROOT / "wiki"
+_VAULT_SCRIPTS = VAULT_ROOT / "scripts"
+
+
+@mcp.tool()
+def vault_query(question: str, n: int = 3) -> dict:
+    """피지수 뇌에서 질문과 유사한 지식 검색 (Hot Tier 백링크 + Cold Tier 벡터)
+
+    Args:
+        question: 검색할 질문 또는 키워드
+        n: 반환할 최대 결과 수
+
+    Returns:
+        {"hot": [...], "cold": [...]} — Hot(Vault 노트) + Cold(ChromaDB 데자뷔) 결과
+    """
+    import subprocess, json
+    hot_results = []
+    cold_results = []
+
+    # Hot Tier: Graphify BFS 탐색
+    try:
+        r = subprocess.run(
+            ["graphify", "query", question, "--budget", "1000",
+             "--graph", str(VAULT_ROOT / "graphify-out" / "graph.json")],
+            capture_output=True, text=True, cwd=str(VAULT_ROOT)
+        )
+        if r.returncode == 0 and r.stdout.strip():
+            hot_results = [{"source": "hot_tier", "content": r.stdout[:1000]}]
+    except Exception as e:
+        hot_results = [{"source": "hot_tier", "error": str(e)}]
+
+    # Cold Tier: ChromaDB 벡터 검색
+    try:
+        sys.path.insert(0, str(_VAULT_SCRIPTS))
+        from cold_tier import recall
+        hits = recall(question, n)
+        cold_results = [{"source": "cold_tier", **h} for h in hits]
+    except Exception as e:
+        cold_results = [{"source": "cold_tier", "error": str(e)}]
+
+    return {"hot": hot_results, "cold": cold_results, "query": question}
+
+
+@mcp.tool()
+def vault_ingest(title: str, content: str, tags: str = "") -> dict:
+    """피지수 뇌에 새 지식 노드 추가 (wiki/ 폴더에 마크다운 생성)
+
+    Args:
+        title: 노트 제목 (파일명이 됨)
+        content: 노트 본문 (마크다운, [[백링크]] 포함 가능)
+        tags: 쉼표 구분 태그 (선택)
+
+    Returns:
+        {"path": str, "status": "created" | "updated"}
+    """
+    from datetime import datetime
+    safe_title = title.replace("/", "_").replace("\\", "_")
+    path = _VAULT_WIKI / f"{safe_title}.md"
+    tag_list = [t.strip() for t in tags.split(",") if t.strip()]
+    now = datetime.now().strftime("%Y-%m-%d")
+
+    note = f"""---
+type: wiki
+created: {now}
+tags: [{", ".join(tag_list)}]
+ref_count: 0
+outcome_score: 0.0
+---
+
+# {title}
+
+{content}
+
+## 연결
+
+- [[홍익인간]]
+"""
+    status = "updated" if path.exists() else "created"
+    path.write_text(note, encoding="utf-8")
+
+    # log.md 업데이트
+    log_path = _VAULT_WIKI / "log.md"
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M")
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(f"\n- [{ts}] vault_ingest: [[{safe_title}]] {status}")
+
+    return {"path": str(path), "status": status, "title": title}
+
+
+@mcp.tool()
+def vault_cycle() -> dict:
+    """피지수 사이클 실행 — CMA심사→소급평가→망각·승격→Graphify 갱신
+
+    Returns:
+        {"status": "ok", "graph": {"nodes": int, "edges": int}}
+    """
+    import subprocess
+    r = subprocess.run(
+        [sys.executable, str(_VAULT_SCRIPTS / "physis_cycle.py")],
+        capture_output=True, text=True, cwd=str(_VAULT_SCRIPTS),
+        env={**os.environ, "ANTHROPIC_API_KEY": os.environ.get("ANTHROPIC_API_KEY", "")}
+    )
+
+    # 그래프 통계 파싱
+    nodes, edges = 0, 0
+    for line in r.stdout.splitlines():
+        if "nodes" in line and "edges" in line:
+            import re
+            m = re.search(r"(\d+) nodes.*?(\d+) edges", line)
+            if m:
+                nodes, edges = int(m.group(1)), int(m.group(2))
+
+    return {
+        "status": "ok" if r.returncode == 0 else "error",
+        "graph": {"nodes": nodes, "edges": edges},
+        "log": r.stdout[-500:] if r.stdout else ""
+    }
+
+
+@mcp.tool()
+def vault_status() -> dict:
+    """피지수 뇌 현황 — 노트 수, God Node 수, Cold Tier 규모
+
+    Returns:
+        {"total_notes": int, "god_nodes": int, "cold_tier": int, "graph": dict}
+    """
+    import json
+
+    total = len(list(VAULT_ROOT.glob("**/*.md")))
+    god_nodes = len(list((VAULT_ROOT / "god_nodes").glob("*.md")))
+    wiki_notes = len(list(_VAULT_WIKI.glob("*.md")))
+
+    # ChromaDB Cold Tier 크기
+    cold_count = 0
+    try:
+        sys.path.insert(0, str(_VAULT_SCRIPTS))
+        from cold_tier import stats
+        cold_count = stats()
+    except Exception:
+        pass
+
+    # Graphify 그래프 통계
+    graph_json = VAULT_ROOT / "graphify-out" / "graph.json"
+    graph = {}
+    if graph_json.exists():
+        try:
+            data = json.loads(graph_json.read_text())
+            graph = {"nodes": len(data.get("nodes", [])), "edges": len(data.get("edges", []))}
+        except Exception:
+            pass
+
+    return {
+        "total_notes": total,
+        "god_nodes": god_nodes,
+        "wiki_notes": wiki_notes,
+        "cold_tier": cold_count,
+        "graph": graph
+    }
+
+
 # ── 진입점 ────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
