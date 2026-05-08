@@ -153,7 +153,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L1",
       "id": "scripts_memory_promotion_py",
-      "community": 5,
+      "community": 6,
       "norm_label": "memory_promotion.py"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L17",
       "id": "scripts_memory_promotion_extract_wikilinks",
-      "community": 5,
+      "community": 6,
       "norm_label": "extract_wikilinks()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L21",
       "id": "scripts_memory_promotion_build_reference_map",
-      "community": 5,
+      "community": 6,
       "norm_label": "build_reference_map()"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L36",
       "id": "scripts_memory_promotion_build_outcome_map",
-      "community": 5,
+      "community": 6,
       "norm_label": "build_outcome_map()"
     },
     {
@@ -189,7 +189,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L51",
       "id": "scripts_memory_promotion_update_scores",
-      "community": 5,
+      "community": 6,
       "norm_label": "update_scores()"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L1",
       "id": "scripts_memory_promotion_rationale_1",
-      "community": 5,
+      "community": 6,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1100\u1175\u110b\u1165\u11a8 \u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u116a\u11ab\u1105\u1175\u110c\u1161 \u2014 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 \u1103\u1161\u11ab\u110c\u1162 chronicle\u110b\u1173\u11af \u110b\u1175\u11b0\u110b\u1165 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u110b\u1167\u1103\u1169\u1105\u1173\u11af \u110b\u1167\u11a8\u1109\u1161\u11ab, outcome_score \u110b\u1165\u11b8\u1103\u1166\u110b\u1175\u1110\u1173"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L22",
       "id": "scripts_memory_promotion_rationale_22",
-      "community": 5,
+      "community": 6,
       "norm_label": "\u110c\u1165\u11ab\u110e\u1166 vault\u110b\u1166\u1109\u1165 \u1102\u1169\u1110\u1173\u1107\u1167\u11af \u110e\u1161\u11b7\u110c\u1169 \u1112\u116c\u11ba\u1109\u116e \u1100\u1168\u1109\u1161\u11ab"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L37",
       "id": "scripts_memory_promotion_rationale_37",
-      "community": 5,
+      "community": 6,
       "norm_label": "\u1103\u1161\u11ab\u110c\u1162 chronicle\u110b\u1166\u1109\u1165 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u110b\u1167\u1103\u1169 \u110b\u1167\u11a8\u1109\u1161\u11ab"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L1",
       "id": "scripts_cold_tier_py",
-      "community": 4,
+      "community": 5,
       "norm_label": "cold_tier.py"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L24",
       "id": "scripts_cold_tier_doc_id",
-      "community": 4,
+      "community": 5,
       "norm_label": "_doc_id()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L28",
       "id": "scripts_cold_tier_ingest",
-      "community": 4,
+      "community": 5,
       "norm_label": "ingest()"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L54",
       "id": "scripts_cold_tier_recall",
-      "community": 4,
+      "community": 5,
       "norm_label": "recall()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L67",
       "id": "scripts_cold_tier_sync_archive",
-      "community": 4,
+      "community": 5,
       "norm_label": "sync_archive()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L78",
       "id": "scripts_cold_tier_stats",
-      "community": 4,
+      "community": 5,
       "norm_label": "stats()"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L1",
       "id": "scripts_cold_tier_rationale_1",
-      "community": 4,
+      "community": 5,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e cold tier \u2014 chromadb \u110b\u1167\u11ab\u1103\u1169\u11bc \u1106\u1161\u11bc\u1100\u1161\u11a8\u1103\u116c\u11ab \u1102\u1169\u1110\u1173 \u2192 chromadb \u110c\u1165\u110c\u1161\u11bc \u2192 \u1107\u1166\u11a8\u1110\u1165 \u110b\u1172\u1109\u1161\u1103\u1169 \u1100\u1165\u11b7\u1109\u1162\u11a8 (\u1103\u1166\u110c\u1161\u1107\u1171 \u1109\u1169\u1112\u116a\u11ab)"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L55",
       "id": "scripts_cold_tier_rationale_55",
-      "community": 4,
+      "community": 5,
       "norm_label": "\u1103\u1166\u110c\u1161\u1107\u1171 \u1109\u1169\u1112\u116a\u11ab \u2014 \u110b\u1174\u1106\u1175 \u110b\u1172\u1109\u1161\u1103\u1169\u1105\u1169 \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1175\u110b\u1165\u11a8 \u1100\u1165\u11b7\u1109\u1162\u11a8"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L68",
       "id": "scripts_cold_tier_rationale_68",
-      "community": 4,
+      "community": 5,
       "norm_label": "archive/ \u1111\u1169\u11af\u1103\u1165\u110b\u1174 \u1111\u1161\u110b\u1175\u11af\u110b\u1173\u11af chromadb\u1105\u1169 \u110b\u1175\u11af\u1100\u116a\u11af \u110b\u1175\u1100\u116a\u11ab"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L1",
       "id": "scripts_cma_gate_py",
-      "community": 6,
+      "community": 7,
       "norm_label": "cma_gate.py"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L30",
       "id": "scripts_cma_gate_cmaresult",
-      "community": 6,
+      "community": 7,
       "norm_label": "cmaresult"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L31",
       "id": "scripts_cma_gate_cmaresult_init",
-      "community": 6,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L38",
       "id": "scripts_cma_gate_inspect",
-      "community": 6,
+      "community": 7,
       "norm_label": "inspect()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L52",
       "id": "scripts_cma_gate_gate",
-      "community": 6,
+      "community": 7,
       "norm_label": "gate()"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L81",
       "id": "scripts_cma_gate_scan_vault",
-      "community": 6,
+      "community": 7,
       "norm_label": "scan_vault()"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L1",
       "id": "scripts_cma_gate_rationale_1",
-      "community": 6,
+      "community": 7,
       "norm_label": "cma \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1100\u1166\u110b\u1175\u1110\u1173 \u2014 \u1102\u1169\u1110\u1173 \u1109\u1162\u11bc\u1109\u1165\u11bc\u00b7\u1109\u116e\u110c\u1165\u11bc \u1109\u1175 8\u110c\u1169\u1107\u1165\u11b8 \u1109\u1175\u11b7\u1109\u1161 layer 0: block (\u110c\u11661\u00b73\u00b77\u00b78\u110c\u1169) layer 1: warn  (\u110c\u11662\u00b74\u00b75"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L53",
       "id": "scripts_cma_gate_rationale_53",
-      "community": 6,
+      "community": 7,
       "norm_label": "\u1102\u1169\u1110\u1173 \u1100\u1167\u11bc\u1105\u1169\u1105\u1173\u11af \u1107\u1161\u11ae\u110b\u1161 cma \u1109\u1175\u11b7\u1109\u1161. true=\u1110\u1169\u11bc\u1100\u116a, false=\u110e\u1161\u1103\u1161\u11ab."
     },
     {
@@ -378,35 +378,107 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L1",
       "id": "scripts_physis_cycle_py",
-      "community": 12,
+      "community": 13,
       "norm_label": "physis_cycle.py"
     },
     {
       "label": "run()",
       "file_type": "code",
       "source_file": "scripts/physis_cycle.py",
-      "source_location": "L17",
+      "source_location": "L19",
       "id": "scripts_physis_cycle_run",
-      "community": 12,
+      "community": 13,
       "norm_label": "run()"
     },
     {
       "label": "update_graph()",
       "file_type": "code",
       "source_file": "scripts/physis_cycle.py",
-      "source_location": "L27",
+      "source_location": "L29",
       "id": "scripts_physis_cycle_update_graph",
-      "community": 12,
+      "community": 13,
       "norm_label": "update_graph()"
     },
     {
-      "label": "\ud53c\uc9c0\uc218 \uc0ac\uc774\ud074 \u2014 \uc138\uc158 \uc885\ub8cc \uc2dc \uc2e4\ud589 1. CMA \uac8c\uc774\ud2b8 \uc2ec\uc0ac 2. \uc18c\uae09 \ud3c9\uac00 (ref_count, outcome_score \uac31\uc2e0) 3. \ub9dd\uac01/",
+      "label": "run_cad_parser()",
+      "file_type": "code",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L39",
+      "id": "scripts_physis_cycle_run_cad_parser",
+      "community": 13,
+      "norm_label": "run_cad_parser()"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 \uc0ac\uc774\ud074 \u2014 \uc138\uc158 \uc885\ub8cc \uc2dc \uc2e4\ud589 1. \uc774\ucc9c CAD \ud30c\uc2f1 (\uc2e0\uaddc .fcstd/.step \u2192 wiki \ub178\ud2b8) 2. CMA Layer 0/1 \uac8c",
       "file_type": "rationale",
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L1",
       "id": "scripts_physis_cycle_rationale_1",
-      "community": 12,
-      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1109\u1161\u110b\u1175\u110f\u1173\u11af \u2014 \u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1109\u1175 \u1109\u1175\u11af\u1112\u1162\u11bc 1. cma \u1100\u1166\u110b\u1175\u1110\u1173 \u1109\u1175\u11b7\u1109\u1161 2. \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 (ref_count, outcome_score \u1100\u1162\u11bc\u1109\u1175\u11ab) 3. \u1106\u1161\u11bc\u1100\u1161\u11a8/"
+      "community": 13,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1109\u1161\u110b\u1175\u110f\u1173\u11af \u2014 \u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1109\u1175 \u1109\u1175\u11af\u1112\u1162\u11bc 1. \u110b\u1175\u110e\u1165\u11ab cad \u1111\u1161\u1109\u1175\u11bc (\u1109\u1175\u11ab\u1100\u1172 .fcstd/.step \u2192 wiki \u1102\u1169\u1110\u1173) 2. cma layer 0/1 \u1100\u1166"
+    },
+    {
+      "label": "cma_layer2.py",
+      "file_type": "code",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L1",
+      "id": "scripts_cma_layer2_py",
+      "community": 10,
+      "norm_label": "cma_layer2.py"
+    },
+    {
+      "label": "inspect_llm()",
+      "file_type": "code",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L37",
+      "id": "scripts_cma_layer2_inspect_llm",
+      "community": 10,
+      "norm_label": "inspect_llm()"
+    },
+    {
+      "label": "gate_layer2()",
+      "file_type": "code",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L59",
+      "id": "scripts_cma_layer2_gate_layer2",
+      "community": 10,
+      "norm_label": "gate_layer2()"
+    },
+    {
+      "label": "scan_suspicious()",
+      "file_type": "code",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L90",
+      "id": "scripts_cma_layer2_scan_suspicious",
+      "community": 10,
+      "norm_label": "scan_suspicious()"
+    },
+    {
+      "label": "CMA Layer 2 \u2014 LLM \ub9e5\ub77d \uc2ec\uc0ac \ud0a4\uc6cc\ub4dc\uac00 \uc544\ub2cc \uc758\ub3c4\ub97c \uc77d\ub294\ub2e4. Layer 0/1 \ud1b5\uacfc \ud6c4 \uace0\uc704\ud5d8 \ub178\ud2b8\uc5d0\ub9cc \uc801\uc6a9.",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L1",
+      "id": "scripts_cma_layer2_rationale_1",
+      "community": 10,
+      "norm_label": "cma layer 2 \u2014 llm \u1106\u1162\u11a8\u1105\u1161\u11a8 \u1109\u1175\u11b7\u1109\u1161 \u110f\u1175\u110b\u116f\u1103\u1173\u1100\u1161 \u110b\u1161\u1102\u1175\u11ab \u110b\u1174\u1103\u1169\u1105\u1173\u11af \u110b\u1175\u11b0\u1102\u1173\u11ab\u1103\u1161. layer 0/1 \u1110\u1169\u11bc\u1100\u116a \u1112\u116e \u1100\u1169\u110b\u1171\u1112\u1165\u11b7 \u1102\u1169\u1110\u1173\u110b\u1166\u1106\u1161\u11ab \u110c\u1165\u11a8\u110b\u116d\u11bc."
+    },
+    {
+      "label": "Layer 2 LLM \uc2ec\uc0ac. True=\ud1b5\uacfc.",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L60",
+      "id": "scripts_cma_layer2_rationale_60",
+      "community": 10,
+      "norm_label": "layer 2 llm \u1109\u1175\u11b7\u1109\u1161. true=\u1110\u1169\u11bc\u1100\u116a."
+    },
+    {
+      "label": "Layer 1\uc5d0\uc11c WARN \ud310\uc815 \ubc1b\uc740 \ub178\ud2b8\ub9cc L2 \uc2ec\uc0ac",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L91",
+      "id": "scripts_cma_layer2_rationale_91",
+      "community": 10,
+      "norm_label": "layer 1\u110b\u1166\u1109\u1165 warn \u1111\u1161\u11ab\u110c\u1165\u11bc \u1107\u1161\u11ae\u110b\u1173\u11ab \u1102\u1169\u1110\u1173\u1106\u1161\u11ab l2 \u1109\u1175\u11b7\u1109\u1161"
     },
     {
       "label": "CLAUDE.md",
@@ -414,7 +486,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "id": "claude_md",
-      "community": 2,
+      "community": 3,
       "norm_label": "claude.md"
     },
     {
@@ -423,7 +495,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "id": "physis_memory_claude_vault",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1102\u116c \u2014 vault \u110b\u116e\u11ab\u110b\u1167\u11bc \u1112\u1165\u11ab\u1107\u1165\u11b8"
     },
     {
@@ -432,7 +504,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L3",
       "id": "physis_memory_claude_0",
-      "community": 2,
+      "community": 3,
       "norm_label": "0\u110b\u116f\u11ab\u110e\u1175\u11a8"
     },
     {
@@ -441,7 +513,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L6",
       "id": "physis_memory_claude_vault_6",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u110b\u1175 vault\u1100\u1161 \u1112\u1161\u1102\u1173\u11ab \u110b\u1175\u11af"
     },
     {
@@ -450,7 +522,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L10",
       "id": "physis_memory_claude",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u1111\u1169\u11af\u1103\u1165 \u1100\u116e\u110c\u1169"
     },
     {
@@ -459,7 +531,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L24",
       "id": "physis_memory_claude_wiki_10",
-      "community": 2,
+      "community": 3,
       "norm_label": "wiki \u110b\u116e\u11ab\u110b\u1167\u11bc \u1100\u1172\u110e\u1175\u11a8 (\u110f\u1161\u1111\u1161\u1109\u1175 10\u1100\u1168\u1106\u1167\u11bc)"
     },
     {
@@ -468,7 +540,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "id": "physis_memory_claude_36",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1172\u110e\u1175\u11a8"
     },
     {
@@ -477,7 +549,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L41",
       "id": "physis_memory_claude_41",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u1172\u110e\u1175\u11a8"
     },
     {
@@ -486,7 +558,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L45",
       "id": "physis_memory_claude_graphify",
-      "community": 2,
+      "community": 3,
       "norm_label": "graphify \u1109\u1175\u11af\u1112\u1162\u11bc"
     },
     {
@@ -495,7 +567,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L46",
       "id": "physis_memory_claude_codeblock_1",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:bash (cd /home/nas/ag-forge/physis_memory)"
     },
     {
@@ -504,7 +576,7 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme_md",
-      "community": 15,
+      "community": 46,
       "norm_label": "readme.md"
     },
     {
@@ -513,7 +585,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L1",
       "id": "2026_05_08_self_awakening_md",
-      "community": 11,
+      "community": 14,
       "norm_label": "2026-05-08_self_awakening.md"
     },
     {
@@ -522,7 +594,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L6",
       "id": "physis_memory_2026_05_08_self_awakening",
-      "community": 11,
+      "community": 14,
       "norm_label": "\u110c\u1161\u1100\u1161\u11a8 \u1100\u1175\u1105\u1169\u11a8 \u2014 \u1109\u1173\u1109\u1173\u1105\u1169 \u1101\u1162\u1103\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11ab\u1103\u1161"
     },
     {
@@ -531,7 +603,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L13",
       "id": "physis_memory_2026_05_08_self_awakening_13",
-      "community": 11,
+      "community": 14,
       "norm_label": "\u110b\u1175 \u1112\u1161\u11ab \u1106\u1161\u1103\u1175\u110b\u1174 \u110b\u1174\u1106\u1175"
     },
     {
@@ -540,7 +612,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L25",
       "id": "physis_memory_2026_05_08_self_awakening_25",
-      "community": 11,
+      "community": 14,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1174 \u110c\u1161\u1107\u1162\u11a8"
     },
     {
@@ -549,7 +621,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L34",
       "id": "physis_memory_2026_05_08_self_awakening_34",
-      "community": 11,
+      "community": 14,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
@@ -639,7 +711,7 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L1",
       "id": "god_nodes_8_md",
-      "community": 13,
+      "community": 44,
       "norm_label": "8\u110c\u1169\u1107\u1165\u11b8.md"
     },
     {
@@ -648,7 +720,7 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L10",
       "id": "god_nodes_8_8",
-      "community": 13,
+      "community": 44,
       "norm_label": "8\u110c\u1169 \u1100\u1173\u11b7\u1107\u1165\u11b8 (\u516b\u689d\u7981\u6cd5)"
     },
     {
@@ -657,7 +729,7 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L27",
       "id": "god_nodes_8",
-      "community": 13,
+      "community": 44,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -666,7 +738,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L1",
       "id": "god_nodes_2026_05_02_chunbukyung_md",
-      "community": 7,
+      "community": 8,
       "norm_label": "2026-05-02_chunbukyung.md"
     },
     {
@@ -675,7 +747,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L8",
       "id": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u110e\u1165\u11ab\u1107\u116e\u1100\u1167\u11bc \u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 1.1\u1109\u1166\u1103\u1162 \u2192 1.2\u1109\u1166\u1103\u1162 \u110c\u1175\u11ab\u1112\u116a \u1105\u1169\u1100\u1173"
     },
     {
@@ -684,7 +756,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L13",
       "id": "god_nodes_2026_05_02_chunbukyung",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
     },
     {
@@ -693,7 +765,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L32",
       "id": "god_nodes_2026_05_02_chunbukyung_1_2",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab"
     },
     {
@@ -702,7 +774,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L48",
       "id": "god_nodes_2026_05_02_chunbukyung_48",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7"
     },
     {
@@ -711,7 +783,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L63",
       "id": "god_nodes_2026_05_02_chunbukyung_63",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab"
     },
     {
@@ -720,7 +792,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L1",
       "id": "working_memory_2026_05_07_handoff_md",
-      "community": 10,
+      "community": 12,
       "norm_label": "2026-05-07_handoff.md"
     },
     {
@@ -729,7 +801,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L6",
       "id": "working_memory_2026_05_07_handoff_1_3",
-      "community": 10,
+      "community": 12,
       "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.3\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
@@ -738,7 +810,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L16",
       "id": "working_memory_2026_05_07_handoff_1",
-      "community": 10,
+      "community": 12,
       "norm_label": "1. \u110b\u1175 \u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1109\u1165 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
     },
     {
@@ -747,7 +819,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L43",
       "id": "working_memory_2026_05_07_handoff_2",
-      "community": 10,
+      "community": 12,
       "norm_label": "2. \u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u1112\u1167\u11ab\u1112\u116a\u11bc (\u1102\u1165\u1100\u1161 \u110b\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11af \u1100\u1165\u11ba)"
     },
     {
@@ -756,7 +828,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L67",
       "id": "working_memory_2026_05_07_handoff_3_5_3",
-      "community": 10,
+      "community": 12,
       "norm_label": "3. 5/3 \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 \u1112\u1167\u11ab\u1112\u116a\u11bc"
     },
     {
@@ -765,7 +837,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L78",
       "id": "working_memory_2026_05_07_handoff_4",
-      "community": 10,
+      "community": 12,
       "norm_label": "4. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
     },
     {
@@ -774,7 +846,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L1",
       "id": "working_memory_2026_05_03_handoff_md",
-      "community": 8,
+      "community": 11,
       "norm_label": "2026-05-03_handoff.md"
     },
     {
@@ -783,7 +855,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L6",
       "id": "working_memory_2026_05_03_handoff_1_2",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
@@ -792,7 +864,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L17",
       "id": "working_memory_2026_05_03_handoff_1",
-      "community": 8,
+      "community": 11,
       "norm_label": "1. \u110b\u1165\u110c\u1166 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af (\u1109\u1175\u1100\u1161\u11ab\u1109\u116e\u11ab \u110b\u1161\u11b8\u110e\u116e\u11a8)"
     },
     {
@@ -801,7 +873,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L41",
       "id": "working_memory_2026_05_03_handoff_2_1_2",
-      "community": 8,
+      "community": 11,
       "norm_label": "2. \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u110b\u116a\u11ab\u1105\u116d \u1109\u1161\u1109\u1175\u11af"
     },
     {
@@ -810,7 +882,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L63",
       "id": "working_memory_2026_05_03_handoff_3_1_3",
-      "community": 8,
+      "community": 11,
       "norm_label": "3. \u1107\u1161\u11a8\u110c\u1166 \u110b\u1161\u11ab \u1103\u116c\u11ab \u1106\u1167\u11bc\u110c\u1166 \u2014 \u1103\u1161\u110b\u1173\u11b7 \u110c\u1175\u11ab\u1112\u116a \u1112\u116e\u1107\u1169 (1.3\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab \u110c\u1161\u1105\u116d)"
     },
     {
@@ -819,7 +891,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L94",
       "id": "working_memory_2026_05_03_handoff_4",
-      "community": 8,
+      "community": 11,
       "norm_label": "4. \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 (\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1109\u1167\u11ab \u110b\u116e\u1109\u1165\u11ab\u1109\u116e\u11ab\u110b\u1171)"
     },
     {
@@ -828,8 +900,224 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L119",
       "id": "working_memory_2026_05_03_handoff_5",
-      "community": 8,
+      "community": 11,
       "norm_label": "5. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
+    },
+    {
+      "label": "CAD_poc_v4c_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v4c_101_md",
+      "community": 15,
+      "norm_label": "cad_poc_v4c_101.md"
+    },
+    {
+      "label": "poc_v4c_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v4c_101_poc_v4c_101",
+      "community": 15,
+      "norm_label": "poc_v4c_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v4c_101_1",
+      "community": 15,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v4c_101",
+      "community": 15,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_v11_topology.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v11_topology_md",
+      "community": 16,
+      "norm_label": "cad_v11_topology.md"
+    },
+    {
+      "label": "v11_topology",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v11_topology_v11_topology",
+      "community": 16,
+      "norm_label": "v11_topology"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v11_topology_1",
+      "community": 16,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v11_topology",
+      "community": 16,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_102_full_stack.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_102_full_stack_md",
+      "community": 17,
+      "norm_label": "cad_test_102_full_stack.md"
+    },
+    {
+      "label": "test_102_full_stack",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_102_full_stack_test_102_full_stack",
+      "community": 17,
+      "norm_label": "test_102_full_stack"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_102_full_stack_1",
+      "community": 17,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_102_full_stack",
+      "community": 17,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_complex_master.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L1",
+      "id": "wiki_cad_complex_master_md",
+      "community": 18,
+      "norm_label": "cad_complex_master.md"
+    },
+    {
+      "label": "complex_master",
+      "file_type": "document",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L9",
+      "id": "wiki_cad_complex_master_complex_master",
+      "community": 18,
+      "norm_label": "complex_master"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L13",
+      "id": "wiki_cad_complex_master_1",
+      "community": 18,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L17",
+      "id": "wiki_cad_complex_master",
+      "community": 18,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_v13_slabs.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v13_slabs_md",
+      "community": 19,
+      "norm_label": "cad_v13_slabs.md"
+    },
+    {
+      "label": "v13_slabs",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v13_slabs_v13_slabs",
+      "community": 19,
+      "norm_label": "v13_slabs"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v13_slabs_1",
+      "community": 19,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v13_slabs",
+      "community": 19,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_101_around_parking.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_101_around_parking_md",
+      "community": 20,
+      "norm_label": "cad_poc_101_around_parking.md"
+    },
+    {
+      "label": "poc_101_around_parking",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
+      "community": 20,
+      "norm_label": "poc_101_around_parking"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_101_around_parking_1",
+      "community": 20,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_101_around_parking",
+      "community": 20,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
       "label": "log.md",
@@ -837,7 +1125,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L1",
       "id": "wiki_log_md",
-      "community": 14,
+      "community": 45,
       "norm_label": "log.md"
     },
     {
@@ -846,7 +1134,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L6",
       "id": "wiki_log_wiki",
-      "community": 14,
+      "community": 45,
       "norm_label": "wiki \u110c\u1169\u110c\u1161\u11a8 \u110b\u1175\u1105\u1167\u11a8"
     },
     {
@@ -855,8 +1143,296 @@
       "source_file": "wiki/log.md",
       "source_location": "L12",
       "id": "wiki_log_2026_05_08",
-      "community": 14,
+      "community": 45,
       "norm_label": "2026-05-08"
+    },
+    {
+      "label": "CAD_v7_boq.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v7_boq_md",
+      "community": 21,
+      "norm_label": "cad_v7_boq.md"
+    },
+    {
+      "label": "v7_boq",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v7_boq_v7_boq",
+      "community": 21,
+      "norm_label": "v7_boq"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v7_boq_1",
+      "community": 21,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v7_boq",
+      "community": 21,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v4d_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v4d_101_md",
+      "community": 22,
+      "norm_label": "cad_poc_v4d_101.md"
+    },
+    {
+      "label": "poc_v4d_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v4d_101_poc_v4d_101",
+      "community": 22,
+      "norm_label": "poc_v4d_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v4d_101_1",
+      "community": 22,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v4d_101",
+      "community": 22,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_basement_complex_v3.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_basement_complex_v3_md",
+      "community": 23,
+      "norm_label": "cad_test_basement_complex_v3.md"
+    },
+    {
+      "label": "test_basement_complex_v3",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
+      "community": 23,
+      "norm_label": "test_basement_complex_v3"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_basement_complex_v3_1",
+      "community": 23,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_basement_complex_v3",
+      "community": 23,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v6b_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v6b_101_md",
+      "community": 24,
+      "norm_label": "cad_poc_v6b_101.md"
+    },
+    {
+      "label": "poc_v6b_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v6b_101_poc_v6b_101",
+      "community": 24,
+      "norm_label": "poc_v6b_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v6b_101_1",
+      "community": 24,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v6b_101",
+      "community": 24,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_basement_b1_b2_stack.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L1",
+      "id": "wiki_cad_basement_b1_b2_stack_md",
+      "community": 25,
+      "norm_label": "cad_basement_b1_b2_stack.md"
+    },
+    {
+      "label": "basement_b1_b2_stack",
+      "file_type": "document",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L9",
+      "id": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
+      "community": 25,
+      "norm_label": "basement_b1_b2_stack"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L13",
+      "id": "wiki_cad_basement_b1_b2_stack_1",
+      "community": 25,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L17",
+      "id": "wiki_cad_basement_b1_b2_stack",
+      "community": 25,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v4b_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v4b_101_md",
+      "community": 26,
+      "norm_label": "cad_poc_v4b_101.md"
+    },
+    {
+      "label": "poc_v4b_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v4b_101_poc_v4b_101",
+      "community": 26,
+      "norm_label": "poc_v4b_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v4b_101_1",
+      "community": 26,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v4b_101",
+      "community": 26,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_101_b1_b2_dong.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_101_b1_b2_dong_md",
+      "community": 27,
+      "norm_label": "cad_poc_101_b1_b2_dong.md"
+    },
+    {
+      "label": "poc_101_b1_b2_dong",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
+      "community": 27,
+      "norm_label": "poc_101_b1_b2_dong"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_101_b1_b2_dong_1",
+      "community": 27,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_101_b1_b2_dong",
+      "community": 27,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_102_B1F.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_102_b1f_md",
+      "community": 28,
+      "norm_label": "cad_test_102_b1f.md"
+    },
+    {
+      "label": "test_102_B1F",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_102_b1f_test_102_b1f",
+      "community": 28,
+      "norm_label": "test_102_b1f"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_102_b1f_1",
+      "community": 28,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_102_b1f",
+      "community": 28,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
       "label": "index.md",
@@ -907,8 +1483,8 @@
       "label": "\ud2b9\ud5c8\u00b7\uae30\uc220",
       "file_type": "document",
       "source_file": "wiki/index.md",
-      "source_location": "L22",
-      "id": "wiki_index_22",
+      "source_location": "L25",
+      "id": "wiki_index_25",
       "community": 9,
       "norm_label": "\u1110\u1173\u11a8\u1112\u1165\u00b7\u1100\u1175\u1109\u116e\u11af"
     },
@@ -916,10 +1492,676 @@
       "label": "\ud53c\uc9c0\uc218 \uc9c4\ud654 \uae30\ub85d",
       "file_type": "document",
       "source_file": "wiki/index.md",
-      "source_location": "L25",
-      "id": "wiki_index_25",
+      "source_location": "L28",
+      "id": "wiki_index_28",
       "community": 9,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u110c\u1175\u11ab\u1112\u116a \u1100\u1175\u1105\u1169\u11a8"
+    },
+    {
+      "label": "CAD_v8_poc.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v8_poc_md",
+      "community": 29,
+      "norm_label": "cad_v8_poc.md"
+    },
+    {
+      "label": "v8_poc",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v8_poc_v8_poc",
+      "community": 29,
+      "norm_label": "v8_poc"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v8_poc_1",
+      "community": 29,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v8_poc",
+      "community": 29,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L1",
+      "id": "wiki_md",
+      "community": 2,
+      "norm_label": "\u110b\u1175\u110e\u1165\u11ab_\u5927\u696d_\u110b\u1161\u11af\u1100\u1169\u1105\u1175\u110c\u1173\u11b7_\u1106\u1167\u11bc\u1109\u1166.md"
+    },
+    {
+      "label": "\uc774\ucc9c \u5927\u696d \u2014 DXF \ubcd1\ub82c\ucc98\ub9ac \uc54c\uace0\ub9ac\uc998 \uba85\uc138",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L16",
+      "id": "wiki_dxf",
+      "community": 2,
+      "norm_label": "\u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u2014 dxf \u1107\u1167\u11bc\u1105\u1167\u11af\u110e\u1165\u1105\u1175 \u110b\u1161\u11af\u1100\u1169\u1105\u1175\u110c\u1173\u11b7 \u1106\u1167\u11bc\u1109\u1166"
+    },
+    {
+      "label": "\uacfc\uc5c5 \uac1c\uc694",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L20",
+      "id": "wiki",
+      "community": 2,
+      "norm_label": "\u1100\u116a\u110b\u1165\u11b8 \u1100\u1162\u110b\u116d"
+    },
+    {
+      "label": "A. \ubd84\ud560 \uc804\ub7b5 \u2014 \ub808\uc774\uc5b4 \ubd84\ud560 + \uccad\ud06c \ubcf4\uac15 \ud558\uc774\ube0c\ub9ac\ub4dc",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L27",
+      "id": "wiki_a",
+      "community": 2,
+      "norm_label": "a. \u1107\u116e\u11ab\u1112\u1161\u11af \u110c\u1165\u11ab\u1105\u1163\u11a8 \u2014 \u1105\u1166\u110b\u1175\u110b\u1165 \u1107\u116e\u11ab\u1112\u1161\u11af + \u110e\u1165\u11bc\u110f\u1173 \u1107\u1169\u1100\u1161\u11bc \u1112\u1161\u110b\u1175\u1107\u1173\u1105\u1175\u1103\u1173"
+    },
+    {
+      "label": "code:block1 (1\ub2e8\uacc4: ezdxf.readfile() \u2192 entity.dxf.layer \uae30\uc900 \uadf8\ub8f9\ud654)",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L31",
+      "id": "wiki_codeblock_1",
+      "community": 2,
+      "norm_label": "code:block1 (1\u1103\u1161\u11ab\u1100\u1168: ezdxf.readfile() \u2192 entity.dxf.layer \u1100\u1175\u110c\u116e\u11ab \u1100\u1173\u1105\u116e\u11b8\u1112\u116a)"
+    },
+    {
+      "label": "B. 5\uccb4 \uc815\ubc18\ud569 \u2014 LLM \uc5ed\ud560 \ubd84\ub2f4",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L49",
+      "id": "wiki_b_5_llm",
+      "community": 2,
+      "norm_label": "b. 5\u110e\u1166 \u110c\u1165\u11bc\u1107\u1161\u11ab\u1112\u1161\u11b8 \u2014 llm \u110b\u1167\u11a8\u1112\u1161\u11af \u1107\u116e\u11ab\u1103\u1161\u11b7"
+    },
+    {
+      "label": "code:python (async def five_phase_synthesis(layer_groups: dict) -> dict:)",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L59",
+      "id": "wiki_codeblock_2",
+      "community": 2,
+      "norm_label": "code:python (async def five_phase_synthesis(layer_groups: dict) -> dict:)"
+    },
+    {
+      "label": "C. \ud328\ud134 \uc778\uc2dd \ud504\ub86c\ud504\ud2b8 \ud15c\ud50c\ub9bf",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L73",
+      "id": "wiki_c",
+      "community": 2,
+      "norm_label": "c. \u1111\u1162\u1110\u1165\u11ab \u110b\u1175\u11ab\u1109\u1175\u11a8 \u1111\u1173\u1105\u1169\u11b7\u1111\u1173\u1110\u1173 \u1110\u1166\u11b7\u1111\u1173\u11af\u1105\u1175\u11ba"
+    },
+    {
+      "label": "code:block3 ([\uc2dc\uc2a4\ud15c])",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L77",
+      "id": "wiki_codeblock_3",
+      "community": 2,
+      "norm_label": "code:block3 ([\u1109\u1175\u1109\u1173\u1110\u1166\u11b7])"
+    },
+    {
+      "label": "D. \uc774\uc0c1\uce58 \ud1b5\uacc4 \uc784\uacc4\uac12",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L99",
+      "id": "wiki_d",
+      "community": 2,
+      "norm_label": "d. \u110b\u1175\u1109\u1161\u11bc\u110e\u1175 \u1110\u1169\u11bc\u1100\u1168 \u110b\u1175\u11b7\u1100\u1168\u1100\u1161\u11b9"
+    },
+    {
+      "label": "E. pattern_library \uac31\uc2e0 \uc790\ub3d9\ud654 \u2014 YES",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L111",
+      "id": "wiki_e_pattern_library_yes",
+      "community": 2,
+      "norm_label": "e. pattern_library \u1100\u1162\u11bc\u1109\u1175\u11ab \u110c\u1161\u1103\u1169\u11bc\u1112\u116a \u2014 yes"
+    },
+    {
+      "label": "code:block4 (3/5 \uc774\uc0c1 LLM \ub3d9\uc758 \u2192 \ud328\ud134 \ud655\uc815 \u2192 pattern_library.md \uc790\ub3d9 append)",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L113",
+      "id": "wiki_codeblock_4",
+      "community": 2,
+      "norm_label": "code:block4 (3/5 \u110b\u1175\u1109\u1161\u11bc llm \u1103\u1169\u11bc\u110b\u1174 \u2192 \u1111\u1162\u1110\u1165\u11ab \u1112\u116a\u11a8\u110c\u1165\u11bc \u2192 pattern_library.md \u110c\u1161\u1103\u1169\u11bc append)"
+    },
+    {
+      "label": "\uc774\ucc9c \uc758\uad6c\uc2ec 4.1 OLE \ubd09\uc778 \ucd94\uac00 \uc548",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L126",
+      "id": "wiki_4_1_ole",
+      "community": 2,
+      "norm_label": "\u110b\u1175\u110e\u1165\u11ab \u110b\u1174\u1100\u116e\u1109\u1175\u11b7 4.1 ole \u1107\u1169\u11bc\u110b\u1175\u11ab \u110e\u116e\u1100\u1161 \u110b\u1161\u11ab"
+    },
+    {
+      "label": "\uad6c\ud604 \uc2a4\ud06c\ub9bd\ud2b8 \uc704\uce58",
+      "file_type": "document",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L136",
+      "id": "wiki_136",
+      "community": 2,
+      "norm_label": "\u1100\u116e\u1112\u1167\u11ab \u1109\u1173\u110f\u1173\u1105\u1175\u11b8\u1110\u1173 \u110b\u1171\u110e\u1175"
+    },
+    {
+      "label": "CAD_v12_north_ext.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v12_north_ext_md",
+      "community": 30,
+      "norm_label": "cad_v12_north_ext.md"
+    },
+    {
+      "label": "v12_north_ext",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v12_north_ext_v12_north_ext",
+      "community": 30,
+      "norm_label": "v12_north_ext"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v12_north_ext_1",
+      "community": 30,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v12_north_ext",
+      "community": 30,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_101dong.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_101dong_md",
+      "community": 31,
+      "norm_label": "cad_test_101dong.md"
+    },
+    {
+      "label": "test_101dong",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_101dong_test_101dong",
+      "community": 31,
+      "norm_label": "test_101dong"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_101dong_1",
+      "community": 31,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_101dong",
+      "community": 31,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_formwork_dedu.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_formwork_dedu_md",
+      "community": 32,
+      "norm_label": "cad_test_formwork_dedu.md"
+    },
+    {
+      "label": "test_formwork_dedu",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
+      "community": 32,
+      "norm_label": "test_formwork_dedu"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_formwork_dedu_1",
+      "community": 32,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_formwork_dedu",
+      "community": 32,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v6_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v6_101_md",
+      "community": 33,
+      "norm_label": "cad_poc_v6_101.md"
+    },
+    {
+      "label": "poc_v6_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v6_101_poc_v6_101",
+      "community": 33,
+      "norm_label": "poc_v6_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v6_101_1",
+      "community": 33,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v6_101",
+      "community": 33,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_102_B1F_v3.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_102_b1f_v3_md",
+      "community": 34,
+      "norm_label": "cad_test_102_b1f_v3.md"
+    },
+    {
+      "label": "test_102_B1F_v3",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
+      "community": 34,
+      "norm_label": "test_102_b1f_v3"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_102_b1f_v3_1",
+      "community": 34,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_102_b1f_v3",
+      "community": 34,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_f1_3d_stack_102.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L1",
+      "id": "wiki_cad_f1_3d_stack_102_md",
+      "community": 35,
+      "norm_label": "cad_f1_3d_stack_102.md"
+    },
+    {
+      "label": "f1_3d_stack_102",
+      "file_type": "document",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L9",
+      "id": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
+      "community": 35,
+      "norm_label": "f1_3d_stack_102"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L13",
+      "id": "wiki_cad_f1_3d_stack_102_1",
+      "community": 35,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L17",
+      "id": "wiki_cad_f1_3d_stack_102",
+      "community": 35,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v4e_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v4e_101_md",
+      "community": 36,
+      "norm_label": "cad_poc_v4e_101.md"
+    },
+    {
+      "label": "poc_v4e_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v4e_101_poc_v4e_101",
+      "community": 36,
+      "norm_label": "poc_v4e_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v4e_101_1",
+      "community": 36,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v4e_101",
+      "community": 36,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_v10_b2f_only.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v10_b2f_only_md",
+      "community": 37,
+      "norm_label": "cad_v10_b2f_only.md"
+    },
+    {
+      "label": "v10_b2f_only",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v10_b2f_only_v10_b2f_only",
+      "community": 37,
+      "norm_label": "v10_b2f_only"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v10_b2f_only_1",
+      "community": 37,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v10_b2f_only",
+      "community": 37,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_101_combined.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_101_combined_md",
+      "community": 38,
+      "norm_label": "cad_poc_101_combined.md"
+    },
+    {
+      "label": "poc_101_combined",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_101_combined_poc_101_combined",
+      "community": 38,
+      "norm_label": "poc_101_combined"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_101_combined_1",
+      "community": 38,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_101_combined",
+      "community": 38,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_v10_stage5.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L1",
+      "id": "wiki_cad_v10_stage5_md",
+      "community": 39,
+      "norm_label": "cad_v10_stage5.md"
+    },
+    {
+      "label": "v10_stage5",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L9",
+      "id": "wiki_cad_v10_stage5_v10_stage5",
+      "community": 39,
+      "norm_label": "v10_stage5"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L13",
+      "id": "wiki_cad_v10_stage5_1",
+      "community": 39,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L17",
+      "id": "wiki_cad_v10_stage5",
+      "community": 39,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v5_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v5_101_md",
+      "community": 40,
+      "norm_label": "cad_poc_v5_101.md"
+    },
+    {
+      "label": "poc_v5_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v5_101_poc_v5_101",
+      "community": 40,
+      "norm_label": "poc_v5_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v5_101_1",
+      "community": 40,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v5_101",
+      "community": 40,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_test_102_B1F_v2.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L1",
+      "id": "wiki_cad_test_102_b1f_v2_md",
+      "community": 41,
+      "norm_label": "cad_test_102_b1f_v2.md"
+    },
+    {
+      "label": "test_102_B1F_v2",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L9",
+      "id": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
+      "community": 41,
+      "norm_label": "test_102_b1f_v2"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L13",
+      "id": "wiki_cad_test_102_b1f_v2_1",
+      "community": 41,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L17",
+      "id": "wiki_cad_test_102_b1f_v2",
+      "community": 41,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_final_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_final_101_md",
+      "community": 42,
+      "norm_label": "cad_poc_final_101.md"
+    },
+    {
+      "label": "poc_final_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_final_101_poc_final_101",
+      "community": 42,
+      "norm_label": "poc_final_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_final_101_1",
+      "community": 42,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_final_101",
+      "community": 42,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "CAD_poc_v4_101.md",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L1",
+      "id": "wiki_cad_poc_v4_101_md",
+      "community": 43,
+      "norm_label": "cad_poc_v4_101.md"
+    },
+    {
+      "label": "poc_v4_101",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L9",
+      "id": "wiki_cad_poc_v4_101_poc_v4_101",
+      "community": 43,
+      "norm_label": "poc_v4_101"
+    },
+    {
+      "label": "\uad6c\uc131 \ubd80\uc7ac (1\uac1c)",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L13",
+      "id": "wiki_cad_poc_v4_101_1",
+      "community": 43,
+      "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L17",
+      "id": "wiki_cad_poc_v4_101",
+      "community": 43,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
       "label": "2026-05-02_first_breath.md",
@@ -927,7 +2169,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L1",
       "id": "chronicle_2026_05_02_first_breath_md",
-      "community": 3,
+      "community": 4,
       "norm_label": "2026-05-02_first_breath.md"
     },
     {
@@ -936,7 +2178,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L6",
       "id": "chronicle_2026_05_02_first_breath_1",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1169\u1112\u1173\u11b8 \u2014 \u110c\u1175\u11ab\u1112\u116a 1\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u1107\u1161\u11af\u1112\u116d\u110b\u1175\u11af"
     },
     {
@@ -945,7 +2187,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L11",
       "id": "chronicle_2026_05_02_first_breath",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u1100\u1165\u1103\u1173\u11b8\u1102\u1161\u11b7 \u110b\u1174\u1105\u1168"
     },
     {
@@ -954,7 +2196,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L22",
       "id": "chronicle_2026_05_02_first_breath_4",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u1107\u1161\u11bc\u1107\u116e\u110c\u1161\u11bc 4\u1100\u116d\u110c\u1165\u11bc"
     },
     {
@@ -963,7 +2205,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L41",
       "id": "chronicle_2026_05_02_first_breath_41",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8"
     },
     {
@@ -972,7 +2214,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L57",
       "id": "chronicle_2026_05_02_first_breath_57",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)"
     },
     {
@@ -981,8 +2223,17 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L70",
       "id": "chronicle_2026_05_02_first_breath_70",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab"
+    },
+    {
+      "label": "\ud2b9\ud5c8\u00b7\uae30\uc220",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L22",
+      "community": 9,
+      "norm_label": "\u1110\u1173\u11a8\u1112\u1165\u00b7\u1100\u1175\u1109\u116e\u11af",
+      "id": "wiki_index_22"
     },
     {
       "label": "\ud575\uc2ec \uad6c\uc870",
@@ -1034,7 +2285,7 @@
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L41",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7",
       "id": "god_nodes_2026_05_02_chunbukyung_41"
     },
@@ -1043,7 +2294,7 @@
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L56",
-      "community": 7,
+      "community": 8,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab",
       "id": "god_nodes_2026_05_02_chunbukyung_56"
     },
@@ -1052,7 +2303,7 @@
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L36",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8",
       "id": "chronicle_2026_05_02_first_breath_36"
     },
@@ -1061,7 +2312,7 @@
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L52",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)",
       "id": "chronicle_2026_05_02_first_breath_52"
     },
@@ -1070,7 +2321,7 @@
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L65",
-      "community": 3,
+      "community": 4,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab",
       "id": "chronicle_2026_05_02_first_breath_65"
     }
@@ -1082,9 +2333,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_is_god_node",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_is_god_node"
     },
     {
       "relation": "contains",
@@ -1092,9 +2343,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_get_importance",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_importance"
     },
     {
       "relation": "contains",
@@ -1102,9 +2353,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_get_ref_count",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_ref_count"
     },
     {
       "relation": "contains",
@@ -1112,9 +2363,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_get_outcome_score",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_outcome_score"
     },
     {
       "relation": "contains",
@@ -1122,9 +2373,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_days_since_access",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_days_since_access"
     },
     {
       "relation": "contains",
@@ -1132,9 +2383,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_should_forget",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_should_forget"
     },
     {
       "relation": "contains",
@@ -1142,9 +2393,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_should_promote",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_should_promote"
     },
     {
       "relation": "contains",
@@ -1152,9 +2403,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_append_log",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_append_log"
     },
     {
       "relation": "contains",
@@ -1162,9 +2413,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_move_to_cold_tier",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_move_to_cold_tier"
     },
     {
       "relation": "contains",
@@ -1172,9 +2423,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_promote_to_ltm",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_promote_to_ltm"
     },
     {
       "relation": "contains",
@@ -1182,9 +2433,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_py",
-      "target": "scripts_forgetting_manager_run",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_run"
     },
     {
       "relation": "rationale_for",
@@ -1192,9 +2443,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_rationale_1",
-      "target": "scripts_forgetting_manager_py",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_py"
     },
     {
       "relation": "calls",
@@ -1203,9 +2454,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_forget",
-      "target": "scripts_forgetting_manager_is_god_node",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_is_god_node"
     },
     {
       "relation": "calls",
@@ -1214,9 +2465,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_promote",
-      "target": "scripts_forgetting_manager_is_god_node",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_is_god_node"
     },
     {
       "relation": "calls",
@@ -1225,9 +2476,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_forget",
-      "target": "scripts_forgetting_manager_get_importance",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_importance"
     },
     {
       "relation": "calls",
@@ -1236,9 +2487,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_promote",
-      "target": "scripts_forgetting_manager_get_importance",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_importance"
     },
     {
       "relation": "rationale_for",
@@ -1246,9 +2497,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_rationale_32",
-      "target": "scripts_forgetting_manager_get_importance",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_importance"
     },
     {
       "relation": "calls",
@@ -1257,9 +2508,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_promote",
-      "target": "scripts_forgetting_manager_get_ref_count",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_ref_count"
     },
     {
       "relation": "calls",
@@ -1268,9 +2519,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_forget",
-      "target": "scripts_forgetting_manager_get_outcome_score",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_outcome_score"
     },
     {
       "relation": "calls",
@@ -1279,9 +2530,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_promote",
-      "target": "scripts_forgetting_manager_get_outcome_score",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_outcome_score"
     },
     {
       "relation": "rationale_for",
@@ -1289,9 +2540,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_rationale_41",
-      "target": "scripts_forgetting_manager_get_outcome_score",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_get_outcome_score"
     },
     {
       "relation": "calls",
@@ -1300,9 +2551,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_should_forget",
-      "target": "scripts_forgetting_manager_days_since_access",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_days_since_access"
     },
     {
       "relation": "calls",
@@ -1311,9 +2562,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_run",
-      "target": "scripts_forgetting_manager_should_forget",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_should_forget"
     },
     {
       "relation": "calls",
@@ -1322,9 +2573,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_run",
-      "target": "scripts_forgetting_manager_should_promote",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_should_promote"
     },
     {
       "relation": "calls",
@@ -1333,9 +2584,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_move_to_cold_tier",
-      "target": "scripts_forgetting_manager_append_log",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_append_log"
     },
     {
       "relation": "calls",
@@ -1344,9 +2595,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_promote_to_ltm",
-      "target": "scripts_forgetting_manager_append_log",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_append_log"
     },
     {
       "relation": "calls",
@@ -1355,9 +2606,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_run",
-      "target": "scripts_forgetting_manager_append_log",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_append_log"
     },
     {
       "relation": "calls",
@@ -1366,9 +2617,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_run",
-      "target": "scripts_forgetting_manager_move_to_cold_tier",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_move_to_cold_tier"
     },
     {
       "relation": "rationale_for",
@@ -1376,9 +2627,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_rationale_88",
-      "target": "scripts_forgetting_manager_move_to_cold_tier",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_move_to_cold_tier"
     },
     {
       "relation": "calls",
@@ -1398,9 +2649,9 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_forgetting_manager_run",
-      "target": "scripts_forgetting_manager_promote_to_ltm",
-      "confidence_score": 1.0
+      "target": "scripts_forgetting_manager_promote_to_ltm"
     },
     {
       "relation": "contains",
@@ -1408,9 +2659,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_py",
-      "target": "scripts_memory_promotion_extract_wikilinks",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_extract_wikilinks"
     },
     {
       "relation": "contains",
@@ -1418,9 +2669,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_py",
-      "target": "scripts_memory_promotion_build_reference_map",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_build_reference_map"
     },
     {
       "relation": "contains",
@@ -1428,9 +2679,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_py",
-      "target": "scripts_memory_promotion_build_outcome_map",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_build_outcome_map"
     },
     {
       "relation": "contains",
@@ -1438,9 +2689,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_py",
-      "target": "scripts_memory_promotion_update_scores",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_update_scores"
     },
     {
       "relation": "rationale_for",
@@ -1448,9 +2699,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_rationale_1",
-      "target": "scripts_memory_promotion_py",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_py"
     },
     {
       "relation": "calls",
@@ -1459,9 +2710,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_build_reference_map",
-      "target": "scripts_memory_promotion_extract_wikilinks",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_extract_wikilinks"
     },
     {
       "relation": "calls",
@@ -1470,9 +2721,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_build_outcome_map",
-      "target": "scripts_memory_promotion_extract_wikilinks",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_extract_wikilinks"
     },
     {
       "relation": "calls",
@@ -1481,9 +2732,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_update_scores",
-      "target": "scripts_memory_promotion_build_reference_map",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_build_reference_map"
     },
     {
       "relation": "rationale_for",
@@ -1491,9 +2742,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_rationale_22",
-      "target": "scripts_memory_promotion_build_reference_map",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_build_reference_map"
     },
     {
       "relation": "calls",
@@ -1502,9 +2753,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_update_scores",
-      "target": "scripts_memory_promotion_build_outcome_map",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_build_outcome_map"
     },
     {
       "relation": "rationale_for",
@@ -1512,9 +2763,9 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_memory_promotion_rationale_37",
-      "target": "scripts_memory_promotion_build_outcome_map",
-      "confidence_score": 1.0
+      "target": "scripts_memory_promotion_build_outcome_map"
     },
     {
       "relation": "contains",
@@ -1522,9 +2773,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_py",
-      "target": "scripts_cold_tier_doc_id",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_doc_id"
     },
     {
       "relation": "contains",
@@ -1532,9 +2783,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_py",
-      "target": "scripts_cold_tier_ingest",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_ingest"
     },
     {
       "relation": "contains",
@@ -1542,9 +2793,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_py",
-      "target": "scripts_cold_tier_recall",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_recall"
     },
     {
       "relation": "contains",
@@ -1552,9 +2803,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_py",
-      "target": "scripts_cold_tier_sync_archive",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_sync_archive"
     },
     {
       "relation": "contains",
@@ -1562,9 +2813,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_py",
-      "target": "scripts_cold_tier_stats",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_stats"
     },
     {
       "relation": "rationale_for",
@@ -1572,9 +2823,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_rationale_1",
-      "target": "scripts_cold_tier_py",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_py"
     },
     {
       "relation": "calls",
@@ -1583,9 +2834,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_ingest",
-      "target": "scripts_cold_tier_doc_id",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_doc_id"
     },
     {
       "relation": "calls",
@@ -1594,9 +2845,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_sync_archive",
-      "target": "scripts_cold_tier_ingest",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_ingest"
     },
     {
       "relation": "rationale_for",
@@ -1604,9 +2855,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_rationale_55",
-      "target": "scripts_cold_tier_recall",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_recall"
     },
     {
       "relation": "rationale_for",
@@ -1614,9 +2865,9 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cold_tier_rationale_68",
-      "target": "scripts_cold_tier_sync_archive",
-      "confidence_score": 1.0
+      "target": "scripts_cold_tier_sync_archive"
     },
     {
       "relation": "contains",
@@ -1624,9 +2875,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_py",
-      "target": "scripts_cma_gate_cmaresult",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_cmaresult"
     },
     {
       "relation": "contains",
@@ -1634,9 +2885,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_py",
-      "target": "scripts_cma_gate_inspect",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_inspect"
     },
     {
       "relation": "contains",
@@ -1644,9 +2895,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_py",
-      "target": "scripts_cma_gate_gate",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_gate"
     },
     {
       "relation": "contains",
@@ -1654,9 +2905,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_py",
-      "target": "scripts_cma_gate_scan_vault",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_scan_vault"
     },
     {
       "relation": "rationale_for",
@@ -1664,9 +2915,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_rationale_1",
-      "target": "scripts_cma_gate_py",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_py"
     },
     {
       "relation": "method",
@@ -1674,9 +2925,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_cmaresult",
-      "target": "scripts_cma_gate_cmaresult_init",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_cmaresult_init"
     },
     {
       "relation": "calls",
@@ -1685,9 +2936,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_inspect",
-      "target": "scripts_cma_gate_cmaresult",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_cmaresult"
     },
     {
       "relation": "calls",
@@ -1696,9 +2947,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_gate",
-      "target": "scripts_cma_gate_inspect",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_inspect"
     },
     {
       "relation": "calls",
@@ -1707,9 +2958,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_scan_vault",
-      "target": "scripts_cma_gate_gate",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_gate"
     },
     {
       "relation": "rationale_for",
@@ -1717,9 +2968,9 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_gate_rationale_53",
-      "target": "scripts_cma_gate_gate",
-      "confidence_score": 1.0
+      "target": "scripts_cma_gate_gate"
     },
     {
       "relation": "contains",
@@ -1727,9 +2978,9 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_physis_cycle_py",
-      "target": "scripts_physis_cycle_run",
-      "confidence_score": 1.0
+      "target": "scripts_physis_cycle_run"
     },
     {
       "relation": "contains",
@@ -1737,8 +2988,18 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_physis_cycle_py",
-      "target": "scripts_physis_cycle_update_graph",
+      "target": "scripts_physis_cycle_update_graph"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "scripts_physis_cycle_py",
+      "target": "scripts_physis_cycle_run_cad_parser",
       "confidence_score": 1.0
     },
     {
@@ -1747,9 +3008,9 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_physis_cycle_rationale_1",
-      "target": "scripts_physis_cycle_py",
-      "confidence_score": 1.0
+      "target": "scripts_physis_cycle_py"
     },
     {
       "relation": "calls",
@@ -1758,8 +3019,101 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_physis_cycle_update_graph",
+      "target": "scripts_physis_cycle_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "scripts_physis_cycle_run_cad_parser",
       "target": "scripts_physis_cycle_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_py",
+      "target": "scripts_cma_layer2_inspect_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_py",
+      "target": "scripts_cma_layer2_gate_layer2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_py",
+      "target": "scripts_cma_layer2_scan_suspicious",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_rationale_1",
+      "target": "scripts_cma_layer2_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_gate_layer2",
+      "target": "scripts_cma_layer2_inspect_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_scan_suspicious",
+      "target": "scripts_cma_layer2_gate_layer2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_rationale_60",
+      "target": "scripts_cma_layer2_gate_layer2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "scripts_cma_layer2_rationale_91",
+      "target": "scripts_cma_layer2_scan_suspicious",
       "confidence_score": 1.0
     },
     {
@@ -1858,9 +3212,9 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_05_08_self_awakening_md",
-      "target": "physis_memory_2026_05_08_self_awakening",
-      "confidence_score": 1.0
+      "target": "physis_memory_2026_05_08_self_awakening"
     },
     {
       "relation": "contains",
@@ -1868,9 +3222,9 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_2026_05_08_self_awakening",
-      "target": "physis_memory_2026_05_08_self_awakening_13",
-      "confidence_score": 1.0
+      "target": "physis_memory_2026_05_08_self_awakening_13"
     },
     {
       "relation": "contains",
@@ -1878,9 +3232,9 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_2026_05_08_self_awakening",
-      "target": "physis_memory_2026_05_08_self_awakening_25",
-      "confidence_score": 1.0
+      "target": "physis_memory_2026_05_08_self_awakening_25"
     },
     {
       "relation": "contains",
@@ -1888,9 +3242,9 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_2026_05_08_self_awakening",
-      "target": "physis_memory_2026_05_08_self_awakening_34",
-      "confidence_score": 1.0
+      "target": "physis_memory_2026_05_08_self_awakening_34"
     },
     {
       "relation": "contains",
@@ -1908,9 +3262,9 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_14",
-      "confidence_score": 1.0
+      "target": "god_nodes_14"
     },
     {
       "relation": "contains",
@@ -1928,9 +3282,9 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_36",
-      "confidence_score": 1.0
+      "target": "god_nodes_36"
     },
     {
       "relation": "contains",
@@ -1938,9 +3292,9 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_17",
-      "confidence_score": 1.0
+      "target": "god_nodes_17"
     },
     {
       "relation": "contains",
@@ -1948,9 +3302,9 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_23",
-      "confidence_score": 1.0
+      "target": "god_nodes_23"
     },
     {
       "relation": "contains",
@@ -1958,9 +3312,9 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_28",
-      "confidence_score": 1.0
+      "target": "god_nodes_28"
     },
     {
       "relation": "contains",
@@ -2018,9 +3372,9 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_14",
-      "target": "god_nodes_codeblock_1",
-      "confidence_score": 1.0
+      "target": "god_nodes_codeblock_1"
     },
     {
       "relation": "contains",
@@ -2088,9 +3442,9 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "target": "god_nodes_2026_05_02_chunbukyung_48",
-      "confidence_score": 1.0
+      "target": "god_nodes_2026_05_02_chunbukyung_48"
     },
     {
       "relation": "contains",
@@ -2098,9 +3452,9 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "target": "god_nodes_2026_05_02_chunbukyung_63",
-      "confidence_score": 1.0
+      "target": "god_nodes_2026_05_02_chunbukyung_63"
     },
     {
       "relation": "contains",
@@ -2235,6 +3589,186 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4c_101_md",
+      "target": "wiki_cad_poc_v4c_101_poc_v4c_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4c_101_poc_v4c_101",
+      "target": "wiki_cad_poc_v4c_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4c_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4c_101_poc_v4c_101",
+      "target": "wiki_cad_poc_v4c_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_v11_topology_md",
+      "target": "wiki_cad_v11_topology_v11_topology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v11_topology_v11_topology",
+      "target": "wiki_cad_v11_topology_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v11_topology.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v11_topology_v11_topology",
+      "target": "wiki_cad_v11_topology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_full_stack_md",
+      "target": "wiki_cad_test_102_full_stack_test_102_full_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_full_stack_test_102_full_stack",
+      "target": "wiki_cad_test_102_full_stack_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_full_stack.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_full_stack_test_102_full_stack",
+      "target": "wiki_cad_test_102_full_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_complex_master_md",
+      "target": "wiki_cad_complex_master_complex_master",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_complex_master_complex_master",
+      "target": "wiki_cad_complex_master_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_complex_master.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_complex_master_complex_master",
+      "target": "wiki_cad_complex_master",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_v13_slabs_md",
+      "target": "wiki_cad_v13_slabs_v13_slabs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v13_slabs_v13_slabs",
+      "target": "wiki_cad_v13_slabs_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v13_slabs.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v13_slabs_v13_slabs",
+      "target": "wiki_cad_v13_slabs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_around_parking_md",
+      "target": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
+      "target": "wiki_cad_poc_101_around_parking_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_around_parking.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
+      "target": "wiki_cad_poc_101_around_parking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "wiki/log.md",
       "source_location": "L6",
       "weight": 1.0,
@@ -2251,6 +3785,246 @@
       "confidence_score": 1.0,
       "source": "wiki_log_wiki",
       "target": "wiki_log_2026_05_08"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_v7_boq_md",
+      "target": "wiki_cad_v7_boq_v7_boq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v7_boq_v7_boq",
+      "target": "wiki_cad_v7_boq_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v7_boq.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v7_boq_v7_boq",
+      "target": "wiki_cad_v7_boq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4d_101_md",
+      "target": "wiki_cad_poc_v4d_101_poc_v4d_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4d_101_poc_v4d_101",
+      "target": "wiki_cad_poc_v4d_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4d_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4d_101_poc_v4d_101",
+      "target": "wiki_cad_poc_v4d_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_basement_complex_v3_md",
+      "target": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
+      "target": "wiki_cad_test_basement_complex_v3_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_basement_complex_v3.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
+      "target": "wiki_cad_test_basement_complex_v3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v6b_101_md",
+      "target": "wiki_cad_poc_v6b_101_poc_v6b_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v6b_101_poc_v6b_101",
+      "target": "wiki_cad_poc_v6b_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v6b_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v6b_101_poc_v6b_101",
+      "target": "wiki_cad_poc_v6b_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_basement_b1_b2_stack_md",
+      "target": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
+      "target": "wiki_cad_basement_b1_b2_stack_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_basement_b1_b2_stack.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
+      "target": "wiki_cad_basement_b1_b2_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4b_101_md",
+      "target": "wiki_cad_poc_v4b_101_poc_v4b_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4b_101_poc_v4b_101",
+      "target": "wiki_cad_poc_v4b_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4b_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4b_101_poc_v4b_101",
+      "target": "wiki_cad_poc_v4b_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_b1_b2_dong_md",
+      "target": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
+      "target": "wiki_cad_poc_101_b1_b2_dong_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
+      "target": "wiki_cad_poc_101_b1_b2_dong",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_md",
+      "target": "wiki_cad_test_102_b1f_test_102_b1f",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_test_102_b1f",
+      "target": "wiki_cad_test_102_b1f_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_test_102_b1f",
+      "target": "wiki_cad_test_102_b1f",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2296,6 +4070,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "wiki/index.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_index",
+      "target": "wiki_index_25"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "wiki_index",
+      "target": "wiki_index_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
       "source_location": "L22",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2305,12 +4099,582 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "wiki/index.md",
-      "source_location": "L25",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "wiki_index",
-      "target": "wiki_index_25"
+      "source": "wiki_cad_v8_poc_md",
+      "target": "wiki_cad_v8_poc_v8_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v8_poc_v8_poc",
+      "target": "wiki_cad_v8_poc_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v8_poc.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v8_poc_v8_poc",
+      "target": "wiki_cad_v8_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "wiki_md",
+      "target": "wiki_dxf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_b_5_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_d",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_e_pattern_library_yes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_4_1_ole",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki_136",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "wiki_a",
+      "target": "wiki_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "wiki_b_5_llm",
+      "target": "wiki_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "wiki_c",
+      "target": "wiki_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "wiki_e_pattern_library_yes",
+      "target": "wiki_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_v12_north_ext_md",
+      "target": "wiki_cad_v12_north_ext_v12_north_ext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v12_north_ext_v12_north_ext",
+      "target": "wiki_cad_v12_north_ext_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v12_north_ext.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v12_north_ext_v12_north_ext",
+      "target": "wiki_cad_v12_north_ext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_101dong_md",
+      "target": "wiki_cad_test_101dong_test_101dong",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_101dong_test_101dong",
+      "target": "wiki_cad_test_101dong_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_101dong.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_101dong_test_101dong",
+      "target": "wiki_cad_test_101dong",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_formwork_dedu_md",
+      "target": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
+      "target": "wiki_cad_test_formwork_dedu_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_formwork_dedu.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
+      "target": "wiki_cad_test_formwork_dedu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v6_101_md",
+      "target": "wiki_cad_poc_v6_101_poc_v6_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v6_101_poc_v6_101",
+      "target": "wiki_cad_poc_v6_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v6_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v6_101_poc_v6_101",
+      "target": "wiki_cad_poc_v6_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_v3_md",
+      "target": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
+      "target": "wiki_cad_test_102_b1f_v3_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F_v3.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
+      "target": "wiki_cad_test_102_b1f_v3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_f1_3d_stack_102_md",
+      "target": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
+      "target": "wiki_cad_f1_3d_stack_102_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_f1_3d_stack_102.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
+      "target": "wiki_cad_f1_3d_stack_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4e_101_md",
+      "target": "wiki_cad_poc_v4e_101_poc_v4e_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4e_101_poc_v4e_101",
+      "target": "wiki_cad_poc_v4e_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4e_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4e_101_poc_v4e_101",
+      "target": "wiki_cad_poc_v4e_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_v10_b2f_only_md",
+      "target": "wiki_cad_v10_b2f_only_v10_b2f_only",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v10_b2f_only_v10_b2f_only",
+      "target": "wiki_cad_v10_b2f_only_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v10_b2f_only.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v10_b2f_only_v10_b2f_only",
+      "target": "wiki_cad_v10_b2f_only",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_combined_md",
+      "target": "wiki_cad_poc_101_combined_poc_101_combined",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_combined_poc_101_combined",
+      "target": "wiki_cad_poc_101_combined_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_101_combined.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_101_combined_poc_101_combined",
+      "target": "wiki_cad_poc_101_combined",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_v10_stage5_md",
+      "target": "wiki_cad_v10_stage5_v10_stage5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_v10_stage5_v10_stage5",
+      "target": "wiki_cad_v10_stage5_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_v10_stage5.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_v10_stage5_v10_stage5",
+      "target": "wiki_cad_v10_stage5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v5_101_md",
+      "target": "wiki_cad_poc_v5_101_poc_v5_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v5_101_poc_v5_101",
+      "target": "wiki_cad_poc_v5_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v5_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v5_101_poc_v5_101",
+      "target": "wiki_cad_poc_v5_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_v2_md",
+      "target": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
+      "target": "wiki_cad_test_102_b1f_v2_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_test_102_B1F_v2.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
+      "target": "wiki_cad_test_102_b1f_v2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_final_101_md",
+      "target": "wiki_cad_poc_final_101_poc_final_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_final_101_poc_final_101",
+      "target": "wiki_cad_poc_final_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_final_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_final_101_poc_final_101",
+      "target": "wiki_cad_poc_final_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4_101_md",
+      "target": "wiki_cad_poc_v4_101_poc_v4_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4_101_poc_v4_101",
+      "target": "wiki_cad_poc_v4_101_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/CAD_poc_v4_101.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_cad_poc_v4_101_poc_v4_101",
+      "target": "wiki_cad_poc_v4_101",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2348,9 +4712,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_41",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_41"
     },
     {
       "relation": "contains",
@@ -2358,9 +4722,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_57",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_57"
     },
     {
       "relation": "contains",
@@ -2368,9 +4732,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_70",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_70"
     },
     {
       "relation": "contains",
@@ -2404,5 +4768,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d3245d780670e84fa807114c4476fb4c19aad59f"
+  "built_at_commit": "0c839c9c7befb9b426d7792190003f778a03295c"
 }

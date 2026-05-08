@@ -17,7 +17,10 @@ updated: 2026-05-08
 *(노트가 추가될수록 이 섹션이 채워진다)*
 
 ### 건설·BOQ·BIM
-- (비어있음)
+- [[이천_大業_알고리즘_명세]] — DXF 병렬처리 5체 정반합 알고리즘 (A~E 명세)
+- CAD_complex_master, CAD_v7_boq ~ CAD_v13_slabs — 이천 3지국 STEP 자동 파싱 29노드
+- CAD_poc_* — 101동·102동 PoC 시리즈 (B1F~지상)
+- CAD_basement_b1_b2_stack — 지하주차장 적층 구조
 
 ### 특허·기술
 - (비어있음)

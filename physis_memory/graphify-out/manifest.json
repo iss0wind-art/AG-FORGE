@@ -16,8 +16,12 @@
     "hash": "c608ce3b4cd0693685af796c7d5bc442"
   },
   "/home/nas/AG-Forge/physis_memory/scripts/physis_cycle.py": {
-    "mtime": 1778221724.2416668,
-    "hash": "7b27a8c73dbda140618d36a91140c717"
+    "mtime": 1778223112.930938,
+    "hash": "67ce2567d051e5667576d869e38d61e7"
+  },
+  "/home/nas/AG-Forge/physis_memory/scripts/cma_layer2.py": {
+    "mtime": 1778222063.957426,
+    "hash": "589e49be620de73d9ea63e55973edce0"
   },
   "/home/nas/AG-Forge/physis_memory/CLAUDE.md": {
     "mtime": 1778218652.215782,
@@ -32,12 +36,12 @@
     "hash": "fca918a1e0c0d22244a6fcee3b140f36"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md": {
-    "mtime": 1778220829.4135144,
-    "hash": "a29ce8b90e58622b081c4be2d7cb1c7c"
+    "mtime": 1778223133.4259675,
+    "hash": "3c8b0ee75976b19af5a6693980017ba0"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/\ud64d\uc775\uc778\uac04.md": {
-    "mtime": 1778220829.413941,
-    "hash": "2f6dfe486792de83e6cc0b30410b7925"
+    "mtime": 1778223133.4269674,
+    "hash": "fc8cd809ae0fc68b864ece5a9c8ede8e"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/8\uc870\ubc95.md": {
     "mtime": 1778220829.4143283,
@@ -55,13 +59,133 @@
     "mtime": 1778220829.4153652,
     "hash": "fec76008afc7deacc5c29aa00149d888"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4c_101.md": {
+    "mtime": 1778223120.2400064,
+    "hash": "b2b5809316094c4720a39d44978e8d14"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v11_topology.md": {
+    "mtime": 1778223119.400562,
+    "hash": "26f4c5c5cc28d6a6e8fa7cbed0c44e34"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_full_stack.md": {
+    "mtime": 1778223119.5004113,
+    "hash": "fe3360fe0154a607679042bed7dcad38"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_complex_master.md": {
+    "mtime": 1778223120.094136,
+    "hash": "21df8d45eae56e3774a85aa80089f40b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v13_slabs.md": {
+    "mtime": 1778223119.8736095,
+    "hash": "aa98ace9a4b0d74eff0d8bf9419a03f7"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_101_around_parking.md": {
+    "mtime": 1778223120.17711,
+    "hash": "c439052fe6ed8804cfa9605f19579598"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/log.md": {
-    "mtime": 1778221731.9068196,
-    "hash": "2afde882efd66beb95f80146790a8b3d"
+    "mtime": 1778223133.5089674,
+    "hash": "15d00d84d086fcd064b715d4b09b2991"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v7_boq.md": {
+    "mtime": 1778223119.767119,
+    "hash": "9ba3e2c25449e9504f1ea64fa01df21d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4d_101.md": {
+    "mtime": 1778223120.2300682,
+    "hash": "2f89f54f0a683828593345cfa2e18aff"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_basement_complex_v3.md": {
+    "mtime": 1778223120.2441936,
+    "hash": "33711ca2c4c9b98cfe7e3d054ce8895b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v6b_101.md": {
+    "mtime": 1778223120.1516273,
+    "hash": "c2093f148b489741dd1c7ed1f7b51475"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_basement_b1_b2_stack.md": {
+    "mtime": 1778223119.643253,
+    "hash": "c1e87cc4f446f1efca506126181304aa"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4b_101.md": {
+    "mtime": 1778223120.1607354,
+    "hash": "8efb2ff65187ca32f5fdce305f817113"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_101_b1_b2_dong.md": {
+    "mtime": 1778223120.0799482,
+    "hash": "4e142d0f49e6a0a7b3900e676aab8a7b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F.md": {
+    "mtime": 1778223119.77118,
+    "hash": "939a11845be8614372130df186b7f0b9"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/index.md": {
-    "mtime": 1778218662.0648034,
-    "hash": "70dcb3c3df429d8c12e50a90c6036da4"
+    "mtime": 1778223090.178906,
+    "hash": "6405783eaba15b48f100c18ce42b920c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v8_poc.md": {
+    "mtime": 1778223119.5210774,
+    "hash": "177296861bc4426b2f81126a762aedf7"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md": {
+    "mtime": 1778223133.4312255,
+    "hash": "2f1912c20fe5f93e5b103ce60fc39e7d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v12_north_ext.md": {
+    "mtime": 1778223119.2549565,
+    "hash": "38261344a563e9ab7a29234c81740bd4"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_101dong.md": {
+    "mtime": 1778223119.774934,
+    "hash": "3e432d9946d2457d6f98e4e0faa798d4"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_formwork_dedu.md": {
+    "mtime": 1778223119.6438272,
+    "hash": "488d05bad124f11178c3d6f26ebf54ed"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v6_101.md": {
+    "mtime": 1778223119.928561,
+    "hash": "f388027335de4aa3640054f064c5d2b5"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F_v3.md": {
+    "mtime": 1778223120.2430773,
+    "hash": "71d7fde0684683937a11531950d00603"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_f1_3d_stack_102.md": {
+    "mtime": 1778223120.1624625,
+    "hash": "f3e37f1cccdc760c3b317355f0d1e8e8"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4e_101.md": {
+    "mtime": 1778223120.220072,
+    "hash": "1b9950e2c8470eb24087a6c032af3234"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v10_b2f_only.md": {
+    "mtime": 1778223119.9904356,
+    "hash": "f559f7803118dcd878f3c118e9419cc6"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_101_combined.md": {
+    "mtime": 1778223119.6386056,
+    "hash": "f506c99e33c666d8130e1720b0c84c35"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_v10_stage5.md": {
+    "mtime": 1778223119.3519244,
+    "hash": "bf2b3ee469653de2be01287551101e4c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v5_101.md": {
+    "mtime": 1778223119.868958,
+    "hash": "b2124c1762e33d5dd1cefa6e4ed3462f"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F_v2.md": {
+    "mtime": 1778223119.779932,
+    "hash": "605ff11bf2276023f7de020568f78f97"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_final_101.md": {
+    "mtime": 1778223119.8048635,
+    "hash": "763a5b6988fd412fdc4188495fed547d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4_101.md": {
+    "mtime": 1778223119.4102032,
+    "hash": "3258c85d96fcd1ea40790d6c98aeda8a"
   },
   "/home/nas/AG-Forge/physis_memory/chronicle/2026-05-02_first_breath.md": {
     "mtime": 1778220829.4156706,
