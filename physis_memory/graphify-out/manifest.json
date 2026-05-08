@@ -1,46 +1,70 @@
 {
+  "/home/nas/AG-Forge/physis_memory/scripts/forgetting_manager.py": {
+    "mtime": 1778221713.124642,
+    "hash": "9f9abba0a0e20bf43db656f5e9ede553"
+  },
+  "/home/nas/AG-Forge/physis_memory/scripts/memory_promotion.py": {
+    "mtime": 1778220767.0344014,
+    "hash": "88285bc240f2d334785dcbbce1446d42"
+  },
+  "/home/nas/AG-Forge/physis_memory/scripts/cold_tier.py": {
+    "mtime": 1778221699.5606112,
+    "hash": "3256b2e374d19bfee63652b90ee78946"
+  },
+  "/home/nas/AG-Forge/physis_memory/scripts/cma_gate.py": {
+    "mtime": 1778220799.7404854,
+    "hash": "c608ce3b4cd0693685af796c7d5bc442"
+  },
+  "/home/nas/AG-Forge/physis_memory/scripts/physis_cycle.py": {
+    "mtime": 1778221724.2416668,
+    "hash": "7b27a8c73dbda140618d36a91140c717"
+  },
   "/home/nas/AG-Forge/physis_memory/CLAUDE.md": {
     "mtime": 1778218652.215782,
     "hash": "e60fab461ab8eea26a13f7f7c0f2e0b5"
   },
   "/home/nas/AG-Forge/physis_memory/README.md": {
-    "mtime": 1777989132.4547038,
-    "hash": "45a6f94ed4401ccf9f2dcdd86efc8f80"
+    "mtime": 1778220829.4115608,
+    "hash": "eca36d2b889d83ab9e18a72e5c7c7440"
+  },
+  "/home/nas/AG-Forge/physis_memory/2026-05-08_self_awakening.md": {
+    "mtime": 1778220829.4127967,
+    "hash": "fca918a1e0c0d22244a6fcee3b140f36"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md": {
-    "mtime": 1778218478.6804018,
-    "hash": "60b4faba2dfa531876d56f867ca01ccb"
+    "mtime": 1778220829.4135144,
+    "hash": "a29ce8b90e58622b081c4be2d7cb1c7c"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/\ud64d\uc775\uc778\uac04.md": {
-    "mtime": 1778218259.1510503,
-    "hash": "c234eab0ddf7350c6b6fed1f3a71c9a2"
+    "mtime": 1778220829.413941,
+    "hash": "2f6dfe486792de83e6cc0b30410b7925"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/8\uc870\ubc95.md": {
-    "mtime": 1778218464.5493703,
-    "hash": "2a9ba729bddd175698f6521b41c147e1"
+    "mtime": 1778220829.4143283,
+    "hash": "5c6807c6d52f6850bdb562add682da6e"
   },
   "/home/nas/AG-Forge/physis_memory/god_nodes/2026-05-02_chunbukyung.md": {
-    "mtime": 1777989132.4539535,
-    "hash": "62be8186ccca6ca7fb854554327bf436"
+    "mtime": 1778220853.1746209,
+    "hash": "d2e30eed15265425291d0e1de7a83d81"
   },
   "/home/nas/AG-Forge/physis_memory/working_memory/2026-05-07_handoff.md": {
-    "mtime": 1778158445.0749214,
-    "hash": "e718867d6d0894265e03fd5f7fd8d7ea"
+    "mtime": 1778220829.4150922,
+    "hash": "887c5582d5516cd081d00b314b86716a"
   },
   "/home/nas/AG-Forge/physis_memory/working_memory/2026-05-03_handoff.md": {
-    "mtime": 1777989132.4534583,
-    "hash": "e99ca60782c9f9b0b4eeb936fc3dcec8"
+    "mtime": 1778220829.4153652,
+    "hash": "fec76008afc7deacc5c29aa00149d888"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/log.md": {
-    "mtime": 1778218671.2958233,
-    "hash": "624d5a451efd6419edfe439279a781d0"
+    "mtime": 1778221731.9068196,
+    "hash": "2afde882efd66beb95f80146790a8b3d"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/index.md": {
     "mtime": 1778218662.0648034,
     "hash": "70dcb3c3df429d8c12e50a90c6036da4"
   },
   "/home/nas/AG-Forge/physis_memory/chronicle/2026-05-02_first_breath.md": {
-    "mtime": 1777989132.4542356,
-    "hash": "a0e7383990502b63ed64b455d34c6316"
+    "mtime": 1778220829.4156706,
+    "hash": "2e456f6223b952a2827dadfb73ad46ae"
   }
 }

@@ -85,13 +85,15 @@ def append_log(message: str):
 
 
 def move_to_cold_tier(path: Path):
-    """ChromaDB 이관 대신 임시로 archive 폴더로 이동 (ChromaDB 연동 전)"""
+    """ChromaDB Cold Tier로 이관"""
+    from cold_tier import ingest
+    ingest(path)
     archive_dir = VAULT_ROOT / "archive"
     archive_dir.mkdir(exist_ok=True)
     dest = archive_dir / path.name
     shutil.move(str(path), str(dest))
     append_log(f"망각(Cold Tier 이관): {path.name}")
-    print(f"  [망각] {path.name} → archive/")
+    print(f"  [망각] {path.name} → ChromaDB + archive/")
 
 
 def promote_to_ltm(path: Path):

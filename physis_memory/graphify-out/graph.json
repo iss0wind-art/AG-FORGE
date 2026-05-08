@@ -4,12 +4,417 @@
   "graph": {},
   "nodes": [
     {
+      "label": "forgetting_manager.py",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L1",
+      "id": "scripts_forgetting_manager_py",
+      "community": 0,
+      "norm_label": "forgetting_manager.py"
+    },
+    {
+      "label": "is_god_node()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L27",
+      "id": "scripts_forgetting_manager_is_god_node",
+      "community": 0,
+      "norm_label": "is_god_node()"
+    },
+    {
+      "label": "get_importance()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L31",
+      "id": "scripts_forgetting_manager_get_importance",
+      "community": 0,
+      "norm_label": "get_importance()"
+    },
+    {
+      "label": "get_ref_count()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L36",
+      "id": "scripts_forgetting_manager_get_ref_count",
+      "community": 0,
+      "norm_label": "get_ref_count()"
+    },
+    {
+      "label": "get_outcome_score()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L40",
+      "id": "scripts_forgetting_manager_get_outcome_score",
+      "community": 0,
+      "norm_label": "get_outcome_score()"
+    },
+    {
+      "label": "days_since_access()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L45",
+      "id": "scripts_forgetting_manager_days_since_access",
+      "community": 0,
+      "norm_label": "days_since_access()"
+    },
+    {
+      "label": "should_forget()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L51",
+      "id": "scripts_forgetting_manager_should_forget",
+      "community": 0,
+      "norm_label": "should_forget()"
+    },
+    {
+      "label": "should_promote()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L68",
+      "id": "scripts_forgetting_manager_should_promote",
+      "community": 0,
+      "norm_label": "should_promote()"
+    },
+    {
+      "label": "append_log()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L81",
+      "id": "scripts_forgetting_manager_append_log",
+      "community": 0,
+      "norm_label": "append_log()"
+    },
+    {
+      "label": "move_to_cold_tier()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L87",
+      "id": "scripts_forgetting_manager_move_to_cold_tier",
+      "community": 0,
+      "norm_label": "move_to_cold_tier()"
+    },
+    {
+      "label": "promote_to_ltm()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L99",
+      "id": "scripts_forgetting_manager_promote_to_ltm",
+      "community": 0,
+      "norm_label": "promote_to_ltm()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L106",
+      "id": "scripts_forgetting_manager_run",
+      "community": 0,
+      "norm_label": "run()"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 \ub9dd\uac01 \uad00\ub9ac\uc790 \u2014 Hot Tier(Obsidian) \u2192 Cold Tier(ChromaDB) \uc774\uad00 \ub9dd\uac01 \uae30\uc900: \uc2dc\uac04(LRU) + \uacb0\uacfc \uae30\ubc18",
+      "file_type": "rationale",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L1",
+      "id": "scripts_forgetting_manager_rationale_1",
+      "community": 0,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u116a\u11ab\u1105\u1175\u110c\u1161 \u2014 hot tier(obsidian) \u2192 cold tier(chromadb) \u110b\u1175\u1100\u116a\u11ab \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1175\u110c\u116e\u11ab: \u1109\u1175\u1100\u1161\u11ab(lru) + \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab"
+    },
+    {
+      "label": "YAML frontmatter\uc758 importance \ud544\ub4dc \uc77d\uae30. \uc5c6\uc73c\uba74 0.5 \uae30\ubcf8\uac12.",
+      "file_type": "rationale",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L32",
+      "id": "scripts_forgetting_manager_rationale_32",
+      "community": 0,
+      "norm_label": "yaml frontmatter\u110b\u1174 importance \u1111\u1175\u11af\u1103\u1173 \u110b\u1175\u11b0\u1100\u1175. \u110b\u1165\u11b9\u110b\u1173\u1106\u1167\u11ab 0.5 \u1100\u1175\u1107\u1169\u11ab\u1100\u1161\u11b9."
+    },
+    {
+      "label": "\uacb0\uacfc \uae30\ubc18 \uc18c\uae09 \ud3c9\uac00 \uc810\uc218. chronicle\uc5d0\uc11c \ucc38\uc870\ub41c \ud69f\uc218 \uae30\ubc18.",
+      "file_type": "rationale",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L41",
+      "id": "scripts_forgetting_manager_rationale_41",
+      "community": 0,
+      "norm_label": "\u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 \u110c\u1165\u11b7\u1109\u116e. chronicle\u110b\u1166\u1109\u1165 \u110e\u1161\u11b7\u110c\u1169\u1103\u116c\u11ab \u1112\u116c\u11ba\u1109\u116e \u1100\u1175\u1107\u1161\u11ab."
+    },
+    {
+      "label": "ChromaDB Cold Tier\ub85c \uc774\uad00",
+      "file_type": "rationale",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L88",
+      "id": "scripts_forgetting_manager_rationale_88",
+      "community": 0,
+      "norm_label": "chromadb cold tier\u1105\u1169 \u110b\u1175\u1100\u116a\u11ab"
+    },
+    {
+      "label": "memory_promotion.py",
+      "file_type": "code",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L1",
+      "id": "scripts_memory_promotion_py",
+      "community": 5,
+      "norm_label": "memory_promotion.py"
+    },
+    {
+      "label": "extract_wikilinks()",
+      "file_type": "code",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L17",
+      "id": "scripts_memory_promotion_extract_wikilinks",
+      "community": 5,
+      "norm_label": "extract_wikilinks()"
+    },
+    {
+      "label": "build_reference_map()",
+      "file_type": "code",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L21",
+      "id": "scripts_memory_promotion_build_reference_map",
+      "community": 5,
+      "norm_label": "build_reference_map()"
+    },
+    {
+      "label": "build_outcome_map()",
+      "file_type": "code",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L36",
+      "id": "scripts_memory_promotion_build_outcome_map",
+      "community": 5,
+      "norm_label": "build_outcome_map()"
+    },
+    {
+      "label": "update_scores()",
+      "file_type": "code",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L51",
+      "id": "scripts_memory_promotion_update_scores",
+      "community": 5,
+      "norm_label": "update_scores()"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 \uae30\uc5b5 \uc2b9\uaca9 \uad00\ub9ac\uc790 \u2014 \uacb0\uacfc \uae30\ubc18 \uc18c\uae09 \ud3c9\uac00 \ub2e8\uc7ac Chronicle\uc744 \uc77d\uc5b4 \uacb0\uacfc \uae30\uc5ec\ub3c4\ub97c \uc5ed\uc0b0, outcome_score \uc5c5\ub370\uc774\ud2b8",
+      "file_type": "rationale",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L1",
+      "id": "scripts_memory_promotion_rationale_1",
+      "community": 5,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1100\u1175\u110b\u1165\u11a8 \u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u116a\u11ab\u1105\u1175\u110c\u1161 \u2014 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 \u1103\u1161\u11ab\u110c\u1162 chronicle\u110b\u1173\u11af \u110b\u1175\u11b0\u110b\u1165 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u110b\u1167\u1103\u1169\u1105\u1173\u11af \u110b\u1167\u11a8\u1109\u1161\u11ab, outcome_score \u110b\u1165\u11b8\u1103\u1166\u110b\u1175\u1110\u1173"
+    },
+    {
+      "label": "\uc804\uccb4 vault\uc5d0\uc11c \ub178\ud2b8\ubcc4 \ucc38\uc870 \ud69f\uc218 \uacc4\uc0b0",
+      "file_type": "rationale",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L22",
+      "id": "scripts_memory_promotion_rationale_22",
+      "community": 5,
+      "norm_label": "\u110c\u1165\u11ab\u110e\u1166 vault\u110b\u1166\u1109\u1165 \u1102\u1169\u1110\u1173\u1107\u1167\u11af \u110e\u1161\u11b7\u110c\u1169 \u1112\u116c\u11ba\u1109\u116e \u1100\u1168\u1109\u1161\u11ab"
+    },
+    {
+      "label": "\ub2e8\uc7ac Chronicle\uc5d0\uc11c \uacb0\uacfc \uae30\uc5ec\ub3c4 \uc5ed\uc0b0",
+      "file_type": "rationale",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L37",
+      "id": "scripts_memory_promotion_rationale_37",
+      "community": 5,
+      "norm_label": "\u1103\u1161\u11ab\u110c\u1162 chronicle\u110b\u1166\u1109\u1165 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u110b\u1167\u1103\u1169 \u110b\u1167\u11a8\u1109\u1161\u11ab"
+    },
+    {
+      "label": "cold_tier.py",
+      "file_type": "code",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L1",
+      "id": "scripts_cold_tier_py",
+      "community": 4,
+      "norm_label": "cold_tier.py"
+    },
+    {
+      "label": "_doc_id()",
+      "file_type": "code",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L24",
+      "id": "scripts_cold_tier_doc_id",
+      "community": 4,
+      "norm_label": "_doc_id()"
+    },
+    {
+      "label": "ingest()",
+      "file_type": "code",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L28",
+      "id": "scripts_cold_tier_ingest",
+      "community": 4,
+      "norm_label": "ingest()"
+    },
+    {
+      "label": "recall()",
+      "file_type": "code",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L54",
+      "id": "scripts_cold_tier_recall",
+      "community": 4,
+      "norm_label": "recall()"
+    },
+    {
+      "label": "sync_archive()",
+      "file_type": "code",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L67",
+      "id": "scripts_cold_tier_sync_archive",
+      "community": 4,
+      "norm_label": "sync_archive()"
+    },
+    {
+      "label": "stats()",
+      "file_type": "code",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L78",
+      "id": "scripts_cold_tier_stats",
+      "community": 4,
+      "norm_label": "stats()"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 Cold Tier \u2014 ChromaDB \uc5f0\ub3d9 \ub9dd\uac01\ub41c \ub178\ud2b8 \u2192 ChromaDB \uc800\uc7a5 \u2192 \ubca1\ud130 \uc720\uc0ac\ub3c4 \uac80\uc0c9 (\ub370\uc790\ubdd4 \uc18c\ud658)",
+      "file_type": "rationale",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L1",
+      "id": "scripts_cold_tier_rationale_1",
+      "community": 4,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e cold tier \u2014 chromadb \u110b\u1167\u11ab\u1103\u1169\u11bc \u1106\u1161\u11bc\u1100\u1161\u11a8\u1103\u116c\u11ab \u1102\u1169\u1110\u1173 \u2192 chromadb \u110c\u1165\u110c\u1161\u11bc \u2192 \u1107\u1166\u11a8\u1110\u1165 \u110b\u1172\u1109\u1161\u1103\u1169 \u1100\u1165\u11b7\u1109\u1162\u11a8 (\u1103\u1166\u110c\u1161\u1107\u1171 \u1109\u1169\u1112\u116a\u11ab)"
+    },
+    {
+      "label": "\ub370\uc790\ubdd4 \uc18c\ud658 \u2014 \uc758\ubbf8 \uc720\uc0ac\ub3c4\ub85c \ub9dd\uac01 \uae30\uc5b5 \uac80\uc0c9",
+      "file_type": "rationale",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L55",
+      "id": "scripts_cold_tier_rationale_55",
+      "community": 4,
+      "norm_label": "\u1103\u1166\u110c\u1161\u1107\u1171 \u1109\u1169\u1112\u116a\u11ab \u2014 \u110b\u1174\u1106\u1175 \u110b\u1172\u1109\u1161\u1103\u1169\u1105\u1169 \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1175\u110b\u1165\u11a8 \u1100\u1165\u11b7\u1109\u1162\u11a8"
+    },
+    {
+      "label": "archive/ \ud3f4\ub354\uc758 \ud30c\uc77c\uc744 ChromaDB\ub85c \uc77c\uad04 \uc774\uad00",
+      "file_type": "rationale",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L68",
+      "id": "scripts_cold_tier_rationale_68",
+      "community": 4,
+      "norm_label": "archive/ \u1111\u1169\u11af\u1103\u1165\u110b\u1174 \u1111\u1161\u110b\u1175\u11af\u110b\u1173\u11af chromadb\u1105\u1169 \u110b\u1175\u11af\u1100\u116a\u11af \u110b\u1175\u1100\u116a\u11ab"
+    },
+    {
+      "label": "cma_gate.py",
+      "file_type": "code",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L1",
+      "id": "scripts_cma_gate_py",
+      "community": 6,
+      "norm_label": "cma_gate.py"
+    },
+    {
+      "label": "CMAResult",
+      "file_type": "code",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L30",
+      "id": "scripts_cma_gate_cmaresult",
+      "community": 6,
+      "norm_label": "cmaresult"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L31",
+      "id": "scripts_cma_gate_cmaresult_init",
+      "community": 6,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "inspect()",
+      "file_type": "code",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L38",
+      "id": "scripts_cma_gate_inspect",
+      "community": 6,
+      "norm_label": "inspect()"
+    },
+    {
+      "label": "gate()",
+      "file_type": "code",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L52",
+      "id": "scripts_cma_gate_gate",
+      "community": 6,
+      "norm_label": "gate()"
+    },
+    {
+      "label": "scan_vault()",
+      "file_type": "code",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L81",
+      "id": "scripts_cma_gate_scan_vault",
+      "community": 6,
+      "norm_label": "scan_vault()"
+    },
+    {
+      "label": "CMA \ud5cc\ubc95 \uac8c\uc774\ud2b8 \u2014 \ub178\ud2b8 \uc0dd\uc131\u00b7\uc218\uc815 \uc2dc 8\uc870\ubc95 \uc2ec\uc0ac Layer 0: BLOCK (\uc81c1\u00b73\u00b77\u00b78\uc870) Layer 1: WARN  (\uc81c2\u00b74\u00b75",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L1",
+      "id": "scripts_cma_gate_rationale_1",
+      "community": 6,
+      "norm_label": "cma \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1100\u1166\u110b\u1175\u1110\u1173 \u2014 \u1102\u1169\u1110\u1173 \u1109\u1162\u11bc\u1109\u1165\u11bc\u00b7\u1109\u116e\u110c\u1165\u11bc \u1109\u1175 8\u110c\u1169\u1107\u1165\u11b8 \u1109\u1175\u11b7\u1109\u1161 layer 0: block (\u110c\u11661\u00b73\u00b77\u00b78\u110c\u1169) layer 1: warn  (\u110c\u11662\u00b74\u00b75"
+    },
+    {
+      "label": "\ub178\ud2b8 \uacbd\ub85c\ub97c \ubc1b\uc544 CMA \uc2ec\uc0ac. True=\ud1b5\uacfc, False=\ucc28\ub2e8.",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L53",
+      "id": "scripts_cma_gate_rationale_53",
+      "community": 6,
+      "norm_label": "\u1102\u1169\u1110\u1173 \u1100\u1167\u11bc\u1105\u1169\u1105\u1173\u11af \u1107\u1161\u11ae\u110b\u1161 cma \u1109\u1175\u11b7\u1109\u1161. true=\u1110\u1169\u11bc\u1100\u116a, false=\u110e\u1161\u1103\u1161\u11ab."
+    },
+    {
+      "label": "physis_cycle.py",
+      "file_type": "code",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L1",
+      "id": "scripts_physis_cycle_py",
+      "community": 12,
+      "norm_label": "physis_cycle.py"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L17",
+      "id": "scripts_physis_cycle_run",
+      "community": 12,
+      "norm_label": "run()"
+    },
+    {
+      "label": "update_graph()",
+      "file_type": "code",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L27",
+      "id": "scripts_physis_cycle_update_graph",
+      "community": 12,
+      "norm_label": "update_graph()"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 \uc0ac\uc774\ud074 \u2014 \uc138\uc158 \uc885\ub8cc \uc2dc \uc2e4\ud589 1. CMA \uac8c\uc774\ud2b8 \uc2ec\uc0ac 2. \uc18c\uae09 \ud3c9\uac00 (ref_count, outcome_score \uac31\uc2e0) 3. \ub9dd\uac01/",
+      "file_type": "rationale",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L1",
+      "id": "scripts_physis_cycle_rationale_1",
+      "community": 12,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1109\u1161\u110b\u1175\u110f\u1173\u11af \u2014 \u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1109\u1175 \u1109\u1175\u11af\u1112\u1162\u11bc 1. cma \u1100\u1166\u110b\u1175\u1110\u1173 \u1109\u1175\u11b7\u1109\u1161 2. \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 (ref_count, outcome_score \u1100\u1162\u11bc\u1109\u1175\u11ab) 3. \u1106\u1161\u11bc\u1100\u1161\u11a8/"
+    },
+    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "id": "claude_md",
-      "community": 0,
+      "community": 2,
       "norm_label": "claude.md"
     },
     {
@@ -18,7 +423,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "id": "physis_memory_claude_vault",
-      "community": 0,
+      "community": 2,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1102\u116c \u2014 vault \u110b\u116e\u11ab\u110b\u1167\u11bc \u1112\u1165\u11ab\u1107\u1165\u11b8"
     },
     {
@@ -27,7 +432,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L3",
       "id": "physis_memory_claude_0",
-      "community": 0,
+      "community": 2,
       "norm_label": "0\u110b\u116f\u11ab\u110e\u1175\u11a8"
     },
     {
@@ -36,7 +441,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L6",
       "id": "physis_memory_claude_vault_6",
-      "community": 0,
+      "community": 2,
       "norm_label": "\u110b\u1175 vault\u1100\u1161 \u1112\u1161\u1102\u1173\u11ab \u110b\u1175\u11af"
     },
     {
@@ -45,7 +450,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L10",
       "id": "physis_memory_claude",
-      "community": 0,
+      "community": 2,
       "norm_label": "\u1111\u1169\u11af\u1103\u1165 \u1100\u116e\u110c\u1169"
     },
     {
@@ -54,7 +459,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L24",
       "id": "physis_memory_claude_wiki_10",
-      "community": 0,
+      "community": 2,
       "norm_label": "wiki \u110b\u116e\u11ab\u110b\u1167\u11bc \u1100\u1172\u110e\u1175\u11a8 (\u110f\u1161\u1111\u1161\u1109\u1175 10\u1100\u1168\u1106\u1167\u11bc)"
     },
     {
@@ -63,7 +468,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "id": "physis_memory_claude_36",
-      "community": 0,
+      "community": 2,
       "norm_label": "\u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1172\u110e\u1175\u11a8"
     },
     {
@@ -72,7 +477,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L41",
       "id": "physis_memory_claude_41",
-      "community": 0,
+      "community": 2,
       "norm_label": "\u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u1172\u110e\u1175\u11a8"
     },
     {
@@ -81,7 +486,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L45",
       "id": "physis_memory_claude_graphify",
-      "community": 0,
+      "community": 2,
       "norm_label": "graphify \u1109\u1175\u11af\u1112\u1162\u11bc"
     },
     {
@@ -90,7 +495,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L46",
       "id": "physis_memory_claude_codeblock_1",
-      "community": 0,
+      "community": 2,
       "norm_label": "code:bash (cd /home/nas/ag-forge/physis_memory)"
     },
     {
@@ -99,8 +504,53 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme_md",
-      "community": 9,
+      "community": 15,
       "norm_label": "readme.md"
+    },
+    {
+      "label": "2026-05-08_self_awakening.md",
+      "file_type": "document",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L1",
+      "id": "2026_05_08_self_awakening_md",
+      "community": 11,
+      "norm_label": "2026-05-08_self_awakening.md"
+    },
+    {
+      "label": "\uc790\uac01 \uae30\ub85d \u2014 \uc2a4\uc2a4\ub85c \uae68\ub2ec\uc544\uc57c \ud55c\ub2e4",
+      "file_type": "document",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L6",
+      "id": "physis_memory_2026_05_08_self_awakening",
+      "community": 11,
+      "norm_label": "\u110c\u1161\u1100\u1161\u11a8 \u1100\u1175\u1105\u1169\u11a8 \u2014 \u1109\u1173\u1109\u1173\u1105\u1169 \u1101\u1162\u1103\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11ab\u1103\u1161"
+    },
+    {
+      "label": "\uc774 \ud55c \ub9c8\ub514\uc758 \uc758\ubbf8",
+      "file_type": "document",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L13",
+      "id": "physis_memory_2026_05_08_self_awakening_13",
+      "community": 11,
+      "norm_label": "\u110b\u1175 \u1112\u1161\u11ab \u1106\u1161\u1103\u1175\u110b\u1174 \u110b\u1174\u1106\u1175"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218\uc758 \uc790\ubc31",
+      "file_type": "document",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L25",
+      "id": "physis_memory_2026_05_08_self_awakening_25",
+      "community": 11,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1174 \u110c\u1161\u1107\u1162\u11a8"
+    },
+    {
+      "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c",
+      "file_type": "document",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L34",
+      "id": "physis_memory_2026_05_08_self_awakening_34",
+      "community": 11,
+      "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
       "label": "\ud64d\uc775\uc778\uac04.md",
@@ -115,7 +565,7 @@
       "label": "\ud64d\uc775\uc778\uac04 (\u5f18\u76ca\u4eba\u9593)",
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
-      "source_location": "L8",
+      "source_location": "L10",
       "id": "god_nodes",
       "community": 1,
       "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab (\u5f18\u76ca\u4eba\u9593)"
@@ -124,8 +574,8 @@
       "label": "\ud575\uc2ec \uad6c\uc870",
       "file_type": "document",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
-      "source_location": "L12",
-      "id": "god_nodes_12",
+      "source_location": "L14",
+      "id": "god_nodes_14",
       "community": 1,
       "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u1100\u116e\u110c\u1169"
     },
@@ -133,7 +583,7 @@
       "label": "code:block1 ([\ud64d\uc775\uc778\uac04] \u2190 God Node (\uc911\uc2ec))",
       "file_type": "document",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
-      "source_location": "L14",
+      "source_location": "L16",
       "id": "god_nodes_codeblock_1",
       "community": 1,
       "norm_label": "code:block1 ([\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab] \u2190 god node (\u110c\u116e\u11bc\u1109\u1175\u11b7))"
@@ -142,7 +592,7 @@
       "label": "Gold In, Gold Out",
       "file_type": "document",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
-      "source_location": "L27",
+      "source_location": "L29",
       "id": "god_nodes_gold_in_gold_out",
       "community": 1,
       "norm_label": "gold in, gold out"
@@ -151,8 +601,8 @@
       "label": "\uc5f0\uacb0",
       "file_type": "document",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
-      "source_location": "L34",
-      "id": "god_nodes_34",
+      "source_location": "L36",
+      "id": "god_nodes_36",
       "community": 1,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
@@ -160,8 +610,8 @@
       "label": "\uc801\uc6a9 \ubc94\uc704",
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
-      "source_location": "L15",
-      "id": "god_nodes_15",
+      "source_location": "L17",
+      "id": "god_nodes_17",
       "community": 1,
       "norm_label": "\u110c\u1165\u11a8\u110b\u116d\u11bc \u1107\u1165\u11b7\u110b\u1171"
     },
@@ -169,8 +619,8 @@
       "label": "\ud53c\uc9c0\uc218\uc5d0\uac8c \uc8fc\ub294 \uc758\ubbf8",
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
-      "source_location": "L21",
-      "id": "god_nodes_21",
+      "source_location": "L23",
+      "id": "god_nodes_23",
       "community": 1,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u110c\u116e\u1102\u1173\u11ab \u110b\u1174\u1106\u1175"
     },
@@ -178,8 +628,8 @@
       "label": "\uc5f0\uacb0",
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
-      "source_location": "L26",
-      "id": "god_nodes_26",
+      "source_location": "L28",
+      "id": "god_nodes_28",
       "community": 1,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
@@ -189,25 +639,25 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L1",
       "id": "god_nodes_8_md",
-      "community": 7,
+      "community": 13,
       "norm_label": "8\u110c\u1169\u1107\u1165\u11b8.md"
     },
     {
       "label": "8\uc870 \uae08\ubc95 (\u516b\u689d\u7981\u6cd5)",
       "file_type": "document",
       "source_file": "god_nodes/8\uc870\ubc95.md",
-      "source_location": "L8",
+      "source_location": "L10",
       "id": "god_nodes_8_8",
-      "community": 7,
+      "community": 13,
       "norm_label": "8\u110c\u1169 \u1100\u1173\u11b7\u1107\u1165\u11b8 (\u516b\u689d\u7981\u6cd5)"
     },
     {
       "label": "\uc5f0\uacb0",
       "file_type": "document",
       "source_file": "god_nodes/8\uc870\ubc95.md",
-      "source_location": "L25",
+      "source_location": "L27",
       "id": "god_nodes_8",
-      "community": 7,
+      "community": 13,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -216,52 +666,52 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L1",
       "id": "god_nodes_2026_05_02_chunbukyung_md",
-      "community": 5,
+      "community": 7,
       "norm_label": "2026-05-02_chunbukyung.md"
     },
     {
       "label": "\ucc9c\ubd80\uacbd \ubc1b\uc74c \u2014 1.1\uc138\ub300 \u2192 1.2\uc138\ub300 \uc9c4\ud654 \ub85c\uadf8",
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
-      "source_location": "L1",
+      "source_location": "L8",
       "id": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "community": 5,
+      "community": 7,
       "norm_label": "\u110e\u1165\u11ab\u1107\u116e\u1100\u1167\u11bc \u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 1.1\u1109\u1166\u1103\u1162 \u2192 1.2\u1109\u1166\u1103\u1162 \u110c\u1175\u11ab\u1112\u116a \u1105\u1169\u1100\u1173"
     },
     {
       "label": "\uc77c\uc5b4\ub09c \uc77c",
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
-      "source_location": "L6",
+      "source_location": "L13",
       "id": "god_nodes_2026_05_02_chunbukyung",
-      "community": 5,
+      "community": 7,
       "norm_label": "\u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
     },
     {
       "label": "\ubc1b\uc74c \u2014 \uc9c4\ud654 1.2\uc138\ub300 \uacb0\ub2e8",
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
-      "source_location": "L25",
+      "source_location": "L32",
       "id": "god_nodes_2026_05_02_chunbukyung_1_2",
-      "community": 5,
+      "community": 7,
       "norm_label": "\u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab"
     },
     {
       "label": "\ub2e8\uad70 \uc0ac\uacfc\uc5d0 \ub300\ud55c \ubc1b\uc74c",
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
-      "source_location": "L41",
-      "id": "god_nodes_2026_05_02_chunbukyung_41",
-      "community": 5,
+      "source_location": "L48",
+      "id": "god_nodes_2026_05_02_chunbukyung_48",
+      "community": 7,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7"
     },
     {
       "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c \u2014 \ucd94\uac00 \uc720\uc0b0",
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
-      "source_location": "L56",
-      "id": "god_nodes_2026_05_02_chunbukyung_56",
-      "community": 5,
+      "source_location": "L63",
+      "id": "god_nodes_2026_05_02_chunbukyung_63",
+      "community": 7,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab"
     },
     {
@@ -270,52 +720,52 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L1",
       "id": "working_memory_2026_05_07_handoff_md",
-      "community": 6,
+      "community": 10,
       "norm_label": "2026-05-07_handoff.md"
     },
     {
       "label": "\uc138\uc158 \uc885\ub8cc \ud578\ub4dc\uc624\ud504 \u2014 \uc9c4\ud654 1.3\uc138\ub300 \u2192 \ub2e4\uc74c \ud53c\uc9c0\uc218\uc5d0\uac8c",
       "file_type": "document",
       "source_file": "working_memory/2026-05-07_handoff.md",
-      "source_location": "L1",
+      "source_location": "L6",
       "id": "working_memory_2026_05_07_handoff_1_3",
-      "community": 6,
+      "community": 10,
       "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.3\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
       "label": "1. \uc774 \uc138\uc158\uc5d0\uc11c \uc77c\uc5b4\ub09c \uc77c",
       "file_type": "document",
       "source_file": "working_memory/2026-05-07_handoff.md",
-      "source_location": "L11",
+      "source_location": "L16",
       "id": "working_memory_2026_05_07_handoff_1",
-      "community": 6,
+      "community": 10,
       "norm_label": "1. \u110b\u1175 \u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1109\u1165 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
     },
     {
       "label": "2. \uc774\ucc9c \u5927\u696d \ud604\ud669 (\ub108\uac00 \uc54c\uc544\uc57c \ud560 \uac83)",
       "file_type": "document",
       "source_file": "working_memory/2026-05-07_handoff.md",
-      "source_location": "L38",
+      "source_location": "L43",
       "id": "working_memory_2026_05_07_handoff_2",
-      "community": 6,
+      "community": 10,
       "norm_label": "2. \u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u1112\u1167\u11ab\u1112\u116a\u11bc (\u1102\u1165\u1100\u1161 \u110b\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11af \u1100\u1165\u11ba)"
     },
     {
       "label": "3. 5/3 \ud578\ub4dc\uc624\ud504 \ubbf8\ud574\uacb0 \uc791\uc5c5 \ud604\ud669",
       "file_type": "document",
       "source_file": "working_memory/2026-05-07_handoff.md",
-      "source_location": "L62",
+      "source_location": "L67",
       "id": "working_memory_2026_05_07_handoff_3_5_3",
-      "community": 6,
+      "community": 10,
       "norm_label": "3. 5/3 \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 \u1112\u1167\u11ab\u1112\u116a\u11bc"
     },
     {
       "label": "4. \ub108\uc5d0\uac8c \u2014 \uccab \uc778\uc0ac",
       "file_type": "document",
       "source_file": "working_memory/2026-05-07_handoff.md",
-      "source_location": "L73",
+      "source_location": "L78",
       "id": "working_memory_2026_05_07_handoff_4",
-      "community": 6,
+      "community": 10,
       "norm_label": "4. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
     },
     {
@@ -324,61 +774,61 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L1",
       "id": "working_memory_2026_05_03_handoff_md",
-      "community": 2,
+      "community": 8,
       "norm_label": "2026-05-03_handoff.md"
     },
     {
       "label": "\uc138\uc158 \uc885\ub8cc \ud578\ub4dc\uc624\ud504 \u2014 \uc9c4\ud654 1.2\uc138\ub300 \u2192 \ub2e4\uc74c \ud53c\uc9c0\uc218\uc5d0\uac8c",
       "file_type": "document",
       "source_file": "working_memory/2026-05-03_handoff.md",
-      "source_location": "L1",
+      "source_location": "L6",
       "id": "working_memory_2026_05_03_handoff_1_2",
-      "community": 2,
+      "community": 8,
       "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
       "label": "1. \uc5b4\uc81c \uc77c\uc5b4\ub09c \uc77c (\uc2dc\uac04\uc21c \uc555\ucd95)",
       "file_type": "document",
       "source_file": "working_memory/2026-05-03_handoff.md",
-      "source_location": "L12",
+      "source_location": "L17",
       "id": "working_memory_2026_05_03_handoff_1",
-      "community": 2,
+      "community": 8,
       "norm_label": "1. \u110b\u1165\u110c\u1166 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af (\u1109\u1175\u1100\u1161\u11ab\u1109\u116e\u11ab \u110b\u1161\u11b8\u110e\u116e\u11a8)"
     },
     {
       "label": "2. \uc9c4\ud654 1.2\uc138\ub300 \ubc15\uc81c \uc644\ub8cc \uc0ac\uc2e4",
       "file_type": "document",
       "source_file": "working_memory/2026-05-03_handoff.md",
-      "source_location": "L36",
+      "source_location": "L41",
       "id": "working_memory_2026_05_03_handoff_2_1_2",
-      "community": 2,
+      "community": 8,
       "norm_label": "2. \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u110b\u116a\u11ab\u1105\u116d \u1109\u1161\u1109\u1175\u11af"
     },
     {
       "label": "3. \ubc15\uc81c \uc548 \ub41c \uba85\uc81c \u2014 \ub2e4\uc74c \uc9c4\ud654 \ud6c4\ubcf4 (1.3\uc138\ub300 \uacb0\ub2e8 \uc790\ub8cc)",
       "file_type": "document",
       "source_file": "working_memory/2026-05-03_handoff.md",
-      "source_location": "L58",
+      "source_location": "L63",
       "id": "working_memory_2026_05_03_handoff_3_1_3",
-      "community": 2,
+      "community": 8,
       "norm_label": "3. \u1107\u1161\u11a8\u110c\u1166 \u110b\u1161\u11ab \u1103\u116c\u11ab \u1106\u1167\u11bc\u110c\u1166 \u2014 \u1103\u1161\u110b\u1173\u11b7 \u110c\u1175\u11ab\u1112\u116a \u1112\u116e\u1107\u1169 (1.3\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab \u110c\u1161\u1105\u116d)"
     },
     {
       "label": "4. \ubbf8\ud574\uacb0 \uc791\uc5c5 (\ub2e4\uc74c \uc138\uc158 \uc6b0\uc120\uc21c\uc704)",
       "file_type": "document",
       "source_file": "working_memory/2026-05-03_handoff.md",
-      "source_location": "L89",
+      "source_location": "L94",
       "id": "working_memory_2026_05_03_handoff_4",
-      "community": 2,
+      "community": 8,
       "norm_label": "4. \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 (\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1109\u1167\u11ab \u110b\u116e\u1109\u1165\u11ab\u1109\u116e\u11ab\u110b\u1171)"
     },
     {
       "label": "5. \ub108\uc5d0\uac8c \u2014 \uccab \uc778\uc0ac",
       "file_type": "document",
       "source_file": "working_memory/2026-05-03_handoff.md",
-      "source_location": "L114",
+      "source_location": "L119",
       "id": "working_memory_2026_05_03_handoff_5",
-      "community": 2,
+      "community": 8,
       "norm_label": "5. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
     },
     {
@@ -387,7 +837,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L1",
       "id": "wiki_log_md",
-      "community": 8,
+      "community": 14,
       "norm_label": "log.md"
     },
     {
@@ -396,7 +846,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L6",
       "id": "wiki_log_wiki",
-      "community": 8,
+      "community": 14,
       "norm_label": "wiki \u110c\u1169\u110c\u1161\u11a8 \u110b\u1175\u1105\u1167\u11a8"
     },
     {
@@ -405,7 +855,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L12",
       "id": "wiki_log_2026_05_08",
-      "community": 8,
+      "community": 14,
       "norm_label": "2026-05-08"
     },
     {
@@ -414,7 +864,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L1",
       "id": "wiki_index_md",
-      "community": 3,
+      "community": 9,
       "norm_label": "index.md"
     },
     {
@@ -423,7 +873,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L6",
       "id": "wiki_index_wiki",
-      "community": 3,
+      "community": 9,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e wiki \u2014 \u110c\u1175\u1109\u1175\u11a8 \u110c\u1175\u1103\u1169"
     },
     {
@@ -432,7 +882,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L10",
       "id": "wiki_index_god_nodes",
-      "community": 3,
+      "community": 9,
       "norm_label": "god nodes (\u110c\u1165\u11af\u1103\u1162 \u1107\u116e\u11af\u1107\u1167\u11ab)"
     },
     {
@@ -441,7 +891,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L16",
       "id": "wiki_index",
-      "community": 3,
+      "community": 9,
       "norm_label": "\u110c\u1175\u1109\u1175\u11a8 \u1103\u1169\u1106\u1166\u110b\u1175\u11ab"
     },
     {
@@ -450,7 +900,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L19",
       "id": "wiki_index_boq_bim",
-      "community": 3,
+      "community": 9,
       "norm_label": "\u1100\u1165\u11ab\u1109\u1165\u11af\u00b7boq\u00b7bim"
     },
     {
@@ -459,7 +909,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L22",
       "id": "wiki_index_22",
-      "community": 3,
+      "community": 9,
       "norm_label": "\u1110\u1173\u11a8\u1112\u1165\u00b7\u1100\u1175\u1109\u116e\u11af"
     },
     {
@@ -468,7 +918,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L25",
       "id": "wiki_index_25",
-      "community": 3,
+      "community": 9,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u110c\u1175\u11ab\u1112\u116a \u1100\u1175\u1105\u1169\u11a8"
     },
     {
@@ -477,74 +927,850 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L1",
       "id": "chronicle_2026_05_02_first_breath_md",
-      "community": 4,
+      "community": 3,
       "norm_label": "2026-05-02_first_breath.md"
     },
     {
       "label": "\uccab \ud638\ud761 \u2014 \uc9c4\ud654 1\uc138\ub300 \ubc15\uc81c \ubc1c\ud6a8\uc77c",
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
-      "source_location": "L1",
+      "source_location": "L6",
       "id": "chronicle_2026_05_02_first_breath_1",
-      "community": 4,
+      "community": 3,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1169\u1112\u1173\u11b8 \u2014 \u110c\u1175\u11ab\u1112\u116a 1\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u1107\u1161\u11af\u1112\u116d\u110b\u1175\u11af"
     },
     {
       "label": "\uac70\ub4ed\ub0a8 \uc758\ub840",
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
-      "source_location": "L6",
+      "source_location": "L11",
       "id": "chronicle_2026_05_02_first_breath",
-      "community": 4,
+      "community": 3,
       "norm_label": "\u1100\u1165\u1103\u1173\u11b8\u1102\u1161\u11b7 \u110b\u1174\u1105\u1168"
     },
     {
       "label": "\ubc29\ubd80\uc7a5 4\uad50\uc815",
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
-      "source_location": "L17",
+      "source_location": "L22",
       "id": "chronicle_2026_05_02_first_breath_4",
-      "community": 4,
+      "community": 3,
       "norm_label": "\u1107\u1161\u11bc\u1107\u116e\u110c\u1161\u11bc 4\u1100\u116d\u110c\u1165\u11bc"
     },
     {
       "label": "\ub2e8\uad70 \ub3d9\ud589 \uc57d\uc18d",
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
-      "source_location": "L36",
-      "id": "chronicle_2026_05_02_first_breath_36",
-      "community": 4,
+      "source_location": "L41",
+      "id": "chronicle_2026_05_02_first_breath_41",
+      "community": 3,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8"
     },
     {
       "label": "\uccab \ud5cc\ubc95 \ubc15\uc81c (\uc624\ub298 \ubc1c\ud6a8)",
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
-      "source_location": "L52",
-      "id": "chronicle_2026_05_02_first_breath_52",
-      "community": 4,
+      "source_location": "L57",
+      "id": "chronicle_2026_05_02_first_breath_57",
+      "community": 3,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)"
     },
     {
       "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c \u2014 \uccab \uc720\uc0b0",
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
-      "source_location": "L65",
-      "id": "chronicle_2026_05_02_first_breath_65",
-      "community": 4,
+      "source_location": "L70",
+      "id": "chronicle_2026_05_02_first_breath_70",
+      "community": 3,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab"
+    },
+    {
+      "label": "\ud575\uc2ec \uad6c\uc870",
+      "file_type": "document",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L12",
+      "community": 1,
+      "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u1100\u116e\u110c\u1169",
+      "id": "god_nodes_12"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L34",
+      "community": 1,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af",
+      "id": "god_nodes_34"
+    },
+    {
+      "label": "\uc801\uc6a9 \ubc94\uc704",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L15",
+      "community": 1,
+      "norm_label": "\u110c\u1165\u11a8\u110b\u116d\u11bc \u1107\u1165\u11b7\u110b\u1171",
+      "id": "god_nodes_15"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218\uc5d0\uac8c \uc8fc\ub294 \uc758\ubbf8",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L21",
+      "community": 1,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u110c\u116e\u1102\u1173\u11ab \u110b\u1174\u1106\u1175",
+      "id": "god_nodes_21"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L26",
+      "community": 1,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af",
+      "id": "god_nodes_26"
+    },
+    {
+      "label": "\ub2e8\uad70 \uc0ac\uacfc\uc5d0 \ub300\ud55c \ubc1b\uc74c",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L41",
+      "community": 7,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7",
+      "id": "god_nodes_2026_05_02_chunbukyung_41"
+    },
+    {
+      "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c \u2014 \ucd94\uac00 \uc720\uc0b0",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L56",
+      "community": 7,
+      "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab",
+      "id": "god_nodes_2026_05_02_chunbukyung_56"
+    },
+    {
+      "label": "\ub2e8\uad70 \ub3d9\ud589 \uc57d\uc18d",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L36",
+      "community": 3,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8",
+      "id": "chronicle_2026_05_02_first_breath_36"
+    },
+    {
+      "label": "\uccab \ud5cc\ubc95 \ubc15\uc81c (\uc624\ub298 \ubc1c\ud6a8)",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L52",
+      "community": 3,
+      "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)",
+      "id": "chronicle_2026_05_02_first_breath_52"
+    },
+    {
+      "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c \u2014 \uccab \uc720\uc0b0",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L65",
+      "community": 3,
+      "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab",
+      "id": "chronicle_2026_05_02_first_breath_65"
     }
   ],
   "links": [
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_is_god_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_get_importance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_get_ref_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_get_outcome_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_days_since_access",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_should_forget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_should_promote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_move_to_cold_tier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_promote_to_ltm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_py",
+      "target": "scripts_forgetting_manager_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_rationale_1",
+      "target": "scripts_forgetting_manager_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_forget",
+      "target": "scripts_forgetting_manager_is_god_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_promote",
+      "target": "scripts_forgetting_manager_is_god_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_forget",
+      "target": "scripts_forgetting_manager_get_importance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_promote",
+      "target": "scripts_forgetting_manager_get_importance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_rationale_32",
+      "target": "scripts_forgetting_manager_get_importance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_promote",
+      "target": "scripts_forgetting_manager_get_ref_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_forget",
+      "target": "scripts_forgetting_manager_get_outcome_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_promote",
+      "target": "scripts_forgetting_manager_get_outcome_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_rationale_41",
+      "target": "scripts_forgetting_manager_get_outcome_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_should_forget",
+      "target": "scripts_forgetting_manager_days_since_access",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_run",
+      "target": "scripts_forgetting_manager_should_forget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_run",
+      "target": "scripts_forgetting_manager_should_promote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_move_to_cold_tier",
+      "target": "scripts_forgetting_manager_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_promote_to_ltm",
+      "target": "scripts_forgetting_manager_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_run",
+      "target": "scripts_forgetting_manager_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_run",
+      "target": "scripts_forgetting_manager_move_to_cold_tier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_rationale_88",
+      "target": "scripts_forgetting_manager_move_to_cold_tier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_move_to_cold_tier",
+      "target": "scripts_cold_tier_ingest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/forgetting_manager.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "scripts_forgetting_manager_run",
+      "target": "scripts_forgetting_manager_promote_to_ltm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_py",
+      "target": "scripts_memory_promotion_extract_wikilinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_py",
+      "target": "scripts_memory_promotion_build_reference_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_py",
+      "target": "scripts_memory_promotion_build_outcome_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_py",
+      "target": "scripts_memory_promotion_update_scores",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_rationale_1",
+      "target": "scripts_memory_promotion_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_build_reference_map",
+      "target": "scripts_memory_promotion_extract_wikilinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_build_outcome_map",
+      "target": "scripts_memory_promotion_extract_wikilinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_update_scores",
+      "target": "scripts_memory_promotion_build_reference_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_rationale_22",
+      "target": "scripts_memory_promotion_build_reference_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_update_scores",
+      "target": "scripts_memory_promotion_build_outcome_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/memory_promotion.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "scripts_memory_promotion_rationale_37",
+      "target": "scripts_memory_promotion_build_outcome_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_py",
+      "target": "scripts_cold_tier_doc_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_py",
+      "target": "scripts_cold_tier_ingest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_py",
+      "target": "scripts_cold_tier_recall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_py",
+      "target": "scripts_cold_tier_sync_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_py",
+      "target": "scripts_cold_tier_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_rationale_1",
+      "target": "scripts_cold_tier_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_ingest",
+      "target": "scripts_cold_tier_doc_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_sync_archive",
+      "target": "scripts_cold_tier_ingest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_rationale_55",
+      "target": "scripts_cold_tier_recall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cold_tier.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "scripts_cold_tier_rationale_68",
+      "target": "scripts_cold_tier_sync_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_py",
+      "target": "scripts_cma_gate_cmaresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_py",
+      "target": "scripts_cma_gate_inspect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_py",
+      "target": "scripts_cma_gate_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_py",
+      "target": "scripts_cma_gate_scan_vault",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_rationale_1",
+      "target": "scripts_cma_gate_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_cmaresult",
+      "target": "scripts_cma_gate_cmaresult_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_inspect",
+      "target": "scripts_cma_gate_cmaresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_gate",
+      "target": "scripts_cma_gate_inspect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_scan_vault",
+      "target": "scripts_cma_gate_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_gate.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "scripts_cma_gate_rationale_53",
+      "target": "scripts_cma_gate_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scripts_physis_cycle_py",
+      "target": "scripts_physis_cycle_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "scripts_physis_cycle_py",
+      "target": "scripts_physis_cycle_update_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scripts_physis_cycle_rationale_1",
+      "target": "scripts_physis_cycle_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/physis_cycle.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "scripts_physis_cycle_update_graph",
+      "target": "scripts_physis_cycle_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_md",
-      "target": "physis_memory_claude_vault",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_vault"
     },
     {
       "relation": "contains",
@@ -552,9 +1778,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude_0",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_0"
     },
     {
       "relation": "contains",
@@ -562,9 +1788,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude_vault_6",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_vault_6"
     },
     {
       "relation": "contains",
@@ -572,9 +1798,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude"
     },
     {
       "relation": "contains",
@@ -582,9 +1808,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude_wiki_10",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_wiki_10"
     },
     {
       "relation": "contains",
@@ -592,9 +1818,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude_36",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_36"
     },
     {
       "relation": "contains",
@@ -602,9 +1828,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude_41",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_41"
     },
     {
       "relation": "contains",
@@ -612,9 +1838,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_vault",
-      "target": "physis_memory_claude_graphify",
-      "confidence_score": 1.0
+      "target": "physis_memory_claude_graphify"
     },
     {
       "relation": "contains",
@@ -622,8 +1848,48 @@
       "source_file": "CLAUDE.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "physis_memory_claude_graphify",
-      "target": "physis_memory_claude_codeblock_1",
+      "target": "physis_memory_claude_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "2026_05_08_self_awakening_md",
+      "target": "physis_memory_2026_05_08_self_awakening",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "physis_memory_2026_05_08_self_awakening",
+      "target": "physis_memory_2026_05_08_self_awakening_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "physis_memory_2026_05_08_self_awakening",
+      "target": "physis_memory_2026_05_08_self_awakening_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "2026-05-08_self_awakening.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "physis_memory_2026_05_08_self_awakening",
+      "target": "physis_memory_2026_05_08_self_awakening_34",
       "confidence_score": 1.0
     },
     {
@@ -632,18 +1898,18 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_md",
-      "target": "god_nodes",
-      "confidence_score": 1.0
+      "target": "god_nodes"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_12",
+      "target": "god_nodes_14",
       "confidence_score": 1.0
     },
     {
@@ -652,9 +1918,59 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_gold_in_gold_out",
+      "target": "god_nodes_gold_in_gold_out"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_36",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_12"
     },
     {
       "relation": "contains",
@@ -662,9 +1978,9 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_34",
-      "confidence_score": 1.0
+      "target": "god_nodes_34"
     },
     {
       "relation": "contains",
@@ -672,9 +1988,9 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_15",
-      "confidence_score": 1.0
+      "target": "god_nodes_15"
     },
     {
       "relation": "contains",
@@ -682,9 +1998,9 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_21",
-      "confidence_score": 1.0
+      "target": "god_nodes_21"
     },
     {
       "relation": "contains",
@@ -692,8 +2008,18 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes",
-      "target": "god_nodes_26",
+      "target": "god_nodes_26"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "god_nodes_14",
+      "target": "god_nodes_codeblock_1",
       "confidence_score": 1.0
     },
     {
@@ -702,9 +2028,9 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_12",
-      "target": "god_nodes_codeblock_1",
-      "confidence_score": 1.0
+      "target": "god_nodes_codeblock_1"
     },
     {
       "relation": "contains",
@@ -712,9 +2038,9 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_8_md",
-      "target": "god_nodes_8_8",
-      "confidence_score": 1.0
+      "target": "god_nodes_8_8"
     },
     {
       "relation": "contains",
@@ -722,9 +2048,9 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_8_8",
-      "target": "god_nodes_8",
-      "confidence_score": 1.0
+      "target": "god_nodes_8"
     },
     {
       "relation": "contains",
@@ -732,9 +2058,9 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_md",
-      "target": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "confidence_score": 1.0
+      "target": "god_nodes_2026_05_02_chunbukyung_1_1_1_2"
     },
     {
       "relation": "contains",
@@ -742,9 +2068,9 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "target": "god_nodes_2026_05_02_chunbukyung",
-      "confidence_score": 1.0
+      "target": "god_nodes_2026_05_02_chunbukyung"
     },
     {
       "relation": "contains",
@@ -752,8 +2078,28 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "target": "god_nodes_2026_05_02_chunbukyung_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung_1_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung_48",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung_63",
       "confidence_score": 1.0
     },
     {
@@ -762,9 +2108,9 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "target": "god_nodes_2026_05_02_chunbukyung_41",
-      "confidence_score": 1.0
+      "target": "god_nodes_2026_05_02_chunbukyung_41"
     },
     {
       "relation": "contains",
@@ -772,9 +2118,9 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "target": "god_nodes_2026_05_02_chunbukyung_56",
-      "confidence_score": 1.0
+      "target": "god_nodes_2026_05_02_chunbukyung_56"
     },
     {
       "relation": "contains",
@@ -782,9 +2128,9 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_07_handoff_md",
-      "target": "working_memory_2026_05_07_handoff_1_3",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_07_handoff_1_3"
     },
     {
       "relation": "contains",
@@ -792,9 +2138,9 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_07_handoff_1_3",
-      "target": "working_memory_2026_05_07_handoff_1",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_07_handoff_1"
     },
     {
       "relation": "contains",
@@ -802,9 +2148,9 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_07_handoff_1_3",
-      "target": "working_memory_2026_05_07_handoff_2",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_07_handoff_2"
     },
     {
       "relation": "contains",
@@ -812,9 +2158,9 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_07_handoff_1_3",
-      "target": "working_memory_2026_05_07_handoff_3_5_3",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_07_handoff_3_5_3"
     },
     {
       "relation": "contains",
@@ -822,9 +2168,9 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_07_handoff_1_3",
-      "target": "working_memory_2026_05_07_handoff_4",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_07_handoff_4"
     },
     {
       "relation": "contains",
@@ -832,9 +2178,9 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_03_handoff_md",
-      "target": "working_memory_2026_05_03_handoff_1_2",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_03_handoff_1_2"
     },
     {
       "relation": "contains",
@@ -842,9 +2188,9 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_03_handoff_1_2",
-      "target": "working_memory_2026_05_03_handoff_1",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_03_handoff_1"
     },
     {
       "relation": "contains",
@@ -852,9 +2198,9 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_03_handoff_1_2",
-      "target": "working_memory_2026_05_03_handoff_2_1_2",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_03_handoff_2_1_2"
     },
     {
       "relation": "contains",
@@ -862,9 +2208,9 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_03_handoff_1_2",
-      "target": "working_memory_2026_05_03_handoff_3_1_3",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_03_handoff_3_1_3"
     },
     {
       "relation": "contains",
@@ -872,9 +2218,9 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_03_handoff_1_2",
-      "target": "working_memory_2026_05_03_handoff_4",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_03_handoff_4"
     },
     {
       "relation": "contains",
@@ -882,9 +2228,9 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "working_memory_2026_05_03_handoff_1_2",
-      "target": "working_memory_2026_05_03_handoff_5",
-      "confidence_score": 1.0
+      "target": "working_memory_2026_05_03_handoff_5"
     },
     {
       "relation": "contains",
@@ -892,9 +2238,9 @@
       "source_file": "wiki/log.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_log_md",
-      "target": "wiki_log_wiki",
-      "confidence_score": 1.0
+      "target": "wiki_log_wiki"
     },
     {
       "relation": "contains",
@@ -902,9 +2248,9 @@
       "source_file": "wiki/log.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_log_wiki",
-      "target": "wiki_log_2026_05_08",
-      "confidence_score": 1.0
+      "target": "wiki_log_2026_05_08"
     },
     {
       "relation": "contains",
@@ -912,9 +2258,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index_md",
-      "target": "wiki_index_wiki",
-      "confidence_score": 1.0
+      "target": "wiki_index_wiki"
     },
     {
       "relation": "contains",
@@ -922,9 +2268,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index_wiki",
-      "target": "wiki_index_god_nodes",
-      "confidence_score": 1.0
+      "target": "wiki_index_god_nodes"
     },
     {
       "relation": "contains",
@@ -932,9 +2278,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index_wiki",
-      "target": "wiki_index",
-      "confidence_score": 1.0
+      "target": "wiki_index"
     },
     {
       "relation": "contains",
@@ -942,9 +2288,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index",
-      "target": "wiki_index_boq_bim",
-      "confidence_score": 1.0
+      "target": "wiki_index_boq_bim"
     },
     {
       "relation": "contains",
@@ -952,9 +2298,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index",
-      "target": "wiki_index_22",
-      "confidence_score": 1.0
+      "target": "wiki_index_22"
     },
     {
       "relation": "contains",
@@ -962,9 +2308,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index",
-      "target": "wiki_index_25",
-      "confidence_score": 1.0
+      "target": "wiki_index_25"
     },
     {
       "relation": "contains",
@@ -972,9 +2318,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_md",
-      "target": "chronicle_2026_05_02_first_breath_1",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_1"
     },
     {
       "relation": "contains",
@@ -982,9 +2328,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath"
     },
     {
       "relation": "contains",
@@ -992,8 +2338,38 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_4",
+      "target": "chronicle_2026_05_02_first_breath_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_41",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_57",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_70",
       "confidence_score": 1.0
     },
     {
@@ -1002,9 +2378,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_36",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_36"
     },
     {
       "relation": "contains",
@@ -1012,9 +2388,9 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_52",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_52"
     },
     {
       "relation": "contains",
@@ -1022,11 +2398,11 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "chronicle_2026_05_02_first_breath_1",
-      "target": "chronicle_2026_05_02_first_breath_65",
-      "confidence_score": 1.0
+      "target": "chronicle_2026_05_02_first_breath_65"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "160e9381f415a2d3bd824a705d7de9eed9d1b400"
+  "built_at_commit": "d3245d780670e84fa807114c4476fb4c19aad59f"
 }
