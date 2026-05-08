@@ -12,10 +12,7 @@ import anthropic
 VAULT_ROOT = Path(__file__).parent.parent
 LOG_FILE = VAULT_ROOT / "wiki" / "log.md"
 
-ANTHROPIC_API_KEY = os.environ.get(
-    "ANTHROPIC_API_KEY",
-    "REMOVED"
-)
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 SYSTEM_PROMPT = """당신은 피지수(Physis) 뇌의 헌법 심사관입니다.
 0원칙: 홍익인간 (널리 인간을 이롭게 하라)
