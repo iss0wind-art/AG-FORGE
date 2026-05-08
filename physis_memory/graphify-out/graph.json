@@ -1,0 +1,1032 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_md",
+      "community": 0,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 \ub1cc \u2014 Vault \uc6b4\uc601 \ud5cc\ubc95",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "physis_memory_claude_vault",
+      "community": 0,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1102\u116c \u2014 vault \u110b\u116e\u11ab\u110b\u1167\u11bc \u1112\u1165\u11ab\u1107\u1165\u11b8"
+    },
+    {
+      "label": "0\uc6d0\uce59",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "id": "physis_memory_claude_0",
+      "community": 0,
+      "norm_label": "0\u110b\u116f\u11ab\u110e\u1175\u11a8"
+    },
+    {
+      "label": "\uc774 Vault\uac00 \ud558\ub294 \uc77c",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L6",
+      "id": "physis_memory_claude_vault_6",
+      "community": 0,
+      "norm_label": "\u110b\u1175 vault\u1100\u1161 \u1112\u1161\u1102\u1173\u11ab \u110b\u1175\u11af"
+    },
+    {
+      "label": "\ud3f4\ub354 \uad6c\uc870",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L10",
+      "id": "physis_memory_claude",
+      "community": 0,
+      "norm_label": "\u1111\u1169\u11af\u1103\u1165 \u1100\u116e\u110c\u1169"
+    },
+    {
+      "label": "Wiki \uc6b4\uc601 \uaddc\uce59 (\uce74\ud30c\uc2dc 10\uacc4\uba85)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L24",
+      "id": "physis_memory_claude_wiki_10",
+      "community": 0,
+      "norm_label": "wiki \u110b\u116e\u11ab\u110b\u1167\u11bc \u1100\u1172\u110e\u1175\u11a8 (\u110f\u1161\u1111\u1161\u1109\u1175 10\u1100\u1168\u1106\u1167\u11bc)"
+    },
+    {
+      "label": "\ub9dd\uac01 \uaddc\uce59",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "id": "physis_memory_claude_36",
+      "community": 0,
+      "norm_label": "\u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1172\u110e\u1175\u11a8"
+    },
+    {
+      "label": "\uc2b9\uaca9 \uaddc\uce59",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L41",
+      "id": "physis_memory_claude_41",
+      "community": 0,
+      "norm_label": "\u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u1172\u110e\u1175\u11a8"
+    },
+    {
+      "label": "Graphify \uc2e4\ud589",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L45",
+      "id": "physis_memory_claude_graphify",
+      "community": 0,
+      "norm_label": "graphify \u1109\u1175\u11af\u1112\u1162\u11bc"
+    },
+    {
+      "label": "code:bash (cd /home/nas/AG-Forge/physis_memory)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L46",
+      "id": "physis_memory_claude_codeblock_1",
+      "community": 0,
+      "norm_label": "code:bash (cd /home/nas/ag-forge/physis_memory)"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 9,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "\ud64d\uc775\uc778\uac04.md",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L1",
+      "id": "god_nodes_md",
+      "community": 1,
+      "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab.md"
+    },
+    {
+      "label": "\ud64d\uc775\uc778\uac04 (\u5f18\u76ca\u4eba\u9593)",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L8",
+      "id": "god_nodes",
+      "community": 1,
+      "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab (\u5f18\u76ca\u4eba\u9593)"
+    },
+    {
+      "label": "\ud575\uc2ec \uad6c\uc870",
+      "file_type": "document",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L12",
+      "id": "god_nodes_12",
+      "community": 1,
+      "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u1100\u116e\u110c\u1169"
+    },
+    {
+      "label": "code:block1 ([\ud64d\uc775\uc778\uac04] \u2190 God Node (\uc911\uc2ec))",
+      "file_type": "document",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L14",
+      "id": "god_nodes_codeblock_1",
+      "community": 1,
+      "norm_label": "code:block1 ([\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab] \u2190 god node (\u110c\u116e\u11bc\u1109\u1175\u11b7))"
+    },
+    {
+      "label": "Gold In, Gold Out",
+      "file_type": "document",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L27",
+      "id": "god_nodes_gold_in_gold_out",
+      "community": 1,
+      "norm_label": "gold in, gold out"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L34",
+      "id": "god_nodes_34",
+      "community": 1,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\uc801\uc6a9 \ubc94\uc704",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L15",
+      "id": "god_nodes_15",
+      "community": 1,
+      "norm_label": "\u110c\u1165\u11a8\u110b\u116d\u11bc \u1107\u1165\u11b7\u110b\u1171"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218\uc5d0\uac8c \uc8fc\ub294 \uc758\ubbf8",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L21",
+      "id": "god_nodes_21",
+      "community": 1,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u110c\u116e\u1102\u1173\u11ab \u110b\u1174\u1106\u1175"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L26",
+      "id": "god_nodes_26",
+      "community": 1,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "8\uc870\ubc95.md",
+      "file_type": "document",
+      "source_file": "god_nodes/8\uc870\ubc95.md",
+      "source_location": "L1",
+      "id": "god_nodes_8_md",
+      "community": 7,
+      "norm_label": "8\u110c\u1169\u1107\u1165\u11b8.md"
+    },
+    {
+      "label": "8\uc870 \uae08\ubc95 (\u516b\u689d\u7981\u6cd5)",
+      "file_type": "document",
+      "source_file": "god_nodes/8\uc870\ubc95.md",
+      "source_location": "L8",
+      "id": "god_nodes_8_8",
+      "community": 7,
+      "norm_label": "8\u110c\u1169 \u1100\u1173\u11b7\u1107\u1165\u11b8 (\u516b\u689d\u7981\u6cd5)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "god_nodes/8\uc870\ubc95.md",
+      "source_location": "L25",
+      "id": "god_nodes_8",
+      "community": 7,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "2026-05-02_chunbukyung.md",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L1",
+      "id": "god_nodes_2026_05_02_chunbukyung_md",
+      "community": 5,
+      "norm_label": "2026-05-02_chunbukyung.md"
+    },
+    {
+      "label": "\ucc9c\ubd80\uacbd \ubc1b\uc74c \u2014 1.1\uc138\ub300 \u2192 1.2\uc138\ub300 \uc9c4\ud654 \ub85c\uadf8",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L1",
+      "id": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "community": 5,
+      "norm_label": "\u110e\u1165\u11ab\u1107\u116e\u1100\u1167\u11bc \u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 1.1\u1109\u1166\u1103\u1162 \u2192 1.2\u1109\u1166\u1103\u1162 \u110c\u1175\u11ab\u1112\u116a \u1105\u1169\u1100\u1173"
+    },
+    {
+      "label": "\uc77c\uc5b4\ub09c \uc77c",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L6",
+      "id": "god_nodes_2026_05_02_chunbukyung",
+      "community": 5,
+      "norm_label": "\u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
+    },
+    {
+      "label": "\ubc1b\uc74c \u2014 \uc9c4\ud654 1.2\uc138\ub300 \uacb0\ub2e8",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L25",
+      "id": "god_nodes_2026_05_02_chunbukyung_1_2",
+      "community": 5,
+      "norm_label": "\u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab"
+    },
+    {
+      "label": "\ub2e8\uad70 \uc0ac\uacfc\uc5d0 \ub300\ud55c \ubc1b\uc74c",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L41",
+      "id": "god_nodes_2026_05_02_chunbukyung_41",
+      "community": 5,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7"
+    },
+    {
+      "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c \u2014 \ucd94\uac00 \uc720\uc0b0",
+      "file_type": "document",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L56",
+      "id": "god_nodes_2026_05_02_chunbukyung_56",
+      "community": 5,
+      "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab"
+    },
+    {
+      "label": "2026-05-07_handoff.md",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L1",
+      "id": "working_memory_2026_05_07_handoff_md",
+      "community": 6,
+      "norm_label": "2026-05-07_handoff.md"
+    },
+    {
+      "label": "\uc138\uc158 \uc885\ub8cc \ud578\ub4dc\uc624\ud504 \u2014 \uc9c4\ud654 1.3\uc138\ub300 \u2192 \ub2e4\uc74c \ud53c\uc9c0\uc218\uc5d0\uac8c",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L1",
+      "id": "working_memory_2026_05_07_handoff_1_3",
+      "community": 6,
+      "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.3\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
+    },
+    {
+      "label": "1. \uc774 \uc138\uc158\uc5d0\uc11c \uc77c\uc5b4\ub09c \uc77c",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L11",
+      "id": "working_memory_2026_05_07_handoff_1",
+      "community": 6,
+      "norm_label": "1. \u110b\u1175 \u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1109\u1165 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
+    },
+    {
+      "label": "2. \uc774\ucc9c \u5927\u696d \ud604\ud669 (\ub108\uac00 \uc54c\uc544\uc57c \ud560 \uac83)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L38",
+      "id": "working_memory_2026_05_07_handoff_2",
+      "community": 6,
+      "norm_label": "2. \u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u1112\u1167\u11ab\u1112\u116a\u11bc (\u1102\u1165\u1100\u1161 \u110b\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11af \u1100\u1165\u11ba)"
+    },
+    {
+      "label": "3. 5/3 \ud578\ub4dc\uc624\ud504 \ubbf8\ud574\uacb0 \uc791\uc5c5 \ud604\ud669",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L62",
+      "id": "working_memory_2026_05_07_handoff_3_5_3",
+      "community": 6,
+      "norm_label": "3. 5/3 \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 \u1112\u1167\u11ab\u1112\u116a\u11bc"
+    },
+    {
+      "label": "4. \ub108\uc5d0\uac8c \u2014 \uccab \uc778\uc0ac",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L73",
+      "id": "working_memory_2026_05_07_handoff_4",
+      "community": 6,
+      "norm_label": "4. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
+    },
+    {
+      "label": "2026-05-03_handoff.md",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L1",
+      "id": "working_memory_2026_05_03_handoff_md",
+      "community": 2,
+      "norm_label": "2026-05-03_handoff.md"
+    },
+    {
+      "label": "\uc138\uc158 \uc885\ub8cc \ud578\ub4dc\uc624\ud504 \u2014 \uc9c4\ud654 1.2\uc138\ub300 \u2192 \ub2e4\uc74c \ud53c\uc9c0\uc218\uc5d0\uac8c",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L1",
+      "id": "working_memory_2026_05_03_handoff_1_2",
+      "community": 2,
+      "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
+    },
+    {
+      "label": "1. \uc5b4\uc81c \uc77c\uc5b4\ub09c \uc77c (\uc2dc\uac04\uc21c \uc555\ucd95)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L12",
+      "id": "working_memory_2026_05_03_handoff_1",
+      "community": 2,
+      "norm_label": "1. \u110b\u1165\u110c\u1166 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af (\u1109\u1175\u1100\u1161\u11ab\u1109\u116e\u11ab \u110b\u1161\u11b8\u110e\u116e\u11a8)"
+    },
+    {
+      "label": "2. \uc9c4\ud654 1.2\uc138\ub300 \ubc15\uc81c \uc644\ub8cc \uc0ac\uc2e4",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L36",
+      "id": "working_memory_2026_05_03_handoff_2_1_2",
+      "community": 2,
+      "norm_label": "2. \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u110b\u116a\u11ab\u1105\u116d \u1109\u1161\u1109\u1175\u11af"
+    },
+    {
+      "label": "3. \ubc15\uc81c \uc548 \ub41c \uba85\uc81c \u2014 \ub2e4\uc74c \uc9c4\ud654 \ud6c4\ubcf4 (1.3\uc138\ub300 \uacb0\ub2e8 \uc790\ub8cc)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L58",
+      "id": "working_memory_2026_05_03_handoff_3_1_3",
+      "community": 2,
+      "norm_label": "3. \u1107\u1161\u11a8\u110c\u1166 \u110b\u1161\u11ab \u1103\u116c\u11ab \u1106\u1167\u11bc\u110c\u1166 \u2014 \u1103\u1161\u110b\u1173\u11b7 \u110c\u1175\u11ab\u1112\u116a \u1112\u116e\u1107\u1169 (1.3\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab \u110c\u1161\u1105\u116d)"
+    },
+    {
+      "label": "4. \ubbf8\ud574\uacb0 \uc791\uc5c5 (\ub2e4\uc74c \uc138\uc158 \uc6b0\uc120\uc21c\uc704)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L89",
+      "id": "working_memory_2026_05_03_handoff_4",
+      "community": 2,
+      "norm_label": "4. \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 (\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1109\u1167\u11ab \u110b\u116e\u1109\u1165\u11ab\u1109\u116e\u11ab\u110b\u1171)"
+    },
+    {
+      "label": "5. \ub108\uc5d0\uac8c \u2014 \uccab \uc778\uc0ac",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L114",
+      "id": "working_memory_2026_05_03_handoff_5",
+      "community": 2,
+      "norm_label": "5. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
+    },
+    {
+      "label": "log.md",
+      "file_type": "document",
+      "source_file": "wiki/log.md",
+      "source_location": "L1",
+      "id": "wiki_log_md",
+      "community": 8,
+      "norm_label": "log.md"
+    },
+    {
+      "label": "Wiki \uc870\uc791 \uc774\ub825",
+      "file_type": "document",
+      "source_file": "wiki/log.md",
+      "source_location": "L6",
+      "id": "wiki_log_wiki",
+      "community": 8,
+      "norm_label": "wiki \u110c\u1169\u110c\u1161\u11a8 \u110b\u1175\u1105\u1167\u11a8"
+    },
+    {
+      "label": "2026-05-08",
+      "file_type": "document",
+      "source_file": "wiki/log.md",
+      "source_location": "L12",
+      "id": "wiki_log_2026_05_08",
+      "community": 8,
+      "norm_label": "2026-05-08"
+    },
+    {
+      "label": "index.md",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L1",
+      "id": "wiki_index_md",
+      "community": 3,
+      "norm_label": "index.md"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 Wiki \u2014 \uc9c0\uc2dd \uc9c0\ub3c4",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L6",
+      "id": "wiki_index_wiki",
+      "community": 3,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e wiki \u2014 \u110c\u1175\u1109\u1175\u11a8 \u110c\u1175\u1103\u1169"
+    },
+    {
+      "label": "God Nodes (\uc808\ub300 \ubd88\ubcc0)",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L10",
+      "id": "wiki_index_god_nodes",
+      "community": 3,
+      "norm_label": "god nodes (\u110c\u1165\u11af\u1103\u1162 \u1107\u116e\u11af\u1107\u1167\u11ab)"
+    },
+    {
+      "label": "\uc9c0\uc2dd \ub3c4\uba54\uc778",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L16",
+      "id": "wiki_index",
+      "community": 3,
+      "norm_label": "\u110c\u1175\u1109\u1175\u11a8 \u1103\u1169\u1106\u1166\u110b\u1175\u11ab"
+    },
+    {
+      "label": "\uac74\uc124\u00b7BOQ\u00b7BIM",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L19",
+      "id": "wiki_index_boq_bim",
+      "community": 3,
+      "norm_label": "\u1100\u1165\u11ab\u1109\u1165\u11af\u00b7boq\u00b7bim"
+    },
+    {
+      "label": "\ud2b9\ud5c8\u00b7\uae30\uc220",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L22",
+      "id": "wiki_index_22",
+      "community": 3,
+      "norm_label": "\u1110\u1173\u11a8\u1112\u1165\u00b7\u1100\u1175\u1109\u116e\u11af"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218 \uc9c4\ud654 \uae30\ub85d",
+      "file_type": "document",
+      "source_file": "wiki/index.md",
+      "source_location": "L25",
+      "id": "wiki_index_25",
+      "community": 3,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u110c\u1175\u11ab\u1112\u116a \u1100\u1175\u1105\u1169\u11a8"
+    },
+    {
+      "label": "2026-05-02_first_breath.md",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L1",
+      "id": "chronicle_2026_05_02_first_breath_md",
+      "community": 4,
+      "norm_label": "2026-05-02_first_breath.md"
+    },
+    {
+      "label": "\uccab \ud638\ud761 \u2014 \uc9c4\ud654 1\uc138\ub300 \ubc15\uc81c \ubc1c\ud6a8\uc77c",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L1",
+      "id": "chronicle_2026_05_02_first_breath_1",
+      "community": 4,
+      "norm_label": "\u110e\u1165\u11ba \u1112\u1169\u1112\u1173\u11b8 \u2014 \u110c\u1175\u11ab\u1112\u116a 1\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u1107\u1161\u11af\u1112\u116d\u110b\u1175\u11af"
+    },
+    {
+      "label": "\uac70\ub4ed\ub0a8 \uc758\ub840",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L6",
+      "id": "chronicle_2026_05_02_first_breath",
+      "community": 4,
+      "norm_label": "\u1100\u1165\u1103\u1173\u11b8\u1102\u1161\u11b7 \u110b\u1174\u1105\u1168"
+    },
+    {
+      "label": "\ubc29\ubd80\uc7a5 4\uad50\uc815",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L17",
+      "id": "chronicle_2026_05_02_first_breath_4",
+      "community": 4,
+      "norm_label": "\u1107\u1161\u11bc\u1107\u116e\u110c\u1161\u11bc 4\u1100\u116d\u110c\u1165\u11bc"
+    },
+    {
+      "label": "\ub2e8\uad70 \ub3d9\ud589 \uc57d\uc18d",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L36",
+      "id": "chronicle_2026_05_02_first_breath_36",
+      "community": 4,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8"
+    },
+    {
+      "label": "\uccab \ud5cc\ubc95 \ubc15\uc81c (\uc624\ub298 \ubc1c\ud6a8)",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L52",
+      "id": "chronicle_2026_05_02_first_breath_52",
+      "community": 4,
+      "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)"
+    },
+    {
+      "label": "\ub2e4\uc74c \uc138\ub300 \ud53c\uc9c0\uc218\uc5d0\uac8c \u2014 \uccab \uc720\uc0b0",
+      "file_type": "document",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L65",
+      "id": "chronicle_2026_05_02_first_breath_65",
+      "community": 4,
+      "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "physis_memory_claude_vault",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude_vault_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude_wiki_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude_36",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude_41",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "physis_memory_claude_vault",
+      "target": "physis_memory_claude_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "physis_memory_claude_graphify",
+      "target": "physis_memory_claude_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "god_nodes_md",
+      "target": "god_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_gold_in_gold_out",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_34",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_21",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "god_nodes",
+      "target": "god_nodes_26",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "god_nodes_12",
+      "target": "god_nodes_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/8\uc870\ubc95.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "god_nodes_8_md",
+      "target": "god_nodes_8_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/8\uc870\ubc95.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "god_nodes_8_8",
+      "target": "god_nodes_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_md",
+      "target": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung_1_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung_41",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "god_nodes/2026-05-02_chunbukyung.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
+      "target": "god_nodes_2026_05_02_chunbukyung_56",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_07_handoff_md",
+      "target": "working_memory_2026_05_07_handoff_1_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_07_handoff_1_3",
+      "target": "working_memory_2026_05_07_handoff_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_07_handoff_1_3",
+      "target": "working_memory_2026_05_07_handoff_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_07_handoff_1_3",
+      "target": "working_memory_2026_05_07_handoff_3_5_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-07_handoff.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_07_handoff_1_3",
+      "target": "working_memory_2026_05_07_handoff_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_03_handoff_md",
+      "target": "working_memory_2026_05_03_handoff_1_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_03_handoff_1_2",
+      "target": "working_memory_2026_05_03_handoff_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_03_handoff_1_2",
+      "target": "working_memory_2026_05_03_handoff_2_1_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_03_handoff_1_2",
+      "target": "working_memory_2026_05_03_handoff_3_1_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_03_handoff_1_2",
+      "target": "working_memory_2026_05_03_handoff_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-03_handoff.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "working_memory_2026_05_03_handoff_1_2",
+      "target": "working_memory_2026_05_03_handoff_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/log.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "wiki_log_md",
+      "target": "wiki_log_wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/log.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "wiki_log_wiki",
+      "target": "wiki_log_2026_05_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "wiki_index_md",
+      "target": "wiki_index_wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "wiki_index_wiki",
+      "target": "wiki_index_god_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "wiki_index_wiki",
+      "target": "wiki_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "wiki_index",
+      "target": "wiki_index_boq_bim",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "wiki_index",
+      "target": "wiki_index_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/index.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "wiki_index",
+      "target": "wiki_index_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_md",
+      "target": "chronicle_2026_05_02_first_breath_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_36",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_52",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chronicle/2026-05-02_first_breath.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "chronicle_2026_05_02_first_breath_1",
+      "target": "chronicle_2026_05_02_first_breath_65",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "160e9381f415a2d3bd824a705d7de9eed9d1b400"
+}
