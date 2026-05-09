@@ -163,6 +163,31 @@ KISClient.{buy|sell}_market_order()  ← 모의/실거래
 - [x] POSITIVE/NEGATIVE 키워드 사전 위치 → news_scraper.py:14~21 확정
 - [ ] 5/9 "뉴스 0건" 원인 분석 — 금요일 장 마감 후 + 시간 윈도우 문제?
 
+### ★ 추가 발견 — Gemini SDK Deprecation Warning
+
+`scheduler.err.log` / `api.err.log` 다수 발견:
+```
+google.generativeai 패키지 지원 종료. google.genai로 마이그레이션 필요.
+https://github.com/google-gemini/deprecated-generative-ai-python
+```
+- 현재 작동 (gemini-2.5-flash 정상 호출)
+- 향후 break 가능 — 마이그레이션 필요
+- 우선순위: 중 (현재 무력화 X, 그러나 SDK 종료 시점 미지)
+
+### ★ 시장 감성 분류 메커니즘 (정독 결과)
+
+`agents/ensemble_agent.py:build_stock_selection_prompt`:
+- LLM(DeepSeek)에 뉴스 + 시장 데이터 투입
+- LLM이 직접 JSON 필드 `market_sentiment: "긍정|부정|중립"` 출력
+- ★ **별도 산출 알고리즘 없음 — LLM 자체 판단**
+
+5/9 "뉴스 0건인데 긍정" 원인 추정:
+- LLM이 시장 데이터(상위 종목 등락률)만 보고 분류
+- 뉴스 0건은 입력 누락이 아닌 *중립 신호*로 처리
+- 그러나 시장 데이터에서 상승 종목이 보이면 LLM이 "긍정"으로 단정
+
+→ **약점**: 뉴스 부재 시 신뢰도 페널티 없음. 거시 신호(코스피 지수·VIX) 무시.
+
 ### 추가 자원 청구
 - [ ] 거시 키워드 추가 (코스피/외국인/환율/금리) — 학습 진행 후 PR 검토
 - [ ] 차트 멀티 시간프레임 (1d + 3m + 1y 동시 분석) 검토

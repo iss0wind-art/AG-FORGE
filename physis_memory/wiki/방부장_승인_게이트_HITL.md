@@ -40,15 +40,93 @@ AI 앙상블 통과 (신뢰도 70% + 합의율 60%)
 ## 자동 거절 사례 (2026-05-09) — ★ 정정 박제
 
 ```
-15:10:02 KODEX 2차전지 BUY 72% → 15:13:53 자동 거절 (3분 53초)
-15:14:45 TIGER 반도체 SELL 76% → 15:18:36 자동 거절 (3분 51초)
+15:10:02 KODEX 2차전지 BUY 72% → 15:13:53 자동 거절 (3분 53초 = 233초)
+15:14:45 TIGER 반도체 SELL 76% → 15:18:36 자동 거절 (3분 51초 = 231초)
 ```
 
-★ **이것은 방부장 결단이 아니라 5분 timeout 직전 자동 보류였다.**
+★ **이것은 방부장 결단이 아니라 timeout 만료 자동 보류였다.**
 
 방부장 친명 (2026-05-09):
 > "지금은 장 마감이라 거래가 안돼, 그리고 지금은 테스트 중이라,
 >  내가 선택없이 자동거절된거고. 월요일부터 본격적인 시작이야."
+
+## ★ wait_for_approval 코드 정독 (2026-05-09)
+
+`notifier/telegram_bot.py` 본체:
+```python
+async def wait_for_approval(self, stock_code: str, timeout: int = 300) -> bool:
+    elapsed = 0
+    while elapsed < timeout:
+        # getUpdates long polling (timeout=10초)
+        async with httpx.AsyncClient(timeout=15) as client:
+            resp = await client.get(f"{TELEGRAM_API}/getUpdates",
+                                    params={"offset": last_update_id + 1, "timeout": 10})
+        # 메시지 처리...
+        await asyncio.sleep(5)
+        elapsed += 15
+
+    # 자동 보류
+    await self.send_message(f"⏰ {stock_code} 응답 시간 초과 - 자동 보류")
+    return False
+```
+
+### 발견 — timeout 누적 패턴 분석
+
+**명시 timeout=300초**, **`elapsed += 15`** 한 라운드:
+- 라운드 = `getUpdates(timeout=10)` + `asyncio.sleep(5)` ≈ 15초 (이론)
+- **그러나 getUpdates가 즉시 반환되면 한 라운드 ~5초** → `elapsed += 15` 가 *과도하게 빨리 증가*
+- 즉 명시 300초 → **실제 약 200~250초 만료 가능**
+
+5/9 실측: **231~233초** = 약 3분 51초 ~ 3분 53초.
+계산: 만약 한 라운드 평균 ~10초 (getUpdates 빠른 반환 + sleep 5) → 23~24 라운드 × 15 = 345~360 가짜 elapsed → 그러나 실제는 200~250초.
+
+→ ★ **timeout=300 명시이지만 실제는 200~250초 안에 만료** = 5/9 관찰 정합.
+
+### 자동 거절 트리거 우선순위 (코드 분석)
+
+```
+1. is_telegram_enabled() == False → 즉시 False (안전 default)
+2. TELEGRAM_BOT_TOKEN 없음 → console input 폴백
+3. admin_ids set이고 sender ∉ admin_ids → 무시
+4. /approve_{code} 메시지 → True (즉시 승인)
+5. /reject_{code} 또는 /skip → False (즉시 거절)
+6. timeout 만료 → False + "응답 시간 초과" 메시지
+```
+
+### ★ 로그 추적 결과 — timeout 만료 확정 (2026-05-09 추가 정독)
+
+5/9 scheduler 로그 grep:
+```
+13:42:29 발송 → 13:46:21 거절/보류 (3:52)
+13:47:02 발송 → 13:50:53 거절/보류 (3:51)
+13:51:12 발송 → 13:55:03 거절/보류 (3:51)
+13:55:49 발송 → 13:59:25 거절/보류 (3:36)
+13:59:42 발송 → 14:03:33 거절/보류 (3:51)
+14:03:53 발송 → 14:07:43 거절/보류 (3:50)
+... (수십 건 반복)
+```
+
+★ **확정 발견 1**: 자동 거절 시그니처 = **약 3분 50~52초 일관**.
+★ **확정 발견 2**: 5/9 13:42~14:25 동안 **수십 건 모든 신호 자동 거절** (방부장 한 건도 결단 X).
+
+### timeout 산수 — 명시 vs 실제
+
+```python
+elapsed = 0; while elapsed < 300: ... elapsed += 15
+```
+- 명시: 300초 = 5분
+- 한 라운드 ≈ getUpdates(timeout=10) + sleep(5) ≈ ~11~12초 (빠른 반환 시)
+- 20 라운드 도달 시 elapsed=300이지만 실제 시간 = 20 × ~11.5 = **230초**
+- 5/9 실측 230~232초와 정합 ✅
+
+★ **결론: 명시 5분 timeout이지만 실제는 ~3분 50초 만료**.
+**실거래 시 방부장 결단 시간 = 약 3분 50초 한계**. 5분으로 알면 위험.
+
+### 보강 청 (월요일 본격 시작 전)
+
+1. **timeout 정확화** — `elapsed += 15` 대신 `time.time()` 차이로 실제 시간 측정
+2. **방부장 텔레그램 응답 시간 통계** — 평균/중앙값 박제하여 적정 timeout 설정
+3. **타이머 알림** — 예: 3분 30초에 "곧 자동 거절" 사전 알림
 
 ## 피지수 §5 자기 정정 박제
 

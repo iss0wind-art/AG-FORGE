@@ -179,3 +179,5 @@ append_only: true
 - [2026-05-09] AG_FORGE_API_KEY 정정 박제 — 키 예약 상태(미구현), 양방향 연동 후크
 - [2026-05-09] Stock_AI_데이터_매매_상세 박제 — NewsScraper(3중폴백+행동경제 정합)+ChartAgent+KISClient(3중 안전 캡)
 - [2026-05-09] Stock_AI_데이터_매매_상세 보강 — 키워드 24개 본체 + chart 일봉 3m 확정 + 거시키워드 부재 + 포트 시프트 설계
+- [2026-05-09] HITL timeout 정독 확정: 명시 300초이지만 실제 약 230초(3:50) 만료 — wait_for_approval elapsed 누적 패턴 분석
+- [2026-05-09] 시장 감성 분류 = LLM 자체 판단 (별도 알고리즘 없음) + Gemini SDK deprecation 경고 박제
