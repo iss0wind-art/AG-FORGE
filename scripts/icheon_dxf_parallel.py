@@ -277,8 +277,8 @@ def _call_gemini(prompt: str) -> str:
     key = os.environ.get("GEMINI_API_KEY", "")
     if not key:
         return _call_deepseek(prompt)
-    # gemini-1.5-flash은 무료 티어에서도 동작
-    for model in ("gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"):
+    # 최신 Gemini 2.5 시리즈 (2026-05-09 확인). 품질 우선 → 속도 폴백.
+    for model in ("gemini-2.5-pro", "gemini-2.5-flash", "gemini-pro-latest", "gemini-flash-latest"):
         try:
             resp = _post_json(
                 f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}",
