@@ -60,13 +60,18 @@ def _load_dotenv():
 
 _load_dotenv()
 
-# ── 레이어 분류 (pattern_library §B-1 + 건설 도메인 관례) ────────────────────
+# ── 레이어 분류 ────────────────────────────────────────────────────────────────
+# 실증 데이터 (2026-05-09 inspect_260119_부산 에코델타 24BL 지하주차장):
+#   00_COLUMN(4743), 00_BEAM(3684), 00_(APT)BEAM(1520), S-PC-GIRDER(379)
+#   00_SLAB END+ETC(14723), 00_SLAB NAME(1128), S-PC-SLAB(380)
+#   00_SHEAR WALL(15817), 00_UNDER ELEMENT(12559)
+#   A-DIM-1(1151), 00_CENTER(545), A-STAIR(548)
 
 LAYER_GROUPS: dict[str, re.Pattern | None] = {
-    "기둥":   re.compile(r"(?i)(COL|COLUMN|C[-_]COL|S[-_]COL|XR[-_]COL|기둥)"),
-    "보":     re.compile(r"(?i)(BEAM|C[-_]BM|S[-_]BM|XR[-_]BEAM|거더|GIRDER)"),
-    "슬라브": re.compile(r"(?i)(SLAB|C[-_]SL|XR[-_]SL|슬라브|PLATE|DECK)"),
-    "벽체":   re.compile(r"(?i)(WALL|C[-_]WL|SW|XR[-_]WL|벽체|SHEAR|RETAINING)"),
+    "기둥":   re.compile(r"(?i)(00_COLUMN|S[-_]PC[-_]COL|^COL$|C[-_]COL|S[-_]COL|기둥)"),
+    "보":     re.compile(r"(?i)(00_BEAM|00_\(APT\)BEAM|S[-_]PC[-_]GIRDER|GIRDER|C[-_]BM|S[-_]BM|거더)"),
+    "슬라브": re.compile(r"(?i)(00_SLAB|S[-_]PC[-_]SLAB|C[-_]SL|슬라브|PLATE|DECK)"),
+    "벽체":   re.compile(r"(?i)(00_SHEAR|SHEAR.WALL|00_UNDER.ELEMENT|C[-_]WL|벽체|전단|RETAINING)"),
     "기타":   None,
 }
 
@@ -134,34 +139,88 @@ def _load_text_fallback(path: str) -> dict[str, list[dict]]:
 
 
 def load_inspect_json(path: str) -> dict[str, list[dict]]:
-    """이미 파싱된 JSON 검사본 로드. 레이어별 그룹이 없으면 entity 목록으로 재분류."""
+    """이미 파싱된 JSON 검사본 로드.
+
+    지원 형식:
+      A. 이천 inspect 형식: {"dxf":..., "sections":{"entity_scan":{"top_layers":{...}}, "text_grep":[...]}}
+      B. 레이어별 그룹: {"기둥": [...], "보": [...]}
+      C. entity 목록: [{"type":..., "layer":...}, ...]
+      D. layers dict: {"layers": {"레이어명": [...], ...}}
+    """
     raw = json.loads(Path(path).read_text(encoding="utf-8"))
 
-    # 형식 1: {"기둥": [...], "보": [...]}
-    if all(k in LAYER_GROUPS for k in raw.keys()):
+    # 형식 A — 이천 inspect 전용 (entity_scan.top_layers 기반 통계 그룹)
+    if "sections" in raw and "entity_scan" in raw.get("sections", {}):
+        return _load_icheon_inspect(raw)
+
+    # 형식 B
+    if isinstance(raw, dict) and all(k in LAYER_GROUPS for k in raw.keys()):
         return raw
 
-    # 형식 2: [{"type": ..., "layer": ...}, ...]  또는 {"entities": [...]}
+    # 형식 C
     entities = raw if isinstance(raw, list) else raw.get("entities", raw.get("items", []))
-    if isinstance(entities, list):
+    if isinstance(entities, list) and entities and isinstance(entities[0], dict):
         groups: dict[str, list[dict]] = defaultdict(list)
         for e in entities:
             layer = e.get("layer", e.get("LAYER", "0"))
             groups[classify_layer(layer)].append(e)
         return dict(groups)
 
-    # 형식 3: {"layers": {"레이어명": [...]}}
+    # 형식 D
     if "layers" in raw:
         groups = defaultdict(list)
         for layer_name, ents in raw["layers"].items():
             group = classify_layer(layer_name)
-            for e in ents:
+            for e in (ents if isinstance(ents, list) else []):
                 e["layer"] = layer_name
                 groups[group].append(e)
         return dict(groups)
 
     print("[경고] inspect JSON 형식 미인식. 원시 데이터로 처리합니다.")
-    return {"기타": [raw] if isinstance(raw, dict) else raw}
+    return {"기타": [raw] if isinstance(raw, dict) else (raw if isinstance(raw, list) else [raw])}
+
+
+def _load_icheon_inspect(raw: dict) -> dict[str, list[dict]]:
+    """이천 inspect JSON → 통계 기반 레이어 그룹 생성.
+
+    실제 entity 좌표 대신 레이어 통계 레코드를 사용.
+    LLM이 패턴 분석하기에 충분한 정보 제공.
+    """
+    es = raw["sections"]["entity_scan"]
+    top_layers: dict = es.get("top_layers", {})
+    by_type: dict = es.get("by_type", {})
+    text_grep: list = raw["sections"].get("text_grep", [])
+    total: int = es.get("total", 0)
+
+    groups: dict[str, list[dict]] = defaultdict(list)
+
+    for layer_name, info in top_layers.items():
+        group = classify_layer(layer_name)
+        # 레이어 통계를 entity 레코드 1개로 요약 (LLM 분석용)
+        groups[group].append({
+            "type": "LAYER_STAT",
+            "layer": layer_name,
+            "total_entities": info.get("total", 0),
+            "dominant_type": info.get("dominant", "?"),
+        })
+
+    # 텍스트 레이블 (grid 식별자, 부재 코드 등) → 기타 그룹에 추가
+    if text_grep:
+        groups["기타"].extend([
+            {"type": "TEXT", "layer": "text_grep", "text": t.get("text"), "x": t.get("x"), "y": t.get("y")}
+            for t in text_grep[:50]
+        ])
+
+    # 전체 통계 메타 레코드 → 기타 그룹에 추가
+    groups["기타"].append({
+        "type": "GLOBAL_STAT",
+        "total_entities": total,
+        "by_type": by_type,
+        "layer_count": len(top_layers),
+        "dxf_source": raw.get("dxf", ""),
+    })
+
+    return dict(groups)
 
 
 def chunk_group(entities: list[dict]) -> list[list[dict]]:
@@ -217,42 +276,56 @@ def _call_deepseek(prompt: str) -> str:
 def _call_gemini(prompt: str) -> str:
     key = os.environ.get("GEMINI_API_KEY", "")
     if not key:
-        return _call_groq(prompt)
-    resp = _post_json(
-        f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={key}",
-        {"Content-Type": "application/json"},
-        {"contents": [{"parts": [{"text": prompt}]}],
-         "generationConfig": {"maxOutputTokens": 4096}},
-    )
-    parts = json.loads(resp)["candidates"][0]["content"]["parts"]
-    return "".join(p.get("text", "") for p in parts)
+        return _call_deepseek(prompt)
+    # gemini-1.5-flash은 무료 티어에서도 동작
+    for model in ("gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"):
+        try:
+            resp = _post_json(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}",
+                {"Content-Type": "application/json"},
+                {"contents": [{"parts": [{"text": prompt}]}],
+                 "generationConfig": {"maxOutputTokens": 4096}},
+            )
+            parts = json.loads(resp)["candidates"][0]["content"]["parts"]
+            return "".join(p.get("text", "") for p in parts)
+        except Exception:
+            continue
+    return _call_deepseek(prompt)  # Gemini 전체 실패 시 DeepSeek 폴백
 
 
 def _call_groq(prompt: str) -> str:
     key = os.environ.get("GROQ_API_KEY", "")
     if not key:
-        return json.dumps({"error": "GROQ_API_KEY not set"})
-    resp = _post_json(
-        "https://api.groq.com/openai/v1/chat/completions",
-        {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-        {"model": "llama-3.1-70b-versatile",
-         "messages": [{"role": "user", "content": prompt}], "max_tokens": 4096},
-    )
-    return json.loads(resp)["choices"][0]["message"]["content"]
+        return _call_deepseek(prompt)
+    # 현재 유효한 모델 목록 시도 (llama-3.3-70b-versatile → llama-3.1-70b-versatile 순)
+    for model in ("llama-3.3-70b-versatile", "llama-3.1-70b-versatile", "mixtral-8x7b-32768"):
+        try:
+            resp = _post_json(
+                "https://api.groq.com/openai/v1/chat/completions",
+                {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                {"model": model, "messages": [{"role": "user", "content": prompt}], "max_tokens": 4096},
+            )
+            return json.loads(resp)["choices"][0]["message"]["content"]
+        except Exception:
+            continue
+    return _call_deepseek(prompt)  # Groq 전체 실패 시 DeepSeek 폴백
 
 
 def _call_claude(prompt: str) -> str:
     key = os.environ.get("CLAUDE_API_KEY") or os.environ.get("ANTHROPIC_API_KEY", "")
     if not key:
-        return _call_groq(prompt)
-    resp = _post_json(
-        "https://api.anthropic.com/v1/messages",
-        {"x-api-key": key, "anthropic-version": "2023-06-01",
-         "Content-Type": "application/json"},
-        {"model": "claude-sonnet-4-6", "max_tokens": 4096,
-         "messages": [{"role": "user", "content": prompt}]},
-    )
-    return json.loads(resp)["content"][0]["text"]
+        return _call_deepseek(prompt)
+    try:
+        resp = _post_json(
+            "https://api.anthropic.com/v1/messages",
+            {"x-api-key": key, "anthropic-version": "2023-06-01",
+             "Content-Type": "application/json"},
+            {"model": "claude-sonnet-4-6", "max_tokens": 4096,
+             "messages": [{"role": "user", "content": prompt}]},
+        )
+        return json.loads(resp)["content"][0]["text"]
+    except Exception:
+        return _call_deepseek(prompt)  # 크레딧 부족 등 실패 시 폴백
 
 
 # ── 프롬프트 빌더 ─────────────────────────────────────────────────────────────
