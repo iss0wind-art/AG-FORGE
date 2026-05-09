@@ -178,3 +178,4 @@ append_only: true
 - [2026-05-09] Stock_AI_모듈_지도 박제 — 6 모듈 정독 + 10중 안전장치 갱신 + AG_FORGE_API_KEY 발견
 - [2026-05-09] AG_FORGE_API_KEY 정정 박제 — 키 예약 상태(미구현), 양방향 연동 후크
 - [2026-05-09] Stock_AI_데이터_매매_상세 박제 — NewsScraper(3중폴백+행동경제 정합)+ChartAgent+KISClient(3중 안전 캡)
+- [2026-05-09] Stock_AI_데이터_매매_상세 보강 — 키워드 24개 본체 + chart 일봉 3m 확정 + 거시키워드 부재 + 포트 시프트 설계
