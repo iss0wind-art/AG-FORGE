@@ -1,9 +1,13 @@
 ---
-type: wiki
 created: 2026-05-09
-tags: [Karpathy, LLM Wiki, Gold In Gold Out, 운영원칙]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 2
+tags:
+- Karpathy
+- LLM Wiki
+- Gold In Gold Out
+- 운영원칙
+type: wiki
 ---
 
 # Karpathy_LLM_Wiki_원칙

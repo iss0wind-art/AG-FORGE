@@ -48,3 +48,102 @@ append_only: true
 - [2026-05-09 09:33] vault_ingest: [[피지수_사명_선언]] created
 - [2026-05-09 09:39] vault_ingest: [[NAS_환경_전체]] created
 - [2026-05-09 09:39] vault_ingest: [[제국의_비전_2026]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_CONSTITUTION]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_brain_architecture]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_ARCHITECTURE]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_brain]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_특허_기술명세서]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_brain_tasks]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_brain_status]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_CLAUDE]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_brain_weekly_report]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_brain_patent]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_README]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_TEAM_OPERATIONS]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_DANGUN_BRANCH_SEED]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_from_3jiguk_icheon_README]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_docs_research_handoff_20260408]] created
+- [2026-05-09 10:35] vault_ingest: [[BOQ_docs_brain_map]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_HANDOFF_2026-05-03]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_HANDOFF_NAS_WIND_2026-05-07]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_DATA_FLOW]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_CLAUDE]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_README]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_DANGUN_BRANCH_SEED]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_brain_logic_context]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_brain_core_stack]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND__brain_CONSTITUTION]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND__brain_brain_architecture]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND__brain_brain]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_shared-context_brain]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_v6-features]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_BLUEPRINT_2026-04-26]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_ZONE_PREDICTION_BLUEPRINT]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_SECURITY_INCIDENTS]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_REVAMP_PLAN_2026-04-26]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_anthropic-usage-policy]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_기획안_공정표_타설현황_탑다운_자동화]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_docs_기획안_최종_V1_0_공정표_탑다운_자동화]] created
+- [2026-05-09 10:35] vault_ingest: [[H2OWIND_public_drawings_README]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_CONSTITUTION]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_brain]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_CLAUDE]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_DANGUN_BRANCH_SEED]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_tools_README_dxf_tools]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_PHASE0_REVIEW_DECISIONS]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_api_contract]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_SEVEN_PIECE_KIT_INVENTORY]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_member_manifest_schema]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_TECH_ANALYSIS_SKETCHUP_VS_FREECAD]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_MATERIAL_RULES]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_PHASE0_REVIEW_FOR_ICHEON]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_HANDOFF_TO_ICHEON]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_spec_PHASE0_HANDOFF]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v2]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_forge_brief]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v3]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_support_request_coord_unification]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_MANUAL_QUICK_REFERENCE]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_coord_unification_trials]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_MANUAL_QUICK_REFERENCE_v3]] created
+- [2026-05-09 10:35] vault_ingest: [[FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v1]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_boq_unified]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_codex_columns_unified]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_members_boq]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_complex_master]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_v9_boq]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_sample_project.boq]] created
+- [2026-05-09 10:37] vault_ingest: [[FREECAD_DATA_db_schema]] created
+- [2026-05-09 10:37] vault_ingest: [[H2OWIND_DATA_schema]] created
+- [2026-05-09 10:40] vault_ingest: [[INTER_material_rules]] created
+- [2026-05-09 10:40] vault_ingest: [[INTER_README]] created
+- [2026-05-09 10:40] vault_ingest: [[INTER_boq_102_B1F_v3]] created
+- [2026-05-09 10:40] vault_ingest: [[INTER_YISUN_TO_ICHEON_2026_05_06_DRAWING_HOMI_REQUEST]] created
+- [2026-05-09 10:40] vault_ingest: [[INTER_DANGUN_TO_ICHEON_NEXT_SESSION_BASEMENT_B1_B2_DIRECTIVE]] created
+- [2026-05-09 10:41] 🔴 CMA BLOCK — GRAPH_REPORT.md: 제8조 위반: '파괴' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — H2OWIND_DANGUN_BRANCH_SEED.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_spec_SEVEN_PIECE_KIT_INVENTORY.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — BOQ_brain_tasks.md: 제8조 위반: '파괴' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — BOQ_TEAM_OPERATIONS.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_spec_PHASE0_REVIEW_FOR_ICHEON.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — H2OWIND_shared-context_brain.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_docs_MANUAL_QUICK_REFERENCE.md: 제7조 위반: '재귀' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — H2OWIND__brain_brain.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — BOQ_docs_research_handoff_20260408.md: 제8조 위반: '파괴' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_CONSTITUTION.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — BOQ_CONSTITUTION.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_spec_PHASE0_REVIEW_DECISIONS.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v1.md: 제7조 위반: '재귀' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — BOQ_DANGUN_BRANCH_SEED.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — BOQ_특허_기술명세서.md: 제8조 위반: '파괴' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — H2OWIND_HANDOFF_2026-05-03.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — BOQ_CLAUDE.md: 제8조 위반: '파괴' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — BOQ_docs_brain_map.md: 제8조 위반: '파괴' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — FREECAD_spec_api_contract.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — 피지수_사명_선언.md: 제7조 위반: '무한' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — 피지수_뇌_구조.md: 제7조 위반: '무한' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — 피지수_3지국_파견_2026-05-08.md: 제7조 위반: '무한' 감지
+- [2026-05-09 10:41] 🟠 CMA WARN — H2OWIND__brain_CONSTITUTION.md: 제2조 경고: '충돌' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — 단군_행동원칙_헌법.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_spec_member_manifest_schema.md: 제7조 위반: '폭주' 감지
+- [2026-05-09 10:41] 소급 평가 완료 — 92개 노트 점수 갱신

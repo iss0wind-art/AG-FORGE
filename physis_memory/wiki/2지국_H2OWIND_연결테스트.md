@@ -1,9 +1,12 @@
 ---
-type: wiki
 created: 2026-05-08
-tags: [h2owind, 2지국, 테스트]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 1
+tags:
+- h2owind
+- 2지국
+- 테스트
+type: wiki
 ---
 
 # 2지국_H2OWIND_연결테스트

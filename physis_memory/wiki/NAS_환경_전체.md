@@ -1,9 +1,14 @@
 ---
-type: wiki
 created: 2026-05-09
-tags: [NAS, 인프라, 서버, 환경, 포트]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 1
+tags:
+- NAS
+- 인프라
+- 서버
+- 환경
+- 포트
+type: wiki
 ---
 
 # NAS_환경_전체

@@ -1,9 +1,12 @@
 ---
-type: wiki
 created: 2026-05-08
-tags: [보q, 1지국, 테스트]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 1
+tags:
+- 보q
+- 1지국
+- 테스트
+type: wiki
 ---
 
 # 1지국_BOQ_연결테스트

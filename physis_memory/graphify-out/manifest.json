@@ -3,6 +3,10 @@
     "mtime": 1778221713.124642,
     "hash": "9f9abba0a0e20bf43db656f5e9ede553"
   },
+  "/home/nas/AG-Forge/physis_memory/scripts/jiguk_data_ingestion.py": {
+    "mtime": 1778290634.6460266,
+    "hash": "c8197145078e15364d042f6a71d74618"
+  },
   "/home/nas/AG-Forge/physis_memory/scripts/memory_promotion.py": {
     "mtime": 1778220767.0344014,
     "hash": "88285bc240f2d334785dcbbce1446d42"
@@ -10,6 +14,10 @@
   "/home/nas/AG-Forge/physis_memory/scripts/cold_tier.py": {
     "mtime": 1778221699.5606112,
     "hash": "3256b2e374d19bfee63652b90ee78946"
+  },
+  "/home/nas/AG-Forge/physis_memory/scripts/jiguk_ingestion.py": {
+    "mtime": 1778290238.434599,
+    "hash": "4210f3c22e47f6b971826e6bd84a1e51"
   },
   "/home/nas/AG-Forge/physis_memory/scripts/cma_gate.py": {
     "mtime": 1778220799.7404854,
@@ -63,6 +71,26 @@
     "mtime": 1778220829.4153652,
     "hash": "fec76008afc7deacc5c29aa00149d888"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_DATA_schema.md": {
+    "mtime": 1778290647.179216,
+    "hash": "86305297d67a79c089c7c0e179c7bdd7"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_DANGUN_BRANCH_SEED.md": {
+    "mtime": 1778290545.536878,
+    "hash": "4b0d421dda819fe708da950bc0abcdc6"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_complex_master.md": {
+    "mtime": 1778290647.155302,
+    "hash": "3a7512e33b2c59e760d2be1a06053c7d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_brain.md": {
+    "mtime": 1778290545.226021,
+    "hash": "e4aba001636da027cd24eaa8f13dabef"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_SECURITY_INCIDENTS.md": {
+    "mtime": 1778290545.5427713,
+    "hash": "574d0254993888d6e8a0e517ab9cea8c"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4c_101.md": {
     "mtime": 1778223120.2400064,
     "hash": "b2b5809316094c4720a39d44978e8d14"
@@ -79,25 +107,53 @@
     "mtime": 1778286788.5786421,
     "hash": "ac84861825bc3e9fc8c95d52848b508c"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_brain_architecture.md": {
+    "mtime": 1778290545.2249076,
+    "hash": "d99c3562e24bddf4f8fe8321f88f5543"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_complex_master.md": {
     "mtime": 1778223120.094136,
     "hash": "21df8d45eae56e3774a85aa80089f40b"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_boq_unified.md": {
+    "mtime": 1778290647.145727,
+    "hash": "09edb878a071f32417d7f8ec932ce14a"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_db_schema.md": {
+    "mtime": 1778290647.1784337,
+    "hash": "6ed04a5c5a4b0afa50e2d5b3950c9781"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_SEVEN_PIECE_KIT_INVENTORY.md": {
+    "mtime": 1778290545.5849245,
+    "hash": "e42c3d990ec8347776c6f1cdbacbe4f8"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_brain_logic_context.md": {
+    "mtime": 1778290545.5374985,
+    "hash": "2dd6564307373865d174aade717bab64"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v13_slabs.md": {
     "mtime": 1778223119.8736095,
     "hash": "aa98ace9a4b0d74eff0d8bf9419a03f7"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_tools_README_dxf_tools.md": {
+    "mtime": 1778290545.581908,
+    "hash": "ef23695eb549cf6d2927b3cad33da9c7"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_101_around_parking.md": {
     "mtime": 1778223120.17711,
     "hash": "c439052fe6ed8804cfa9605f19579598"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/log.md": {
-    "mtime": 1778287185.801263,
-    "hash": "77482cd02d2d4901d600c275b53a9a2b"
+    "mtime": 1778290853.0893106,
+    "hash": "0f17058129276c51a2390b4e98a937f2"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md": {
     "mtime": 1778224762.388185,
     "hash": "f9fb2dc3301b52954f6b815e4c754924"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_TECH_ANALYSIS_SKETCHUP_VS_FREECAD.md": {
+    "mtime": 1778290545.586165,
+    "hash": "6047ccad60a124aaa273033b9f4665dd"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v7_boq.md": {
     "mtime": 1778223119.767119,
@@ -111,9 +167,21 @@
     "mtime": 1778285048.646479,
     "hash": "69130f4233ff2084e1f052283c6709a6"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_ARCHITECTURE.md": {
+    "mtime": 1778290545.2256613,
+    "hash": "a05a082b8746014d82f3208e3b9d1da9"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_basement_complex_v3.md": {
     "mtime": 1778223120.2441936,
     "hash": "33711ca2c4c9b98cfe7e3d054ce8895b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_brain_tasks.md": {
+    "mtime": 1778290545.2267296,
+    "hash": "75a7cf228d305dc4de429687560e637c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_HANDOFF_NAS_WIND_2026-05-07.md": {
+    "mtime": 1778290545.5342128,
+    "hash": "a819b3237014c096b1f10fb8693bbee3"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v6b_101.md": {
     "mtime": 1778223120.1516273,
@@ -131,45 +199,181 @@
     "mtime": 1778223120.1607354,
     "hash": "8efb2ff65187ca32f5fdce305f817113"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_brain_weekly_report.md": {
+    "mtime": 1778290545.2277257,
+    "hash": "41406c4161e610efe16ce1198118dafa"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_README.md": {
+    "mtime": 1778290545.536195,
+    "hash": "f1f6765b811cab8595a7c4e0ce118740"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_101_b1_b2_dong.md": {
     "mtime": 1778223120.0799482,
     "hash": "4e142d0f49e6a0a7b3900e676aab8a7b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_brain_core_stack.md": {
+    "mtime": 1778290545.5380173,
+    "hash": "0e4bd2419bc68a1def918923e3eacab4"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_TEAM_OPERATIONS.md": {
+    "mtime": 1778290545.2287428,
+    "hash": "84fc2d0ea11943b56b31225f24a9f9ee"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F.md": {
     "mtime": 1778223119.77118,
     "hash": "939a11845be8614372130df186b7f0b9"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_ZONE_PREDICTION_BLUEPRINT.md": {
+    "mtime": 1778290545.542171,
+    "hash": "5b3b7a77bddc4f5254395ab366ef8ece"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/index.md": {
     "mtime": 1778223090.178906,
     "hash": "6405783eaba15b48f100c18ce42b920c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_PHASE0_REVIEW_FOR_ICHEON.md": {
+    "mtime": 1778290545.5875843,
+    "hash": "fe2bbdd07291ca170f4f5258e08ca745"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v8_poc.md": {
     "mtime": 1778223119.5210774,
     "hash": "177296861bc4426b2f81126a762aedf7"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/INTER_material_rules.md": {
+    "mtime": 1778290853.0870464,
+    "hash": "199cb198c30a885a328b5eaf53882910"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md": {
     "mtime": 1778223133.4312255,
     "hash": "2f1912c20fe5f93e5b103ce60fc39e7d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_CLAUDE.md": {
+    "mtime": 1778290545.5809667,
+    "hash": "87deceeb65579b61d3bb2b9590bf9078"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v12_north_ext.md": {
     "mtime": 1778223119.2549565,
     "hash": "38261344a563e9ab7a29234c81740bd4"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_shared-context_brain.md": {
+    "mtime": 1778290545.5403552,
+    "hash": "e47b16acbe7b9411cfd16fbd2dc3cd1c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND__brain_brain_architecture.md": {
+    "mtime": 1778290545.5392656,
+    "hash": "05aa243886f8a1cc1074adc8c6d9fffc"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_MANUAL_QUICK_REFERENCE.md": {
+    "mtime": 1778290545.5933743,
+    "hash": "54940d7ebaec0bb36d63dfefc90791dc"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v2.md": {
+    "mtime": 1778290545.590089,
+    "hash": "5784b26904409b529941bbe328525a72"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/INTER_DANGUN_TO_ICHEON_NEXT_SESSION_BASEMENT_B1_B2_DIRECTIVE.md": {
+    "mtime": 1778290853.0893106,
+    "hash": "2d8ac6408437ee22ed39ccfa88a17eaf"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_101dong.md": {
     "mtime": 1778223119.774934,
     "hash": "3e432d9946d2457d6f98e4e0faa798d4"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_BLUEPRINT_2026-04-26.md": {
+    "mtime": 1778290545.5415206,
+    "hash": "82c1d4fe376a145ba3497621ff9becef"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND__brain_brain.md": {
+    "mtime": 1778290545.5398717,
+    "hash": "868ce1fc8bd0c5b2e5b667242fac8149"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_MANUAL_QUICK_REFERENCE_v3.md": {
+    "mtime": 1778290545.594755,
+    "hash": "41503e1a658999227d94ed6815e73f7c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_brain_patent.md": {
+    "mtime": 1778290545.2280602,
+    "hash": "f0778c42fcbe5c8887fd4e509d64de9a"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_CLAUDE.md": {
+    "mtime": 1778290545.5355592,
+    "hash": "50194df0cf694eae0917174856a43cb5"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_formwork_dedu.md": {
     "mtime": 1778223119.6438272,
     "hash": "488d05bad124f11178c3d6f26ebf54ed"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_docs_research_handoff_20260408.md": {
+    "mtime": 1778290545.2304254,
+    "hash": "e1b9e7f3c03d1d3904b4aa4d89cc02df"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_CONSTITUTION.md": {
+    "mtime": 1778290545.5798132,
+    "hash": "5bcafe7afe3790c5ef6646a2429af4e5"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_coord_unification_trials.md": {
+    "mtime": 1778290545.5940866,
+    "hash": "7c7d93de98484b5e8d0e80424d68c58a"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_anthropic-usage-policy.md": {
+    "mtime": 1778290545.5440195,
+    "hash": "66bc5c6a91b4eae2c4a13971a50165dc"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_MATERIAL_RULES.md": {
+    "mtime": 1778290545.5868042,
+    "hash": "060fa0f722f9310158657b4690e81a8a"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md": {
     "mtime": 1778285048.6460958,
     "hash": "4269b039d56e5f5a31690773eba58fbe"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_REVAMP_PLAN_2026-04-26.md": {
+    "mtime": 1778290545.5434206,
+    "hash": "2b10ee8675704e0d0235df59f85d4d3f"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_sample_project.boq.md": {
+    "mtime": 1778290647.1778946,
+    "hash": "832e94709c00319fd8e0d6c023d7f876"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/INTER_YISUN_TO_ICHEON_2026_05_06_DRAWING_HOMI_REQUEST.md": {
+    "mtime": 1778290853.0887313,
+    "hash": "db249f952e01b89178c691b9f39b325b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_PHASE0_HANDOFF.md": {
+    "mtime": 1778290545.5889916,
+    "hash": "57df8bd7f6bdc89ff17875dc07090e7f"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v6_101.md": {
     "mtime": 1778223119.928561,
     "hash": "f388027335de4aa3640054f064c5d2b5"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_from_3jiguk_icheon_README.md": {
+    "mtime": 1778290545.2298462,
+    "hash": "6b4e99999a190c4888c4fbadd5b5d734"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_CONSTITUTION.md": {
+    "mtime": 1778290545.22487,
+    "hash": "48c6fdf5e181369c79ae398833364e9d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_codex_columns_unified.md": {
+    "mtime": 1778290647.1540391,
+    "hash": "6d61b2a74bc5e682d70de4cf1b4c1767"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_v9_boq.md": {
+    "mtime": 1778290647.175736,
+    "hash": "7fb76d93f4dfe27decc733eff3dc2e27"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_PHASE0_REVIEW_DECISIONS.md": {
+    "mtime": 1778290545.5835166,
+    "hash": "1a3fadf71e1d55d3a4e2d3c7ec2061d8"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v1.md": {
+    "mtime": 1778290545.5957005,
+    "hash": "3a7698ca59614446c7438fc2857f2477"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/INTER_README.md": {
+    "mtime": 1778290853.0874114,
+    "hash": "af31dbd94fc0530fc6bf68972fae134b"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F_v3.md": {
     "mtime": 1778223120.2430773,
@@ -183,17 +387,61 @@
     "mtime": 1778287185.801263,
     "hash": "3c2dbedce03780c3924690a77dd32b77"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_\uae30\ud68d\uc548_\uacf5\uc815\ud45c_\ud0c0\uc124\ud604\ud669_\ud0d1\ub2e4\uc6b4_\uc790\ub3d9\ud654.md": {
+    "mtime": 1778290545.5445473,
+    "hash": "5962d56aa3f182d4600a8bb6b7f843a8"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_DANGUN_BRANCH_SEED.md": {
+    "mtime": 1778290545.229293,
+    "hash": "ea1d0208bde33ada6181e10abb02e394"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4e_101.md": {
     "mtime": 1778223120.220072,
     "hash": "1b9950e2c8470eb24087a6c032af3234"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_\ud2b9\ud5c8_\uae30\uc220\uba85\uc138\uc11c.md": {
+    "mtime": 1778290545.2264054,
+    "hash": "a07a3c07d9d3d65d741a2f03294e4e6e"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_HANDOFF_2026-05-03.md": {
+    "mtime": 1778290545.5334404,
+    "hash": "0dbce36734b7d21b577b89727f0f6c4c"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_forge_brief.md": {
+    "mtime": 1778290545.5908334,
+    "hash": "e46f96b587efefe7087dff58329f1aed"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_CLAUDE.md": {
+    "mtime": 1778290545.227366,
+    "hash": "48675a6e091ad1a6130f0f3085bf7a5a"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/INTER_boq_102_B1F_v3.md": {
+    "mtime": 1778290853.0879445,
+    "hash": "325e126f43081ade2a9f9de7a84eac6a"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md": {
     "mtime": 1778284981.2072928,
     "hash": "c0a4c442e14f9df065c3f7a384278525"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_DATA_FLOW.md": {
+    "mtime": 1778290545.535143,
+    "hash": "f2046c1e543cf662f6b8dbbf21c48dcd"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_support_request_coord_unification.md": {
+    "mtime": 1778290545.5927942,
+    "hash": "e553ad8b4d8739e8c60910c9e043b115"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_docs_brain_map.md": {
+    "mtime": 1778290545.2308795,
+    "hash": "93205e94f2dccbe5342b88a94be74d42"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md": {
     "mtime": 1778286756.1322606,
     "hash": "243a75a39362d8969d9a706270329808"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_HANDOFF_TO_ICHEON.md": {
+    "mtime": 1778290545.588293,
+    "hash": "bdc23c3d340edfb57a6d40f77e55240d"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md": {
     "mtime": 1778224762.3877838,
@@ -207,9 +455,21 @@
     "mtime": 1778223119.9904356,
     "hash": "f559f7803118dcd878f3c118e9419cc6"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_api_contract.md": {
+    "mtime": 1778290545.5842252,
+    "hash": "b204a45990d52545185a16f8e6a0e525"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v3.md": {
+    "mtime": 1778290545.5920506,
+    "hash": "b040ea204439de29a3ea6c0a14acfd03"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md": {
     "mtime": 1778284981.207602,
     "hash": "32eda928aa11ce4e3898ec145a7fc012"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DATA_members_boq.md": {
+    "mtime": 1778290647.1547472,
+    "hash": "6f810b3a0d55c6021a0b7823ef2fc45b"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md": {
     "mtime": 1778286788.5789285,
@@ -219,13 +479,29 @@
     "mtime": 1778223119.6386056,
     "hash": "f506c99e33c666d8130e1720b0c84c35"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_v6-features.md": {
+    "mtime": 1778290545.5409033,
+    "hash": "fc0bf5bc8d6257a7d33cecc1124817e1"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md": {
     "mtime": 1778286606.0950925,
     "hash": "cd8e43ea2a9ad206d0c7548c464cf941"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_brain.md": {
+    "mtime": 1778290545.5805798,
+    "hash": "219ac0753b1c750bc8bcb9aa958bbef7"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_README.md": {
+    "mtime": 1778290545.2283833,
+    "hash": "7f12be16cb1d2d3c70a2b22e9d801d89"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md": {
     "mtime": 1778237291.0279455,
     "hash": "d2c0476d03b8826d944018849d8c571d"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND__brain_CONSTITUTION.md": {
+    "mtime": 1778290545.538684,
+    "hash": "6367f1ce721a7392f24271afadf8944a"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v10_stage5.md": {
     "mtime": 1778223119.3519244,
@@ -243,6 +519,22 @@
     "mtime": 1778224762.3880134,
     "hash": "f25c9158a67f28c88abc2cf26cb4cdb8"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_spec_member_manifest_schema.md": {
+    "mtime": 1778290545.585567,
+    "hash": "b7f2078231dec5866c3f65931c4dcc39"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_public_drawings_README.md": {
+    "mtime": 1778290545.5456736,
+    "hash": "dd0c1d2a6576a04a1b78d00ae0b96ddd"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/BOQ_brain_status.md": {
+    "mtime": 1778290545.2270358,
+    "hash": "afc7be45320996cbdd8d78185ec69b0e"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/H2OWIND_docs_\uae30\ud68d\uc548_\ucd5c\uc885_V1_0_\uacf5\uc815\ud45c_\ud0d1\ub2e4\uc6b4_\uc790\ub3d9\ud654.md": {
+    "mtime": 1778290545.5451276,
+    "hash": "55ec7f9fecb025970a48739ab906c4ac"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F_v2.md": {
     "mtime": 1778223119.779932,
     "hash": "605ff11bf2276023f7de020568f78f97"
@@ -254,6 +546,10 @@
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4_101.md": {
     "mtime": 1778223119.4102032,
     "hash": "3258c85d96fcd1ea40790d6c98aeda8a"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/FREECAD_DANGUN_BRANCH_SEED.md": {
+    "mtime": 1778290545.5815544,
+    "hash": "91fc05df6d741b5694ca844f43906a89"
   },
   "/home/nas/AG-Forge/physis_memory/chronicle/2026-05-02_first_breath.md": {
     "mtime": 1778220829.4156706,
