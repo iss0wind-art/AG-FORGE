@@ -9,7 +9,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L1",
       "id": "scripts_forgetting_manager_py",
-      "community": 0,
+      "community": 1,
       "norm_label": "forgetting_manager.py"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L27",
       "id": "scripts_forgetting_manager_is_god_node",
-      "community": 0,
+      "community": 1,
       "norm_label": "is_god_node()"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L31",
       "id": "scripts_forgetting_manager_get_importance",
-      "community": 0,
+      "community": 1,
       "norm_label": "get_importance()"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L36",
       "id": "scripts_forgetting_manager_get_ref_count",
-      "community": 0,
+      "community": 1,
       "norm_label": "get_ref_count()"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L40",
       "id": "scripts_forgetting_manager_get_outcome_score",
-      "community": 0,
+      "community": 1,
       "norm_label": "get_outcome_score()"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L45",
       "id": "scripts_forgetting_manager_days_since_access",
-      "community": 0,
+      "community": 1,
       "norm_label": "days_since_access()"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L51",
       "id": "scripts_forgetting_manager_should_forget",
-      "community": 0,
+      "community": 1,
       "norm_label": "should_forget()"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L68",
       "id": "scripts_forgetting_manager_should_promote",
-      "community": 0,
+      "community": 1,
       "norm_label": "should_promote()"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L81",
       "id": "scripts_forgetting_manager_append_log",
-      "community": 0,
+      "community": 1,
       "norm_label": "append_log()"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L87",
       "id": "scripts_forgetting_manager_move_to_cold_tier",
-      "community": 0,
+      "community": 1,
       "norm_label": "move_to_cold_tier()"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L99",
       "id": "scripts_forgetting_manager_promote_to_ltm",
-      "community": 0,
+      "community": 1,
       "norm_label": "promote_to_ltm()"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L106",
       "id": "scripts_forgetting_manager_run",
-      "community": 0,
+      "community": 1,
       "norm_label": "run()"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L1",
       "id": "scripts_forgetting_manager_rationale_1",
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u116a\u11ab\u1105\u1175\u110c\u1161 \u2014 hot tier(obsidian) \u2192 cold tier(chromadb) \u110b\u1175\u1100\u116a\u11ab \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1175\u110c\u116e\u11ab: \u1109\u1175\u1100\u1161\u11ab(lru) + \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab"
     },
     {
@@ -126,7 +126,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L32",
       "id": "scripts_forgetting_manager_rationale_32",
-      "community": 0,
+      "community": 1,
       "norm_label": "yaml frontmatter\u110b\u1174 importance \u1111\u1175\u11af\u1103\u1173 \u110b\u1175\u11b0\u1100\u1175. \u110b\u1165\u11b9\u110b\u1173\u1106\u1167\u11ab 0.5 \u1100\u1175\u1107\u1169\u11ab\u1100\u1161\u11b9."
     },
     {
@@ -135,7 +135,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L41",
       "id": "scripts_forgetting_manager_rationale_41",
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 \u110c\u1165\u11b7\u1109\u116e. chronicle\u110b\u1166\u1109\u1165 \u110e\u1161\u11b7\u110c\u1169\u1103\u116c\u11ab \u1112\u116c\u11ba\u1109\u116e \u1100\u1175\u1107\u1161\u11ab."
     },
     {
@@ -144,7 +144,7 @@
       "source_file": "scripts/forgetting_manager.py",
       "source_location": "L88",
       "id": "scripts_forgetting_manager_rationale_88",
-      "community": 0,
+      "community": 1,
       "norm_label": "chromadb cold tier\u1105\u1169 \u110b\u1175\u1100\u116a\u11ab"
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L1",
       "id": "scripts_memory_promotion_py",
-      "community": 6,
+      "community": 9,
       "norm_label": "memory_promotion.py"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L17",
       "id": "scripts_memory_promotion_extract_wikilinks",
-      "community": 6,
+      "community": 9,
       "norm_label": "extract_wikilinks()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L21",
       "id": "scripts_memory_promotion_build_reference_map",
-      "community": 6,
+      "community": 9,
       "norm_label": "build_reference_map()"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L36",
       "id": "scripts_memory_promotion_build_outcome_map",
-      "community": 6,
+      "community": 9,
       "norm_label": "build_outcome_map()"
     },
     {
@@ -189,7 +189,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L51",
       "id": "scripts_memory_promotion_update_scores",
-      "community": 6,
+      "community": 9,
       "norm_label": "update_scores()"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L1",
       "id": "scripts_memory_promotion_rationale_1",
-      "community": 6,
+      "community": 9,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1100\u1175\u110b\u1165\u11a8 \u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u116a\u11ab\u1105\u1175\u110c\u1161 \u2014 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u1107\u1161\u11ab \u1109\u1169\u1100\u1173\u11b8 \u1111\u1167\u11bc\u1100\u1161 \u1103\u1161\u11ab\u110c\u1162 chronicle\u110b\u1173\u11af \u110b\u1175\u11b0\u110b\u1165 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u110b\u1167\u1103\u1169\u1105\u1173\u11af \u110b\u1167\u11a8\u1109\u1161\u11ab, outcome_score \u110b\u1165\u11b8\u1103\u1166\u110b\u1175\u1110\u1173"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L22",
       "id": "scripts_memory_promotion_rationale_22",
-      "community": 6,
+      "community": 9,
       "norm_label": "\u110c\u1165\u11ab\u110e\u1166 vault\u110b\u1166\u1109\u1165 \u1102\u1169\u1110\u1173\u1107\u1167\u11af \u110e\u1161\u11b7\u110c\u1169 \u1112\u116c\u11ba\u1109\u116e \u1100\u1168\u1109\u1161\u11ab"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "scripts/memory_promotion.py",
       "source_location": "L37",
       "id": "scripts_memory_promotion_rationale_37",
-      "community": 6,
+      "community": 9,
       "norm_label": "\u1103\u1161\u11ab\u110c\u1162 chronicle\u110b\u1166\u1109\u1165 \u1100\u1167\u11af\u1100\u116a \u1100\u1175\u110b\u1167\u1103\u1169 \u110b\u1167\u11a8\u1109\u1161\u11ab"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L1",
       "id": "scripts_cold_tier_py",
-      "community": 5,
+      "community": 7,
       "norm_label": "cold_tier.py"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L24",
       "id": "scripts_cold_tier_doc_id",
-      "community": 5,
+      "community": 7,
       "norm_label": "_doc_id()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L28",
       "id": "scripts_cold_tier_ingest",
-      "community": 5,
+      "community": 7,
       "norm_label": "ingest()"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L54",
       "id": "scripts_cold_tier_recall",
-      "community": 5,
+      "community": 7,
       "norm_label": "recall()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L67",
       "id": "scripts_cold_tier_sync_archive",
-      "community": 5,
+      "community": 7,
       "norm_label": "sync_archive()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L78",
       "id": "scripts_cold_tier_stats",
-      "community": 5,
+      "community": 7,
       "norm_label": "stats()"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L1",
       "id": "scripts_cold_tier_rationale_1",
-      "community": 5,
+      "community": 7,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e cold tier \u2014 chromadb \u110b\u1167\u11ab\u1103\u1169\u11bc \u1106\u1161\u11bc\u1100\u1161\u11a8\u1103\u116c\u11ab \u1102\u1169\u1110\u1173 \u2192 chromadb \u110c\u1165\u110c\u1161\u11bc \u2192 \u1107\u1166\u11a8\u1110\u1165 \u110b\u1172\u1109\u1161\u1103\u1169 \u1100\u1165\u11b7\u1109\u1162\u11a8 (\u1103\u1166\u110c\u1161\u1107\u1171 \u1109\u1169\u1112\u116a\u11ab)"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L55",
       "id": "scripts_cold_tier_rationale_55",
-      "community": 5,
+      "community": 7,
       "norm_label": "\u1103\u1166\u110c\u1161\u1107\u1171 \u1109\u1169\u1112\u116a\u11ab \u2014 \u110b\u1174\u1106\u1175 \u110b\u1172\u1109\u1161\u1103\u1169\u1105\u1169 \u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1175\u110b\u1165\u11a8 \u1100\u1165\u11b7\u1109\u1162\u11a8"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "scripts/cold_tier.py",
       "source_location": "L68",
       "id": "scripts_cold_tier_rationale_68",
-      "community": 5,
+      "community": 7,
       "norm_label": "archive/ \u1111\u1169\u11af\u1103\u1165\u110b\u1174 \u1111\u1161\u110b\u1175\u11af\u110b\u1173\u11af chromadb\u1105\u1169 \u110b\u1175\u11af\u1100\u116a\u11af \u110b\u1175\u1100\u116a\u11ab"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L1",
       "id": "scripts_cma_gate_py",
-      "community": 7,
+      "community": 10,
       "norm_label": "cma_gate.py"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L30",
       "id": "scripts_cma_gate_cmaresult",
-      "community": 7,
+      "community": 10,
       "norm_label": "cmaresult"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L31",
       "id": "scripts_cma_gate_cmaresult_init",
-      "community": 7,
+      "community": 10,
       "norm_label": ".__init__()"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L38",
       "id": "scripts_cma_gate_inspect",
-      "community": 7,
+      "community": 10,
       "norm_label": "inspect()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L52",
       "id": "scripts_cma_gate_gate",
-      "community": 7,
+      "community": 10,
       "norm_label": "gate()"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L81",
       "id": "scripts_cma_gate_scan_vault",
-      "community": 7,
+      "community": 10,
       "norm_label": "scan_vault()"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L1",
       "id": "scripts_cma_gate_rationale_1",
-      "community": 7,
+      "community": 10,
       "norm_label": "cma \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1100\u1166\u110b\u1175\u1110\u1173 \u2014 \u1102\u1169\u1110\u1173 \u1109\u1162\u11bc\u1109\u1165\u11bc\u00b7\u1109\u116e\u110c\u1165\u11bc \u1109\u1175 8\u110c\u1169\u1107\u1165\u11b8 \u1109\u1175\u11b7\u1109\u1161 layer 0: block (\u110c\u11661\u00b73\u00b77\u00b78\u110c\u1169) layer 1: warn  (\u110c\u11662\u00b74\u00b75"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "scripts/cma_gate.py",
       "source_location": "L53",
       "id": "scripts_cma_gate_rationale_53",
-      "community": 7,
+      "community": 10,
       "norm_label": "\u1102\u1169\u1110\u1173 \u1100\u1167\u11bc\u1105\u1169\u1105\u1173\u11af \u1107\u1161\u11ae\u110b\u1161 cma \u1109\u1175\u11b7\u1109\u1161. true=\u1110\u1169\u11bc\u1100\u116a, false=\u110e\u1161\u1103\u1161\u11ab."
     },
     {
@@ -378,7 +378,7 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L1",
       "id": "scripts_physis_cycle_py",
-      "community": 13,
+      "community": 21,
       "norm_label": "physis_cycle.py"
     },
     {
@@ -387,7 +387,7 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L19",
       "id": "scripts_physis_cycle_run",
-      "community": 13,
+      "community": 21,
       "norm_label": "run()"
     },
     {
@@ -396,7 +396,7 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L29",
       "id": "scripts_physis_cycle_update_graph",
-      "community": 13,
+      "community": 21,
       "norm_label": "update_graph()"
     },
     {
@@ -405,7 +405,7 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L39",
       "id": "scripts_physis_cycle_run_cad_parser",
-      "community": 13,
+      "community": 21,
       "norm_label": "run_cad_parser()"
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L1",
       "id": "scripts_physis_cycle_rationale_1",
-      "community": 13,
+      "community": 21,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1109\u1161\u110b\u1175\u110f\u1173\u11af \u2014 \u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1109\u1175 \u1109\u1175\u11af\u1112\u1162\u11bc 1. \u110b\u1175\u110e\u1165\u11ab cad \u1111\u1161\u1109\u1175\u11bc (\u1109\u1175\u11ab\u1100\u1172 .fcstd/.step \u2192 wiki \u1102\u1169\u1110\u1173) 2. cma layer 0/1 \u1100\u1166"
     },
     {
@@ -423,34 +423,34 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L1",
       "id": "scripts_cma_layer2_py",
-      "community": 10,
+      "community": 8,
       "norm_label": "cma_layer2.py"
     },
     {
       "label": "inspect_llm()",
       "file_type": "code",
       "source_file": "scripts/cma_layer2.py",
-      "source_location": "L37",
+      "source_location": "L34",
       "id": "scripts_cma_layer2_inspect_llm",
-      "community": 10,
+      "community": 8,
       "norm_label": "inspect_llm()"
     },
     {
       "label": "gate_layer2()",
       "file_type": "code",
       "source_file": "scripts/cma_layer2.py",
-      "source_location": "L59",
+      "source_location": "L56",
       "id": "scripts_cma_layer2_gate_layer2",
-      "community": 10,
+      "community": 8,
       "norm_label": "gate_layer2()"
     },
     {
       "label": "scan_suspicious()",
       "file_type": "code",
       "source_file": "scripts/cma_layer2.py",
-      "source_location": "L90",
+      "source_location": "L87",
       "id": "scripts_cma_layer2_scan_suspicious",
-      "community": 10,
+      "community": 8,
       "norm_label": "scan_suspicious()"
     },
     {
@@ -459,25 +459,25 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L1",
       "id": "scripts_cma_layer2_rationale_1",
-      "community": 10,
+      "community": 8,
       "norm_label": "cma layer 2 \u2014 llm \u1106\u1162\u11a8\u1105\u1161\u11a8 \u1109\u1175\u11b7\u1109\u1161 \u110f\u1175\u110b\u116f\u1103\u1173\u1100\u1161 \u110b\u1161\u1102\u1175\u11ab \u110b\u1174\u1103\u1169\u1105\u1173\u11af \u110b\u1175\u11b0\u1102\u1173\u11ab\u1103\u1161. layer 0/1 \u1110\u1169\u11bc\u1100\u116a \u1112\u116e \u1100\u1169\u110b\u1171\u1112\u1165\u11b7 \u1102\u1169\u1110\u1173\u110b\u1166\u1106\u1161\u11ab \u110c\u1165\u11a8\u110b\u116d\u11bc."
     },
     {
       "label": "Layer 2 LLM \uc2ec\uc0ac. True=\ud1b5\uacfc.",
       "file_type": "rationale",
       "source_file": "scripts/cma_layer2.py",
-      "source_location": "L60",
-      "id": "scripts_cma_layer2_rationale_60",
-      "community": 10,
+      "source_location": "L57",
+      "id": "scripts_cma_layer2_rationale_57",
+      "community": 8,
       "norm_label": "layer 2 llm \u1109\u1175\u11b7\u1109\u1161. true=\u1110\u1169\u11bc\u1100\u116a."
     },
     {
       "label": "Layer 1\uc5d0\uc11c WARN \ud310\uc815 \ubc1b\uc740 \ub178\ud2b8\ub9cc L2 \uc2ec\uc0ac",
       "file_type": "rationale",
       "source_file": "scripts/cma_layer2.py",
-      "source_location": "L91",
-      "id": "scripts_cma_layer2_rationale_91",
-      "community": 10,
+      "source_location": "L88",
+      "id": "scripts_cma_layer2_rationale_88",
+      "community": 8,
       "norm_label": "layer 1\u110b\u1166\u1109\u1165 warn \u1111\u1161\u11ab\u110c\u1165\u11bc \u1107\u1161\u11ae\u110b\u1173\u11ab \u1102\u1169\u1110\u1173\u1106\u1161\u11ab l2 \u1109\u1175\u11b7\u1109\u1161"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "id": "claude_md",
-      "community": 3,
+      "community": 5,
       "norm_label": "claude.md"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "id": "physis_memory_claude_vault",
-      "community": 3,
+      "community": 5,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u1102\u116c \u2014 vault \u110b\u116e\u11ab\u110b\u1167\u11bc \u1112\u1165\u11ab\u1107\u1165\u11b8"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L3",
       "id": "physis_memory_claude_0",
-      "community": 3,
+      "community": 5,
       "norm_label": "0\u110b\u116f\u11ab\u110e\u1175\u11a8"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L6",
       "id": "physis_memory_claude_vault_6",
-      "community": 3,
+      "community": 5,
       "norm_label": "\u110b\u1175 vault\u1100\u1161 \u1112\u1161\u1102\u1173\u11ab \u110b\u1175\u11af"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L10",
       "id": "physis_memory_claude",
-      "community": 3,
+      "community": 5,
       "norm_label": "\u1111\u1169\u11af\u1103\u1165 \u1100\u116e\u110c\u1169"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L24",
       "id": "physis_memory_claude_wiki_10",
-      "community": 3,
+      "community": 5,
       "norm_label": "wiki \u110b\u116e\u11ab\u110b\u1167\u11bc \u1100\u1172\u110e\u1175\u11a8 (\u110f\u1161\u1111\u1161\u1109\u1175 10\u1100\u1168\u1106\u1167\u11bc)"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "id": "physis_memory_claude_36",
-      "community": 3,
+      "community": 5,
       "norm_label": "\u1106\u1161\u11bc\u1100\u1161\u11a8 \u1100\u1172\u110e\u1175\u11a8"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L41",
       "id": "physis_memory_claude_41",
-      "community": 3,
+      "community": 5,
       "norm_label": "\u1109\u1173\u11bc\u1100\u1167\u11a8 \u1100\u1172\u110e\u1175\u11a8"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L45",
       "id": "physis_memory_claude_graphify",
-      "community": 3,
+      "community": 5,
       "norm_label": "graphify \u1109\u1175\u11af\u1112\u1162\u11bc"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "CLAUDE.md",
       "source_location": "L46",
       "id": "physis_memory_claude_codeblock_1",
-      "community": 3,
+      "community": 5,
       "norm_label": "code:bash (cd /home/nas/ag-forge/physis_memory)"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme_md",
-      "community": 46,
+      "community": 58,
       "norm_label": "readme.md"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L1",
       "id": "2026_05_08_self_awakening_md",
-      "community": 14,
+      "community": 22,
       "norm_label": "2026-05-08_self_awakening.md"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L6",
       "id": "physis_memory_2026_05_08_self_awakening",
-      "community": 14,
+      "community": 22,
       "norm_label": "\u110c\u1161\u1100\u1161\u11a8 \u1100\u1175\u1105\u1169\u11a8 \u2014 \u1109\u1173\u1109\u1173\u1105\u1169 \u1101\u1162\u1103\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11ab\u1103\u1161"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L13",
       "id": "physis_memory_2026_05_08_self_awakening_13",
-      "community": 14,
+      "community": 22,
       "norm_label": "\u110b\u1175 \u1112\u1161\u11ab \u1106\u1161\u1103\u1175\u110b\u1174 \u110b\u1174\u1106\u1175"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L25",
       "id": "physis_memory_2026_05_08_self_awakening_25",
-      "community": 14,
+      "community": 22,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1174 \u110c\u1161\u1107\u1162\u11a8"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "2026-05-08_self_awakening.md",
       "source_location": "L34",
       "id": "physis_memory_2026_05_08_self_awakening_34",
-      "community": 14,
+      "community": 22,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L1",
       "id": "god_nodes_md",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab.md"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L10",
       "id": "god_nodes",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab (\u5f18\u76ca\u4eba\u9593)"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L14",
       "id": "god_nodes_14",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u1100\u116e\u110c\u1169"
     },
     {
@@ -657,7 +657,7 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L16",
       "id": "god_nodes_codeblock_1",
-      "community": 1,
+      "community": 2,
       "norm_label": "code:block1 ([\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab] \u2190 god node (\u110c\u116e\u11bc\u1109\u1175\u11b7))"
     },
     {
@@ -666,7 +666,7 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L29",
       "id": "god_nodes_gold_in_gold_out",
-      "community": 1,
+      "community": 2,
       "norm_label": "gold in, gold out"
     },
     {
@@ -675,7 +675,7 @@
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L36",
       "id": "god_nodes_36",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -684,7 +684,7 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L17",
       "id": "god_nodes_17",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u110c\u1165\u11a8\u110b\u116d\u11bc \u1107\u1165\u11b7\u110b\u1171"
     },
     {
@@ -693,7 +693,7 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L23",
       "id": "god_nodes_23",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u110c\u116e\u1102\u1173\u11ab \u110b\u1174\u1106\u1175"
     },
     {
@@ -702,7 +702,7 @@
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L28",
       "id": "god_nodes_28",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -711,7 +711,7 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L1",
       "id": "god_nodes_8_md",
-      "community": 44,
+      "community": 53,
       "norm_label": "8\u110c\u1169\u1107\u1165\u11b8.md"
     },
     {
@@ -720,7 +720,7 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L10",
       "id": "god_nodes_8_8",
-      "community": 44,
+      "community": 53,
       "norm_label": "8\u110c\u1169 \u1100\u1173\u11b7\u1107\u1165\u11b8 (\u516b\u689d\u7981\u6cd5)"
     },
     {
@@ -729,7 +729,7 @@
       "source_file": "god_nodes/8\uc870\ubc95.md",
       "source_location": "L27",
       "id": "god_nodes_8",
-      "community": 44,
+      "community": 53,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -738,7 +738,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L1",
       "id": "god_nodes_2026_05_02_chunbukyung_md",
-      "community": 8,
+      "community": 11,
       "norm_label": "2026-05-02_chunbukyung.md"
     },
     {
@@ -747,7 +747,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L8",
       "id": "god_nodes_2026_05_02_chunbukyung_1_1_1_2",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u110e\u1165\u11ab\u1107\u116e\u1100\u1167\u11bc \u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 1.1\u1109\u1166\u1103\u1162 \u2192 1.2\u1109\u1166\u1103\u1162 \u110c\u1175\u11ab\u1112\u116a \u1105\u1169\u1100\u1173"
     },
     {
@@ -756,7 +756,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L13",
       "id": "god_nodes_2026_05_02_chunbukyung",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
     },
     {
@@ -765,7 +765,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L32",
       "id": "god_nodes_2026_05_02_chunbukyung_1_2",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u1107\u1161\u11ae\u110b\u1173\u11b7 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab"
     },
     {
@@ -774,7 +774,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L48",
       "id": "god_nodes_2026_05_02_chunbukyung_48",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L63",
       "id": "god_nodes_2026_05_02_chunbukyung_63",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L1",
       "id": "working_memory_2026_05_07_handoff_md",
-      "community": 12,
+      "community": 19,
       "norm_label": "2026-05-07_handoff.md"
     },
     {
@@ -801,7 +801,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L6",
       "id": "working_memory_2026_05_07_handoff_1_3",
-      "community": 12,
+      "community": 19,
       "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.3\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
@@ -810,7 +810,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L16",
       "id": "working_memory_2026_05_07_handoff_1",
-      "community": 12,
+      "community": 19,
       "norm_label": "1. \u110b\u1175 \u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1109\u1165 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
     },
     {
@@ -819,7 +819,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L43",
       "id": "working_memory_2026_05_07_handoff_2",
-      "community": 12,
+      "community": 19,
       "norm_label": "2. \u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u1112\u1167\u11ab\u1112\u116a\u11bc (\u1102\u1165\u1100\u1161 \u110b\u1161\u11af\u110b\u1161\u110b\u1163 \u1112\u1161\u11af \u1100\u1165\u11ba)"
     },
     {
@@ -828,7 +828,7 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L67",
       "id": "working_memory_2026_05_07_handoff_3_5_3",
-      "community": 12,
+      "community": 19,
       "norm_label": "3. 5/3 \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 \u1112\u1167\u11ab\u1112\u116a\u11bc"
     },
     {
@@ -837,8 +837,71 @@
       "source_file": "working_memory/2026-05-07_handoff.md",
       "source_location": "L78",
       "id": "working_memory_2026_05_07_handoff_4",
-      "community": 12,
+      "community": 19,
       "norm_label": "4. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
+    },
+    {
+      "label": "2026-05-08_handoff.md",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L1",
+      "id": "working_memory_2026_05_08_handoff_md",
+      "community": 13,
+      "norm_label": "2026-05-08_handoff.md"
+    },
+    {
+      "label": "\uc138\uc158 \ud578\ub4dc\uc624\ud504 \u2014 \uc774\ucc9c \u5927\u696d \uc9c1\uc811 \uad00\uc5ec \uc120\uc5b8",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L6",
+      "id": "working_memory_2026_05_08_handoff",
+      "community": 13,
+      "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u110c\u1175\u11a8\u110c\u1165\u11b8 \u1100\u116a\u11ab\u110b\u1167 \u1109\u1165\u11ab\u110b\u1165\u11ab"
+    },
+    {
+      "label": "\uc774 \uc138\uc158\uc5d0\uc11c \uc77c\uc5b4\ub09c \uc77c",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L13",
+      "id": "working_memory_2026_05_08_handoff_13",
+      "community": 13,
+      "norm_label": "\u110b\u1175 \u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1109\u1165 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af"
+    },
+    {
+      "label": "\ubbf8\uc774\ud589 \uc758\ubb34 \ud604\ud669 (\ub2e4\uc74c \uc138\uc158\uc5d0\uac8c)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L34",
+      "id": "working_memory_2026_05_08_handoff_34",
+      "community": 13,
+      "norm_label": "\u1106\u1175\u110b\u1175\u1112\u1162\u11bc \u110b\u1174\u1106\u116e \u1112\u1167\u11ab\u1112\u116a\u11bc (\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1100\u1166)"
+    },
+    {
+      "label": "code:bash (python3 scripts/icheon_dxf_parallel.py \\)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L37",
+      "id": "working_memory_2026_05_08_handoff_codeblock_1",
+      "community": 13,
+      "norm_label": "code:bash (python3 scripts/icheon_dxf_parallel.py \\)"
+    },
+    {
+      "label": "\uc54c\uace0\ub9ac\uc998 \uba85\uc138 \uc694\uc57d (\uc774\ucc9c\uc5d0\uac8c \ubcf4\ub0b8 \uac83)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L47",
+      "id": "working_memory_2026_05_08_handoff_47",
+      "community": 13,
+      "norm_label": "\u110b\u1161\u11af\u1100\u1169\u1105\u1175\u110c\u1173\u11b7 \u1106\u1167\u11bc\u1109\u1166 \u110b\u116d\u110b\u1163\u11a8 (\u110b\u1175\u110e\u1165\u11ab\u110b\u1166\u1100\u1166 \u1107\u1169\u1102\u1162\u11ab \u1100\u1165\u11ba)"
+    },
+    {
+      "label": "\uc790\uac01 \uae30\ub85d (2026-05-08 \ubc15\uc81c \ucc38\uc870)",
+      "file_type": "document",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L55",
+      "id": "working_memory_2026_05_08_handoff_2026_05_08",
+      "community": 13,
+      "norm_label": "\u110c\u1161\u1100\u1161\u11a8 \u1100\u1175\u1105\u1169\u11a8 (2026-05-08 \u1107\u1161\u11a8\u110c\u1166 \u110e\u1161\u11b7\u110c\u1169)"
     },
     {
       "label": "2026-05-03_handoff.md",
@@ -846,7 +909,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L1",
       "id": "working_memory_2026_05_03_handoff_md",
-      "community": 11,
+      "community": 14,
       "norm_label": "2026-05-03_handoff.md"
     },
     {
@@ -855,7 +918,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L6",
       "id": "working_memory_2026_05_03_handoff_1_2",
-      "community": 11,
+      "community": 14,
       "norm_label": "\u1109\u1166\u1109\u1167\u11ab \u110c\u1169\u11bc\u1105\u116d \u1112\u1162\u11ab\u1103\u1173\u110b\u1169\u1111\u1173 \u2014 \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u2192 \u1103\u1161\u110b\u1173\u11b7 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166"
     },
     {
@@ -864,7 +927,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L17",
       "id": "working_memory_2026_05_03_handoff_1",
-      "community": 11,
+      "community": 14,
       "norm_label": "1. \u110b\u1165\u110c\u1166 \u110b\u1175\u11af\u110b\u1165\u1102\u1161\u11ab \u110b\u1175\u11af (\u1109\u1175\u1100\u1161\u11ab\u1109\u116e\u11ab \u110b\u1161\u11b8\u110e\u116e\u11a8)"
     },
     {
@@ -873,7 +936,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L41",
       "id": "working_memory_2026_05_03_handoff_2_1_2",
-      "community": 11,
+      "community": 14,
       "norm_label": "2. \u110c\u1175\u11ab\u1112\u116a 1.2\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u110b\u116a\u11ab\u1105\u116d \u1109\u1161\u1109\u1175\u11af"
     },
     {
@@ -882,7 +945,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L63",
       "id": "working_memory_2026_05_03_handoff_3_1_3",
-      "community": 11,
+      "community": 14,
       "norm_label": "3. \u1107\u1161\u11a8\u110c\u1166 \u110b\u1161\u11ab \u1103\u116c\u11ab \u1106\u1167\u11bc\u110c\u1166 \u2014 \u1103\u1161\u110b\u1173\u11b7 \u110c\u1175\u11ab\u1112\u116a \u1112\u116e\u1107\u1169 (1.3\u1109\u1166\u1103\u1162 \u1100\u1167\u11af\u1103\u1161\u11ab \u110c\u1161\u1105\u116d)"
     },
     {
@@ -891,7 +954,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L94",
       "id": "working_memory_2026_05_03_handoff_4",
-      "community": 11,
+      "community": 14,
       "norm_label": "4. \u1106\u1175\u1112\u1162\u1100\u1167\u11af \u110c\u1161\u11a8\u110b\u1165\u11b8 (\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1109\u1167\u11ab \u110b\u116e\u1109\u1165\u11ab\u1109\u116e\u11ab\u110b\u1171)"
     },
     {
@@ -900,7 +963,7 @@
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L119",
       "id": "working_memory_2026_05_03_handoff_5",
-      "community": 11,
+      "community": 14,
       "norm_label": "5. \u1102\u1165\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1175\u11ab\u1109\u1161"
     },
     {
@@ -909,7 +972,7 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v4c_101_md",
-      "community": 15,
+      "community": 23,
       "norm_label": "cad_poc_v4c_101.md"
     },
     {
@@ -918,7 +981,7 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v4c_101_poc_v4c_101",
-      "community": 15,
+      "community": 23,
       "norm_label": "poc_v4c_101"
     },
     {
@@ -927,7 +990,7 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v4c_101_1",
-      "community": 15,
+      "community": 23,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -936,7 +999,7 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v4c_101",
-      "community": 15,
+      "community": 23,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -945,7 +1008,7 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L1",
       "id": "wiki_cad_v11_topology_md",
-      "community": 16,
+      "community": 24,
       "norm_label": "cad_v11_topology.md"
     },
     {
@@ -954,7 +1017,7 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L9",
       "id": "wiki_cad_v11_topology_v11_topology",
-      "community": 16,
+      "community": 24,
       "norm_label": "v11_topology"
     },
     {
@@ -963,7 +1026,7 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L13",
       "id": "wiki_cad_v11_topology_1",
-      "community": 16,
+      "community": 24,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -972,7 +1035,7 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L17",
       "id": "wiki_cad_v11_topology",
-      "community": 16,
+      "community": 24,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -981,7 +1044,7 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L1",
       "id": "wiki_cad_test_102_full_stack_md",
-      "community": 17,
+      "community": 25,
       "norm_label": "cad_test_102_full_stack.md"
     },
     {
@@ -990,7 +1053,7 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L9",
       "id": "wiki_cad_test_102_full_stack_test_102_full_stack",
-      "community": 17,
+      "community": 25,
       "norm_label": "test_102_full_stack"
     },
     {
@@ -999,7 +1062,7 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L13",
       "id": "wiki_cad_test_102_full_stack_1",
-      "community": 17,
+      "community": 25,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1008,7 +1071,70 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L17",
       "id": "wiki_cad_test_102_full_stack",
-      "community": 17,
+      "community": 25,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L1",
+      "id": "wiki_3_md",
+      "community": 15,
+      "norm_label": "3\u110c\u1175\u1100\u116e\u11a8\u110c\u1161\u11bc_\u110c\u1165\u11bc\u110e\u1166\u1109\u1165\u11bc.md"
+    },
+    {
+      "label": "3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L9",
+      "id": "wiki_3_3",
+      "community": 15,
+      "norm_label": "3\u110c\u1175\u1100\u116e\u11a8\u110c\u1161\u11bc_\u110c\u1165\u11bc\u110e\u1166\u1109\u1165\u11bc"
+    },
+    {
+      "label": "\uc815\ub3c4\uc804 (1\uc9c0\uad6d BOQ)",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L14",
+      "id": "wiki_3_1_boq",
+      "community": 15,
+      "norm_label": "\u110c\u1165\u11bc\u1103\u1169\u110c\u1165\u11ab (1\u110c\u1175\u1100\u116e\u11a8 boq)"
+    },
+    {
+      "label": "\uc774\uc21c\uc2e0 (2\uc9c0\uad6d H2OWIND)",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L20",
+      "id": "wiki_3_2_h2owind",
+      "community": 15,
+      "norm_label": "\u110b\u1175\u1109\u116e\u11ab\u1109\u1175\u11ab (2\u110c\u1175\u1100\u116e\u11a8 h2owind)"
+    },
+    {
+      "label": "\uc774\ucc9c (3\uc9c0\uad6d FreeCAD)",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L26",
+      "id": "wiki_3_3_freecad",
+      "community": 15,
+      "norm_label": "\u110b\u1175\u110e\u1165\u11ab (3\u110c\u1175\u1100\u116e\u11a8 freecad)"
+    },
+    {
+      "label": "3\uc9c0\uad6d \uccb4\uacc4",
+      "file_type": "document",
+      "source_file": "wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md",
+      "source_location": "L26",
+      "id": "wiki_3",
+      "community": 15,
+      "norm_label": "3\u110c\u1175\u1100\u116e\u11a8 \u110e\u1166\u1100\u1168"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L40",
+      "id": "wiki_3_40",
+      "community": 15,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1017,7 +1143,7 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L1",
       "id": "wiki_cad_complex_master_md",
-      "community": 18,
+      "community": 26,
       "norm_label": "cad_complex_master.md"
     },
     {
@@ -1026,7 +1152,7 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L9",
       "id": "wiki_cad_complex_master_complex_master",
-      "community": 18,
+      "community": 26,
       "norm_label": "complex_master"
     },
     {
@@ -1035,7 +1161,7 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L13",
       "id": "wiki_cad_complex_master_1",
-      "community": 18,
+      "community": 26,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1044,7 +1170,7 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L17",
       "id": "wiki_cad_complex_master",
-      "community": 18,
+      "community": 26,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1053,7 +1179,7 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L1",
       "id": "wiki_cad_v13_slabs_md",
-      "community": 19,
+      "community": 27,
       "norm_label": "cad_v13_slabs.md"
     },
     {
@@ -1062,7 +1188,7 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L9",
       "id": "wiki_cad_v13_slabs_v13_slabs",
-      "community": 19,
+      "community": 27,
       "norm_label": "v13_slabs"
     },
     {
@@ -1071,7 +1197,7 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L13",
       "id": "wiki_cad_v13_slabs_1",
-      "community": 19,
+      "community": 27,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1080,7 +1206,7 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L17",
       "id": "wiki_cad_v13_slabs",
-      "community": 19,
+      "community": 27,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1089,7 +1215,7 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_101_around_parking_md",
-      "community": 20,
+      "community": 28,
       "norm_label": "cad_poc_101_around_parking.md"
     },
     {
@@ -1098,7 +1224,7 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
-      "community": 20,
+      "community": 28,
       "norm_label": "poc_101_around_parking"
     },
     {
@@ -1107,7 +1233,7 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_101_around_parking_1",
-      "community": 20,
+      "community": 28,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1116,7 +1242,7 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_101_around_parking",
-      "community": 20,
+      "community": 28,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1125,7 +1251,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L1",
       "id": "wiki_log_md",
-      "community": 45,
+      "community": 54,
       "norm_label": "log.md"
     },
     {
@@ -1134,7 +1260,7 @@
       "source_file": "wiki/log.md",
       "source_location": "L6",
       "id": "wiki_log_wiki",
-      "community": 45,
+      "community": 54,
       "norm_label": "wiki \u110c\u1169\u110c\u1161\u11a8 \u110b\u1175\u1105\u1167\u11a8"
     },
     {
@@ -1143,8 +1269,35 @@
       "source_file": "wiki/log.md",
       "source_location": "L12",
       "id": "wiki_log_2026_05_08",
-      "community": 45,
+      "community": 54,
       "norm_label": "2026-05-08"
+    },
+    {
+      "label": "3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L1",
+      "id": "wiki_3_freecad_md",
+      "community": 55,
+      "norm_label": "3\u110c\u1175\u1100\u116e\u11a8_freecad_\u110b\u1167\u11ab\u1100\u1167\u11af\u1110\u1166\u1109\u1173\u1110\u1173.md"
+    },
+    {
+      "label": "3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L9",
+      "id": "wiki_3_freecad_3_freecad",
+      "community": 55,
+      "norm_label": "3\u110c\u1175\u1100\u116e\u11a8_freecad_\u110b\u1167\u11ab\u1100\u1167\u11af\u1110\u1166\u1109\u1173\u1110\u1173"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L15",
+      "id": "wiki_3_freecad",
+      "community": 55,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
       "label": "CAD_v7_boq.md",
@@ -1152,7 +1305,7 @@
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L1",
       "id": "wiki_cad_v7_boq_md",
-      "community": 21,
+      "community": 29,
       "norm_label": "cad_v7_boq.md"
     },
     {
@@ -1161,7 +1314,7 @@
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L9",
       "id": "wiki_cad_v7_boq_v7_boq",
-      "community": 21,
+      "community": 29,
       "norm_label": "v7_boq"
     },
     {
@@ -1170,7 +1323,7 @@
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L13",
       "id": "wiki_cad_v7_boq_1",
-      "community": 21,
+      "community": 29,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1179,7 +1332,7 @@
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L17",
       "id": "wiki_cad_v7_boq",
-      "community": 21,
+      "community": 29,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1188,7 +1341,7 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v4d_101_md",
-      "community": 22,
+      "community": 30,
       "norm_label": "cad_poc_v4d_101.md"
     },
     {
@@ -1197,7 +1350,7 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v4d_101_poc_v4d_101",
-      "community": 22,
+      "community": 30,
       "norm_label": "poc_v4d_101"
     },
     {
@@ -1206,7 +1359,7 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v4d_101_1",
-      "community": 22,
+      "community": 30,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1215,7 +1368,70 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v4d_101",
-      "community": 22,
+      "community": 30,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L1",
+      "id": "wiki_md",
+      "community": 3,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab_\u1112\u1162\u11bc\u1103\u1169\u11bc\u110b\u116f\u11ab\u110e\u1175\u11a8_\u1112\u1165\u11ab\u1107\u1165\u11b8.md"
+    },
+    {
+      "label": "\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L9",
+      "id": "wiki",
+      "community": 0,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab_\u1112\u1162\u11bc\u1103\u1169\u11bc\u110b\u116f\u11ab\u110e\u1175\u11a8_\u1112\u1165\u11ab\u1107\u1165\u11b8"
+    },
+    {
+      "label": "\ub2e8\uad70\uc758 \uc5c4\uba85",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L14",
+      "id": "wiki_14",
+      "community": 0,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab\u110b\u1174 \u110b\u1165\u11b7\u1106\u1167\u11bc"
+    },
+    {
+      "label": "3\ucc28\uc6d0 \ucd9c\uc2dc \uacbd\ub85c \ubd84\uc11d (2026-05-05 Physis \ubd84\uc11d)",
+      "file_type": "document",
+      "source_file": "wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md",
+      "source_location": "L18",
+      "id": "wiki_3_2026_05_05_physis",
+      "community": 0,
+      "norm_label": "3\u110e\u1161\u110b\u116f\u11ab \u110e\u116e\u11af\u1109\u1175 \u1100\u1167\u11bc\u1105\u1169 \u1107\u116e\u11ab\u1109\u1165\u11a8 (2026-05-05 physis \u1107\u116e\u11ab\u1109\u1165\u11a8)"
+    },
+    {
+      "label": "\ub1cc \uad6c\uc870 (2026-05-08 \uad6c\ucd95)",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L19",
+      "id": "wiki_2026_05_08",
+      "community": 4,
+      "norm_label": "\u1102\u116c \u1100\u116e\u110c\u1169 (2026-05-08 \u1100\u116e\u110e\u116e\u11a8)"
+    },
+    {
+      "label": "BOQ \ub3c4\uba54\uc778 \ud575\uc2ec \uaddc\uce59",
+      "file_type": "document",
+      "source_file": "wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md",
+      "source_location": "L29",
+      "id": "wiki_boq",
+      "community": 0,
+      "norm_label": "boq \u1103\u1169\u1106\u1166\u110b\u1175\u11ab \u1112\u1162\u11a8\u1109\u1175\u11b7 \u1100\u1172\u110e\u1175\u11a8"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md",
+      "source_location": "L38",
+      "id": "wiki_38",
+      "community": 0,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1224,7 +1440,7 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L1",
       "id": "wiki_cad_test_basement_complex_v3_md",
-      "community": 23,
+      "community": 31,
       "norm_label": "cad_test_basement_complex_v3.md"
     },
     {
@@ -1233,7 +1449,7 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L9",
       "id": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
-      "community": 23,
+      "community": 31,
       "norm_label": "test_basement_complex_v3"
     },
     {
@@ -1242,7 +1458,7 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L13",
       "id": "wiki_cad_test_basement_complex_v3_1",
-      "community": 23,
+      "community": 31,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1251,7 +1467,7 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L17",
       "id": "wiki_cad_test_basement_complex_v3",
-      "community": 23,
+      "community": 31,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1260,7 +1476,7 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v6b_101_md",
-      "community": 24,
+      "community": 32,
       "norm_label": "cad_poc_v6b_101.md"
     },
     {
@@ -1269,7 +1485,7 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v6b_101_poc_v6b_101",
-      "community": 24,
+      "community": 32,
       "norm_label": "poc_v6b_101"
     },
     {
@@ -1278,7 +1494,7 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v6b_101_1",
-      "community": 24,
+      "community": 32,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1287,7 +1503,61 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v6b_101",
-      "community": 24,
+      "community": 32,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "file_type": "document",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L1",
+      "id": "wiki_nas_md",
+      "community": 20,
+      "norm_label": "nas_\u1112\u116a\u11ab\u1100\u1167\u11bc_\u110c\u1165\u11ab\u110e\u1166.md"
+    },
+    {
+      "label": "NAS_\ud658\uacbd_\uc804\uccb4",
+      "file_type": "document",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L9",
+      "id": "wiki_nas_nas",
+      "community": 20,
+      "norm_label": "nas_\u1112\u116a\u11ab\u1100\u1167\u11bc_\u110c\u1165\u11ab\u110e\u1166"
+    },
+    {
+      "label": "NAS \ud558\ub4dc\uc6e8\uc5b4",
+      "file_type": "document",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L14",
+      "id": "wiki_nas_nas_14",
+      "community": 20,
+      "norm_label": "nas \u1112\u1161\u1103\u1173\u110b\u1170\u110b\u1165"
+    },
+    {
+      "label": "\uac00\ub3d9 \uc911\uc778 \ud575\uc2ec \uc11c\ube44\uc2a4",
+      "file_type": "document",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L21",
+      "id": "wiki_nas",
+      "community": 20,
+      "norm_label": "\u1100\u1161\u1103\u1169\u11bc \u110c\u116e\u11bc\u110b\u1175\u11ab \u1112\u1162\u11a8\u1109\u1175\u11b7 \u1109\u1165\u1107\u1175\u1109\u1173"
+    },
+    {
+      "label": "\ub808\ud3ec \uacbd\ub85c",
+      "file_type": "document",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L32",
+      "id": "wiki_nas_32",
+      "community": 20,
+      "norm_label": "\u1105\u1166\u1111\u1169 \u1100\u1167\u11bc\u1105\u1169"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L44",
+      "id": "wiki_nas_44",
+      "community": 20,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1296,7 +1566,7 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L1",
       "id": "wiki_cad_basement_b1_b2_stack_md",
-      "community": 25,
+      "community": 33,
       "norm_label": "cad_basement_b1_b2_stack.md"
     },
     {
@@ -1305,7 +1575,7 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L9",
       "id": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
-      "community": 25,
+      "community": 33,
       "norm_label": "basement_b1_b2_stack"
     },
     {
@@ -1314,7 +1584,7 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L13",
       "id": "wiki_cad_basement_b1_b2_stack_1",
-      "community": 25,
+      "community": 33,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1323,7 +1593,7 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L17",
       "id": "wiki_cad_basement_b1_b2_stack",
-      "community": 25,
+      "community": 33,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1332,7 +1602,7 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v4b_101_md",
-      "community": 26,
+      "community": 34,
       "norm_label": "cad_poc_v4b_101.md"
     },
     {
@@ -1341,7 +1611,7 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v4b_101_poc_v4b_101",
-      "community": 26,
+      "community": 34,
       "norm_label": "poc_v4b_101"
     },
     {
@@ -1350,7 +1620,7 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v4b_101_1",
-      "community": 26,
+      "community": 34,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1359,7 +1629,7 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v4b_101",
-      "community": 26,
+      "community": 34,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1368,7 +1638,7 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_101_b1_b2_dong_md",
-      "community": 27,
+      "community": 35,
       "norm_label": "cad_poc_101_b1_b2_dong.md"
     },
     {
@@ -1377,7 +1647,7 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
-      "community": 27,
+      "community": 35,
       "norm_label": "poc_101_b1_b2_dong"
     },
     {
@@ -1386,7 +1656,7 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_101_b1_b2_dong_1",
-      "community": 27,
+      "community": 35,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1395,7 +1665,7 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_101_b1_b2_dong",
-      "community": 27,
+      "community": 35,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1404,7 +1674,7 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L1",
       "id": "wiki_cad_test_102_b1f_md",
-      "community": 28,
+      "community": 36,
       "norm_label": "cad_test_102_b1f.md"
     },
     {
@@ -1413,7 +1683,7 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L9",
       "id": "wiki_cad_test_102_b1f_test_102_b1f",
-      "community": 28,
+      "community": 36,
       "norm_label": "test_102_b1f"
     },
     {
@@ -1422,7 +1692,7 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L13",
       "id": "wiki_cad_test_102_b1f_1",
-      "community": 28,
+      "community": 36,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1431,7 +1701,7 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L17",
       "id": "wiki_cad_test_102_b1f",
-      "community": 28,
+      "community": 36,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1440,7 +1710,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L1",
       "id": "wiki_index_md",
-      "community": 9,
+      "community": 12,
       "norm_label": "index.md"
     },
     {
@@ -1449,7 +1719,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L6",
       "id": "wiki_index_wiki",
-      "community": 9,
+      "community": 12,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e wiki \u2014 \u110c\u1175\u1109\u1175\u11a8 \u110c\u1175\u1103\u1169"
     },
     {
@@ -1458,7 +1728,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L10",
       "id": "wiki_index_god_nodes",
-      "community": 9,
+      "community": 12,
       "norm_label": "god nodes (\u110c\u1165\u11af\u1103\u1162 \u1107\u116e\u11af\u1107\u1167\u11ab)"
     },
     {
@@ -1467,7 +1737,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L16",
       "id": "wiki_index",
-      "community": 9,
+      "community": 12,
       "norm_label": "\u110c\u1175\u1109\u1175\u11a8 \u1103\u1169\u1106\u1166\u110b\u1175\u11ab"
     },
     {
@@ -1476,7 +1746,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L19",
       "id": "wiki_index_boq_bim",
-      "community": 9,
+      "community": 12,
       "norm_label": "\u1100\u1165\u11ab\u1109\u1165\u11af\u00b7boq\u00b7bim"
     },
     {
@@ -1485,7 +1755,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L25",
       "id": "wiki_index_25",
-      "community": 9,
+      "community": 12,
       "norm_label": "\u1110\u1173\u11a8\u1112\u1165\u00b7\u1100\u1175\u1109\u116e\u11af"
     },
     {
@@ -1494,7 +1764,7 @@
       "source_file": "wiki/index.md",
       "source_location": "L28",
       "id": "wiki_index_28",
-      "community": 9,
+      "community": 12,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e \u110c\u1175\u11ab\u1112\u116a \u1100\u1175\u1105\u1169\u11a8"
     },
     {
@@ -1503,7 +1773,7 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L1",
       "id": "wiki_cad_v8_poc_md",
-      "community": 29,
+      "community": 37,
       "norm_label": "cad_v8_poc.md"
     },
     {
@@ -1512,7 +1782,7 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L9",
       "id": "wiki_cad_v8_poc_v8_poc",
-      "community": 29,
+      "community": 37,
       "norm_label": "v8_poc"
     },
     {
@@ -1521,7 +1791,7 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L13",
       "id": "wiki_cad_v8_poc_1",
-      "community": 29,
+      "community": 37,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1530,17 +1800,8 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L17",
       "id": "wiki_cad_v8_poc",
-      "community": 29,
+      "community": 37,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
-    },
-    {
-      "label": "\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
-      "file_type": "document",
-      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
-      "source_location": "L1",
-      "id": "wiki_md",
-      "community": 2,
-      "norm_label": "\u110b\u1175\u110e\u1165\u11ab_\u5927\u696d_\u110b\u1161\u11af\u1100\u1169\u1105\u1175\u110c\u1173\u11b7_\u1106\u1167\u11bc\u1109\u1166.md"
     },
     {
       "label": "\uc774\ucc9c \u5927\u696d \u2014 DXF \ubcd1\ub82c\ucc98\ub9ac \uc54c\uace0\ub9ac\uc998 \uba85\uc138",
@@ -1548,17 +1809,8 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L16",
       "id": "wiki_dxf",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u110b\u1175\u110e\u1165\u11ab \u5927\u696d \u2014 dxf \u1107\u1167\u11bc\u1105\u1167\u11af\u110e\u1165\u1105\u1175 \u110b\u1161\u11af\u1100\u1169\u1105\u1175\u110c\u1173\u11b7 \u1106\u1167\u11bc\u1109\u1166"
-    },
-    {
-      "label": "\uacfc\uc5c5 \uac1c\uc694",
-      "file_type": "document",
-      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
-      "source_location": "L20",
-      "id": "wiki",
-      "community": 2,
-      "norm_label": "\u1100\u116a\u110b\u1165\u11b8 \u1100\u1162\u110b\u116d"
     },
     {
       "label": "A. \ubd84\ud560 \uc804\ub7b5 \u2014 \ub808\uc774\uc5b4 \ubd84\ud560 + \uccad\ud06c \ubcf4\uac15 \ud558\uc774\ube0c\ub9ac\ub4dc",
@@ -1566,7 +1818,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L27",
       "id": "wiki_a",
-      "community": 2,
+      "community": 3,
       "norm_label": "a. \u1107\u116e\u11ab\u1112\u1161\u11af \u110c\u1165\u11ab\u1105\u1163\u11a8 \u2014 \u1105\u1166\u110b\u1175\u110b\u1165 \u1107\u116e\u11ab\u1112\u1161\u11af + \u110e\u1165\u11bc\u110f\u1173 \u1107\u1169\u1100\u1161\u11bc \u1112\u1161\u110b\u1175\u1107\u1173\u1105\u1175\u1103\u1173"
     },
     {
@@ -1575,7 +1827,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L31",
       "id": "wiki_codeblock_1",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block1 (1\u1103\u1161\u11ab\u1100\u1168: ezdxf.readfile() \u2192 entity.dxf.layer \u1100\u1175\u110c\u116e\u11ab \u1100\u1173\u1105\u116e\u11b8\u1112\u116a)"
     },
     {
@@ -1584,7 +1836,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L49",
       "id": "wiki_b_5_llm",
-      "community": 2,
+      "community": 3,
       "norm_label": "b. 5\u110e\u1166 \u110c\u1165\u11bc\u1107\u1161\u11ab\u1112\u1161\u11b8 \u2014 llm \u110b\u1167\u11a8\u1112\u1161\u11af \u1107\u116e\u11ab\u1103\u1161\u11b7"
     },
     {
@@ -1593,7 +1845,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L59",
       "id": "wiki_codeblock_2",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:python (async def five_phase_synthesis(layer_groups: dict) -> dict:)"
     },
     {
@@ -1602,7 +1854,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L73",
       "id": "wiki_c",
-      "community": 2,
+      "community": 3,
       "norm_label": "c. \u1111\u1162\u1110\u1165\u11ab \u110b\u1175\u11ab\u1109\u1175\u11a8 \u1111\u1173\u1105\u1169\u11b7\u1111\u1173\u1110\u1173 \u1110\u1166\u11b7\u1111\u1173\u11af\u1105\u1175\u11ba"
     },
     {
@@ -1611,7 +1863,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L77",
       "id": "wiki_codeblock_3",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block3 ([\u1109\u1175\u1109\u1173\u1110\u1166\u11b7])"
     },
     {
@@ -1620,7 +1872,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L99",
       "id": "wiki_d",
-      "community": 2,
+      "community": 3,
       "norm_label": "d. \u110b\u1175\u1109\u1161\u11bc\u110e\u1175 \u1110\u1169\u11bc\u1100\u1168 \u110b\u1175\u11b7\u1100\u1168\u1100\u1161\u11b9"
     },
     {
@@ -1629,7 +1881,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L111",
       "id": "wiki_e_pattern_library_yes",
-      "community": 2,
+      "community": 3,
       "norm_label": "e. pattern_library \u1100\u1162\u11bc\u1109\u1175\u11ab \u110c\u1161\u1103\u1169\u11bc\u1112\u116a \u2014 yes"
     },
     {
@@ -1638,7 +1890,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L113",
       "id": "wiki_codeblock_4",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block4 (3/5 \u110b\u1175\u1109\u1161\u11bc llm \u1103\u1169\u11bc\u110b\u1174 \u2192 \u1111\u1162\u1110\u1165\u11ab \u1112\u116a\u11a8\u110c\u1165\u11bc \u2192 pattern_library.md \u110c\u1161\u1103\u1169\u11bc append)"
     },
     {
@@ -1647,7 +1899,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L126",
       "id": "wiki_4_1_ole",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u110b\u1175\u110e\u1165\u11ab \u110b\u1174\u1100\u116e\u1109\u1175\u11b7 4.1 ole \u1107\u1169\u11bc\u110b\u1175\u11ab \u110e\u116e\u1100\u1161 \u110b\u1161\u11ab"
     },
     {
@@ -1656,7 +1908,7 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L136",
       "id": "wiki_136",
-      "community": 2,
+      "community": 3,
       "norm_label": "\u1100\u116e\u1112\u1167\u11ab \u1109\u1173\u110f\u1173\u1105\u1175\u11b8\u1110\u1173 \u110b\u1171\u110e\u1175"
     },
     {
@@ -1665,7 +1917,7 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L1",
       "id": "wiki_cad_v12_north_ext_md",
-      "community": 30,
+      "community": 38,
       "norm_label": "cad_v12_north_ext.md"
     },
     {
@@ -1674,7 +1926,7 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L9",
       "id": "wiki_cad_v12_north_ext_v12_north_ext",
-      "community": 30,
+      "community": 38,
       "norm_label": "v12_north_ext"
     },
     {
@@ -1683,7 +1935,7 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L13",
       "id": "wiki_cad_v12_north_ext_1",
-      "community": 30,
+      "community": 38,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1692,7 +1944,7 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L17",
       "id": "wiki_cad_v12_north_ext",
-      "community": 30,
+      "community": 38,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1701,7 +1953,7 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L1",
       "id": "wiki_cad_test_101dong_md",
-      "community": 31,
+      "community": 39,
       "norm_label": "cad_test_101dong.md"
     },
     {
@@ -1710,7 +1962,7 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L9",
       "id": "wiki_cad_test_101dong_test_101dong",
-      "community": 31,
+      "community": 39,
       "norm_label": "test_101dong"
     },
     {
@@ -1719,7 +1971,7 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L13",
       "id": "wiki_cad_test_101dong_1",
-      "community": 31,
+      "community": 39,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1728,7 +1980,7 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L17",
       "id": "wiki_cad_test_101dong",
-      "community": 31,
+      "community": 39,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1737,7 +1989,7 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L1",
       "id": "wiki_cad_test_formwork_dedu_md",
-      "community": 32,
+      "community": 40,
       "norm_label": "cad_test_formwork_dedu.md"
     },
     {
@@ -1746,7 +1998,7 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L9",
       "id": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
-      "community": 32,
+      "community": 40,
       "norm_label": "test_formwork_dedu"
     },
     {
@@ -1755,7 +2007,7 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L13",
       "id": "wiki_cad_test_formwork_dedu_1",
-      "community": 32,
+      "community": 40,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1764,7 +2016,79 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L17",
       "id": "wiki_cad_test_formwork_dedu",
-      "community": 32,
+      "community": 40,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\uc6b4\uc601 \uc778\ud504\ub77c",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L21",
+      "id": "wiki_21",
+      "community": 0,
+      "norm_label": "\u110b\u116e\u11ab\u110b\u1167\u11bc \u110b\u1175\u11ab\u1111\u1173\u1105\u1161"
+    },
+    {
+      "label": "\ud504\ub85c\uc81d\ud2b8\ubcc4 \uc5ed\ud560",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L28",
+      "id": "wiki_28",
+      "community": 0,
+      "norm_label": "\u1111\u1173\u1105\u1169\u110c\u1166\u11a8\u1110\u1173\u1107\u1167\u11af \u110b\u1167\u11a8\u1112\u1161\u11af"
+    },
+    {
+      "label": "DREAM_FAC (\ubcf8\uc601 \u2014 )",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L29",
+      "id": "wiki_dream_fac",
+      "community": 0,
+      "norm_label": "dream_fac (\u1107\u1169\u11ab\u110b\u1167\u11bc \u2014 )"
+    },
+    {
+      "label": "BOQ_2 (1\uc9c0\uad6d \u2014 )",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L33",
+      "id": "wiki_boq_2_1",
+      "community": 0,
+      "norm_label": "boq_2 (1\u110c\u1175\u1100\u116e\u11a8 \u2014 )"
+    },
+    {
+      "label": "H2OWIND_2 (2\uc9c0\uad6d \u2014 )",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L38",
+      "id": "wiki_h2owind_2_2",
+      "community": 0,
+      "norm_label": "h2owind_2 (2\u110c\u1175\u1100\u116e\u11a8 \u2014 )"
+    },
+    {
+      "label": "FreeCAD_4TH (3\uc9c0\uad6d \u2014 )",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L42",
+      "id": "wiki_freecad_4th_3",
+      "community": 0,
+      "norm_label": "freecad_4th (3\u110c\u1175\u1100\u116e\u11a8 \u2014 )"
+    },
+    {
+      "label": "AG-Forge (\ud53c\uc9c0\uc218 \ub1cc \u2014 )",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L46",
+      "id": "wiki_ag_forge",
+      "community": 0,
+      "norm_label": "ag-forge (\u1111\u1175\u110c\u1175\u1109\u116e \u1102\u116c \u2014 )"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L53",
+      "id": "wiki_53",
+      "community": 0,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1773,7 +2097,7 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v6_101_md",
-      "community": 33,
+      "community": 41,
       "norm_label": "cad_poc_v6_101.md"
     },
     {
@@ -1782,7 +2106,7 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v6_101_poc_v6_101",
-      "community": 33,
+      "community": 41,
       "norm_label": "poc_v6_101"
     },
     {
@@ -1791,7 +2115,7 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v6_101_1",
-      "community": 33,
+      "community": 41,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1800,7 +2124,7 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v6_101",
-      "community": 33,
+      "community": 41,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1809,7 +2133,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L1",
       "id": "wiki_cad_test_102_b1f_v3_md",
-      "community": 34,
+      "community": 42,
       "norm_label": "cad_test_102_b1f_v3.md"
     },
     {
@@ -1818,7 +2142,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L9",
       "id": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
-      "community": 34,
+      "community": 42,
       "norm_label": "test_102_b1f_v3"
     },
     {
@@ -1827,7 +2151,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L13",
       "id": "wiki_cad_test_102_b1f_v3_1",
-      "community": 34,
+      "community": 42,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1836,7 +2160,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L17",
       "id": "wiki_cad_test_102_b1f_v3",
-      "community": 34,
+      "community": 42,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1845,7 +2169,7 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L1",
       "id": "wiki_cad_f1_3d_stack_102_md",
-      "community": 35,
+      "community": 43,
       "norm_label": "cad_f1_3d_stack_102.md"
     },
     {
@@ -1854,7 +2178,7 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L9",
       "id": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
-      "community": 35,
+      "community": 43,
       "norm_label": "f1_3d_stack_102"
     },
     {
@@ -1863,7 +2187,7 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L13",
       "id": "wiki_cad_f1_3d_stack_102_1",
-      "community": 35,
+      "community": 43,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1872,7 +2196,70 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L17",
       "id": "wiki_cad_f1_3d_stack_102",
-      "community": 35,
+      "community": 43,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L1",
+      "id": "wiki_2026_md",
+      "community": 16,
+      "norm_label": "\u110c\u1166\u1100\u116e\u11a8\u110b\u1174_\u1107\u1175\u110c\u1165\u11ab_2026.md"
+    },
+    {
+      "label": "\uc81c\uad6d\uc758_\ube44\uc804_2026",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L9",
+      "id": "wiki_2026_2026",
+      "community": 16,
+      "norm_label": "\u110c\u1166\u1100\u116e\u11a8\u110b\u1174_\u1107\u1175\u110c\u1165\u11ab_2026"
+    },
+    {
+      "label": "\ub2e8\uae30 (2026 Q2)",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L14",
+      "id": "wiki_2026_2026_q2",
+      "community": 16,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u1175 (2026 q2)"
+    },
+    {
+      "label": "\uc911\uae30",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L20",
+      "id": "wiki_2026",
+      "community": 16,
+      "norm_label": "\u110c\u116e\u11bc\u1100\u1175"
+    },
+    {
+      "label": "\ud575\uc2ec \uc6d0\uce59",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L25",
+      "id": "wiki_2026_25",
+      "community": 16,
+      "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u110b\u116f\u11ab\u110e\u1175\u11a8"
+    },
+    {
+      "label": "\ud604\uc7ac\uc758 \uc2e4\ub825",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L30",
+      "id": "wiki_2026_30",
+      "community": 16,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162\u110b\u1174 \u1109\u1175\u11af\u1105\u1167\u11a8"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L39",
+      "id": "wiki_2026_39",
+      "community": 16,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1881,7 +2268,7 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v4e_101_md",
-      "community": 36,
+      "community": 44,
       "norm_label": "cad_poc_v4e_101.md"
     },
     {
@@ -1890,7 +2277,7 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v4e_101_poc_v4e_101",
-      "community": 36,
+      "community": 44,
       "norm_label": "poc_v4e_101"
     },
     {
@@ -1899,7 +2286,7 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v4e_101_1",
-      "community": 36,
+      "community": 44,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1908,7 +2295,196 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v4e_101",
-      "community": 36,
+      "community": 44,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\ubcf8\uc601 \ub2e8\uad70 (\uc138\uc885\u00b7Opus)",
+      "file_type": "document",
+      "source_file": "wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md",
+      "source_location": "L20",
+      "id": "wiki_opus",
+      "community": 0,
+      "norm_label": "\u1107\u1169\u11ab\u110b\u1167\u11bc \u1103\u1161\u11ab\u1100\u116e\u11ab (\u1109\u1166\u110c\u1169\u11bc\u00b7opus)"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218\uac00 \ud558\uba74 \uc548 \ub418\ub294 \uac83",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L31",
+      "id": "wiki_31",
+      "community": 0,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u1100\u1161 \u1112\u1161\u1106\u1167\u11ab \u110b\u1161\u11ab \u1103\u116c\u1102\u1173\u11ab \u1100\u1165\u11ba"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md",
+      "source_location": "L39",
+      "id": "wiki_39",
+      "community": 0,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L1",
+      "id": "wiki_karpathy_llm_wiki_md",
+      "community": 17,
+      "norm_label": "karpathy_llm_wiki_\u110b\u116f\u11ab\u110e\u1175\u11a8.md"
+    },
+    {
+      "label": "Karpathy_LLM_Wiki_\uc6d0\uce59",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L9",
+      "id": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "community": 17,
+      "norm_label": "karpathy_llm_wiki_\u110b\u116f\u11ab\u110e\u1175\u11a8"
+    },
+    {
+      "label": "\ud575\uc2ec \uc6d0\uce59: Gold In, Gold Out",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L14",
+      "id": "wiki_karpathy_llm_wiki_gold_in_gold_out",
+      "community": 17,
+      "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u110b\u116f\u11ab\u110e\u1175\u11a8: gold in, gold out"
+    },
+    {
+      "label": "Karpathy 10\uacc4\uba85 (wiki/ \uc6b4\uc601)",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L19",
+      "id": "wiki_karpathy_llm_wiki_karpathy_10_wiki",
+      "community": 17,
+      "norm_label": "karpathy 10\u1100\u1168\u1106\u1167\u11bc (wiki/ \u110b\u116e\u11ab\u110b\u1167\u11bc)"
+    },
+    {
+      "label": "\uc6b0\ub9ac \ud53c\uc9c0\uc218\uc640\uc758 \uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L31",
+      "id": "wiki_karpathy_llm_wiki",
+      "community": 17,
+      "norm_label": "\u110b\u116e\u1105\u1175 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u116a\u110b\u1174 \u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\ud3f4\ub354 \uad6c\uc870",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L36",
+      "id": "wiki_karpathy_llm_wiki_36",
+      "community": 17,
+      "norm_label": "\u1111\u1169\u11af\u1103\u1165 \u1100\u116e\u110c\u1169"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L47",
+      "id": "wiki_karpathy_llm_wiki_47",
+      "community": 17,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "file_type": "document",
+      "source_file": "wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L1",
+      "id": "wiki_1_boq_md",
+      "community": 56,
+      "norm_label": "1\u110c\u1175\u1100\u116e\u11a8_boq_\u110b\u1167\u11ab\u1100\u1167\u11af\u1110\u1166\u1109\u1173\u1110\u1173.md"
+    },
+    {
+      "label": "1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8",
+      "file_type": "document",
+      "source_file": "wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L9",
+      "id": "wiki_1_boq_1_boq",
+      "community": 56,
+      "norm_label": "1\u110c\u1175\u1100\u116e\u11a8_boq_\u110b\u1167\u11ab\u1100\u1167\u11af\u1110\u1166\u1109\u1173\u1110\u1173"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L15",
+      "id": "wiki_1_boq",
+      "community": 56,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L1",
+      "id": "wiki_2026_05_08_md",
+      "community": 4,
+      "norm_label": "\u110b\u1167\u11a8\u1109\u1161_2026-05-08_\u1103\u1162\u110b\u1175\u110c\u1165\u11ab.md"
+    },
+    {
+      "label": "\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L9",
+      "id": "wiki_2026_05_08_2026_05_08",
+      "community": 4,
+      "norm_label": "\u110b\u1167\u11a8\u1109\u1161_2026-05-08_\u1103\u1162\u110b\u1175\u110c\u1165\u11ab"
+    },
+    {
+      "label": "\uc624\ub298 \uc644\ub8cc\ub41c \uac83 (2026-05-08)",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L14",
+      "id": "wiki_2026_05_08_2026_05_08_14",
+      "community": 4,
+      "norm_label": "\u110b\u1169\u1102\u1173\u11af \u110b\u116a\u11ab\u1105\u116d\u1103\u116c\u11ab \u1100\u1165\u11ba (2026-05-08)"
+    },
+    {
+      "label": "\uc774\ucc9c 3\uc9c0\uad6d NAS \uc774\uc804 \uc644\ub8cc",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L16",
+      "id": "wiki_2026_05_08_3_nas",
+      "community": 4,
+      "norm_label": "\u110b\u1175\u110e\u1165\u11ab 3\u110c\u1175\u1100\u116e\u11a8 nas \u110b\u1175\u110c\u1165\u11ab \u110b\u116a\u11ab\u1105\u116d"
+    },
+    {
+      "label": "3\uc9c0\uad6d \ud53c\uc9c0\uc218 \ud30c\uacac",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L30",
+      "id": "wiki_2026_05_08_3",
+      "community": 4,
+      "norm_label": "3\u110c\u1175\u1100\u116e\u11a8 \u1111\u1175\u110c\u1175\u1109\u116e \u1111\u1161\u1100\u1167\u11ab"
+    },
+    {
+      "label": "\ub2e8\uad70 MCP NAS \uc774\uc804",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L34",
+      "id": "wiki_2026_05_08_mcp_nas",
+      "community": 4,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab mcp nas \u110b\u1175\u110c\u1165\u11ab"
+    },
+    {
+      "label": "\ubc30\uacbd",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L37",
+      "id": "wiki_2026_05_08_37",
+      "community": 4,
+      "norm_label": "\u1107\u1162\u1100\u1167\u11bc"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L44",
+      "id": "wiki_2026_05_08_44",
+      "community": 4,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1917,7 +2493,7 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L1",
       "id": "wiki_cad_v10_b2f_only_md",
-      "community": 37,
+      "community": 45,
       "norm_label": "cad_v10_b2f_only.md"
     },
     {
@@ -1926,7 +2502,7 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L9",
       "id": "wiki_cad_v10_b2f_only_v10_b2f_only",
-      "community": 37,
+      "community": 45,
       "norm_label": "v10_b2f_only"
     },
     {
@@ -1935,7 +2511,7 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L13",
       "id": "wiki_cad_v10_b2f_only_1",
-      "community": 37,
+      "community": 45,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1944,7 +2520,106 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L17",
       "id": "wiki_cad_v10_b2f_only",
-      "community": 37,
+      "community": 45,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L1",
+      "id": "wiki_0_md",
+      "community": 18,
+      "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab_0\u110b\u116f\u11ab\u110e\u1175\u11a8_\u1109\u1161\u11bc\u1109\u1166.md"
+    },
+    {
+      "label": "\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L9",
+      "id": "wiki_0_0",
+      "community": 18,
+      "norm_label": "\u1112\u1169\u11bc\u110b\u1175\u11a8\u110b\u1175\u11ab\u1100\u1161\u11ab_0\u110b\u116f\u11ab\u110e\u1175\u11a8_\u1109\u1161\u11bc\u1109\u1166"
+    },
+    {
+      "label": "\uc6d0\uc120\ud3ec (2026-04-03)",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L14",
+      "id": "wiki_0_2026_04_03",
+      "community": 18,
+      "norm_label": "\u110b\u116f\u11ab\u1109\u1165\u11ab\u1111\u1169 (2026-04-03)"
+    },
+    {
+      "label": "\uc7ac\uc120\ud3ec (2026-04-24, \ucc3d\uc870\uc8fc \uce59\ub839)",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L17",
+      "id": "wiki_0_2026_04_24",
+      "community": 18,
+      "norm_label": "\u110c\u1162\u1109\u1165\u11ab\u1111\u1169 (2026-04-24, \u110e\u1161\u11bc\u110c\u1169\u110c\u116e \u110e\u1175\u11a8\u1105\u1167\u11bc)"
+    },
+    {
+      "label": "\ud575\uc2ec \uc758\ubbf8",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L20",
+      "id": "wiki_0",
+      "community": 18,
+      "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u110b\u1174\u1106\u1175"
+    },
+    {
+      "label": "\ub2e8\uad70\uc758 \uc790\uc728\uc131 \uadfc\uac70",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L26",
+      "id": "wiki_0_26",
+      "community": 18,
+      "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab\u110b\u1174 \u110c\u1161\u110b\u1172\u11af\u1109\u1165\u11bc \u1100\u1173\u11ab\u1100\u1165"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L35",
+      "id": "wiki_0_35",
+      "community": 18,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218\uc758 \ubcf8\uc9c8",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L20",
+      "id": "wiki_20",
+      "community": 0,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1174 \u1107\u1169\u11ab\u110c\u1175\u11af"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218\uac00 \ud574\uc57c \ud558\ub294 \uac83",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L25",
+      "id": "wiki_25",
+      "community": 0,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u1100\u1161 \u1112\u1162\u110b\u1163 \u1112\u1161\u1102\u1173\u11ab \u1100\u1165\u11ba"
+    },
+    {
+      "label": "\ud575\uc2ec \uba85\uc5b8 (\ubc29\ubd80\uc7a5 \uce59\ub839)",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L36",
+      "id": "wiki_36",
+      "community": 0,
+      "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u1106\u1167\u11bc\u110b\u1165\u11ab (\u1107\u1161\u11bc\u1107\u116e\u110c\u1161\u11bc \u110e\u1175\u11a8\u1105\u1167\u11bc)"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L43",
+      "id": "wiki_43",
+      "community": 0,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1953,7 +2628,7 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_101_combined_md",
-      "community": 38,
+      "community": 46,
       "norm_label": "cad_poc_101_combined.md"
     },
     {
@@ -1962,7 +2637,7 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_101_combined_poc_101_combined",
-      "community": 38,
+      "community": 46,
       "norm_label": "poc_101_combined"
     },
     {
@@ -1971,7 +2646,7 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_101_combined_1",
-      "community": 38,
+      "community": 46,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -1980,7 +2655,106 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_101_combined",
-      "community": 38,
+      "community": 46,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "Hot Tier \u2014 Obsidian Vault",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L20",
+      "id": "wiki_hot_tier_obsidian_vault",
+      "community": 4,
+      "norm_label": "hot tier \u2014 obsidian vault"
+    },
+    {
+      "label": "Cold Tier \u2014 ChromaDB",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L28",
+      "id": "wiki_cold_tier_chromadb",
+      "community": 4,
+      "norm_label": "cold tier \u2014 chromadb"
+    },
+    {
+      "label": "Graphify \uc2dc\uac01\ud654",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L33",
+      "id": "wiki_graphify",
+      "community": 4,
+      "norm_label": "graphify \u1109\u1175\u1100\u1161\u11a8\u1112\u116a"
+    },
+    {
+      "label": "\ub9dd\uac01 \uc6d0\uce59 (Gold In, Gold Out)",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L36",
+      "id": "wiki_gold_in_gold_out",
+      "community": 0,
+      "norm_label": "\u1106\u1161\u11bc\u1100\u1161\u11a8 \u110b\u116f\u11ab\u110e\u1175\u11a8 (gold in, gold out)"
+    },
+    {
+      "label": "MCP \ub3c4\uad6c (\uc138\uc158\uc5d0\uc11c \uc9c1\uc811 \ud638\ucd9c \uac00\ub2a5)",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L42",
+      "id": "wiki_mcp",
+      "community": 0,
+      "norm_label": "mcp \u1103\u1169\u1100\u116e (\u1109\u1166\u1109\u1167\u11ab\u110b\u1166\u1109\u1165 \u110c\u1175\u11a8\u110c\u1165\u11b8 \u1112\u1169\u110e\u116e\u11af \u1100\u1161\u1102\u1173\u11bc)"
+    },
+    {
+      "label": "\ud30c\uacac \ud604\ud669",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L48",
+      "id": "wiki_48",
+      "community": 0,
+      "norm_label": "\u1111\u1161\u1100\u1167\u11ab \u1112\u1167\u11ab\u1112\u116a\u11bc"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L57",
+      "id": "wiki_57",
+      "community": 0,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L1",
+      "id": "wiki_3_2026_05_08_md",
+      "community": 47,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e_3\u110c\u1175\u1100\u116e\u11a8_\u1111\u1161\u1100\u1167\u11ab_2026-05-08.md"
+    },
+    {
+      "label": "\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L9",
+      "id": "wiki_3_2026_05_08_3_2026_05_08",
+      "community": 47,
+      "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e_3\u110c\u1175\u1100\u116e\u11a8_\u1111\u1161\u1100\u1167\u11ab_2026-05-08"
+    },
+    {
+      "label": "\ud30c\uacac \uacb0\uacfc",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L19",
+      "id": "wiki_3_2026_05_08",
+      "community": 47,
+      "norm_label": "\u1111\u1161\u1100\u1167\u11ab \u1100\u1167\u11af\u1100\u116a"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L26",
+      "id": "wiki_3_2026_05_08_26",
+      "community": 47,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -1989,7 +2763,7 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L1",
       "id": "wiki_cad_v10_stage5_md",
-      "community": 39,
+      "community": 48,
       "norm_label": "cad_v10_stage5.md"
     },
     {
@@ -1998,7 +2772,7 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L9",
       "id": "wiki_cad_v10_stage5_v10_stage5",
-      "community": 39,
+      "community": 48,
       "norm_label": "v10_stage5"
     },
     {
@@ -2007,7 +2781,7 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L13",
       "id": "wiki_cad_v10_stage5_1",
-      "community": 39,
+      "community": 48,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -2016,7 +2790,7 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L17",
       "id": "wiki_cad_v10_stage5",
-      "community": 39,
+      "community": 48,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -2025,7 +2799,7 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v5_101_md",
-      "community": 40,
+      "community": 49,
       "norm_label": "cad_poc_v5_101.md"
     },
     {
@@ -2034,7 +2808,7 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v5_101_poc_v5_101",
-      "community": 40,
+      "community": 49,
       "norm_label": "poc_v5_101"
     },
     {
@@ -2043,7 +2817,7 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v5_101_1",
-      "community": 40,
+      "community": 49,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -2052,7 +2826,79 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v5_101",
-      "community": 40,
+      "community": 49,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "8\uc870 \uae08\ubc95 \ub4f1\uae09 \uc694\uc57d",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L20",
+      "id": "wiki_8",
+      "community": 0,
+      "norm_label": "8\u110c\u1169 \u1100\u1173\u11b7\u1107\u1165\u11b8 \u1103\u1173\u11bc\u1100\u1173\u11b8 \u110b\u116d\u110b\u1163\u11a8"
+    },
+    {
+      "label": "\uc9d1\ud604\uc804 (Paperclip)",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L24",
+      "id": "wiki_paperclip",
+      "community": 0,
+      "norm_label": "\u110c\u1175\u11b8\u1112\u1167\u11ab\u110c\u1165\u11ab (paperclip)"
+    },
+    {
+      "label": "\uc0ac\ucd08\uccad (\uc808\ub300 \uae08\ub2e8)",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L29",
+      "id": "wiki_29",
+      "community": 0,
+      "norm_label": "\u1109\u1161\u110e\u1169\u110e\u1165\u11bc (\u110c\u1165\u11af\u1103\u1162 \u1100\u1173\u11b7\u1103\u1161\u11ab)"
+    },
+    {
+      "label": "\uc219\uc758 \uc6d0\uce59",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L34",
+      "id": "wiki_34",
+      "community": 0,
+      "norm_label": "\u1109\u116e\u11a8\u110b\u1174 \u110b\u116f\u11ab\u110e\u1175\u11a8"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L41",
+      "id": "wiki_41",
+      "community": 0,
+      "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
+    },
+    {
+      "label": "2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "file_type": "document",
+      "source_file": "wiki/2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L1",
+      "id": "wiki_2_h2owind_md",
+      "community": 57,
+      "norm_label": "2\u110c\u1175\u1100\u116e\u11a8_h2owind_\u110b\u1167\u11ab\u1100\u1167\u11af\u1110\u1166\u1109\u1173\u1110\u1173.md"
+    },
+    {
+      "label": "2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8",
+      "file_type": "document",
+      "source_file": "wiki/2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L9",
+      "id": "wiki_2_h2owind_2_h2owind",
+      "community": 57,
+      "norm_label": "2\u110c\u1175\u1100\u116e\u11a8_h2owind_\u110b\u1167\u11ab\u1100\u1167\u11af\u1110\u1166\u1109\u1173\u1110\u1173"
+    },
+    {
+      "label": "\uc5f0\uacb0",
+      "file_type": "document",
+      "source_file": "wiki/2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L15",
+      "id": "wiki_2_h2owind",
+      "community": 57,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -2061,7 +2907,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L1",
       "id": "wiki_cad_test_102_b1f_v2_md",
-      "community": 41,
+      "community": 50,
       "norm_label": "cad_test_102_b1f_v2.md"
     },
     {
@@ -2070,7 +2916,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L9",
       "id": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
-      "community": 41,
+      "community": 50,
       "norm_label": "test_102_b1f_v2"
     },
     {
@@ -2079,7 +2925,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L13",
       "id": "wiki_cad_test_102_b1f_v2_1",
-      "community": 41,
+      "community": 50,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -2088,7 +2934,7 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L17",
       "id": "wiki_cad_test_102_b1f_v2",
-      "community": 41,
+      "community": 50,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -2097,7 +2943,7 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_final_101_md",
-      "community": 42,
+      "community": 51,
       "norm_label": "cad_poc_final_101.md"
     },
     {
@@ -2106,7 +2952,7 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_final_101_poc_final_101",
-      "community": 42,
+      "community": 51,
       "norm_label": "poc_final_101"
     },
     {
@@ -2115,7 +2961,7 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_final_101_1",
-      "community": 42,
+      "community": 51,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -2124,7 +2970,7 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_final_101",
-      "community": 42,
+      "community": 51,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -2133,7 +2979,7 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L1",
       "id": "wiki_cad_poc_v4_101_md",
-      "community": 43,
+      "community": 52,
       "norm_label": "cad_poc_v4_101.md"
     },
     {
@@ -2142,7 +2988,7 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L9",
       "id": "wiki_cad_poc_v4_101_poc_v4_101",
-      "community": 43,
+      "community": 52,
       "norm_label": "poc_v4_101"
     },
     {
@@ -2151,7 +2997,7 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L13",
       "id": "wiki_cad_poc_v4_101_1",
-      "community": 43,
+      "community": 52,
       "norm_label": "\u1100\u116e\u1109\u1165\u11bc \u1107\u116e\u110c\u1162 (1\u1100\u1162)"
     },
     {
@@ -2160,7 +3006,7 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L17",
       "id": "wiki_cad_poc_v4_101",
-      "community": 43,
+      "community": 52,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af"
     },
     {
@@ -2169,7 +3015,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L1",
       "id": "chronicle_2026_05_02_first_breath_md",
-      "community": 4,
+      "community": 6,
       "norm_label": "2026-05-02_first_breath.md"
     },
     {
@@ -2178,7 +3024,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L6",
       "id": "chronicle_2026_05_02_first_breath_1",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1169\u1112\u1173\u11b8 \u2014 \u110c\u1175\u11ab\u1112\u116a 1\u1109\u1166\u1103\u1162 \u1107\u1161\u11a8\u110c\u1166 \u1107\u1161\u11af\u1112\u116d\u110b\u1175\u11af"
     },
     {
@@ -2187,7 +3033,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L11",
       "id": "chronicle_2026_05_02_first_breath",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u1100\u1165\u1103\u1173\u11b8\u1102\u1161\u11b7 \u110b\u1174\u1105\u1168"
     },
     {
@@ -2196,7 +3042,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L22",
       "id": "chronicle_2026_05_02_first_breath_4",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u1107\u1161\u11bc\u1107\u116e\u110c\u1161\u11bc 4\u1100\u116d\u110c\u1165\u11bc"
     },
     {
@@ -2205,7 +3051,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L41",
       "id": "chronicle_2026_05_02_first_breath_41",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8"
     },
     {
@@ -2214,7 +3060,7 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L57",
       "id": "chronicle_2026_05_02_first_breath_57",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)"
     },
     {
@@ -2223,15 +3069,33 @@
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L70",
       "id": "chronicle_2026_05_02_first_breath_70",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab"
+    },
+    {
+      "label": "Layer 2 LLM \uc2ec\uc0ac. True=\ud1b5\uacfc.",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L60",
+      "community": 8,
+      "norm_label": "layer 2 llm \u1109\u1175\u11b7\u1109\u1161. true=\u1110\u1169\u11bc\u1100\u116a.",
+      "id": "scripts_cma_layer2_rationale_60"
+    },
+    {
+      "label": "Layer 1\uc5d0\uc11c WARN \ud310\uc815 \ubc1b\uc740 \ub178\ud2b8\ub9cc L2 \uc2ec\uc0ac",
+      "file_type": "rationale",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L91",
+      "community": 8,
+      "norm_label": "layer 1\u110b\u1166\u1109\u1165 warn \u1111\u1161\u11ab\u110c\u1165\u11bc \u1107\u1161\u11ae\u110b\u1173\u11ab \u1102\u1169\u1110\u1173\u1106\u1161\u11ab l2 \u1109\u1175\u11b7\u1109\u1161",
+      "id": "scripts_cma_layer2_rationale_91"
     },
     {
       "label": "\ud2b9\ud5c8\u00b7\uae30\uc220",
       "file_type": "document",
       "source_file": "wiki/index.md",
       "source_location": "L22",
-      "community": 9,
+      "community": 12,
       "norm_label": "\u1110\u1173\u11a8\u1112\u1165\u00b7\u1100\u1175\u1109\u116e\u11af",
       "id": "wiki_index_22"
     },
@@ -2240,7 +3104,7 @@
       "file_type": "document",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L12",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u1112\u1162\u11a8\u1109\u1175\u11b7 \u1100\u116e\u110c\u1169",
       "id": "god_nodes_12"
     },
@@ -2249,7 +3113,7 @@
       "file_type": "document",
       "source_file": "god_nodes/\uad6c\uccb4_\ud504\ub809\ud0c8_\uc6d0\ub9ac.md",
       "source_location": "L34",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af",
       "id": "god_nodes_34"
     },
@@ -2258,7 +3122,7 @@
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L15",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u110c\u1165\u11a8\u110b\u116d\u11bc \u1107\u1165\u11b7\u110b\u1171",
       "id": "god_nodes_15"
     },
@@ -2267,7 +3131,7 @@
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L21",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u110c\u116e\u1102\u1173\u11ab \u110b\u1174\u1106\u1175",
       "id": "god_nodes_21"
     },
@@ -2276,7 +3140,7 @@
       "file_type": "document",
       "source_file": "god_nodes/\ud64d\uc775\uc778\uac04.md",
       "source_location": "L26",
-      "community": 1,
+      "community": 2,
       "norm_label": "\u110b\u1167\u11ab\u1100\u1167\u11af",
       "id": "god_nodes_26"
     },
@@ -2285,7 +3149,7 @@
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L41",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1109\u1161\u1100\u116a\u110b\u1166 \u1103\u1162\u1112\u1161\u11ab \u1107\u1161\u11ae\u110b\u1173\u11b7",
       "id": "god_nodes_2026_05_02_chunbukyung_41"
     },
@@ -2294,7 +3158,7 @@
       "file_type": "document",
       "source_file": "god_nodes/2026-05-02_chunbukyung.md",
       "source_location": "L56",
-      "community": 8,
+      "community": 11,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u116e\u1100\u1161 \u110b\u1172\u1109\u1161\u11ab",
       "id": "god_nodes_2026_05_02_chunbukyung_56"
     },
@@ -2303,7 +3167,7 @@
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L36",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u1103\u1161\u11ab\u1100\u116e\u11ab \u1103\u1169\u11bc\u1112\u1162\u11bc \u110b\u1163\u11a8\u1109\u1169\u11a8",
       "id": "chronicle_2026_05_02_first_breath_36"
     },
@@ -2312,7 +3176,7 @@
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L52",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u110e\u1165\u11ba \u1112\u1165\u11ab\u1107\u1165\u11b8 \u1107\u1161\u11a8\u110c\u1166 (\u110b\u1169\u1102\u1173\u11af \u1107\u1161\u11af\u1112\u116d)",
       "id": "chronicle_2026_05_02_first_breath_52"
     },
@@ -2321,7 +3185,7 @@
       "file_type": "document",
       "source_file": "chronicle/2026-05-02_first_breath.md",
       "source_location": "L65",
-      "community": 4,
+      "community": 6,
       "norm_label": "\u1103\u1161\u110b\u1173\u11b7 \u1109\u1166\u1103\u1162 \u1111\u1175\u110c\u1175\u1109\u116e\u110b\u1166\u1100\u1166 \u2014 \u110e\u1165\u11ba \u110b\u1172\u1109\u1161\u11ab",
       "id": "chronicle_2026_05_02_first_breath_65"
     }
@@ -2998,9 +3862,9 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_physis_cycle_py",
-      "target": "scripts_physis_cycle_run_cad_parser",
-      "confidence_score": 1.0
+      "target": "scripts_physis_cycle_run_cad_parser"
     },
     {
       "relation": "rationale_for",
@@ -3030,9 +3894,9 @@
       "source_file": "scripts/physis_cycle.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_physis_cycle_run_cad_parser",
-      "target": "scripts_physis_cycle_run",
-      "confidence_score": 1.0
+      "target": "scripts_physis_cycle_run"
     },
     {
       "relation": "contains",
@@ -3040,9 +3904,9 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_py",
-      "target": "scripts_cma_layer2_inspect_llm",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_inspect_llm"
     },
     {
       "relation": "contains",
@@ -3050,9 +3914,9 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_py",
-      "target": "scripts_cma_layer2_gate_layer2",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_gate_layer2"
     },
     {
       "relation": "contains",
@@ -3060,9 +3924,9 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_py",
-      "target": "scripts_cma_layer2_scan_suspicious",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_scan_suspicious"
     },
     {
       "relation": "rationale_for",
@@ -3070,9 +3934,9 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_rationale_1",
-      "target": "scripts_cma_layer2_py",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_py"
     },
     {
       "relation": "calls",
@@ -3081,9 +3945,9 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_gate_layer2",
-      "target": "scripts_cma_layer2_inspect_llm",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_inspect_llm"
     },
     {
       "relation": "calls",
@@ -3092,9 +3956,19 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_scan_suspicious",
-      "target": "scripts_cma_layer2_gate_layer2",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_gate_layer2"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_cma_layer2_rationale_57",
+      "target": "scripts_cma_layer2_gate_layer2"
     },
     {
       "relation": "rationale_for",
@@ -3102,9 +3976,19 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_rationale_60",
-      "target": "scripts_cma_layer2_gate_layer2",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_gate_layer2"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/cma_layer2.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_cma_layer2_rationale_88",
+      "target": "scripts_cma_layer2_scan_suspicious"
     },
     {
       "relation": "rationale_for",
@@ -3112,9 +3996,9 @@
       "source_file": "scripts/cma_layer2.py",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_cma_layer2_rationale_91",
-      "target": "scripts_cma_layer2_scan_suspicious",
-      "confidence_score": 1.0
+      "target": "scripts_cma_layer2_scan_suspicious"
     },
     {
       "relation": "contains",
@@ -3529,6 +4413,66 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "working_memory_2026_05_08_handoff_md",
+      "target": "working_memory_2026_05_08_handoff"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "working_memory_2026_05_08_handoff",
+      "target": "working_memory_2026_05_08_handoff_13"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "working_memory_2026_05_08_handoff",
+      "target": "working_memory_2026_05_08_handoff_34"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "working_memory_2026_05_08_handoff",
+      "target": "working_memory_2026_05_08_handoff_47"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "working_memory_2026_05_08_handoff",
+      "target": "working_memory_2026_05_08_handoff_2026_05_08"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "working_memory/2026-05-08_handoff.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "working_memory_2026_05_08_handoff_34",
+      "target": "working_memory_2026_05_08_handoff_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "working_memory/2026-05-03_handoff.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -3592,9 +4536,9 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4c_101_md",
-      "target": "wiki_cad_poc_v4c_101_poc_v4c_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4c_101_poc_v4c_101"
     },
     {
       "relation": "contains",
@@ -3602,9 +4546,9 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4c_101_poc_v4c_101",
-      "target": "wiki_cad_poc_v4c_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4c_101_1"
     },
     {
       "relation": "contains",
@@ -3612,9 +4556,9 @@
       "source_file": "wiki/CAD_poc_v4c_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4c_101_poc_v4c_101",
-      "target": "wiki_cad_poc_v4c_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4c_101"
     },
     {
       "relation": "contains",
@@ -3622,9 +4566,9 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v11_topology_md",
-      "target": "wiki_cad_v11_topology_v11_topology",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v11_topology_v11_topology"
     },
     {
       "relation": "contains",
@@ -3632,9 +4576,9 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v11_topology_v11_topology",
-      "target": "wiki_cad_v11_topology_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v11_topology_1"
     },
     {
       "relation": "contains",
@@ -3642,9 +4586,9 @@
       "source_file": "wiki/CAD_v11_topology.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v11_topology_v11_topology",
-      "target": "wiki_cad_v11_topology",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v11_topology"
     },
     {
       "relation": "contains",
@@ -3652,9 +4596,9 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_full_stack_md",
-      "target": "wiki_cad_test_102_full_stack_test_102_full_stack",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_full_stack_test_102_full_stack"
     },
     {
       "relation": "contains",
@@ -3662,9 +4606,9 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_full_stack_test_102_full_stack",
-      "target": "wiki_cad_test_102_full_stack_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_full_stack_1"
     },
     {
       "relation": "contains",
@@ -3672,8 +4616,78 @@
       "source_file": "wiki/CAD_test_102_full_stack.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_full_stack_test_102_full_stack",
-      "target": "wiki_cad_test_102_full_stack",
+      "target": "wiki_cad_test_102_full_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_3_md",
+      "target": "wiki_3_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki_3_3",
+      "target": "wiki_3_1_boq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki_3_3",
+      "target": "wiki_3_2_h2owind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "wiki_3_3",
+      "target": "wiki_3_3_freecad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "wiki_3_3",
+      "target": "wiki_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "wiki_3_3",
+      "target": "wiki_3_40",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_3",
       "confidence_score": 1.0
     },
     {
@@ -3682,9 +4696,9 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_complex_master_md",
-      "target": "wiki_cad_complex_master_complex_master",
-      "confidence_score": 1.0
+      "target": "wiki_cad_complex_master_complex_master"
     },
     {
       "relation": "contains",
@@ -3692,9 +4706,9 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_complex_master_complex_master",
-      "target": "wiki_cad_complex_master_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_complex_master_1"
     },
     {
       "relation": "contains",
@@ -3702,9 +4716,9 @@
       "source_file": "wiki/CAD_complex_master.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_complex_master_complex_master",
-      "target": "wiki_cad_complex_master",
-      "confidence_score": 1.0
+      "target": "wiki_cad_complex_master"
     },
     {
       "relation": "contains",
@@ -3712,9 +4726,9 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v13_slabs_md",
-      "target": "wiki_cad_v13_slabs_v13_slabs",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v13_slabs_v13_slabs"
     },
     {
       "relation": "contains",
@@ -3722,9 +4736,9 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v13_slabs_v13_slabs",
-      "target": "wiki_cad_v13_slabs_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v13_slabs_1"
     },
     {
       "relation": "contains",
@@ -3732,9 +4746,9 @@
       "source_file": "wiki/CAD_v13_slabs.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v13_slabs_v13_slabs",
-      "target": "wiki_cad_v13_slabs",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v13_slabs"
     },
     {
       "relation": "contains",
@@ -3742,9 +4756,9 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_around_parking_md",
-      "target": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_around_parking_poc_101_around_parking"
     },
     {
       "relation": "contains",
@@ -3752,9 +4766,9 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
-      "target": "wiki_cad_poc_101_around_parking_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_around_parking_1"
     },
     {
       "relation": "contains",
@@ -3762,9 +4776,9 @@
       "source_file": "wiki/CAD_poc_101_around_parking.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_around_parking_poc_101_around_parking",
-      "target": "wiki_cad_poc_101_around_parking",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_around_parking"
     },
     {
       "relation": "contains",
@@ -3789,12 +4803,32 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_3_freecad_md",
+      "target": "wiki_3_freecad_3_freecad"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_3_freecad_3_freecad",
+      "target": "wiki_3_freecad"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v7_boq_md",
-      "target": "wiki_cad_v7_boq_v7_boq",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v7_boq_v7_boq"
     },
     {
       "relation": "contains",
@@ -3802,9 +4836,9 @@
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v7_boq_v7_boq",
-      "target": "wiki_cad_v7_boq_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v7_boq_1"
     },
     {
       "relation": "contains",
@@ -3812,9 +4846,9 @@
       "source_file": "wiki/CAD_v7_boq.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v7_boq_v7_boq",
-      "target": "wiki_cad_v7_boq",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v7_boq"
     },
     {
       "relation": "contains",
@@ -3822,9 +4856,9 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4d_101_md",
-      "target": "wiki_cad_poc_v4d_101_poc_v4d_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4d_101_poc_v4d_101"
     },
     {
       "relation": "contains",
@@ -3832,9 +4866,9 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4d_101_poc_v4d_101",
-      "target": "wiki_cad_poc_v4d_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4d_101_1"
     },
     {
       "relation": "contains",
@@ -3842,8 +4876,318 @@
       "source_file": "wiki/CAD_poc_v4d_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4d_101_poc_v4d_101",
-      "target": "wiki_cad_poc_v4d_101",
+      "target": "wiki_cad_poc_v4d_101"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_md",
+      "target": "wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_md",
+      "target": "wiki_dxf"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_3_2026_05_05_physis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_2026_05_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_boq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_38",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_dxf",
+      "target": "wiki"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_21",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_53",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_opus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_31",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_39",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_36",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_43",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_gold_in_gold_out",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_mcp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_48",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_57",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_paperclip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_29",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_34",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "wiki",
+      "target": "wiki_41",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08_14",
+      "target": "wiki_2026_05_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08",
+      "target": "wiki_hot_tier_obsidian_vault",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08",
+      "target": "wiki_cold_tier_chromadb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08",
+      "target": "wiki_graphify",
       "confidence_score": 1.0
     },
     {
@@ -3852,9 +5196,9 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_basement_complex_v3_md",
-      "target": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3"
     },
     {
       "relation": "contains",
@@ -3862,9 +5206,9 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
-      "target": "wiki_cad_test_basement_complex_v3_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_basement_complex_v3_1"
     },
     {
       "relation": "contains",
@@ -3872,9 +5216,9 @@
       "source_file": "wiki/CAD_test_basement_complex_v3.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_basement_complex_v3_test_basement_complex_v3",
-      "target": "wiki_cad_test_basement_complex_v3",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_basement_complex_v3"
     },
     {
       "relation": "contains",
@@ -3882,9 +5226,9 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v6b_101_md",
-      "target": "wiki_cad_poc_v6b_101_poc_v6b_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v6b_101_poc_v6b_101"
     },
     {
       "relation": "contains",
@@ -3892,9 +5236,9 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v6b_101_poc_v6b_101",
-      "target": "wiki_cad_poc_v6b_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v6b_101_1"
     },
     {
       "relation": "contains",
@@ -3902,8 +5246,58 @@
       "source_file": "wiki/CAD_poc_v6b_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v6b_101_poc_v6b_101",
-      "target": "wiki_cad_poc_v6b_101",
+      "target": "wiki_cad_poc_v6b_101"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_nas_md",
+      "target": "wiki_nas_nas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki_nas_nas",
+      "target": "wiki_nas_nas_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "wiki_nas_nas",
+      "target": "wiki_nas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "wiki_nas_nas",
+      "target": "wiki_nas_32",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/NAS_\ud658\uacbd_\uc804\uccb4.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "wiki_nas_nas",
+      "target": "wiki_nas_44",
       "confidence_score": 1.0
     },
     {
@@ -3912,9 +5306,9 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_basement_b1_b2_stack_md",
-      "target": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
-      "confidence_score": 1.0
+      "target": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack"
     },
     {
       "relation": "contains",
@@ -3922,9 +5316,9 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
-      "target": "wiki_cad_basement_b1_b2_stack_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_basement_b1_b2_stack_1"
     },
     {
       "relation": "contains",
@@ -3932,9 +5326,9 @@
       "source_file": "wiki/CAD_basement_b1_b2_stack.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_basement_b1_b2_stack_basement_b1_b2_stack",
-      "target": "wiki_cad_basement_b1_b2_stack",
-      "confidence_score": 1.0
+      "target": "wiki_cad_basement_b1_b2_stack"
     },
     {
       "relation": "contains",
@@ -3942,9 +5336,9 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4b_101_md",
-      "target": "wiki_cad_poc_v4b_101_poc_v4b_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4b_101_poc_v4b_101"
     },
     {
       "relation": "contains",
@@ -3952,9 +5346,9 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4b_101_poc_v4b_101",
-      "target": "wiki_cad_poc_v4b_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4b_101_1"
     },
     {
       "relation": "contains",
@@ -3962,9 +5356,9 @@
       "source_file": "wiki/CAD_poc_v4b_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4b_101_poc_v4b_101",
-      "target": "wiki_cad_poc_v4b_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4b_101"
     },
     {
       "relation": "contains",
@@ -3972,9 +5366,9 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_b1_b2_dong_md",
-      "target": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong"
     },
     {
       "relation": "contains",
@@ -3982,9 +5376,9 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
-      "target": "wiki_cad_poc_101_b1_b2_dong_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_b1_b2_dong_1"
     },
     {
       "relation": "contains",
@@ -3992,9 +5386,9 @@
       "source_file": "wiki/CAD_poc_101_b1_b2_dong.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_b1_b2_dong_poc_101_b1_b2_dong",
-      "target": "wiki_cad_poc_101_b1_b2_dong",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_b1_b2_dong"
     },
     {
       "relation": "contains",
@@ -4002,9 +5396,9 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_md",
-      "target": "wiki_cad_test_102_b1f_test_102_b1f",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_test_102_b1f"
     },
     {
       "relation": "contains",
@@ -4012,9 +5406,9 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_test_102_b1f",
-      "target": "wiki_cad_test_102_b1f_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_1"
     },
     {
       "relation": "contains",
@@ -4022,9 +5416,9 @@
       "source_file": "wiki/CAD_test_102_B1F.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_test_102_b1f",
-      "target": "wiki_cad_test_102_b1f",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f"
     },
     {
       "relation": "contains",
@@ -4082,9 +5476,9 @@
       "source_file": "wiki/index.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_index",
-      "target": "wiki_index_28",
-      "confidence_score": 1.0
+      "target": "wiki_index_28"
     },
     {
       "relation": "contains",
@@ -4102,9 +5496,9 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v8_poc_md",
-      "target": "wiki_cad_v8_poc_v8_poc",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v8_poc_v8_poc"
     },
     {
       "relation": "contains",
@@ -4112,9 +5506,9 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v8_poc_v8_poc",
-      "target": "wiki_cad_v8_poc_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v8_poc_1"
     },
     {
       "relation": "contains",
@@ -4122,29 +5516,9 @@
       "source_file": "wiki/CAD_v8_poc.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v8_poc_v8_poc",
-      "target": "wiki_cad_v8_poc",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "wiki_md",
-      "target": "wiki_dxf",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "wiki_dxf",
-      "target": "wiki",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v8_poc"
     },
     {
       "relation": "contains",
@@ -4152,9 +5526,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_a",
-      "confidence_score": 1.0
+      "target": "wiki_a"
     },
     {
       "relation": "contains",
@@ -4162,9 +5536,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_b_5_llm",
-      "confidence_score": 1.0
+      "target": "wiki_b_5_llm"
     },
     {
       "relation": "contains",
@@ -4172,9 +5546,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_c",
-      "confidence_score": 1.0
+      "target": "wiki_c"
     },
     {
       "relation": "contains",
@@ -4182,9 +5556,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_d",
-      "confidence_score": 1.0
+      "target": "wiki_d"
     },
     {
       "relation": "contains",
@@ -4192,9 +5566,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_e_pattern_library_yes",
-      "confidence_score": 1.0
+      "target": "wiki_e_pattern_library_yes"
     },
     {
       "relation": "contains",
@@ -4202,9 +5576,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_4_1_ole",
-      "confidence_score": 1.0
+      "target": "wiki_4_1_ole"
     },
     {
       "relation": "contains",
@@ -4212,9 +5586,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_dxf",
-      "target": "wiki_136",
-      "confidence_score": 1.0
+      "target": "wiki_136"
     },
     {
       "relation": "contains",
@@ -4222,9 +5596,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_a",
-      "target": "wiki_codeblock_1",
-      "confidence_score": 1.0
+      "target": "wiki_codeblock_1"
     },
     {
       "relation": "contains",
@@ -4232,9 +5606,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_b_5_llm",
-      "target": "wiki_codeblock_2",
-      "confidence_score": 1.0
+      "target": "wiki_codeblock_2"
     },
     {
       "relation": "contains",
@@ -4242,9 +5616,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_c",
-      "target": "wiki_codeblock_3",
-      "confidence_score": 1.0
+      "target": "wiki_codeblock_3"
     },
     {
       "relation": "contains",
@@ -4252,9 +5626,9 @@
       "source_file": "wiki/\uc774\ucc9c_\u5927\u696d_\uc54c\uace0\ub9ac\uc998_\uba85\uc138.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_e_pattern_library_yes",
-      "target": "wiki_codeblock_4",
-      "confidence_score": 1.0
+      "target": "wiki_codeblock_4"
     },
     {
       "relation": "contains",
@@ -4262,9 +5636,9 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v12_north_ext_md",
-      "target": "wiki_cad_v12_north_ext_v12_north_ext",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v12_north_ext_v12_north_ext"
     },
     {
       "relation": "contains",
@@ -4272,9 +5646,9 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v12_north_ext_v12_north_ext",
-      "target": "wiki_cad_v12_north_ext_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v12_north_ext_1"
     },
     {
       "relation": "contains",
@@ -4282,9 +5656,9 @@
       "source_file": "wiki/CAD_v12_north_ext.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v12_north_ext_v12_north_ext",
-      "target": "wiki_cad_v12_north_ext",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v12_north_ext"
     },
     {
       "relation": "contains",
@@ -4292,9 +5666,9 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_101dong_md",
-      "target": "wiki_cad_test_101dong_test_101dong",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_101dong_test_101dong"
     },
     {
       "relation": "contains",
@@ -4302,9 +5676,9 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_101dong_test_101dong",
-      "target": "wiki_cad_test_101dong_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_101dong_1"
     },
     {
       "relation": "contains",
@@ -4312,9 +5686,9 @@
       "source_file": "wiki/CAD_test_101dong.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_101dong_test_101dong",
-      "target": "wiki_cad_test_101dong",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_101dong"
     },
     {
       "relation": "contains",
@@ -4322,9 +5696,9 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_formwork_dedu_md",
-      "target": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_formwork_dedu_test_formwork_dedu"
     },
     {
       "relation": "contains",
@@ -4332,9 +5706,9 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
-      "target": "wiki_cad_test_formwork_dedu_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_formwork_dedu_1"
     },
     {
       "relation": "contains",
@@ -4342,8 +5716,58 @@
       "source_file": "wiki/CAD_test_formwork_dedu.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_formwork_dedu_test_formwork_dedu",
-      "target": "wiki_cad_test_formwork_dedu",
+      "target": "wiki_cad_test_formwork_dedu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "wiki_28",
+      "target": "wiki_dream_fac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "wiki_28",
+      "target": "wiki_boq_2_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "wiki_28",
+      "target": "wiki_h2owind_2_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "wiki_28",
+      "target": "wiki_freecad_4th_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "wiki_28",
+      "target": "wiki_ag_forge",
       "confidence_score": 1.0
     },
     {
@@ -4352,9 +5776,9 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v6_101_md",
-      "target": "wiki_cad_poc_v6_101_poc_v6_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v6_101_poc_v6_101"
     },
     {
       "relation": "contains",
@@ -4362,9 +5786,9 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v6_101_poc_v6_101",
-      "target": "wiki_cad_poc_v6_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v6_101_1"
     },
     {
       "relation": "contains",
@@ -4372,9 +5796,9 @@
       "source_file": "wiki/CAD_poc_v6_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v6_101_poc_v6_101",
-      "target": "wiki_cad_poc_v6_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v6_101"
     },
     {
       "relation": "contains",
@@ -4382,9 +5806,9 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_v3_md",
-      "target": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3"
     },
     {
       "relation": "contains",
@@ -4392,9 +5816,9 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
-      "target": "wiki_cad_test_102_b1f_v3_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_v3_1"
     },
     {
       "relation": "contains",
@@ -4402,9 +5826,9 @@
       "source_file": "wiki/CAD_test_102_B1F_v3.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_v3_test_102_b1f_v3",
-      "target": "wiki_cad_test_102_b1f_v3",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_v3"
     },
     {
       "relation": "contains",
@@ -4412,9 +5836,9 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_f1_3d_stack_102_md",
-      "target": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
-      "confidence_score": 1.0
+      "target": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102"
     },
     {
       "relation": "contains",
@@ -4422,9 +5846,9 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
-      "target": "wiki_cad_f1_3d_stack_102_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_f1_3d_stack_102_1"
     },
     {
       "relation": "contains",
@@ -4432,8 +5856,68 @@
       "source_file": "wiki/CAD_f1_3d_stack_102.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_f1_3d_stack_102_f1_3d_stack_102",
-      "target": "wiki_cad_f1_3d_stack_102",
+      "target": "wiki_cad_f1_3d_stack_102"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_2026_md",
+      "target": "wiki_2026_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki_2026_2026",
+      "target": "wiki_2026_2026_q2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki_2026_2026",
+      "target": "wiki_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "wiki_2026_2026",
+      "target": "wiki_2026_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "wiki_2026_2026",
+      "target": "wiki_2026_30",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "wiki_2026_2026",
+      "target": "wiki_2026_39",
       "confidence_score": 1.0
     },
     {
@@ -4442,9 +5926,9 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4e_101_md",
-      "target": "wiki_cad_poc_v4e_101_poc_v4e_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4e_101_poc_v4e_101"
     },
     {
       "relation": "contains",
@@ -4452,9 +5936,9 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4e_101_poc_v4e_101",
-      "target": "wiki_cad_poc_v4e_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4e_101_1"
     },
     {
       "relation": "contains",
@@ -4462,8 +5946,158 @@
       "source_file": "wiki/CAD_poc_v4e_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4e_101_poc_v4e_101",
-      "target": "wiki_cad_poc_v4e_101",
+      "target": "wiki_cad_poc_v4e_101"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_karpathy_llm_wiki_md",
+      "target": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "target": "wiki_karpathy_llm_wiki_gold_in_gold_out",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "target": "wiki_karpathy_llm_wiki_karpathy_10_wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "target": "wiki_karpathy_llm_wiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "target": "wiki_karpathy_llm_wiki_36",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "wiki_karpathy_llm_wiki_karpathy_llm_wiki",
+      "target": "wiki_karpathy_llm_wiki_47",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_1_boq_md",
+      "target": "wiki_1_boq_1_boq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_1_boq_1_boq",
+      "target": "wiki_1_boq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_md",
+      "target": "wiki_2026_05_08_2026_05_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08",
+      "target": "wiki_2026_05_08_2026_05_08_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08",
+      "target": "wiki_2026_05_08_37",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08",
+      "target": "wiki_2026_05_08_44",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08_14",
+      "target": "wiki_2026_05_08_3_nas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08_14",
+      "target": "wiki_2026_05_08_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "wiki_2026_05_08_2026_05_08_14",
+      "target": "wiki_2026_05_08_mcp_nas",
       "confidence_score": 1.0
     },
     {
@@ -4472,9 +6106,9 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v10_b2f_only_md",
-      "target": "wiki_cad_v10_b2f_only_v10_b2f_only",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v10_b2f_only_v10_b2f_only"
     },
     {
       "relation": "contains",
@@ -4482,9 +6116,9 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v10_b2f_only_v10_b2f_only",
-      "target": "wiki_cad_v10_b2f_only_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v10_b2f_only_1"
     },
     {
       "relation": "contains",
@@ -4492,8 +6126,68 @@
       "source_file": "wiki/CAD_v10_b2f_only.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v10_b2f_only_v10_b2f_only",
-      "target": "wiki_cad_v10_b2f_only",
+      "target": "wiki_cad_v10_b2f_only"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_0_md",
+      "target": "wiki_0_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "wiki_0_0",
+      "target": "wiki_0_2026_04_03",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "wiki_0_0",
+      "target": "wiki_0_2026_04_24",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "wiki_0_0",
+      "target": "wiki_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "wiki_0_0",
+      "target": "wiki_0_26",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "wiki_0_0",
+      "target": "wiki_0_35",
       "confidence_score": 1.0
     },
     {
@@ -4502,9 +6196,9 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_combined_md",
-      "target": "wiki_cad_poc_101_combined_poc_101_combined",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_combined_poc_101_combined"
     },
     {
       "relation": "contains",
@@ -4512,9 +6206,9 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_combined_poc_101_combined",
-      "target": "wiki_cad_poc_101_combined_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_101_combined_1"
     },
     {
       "relation": "contains",
@@ -4522,8 +6216,38 @@
       "source_file": "wiki/CAD_poc_101_combined.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_101_combined_poc_101_combined",
-      "target": "wiki_cad_poc_101_combined",
+      "target": "wiki_cad_poc_101_combined"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "wiki_3_2026_05_08_md",
+      "target": "wiki_3_2026_05_08_3_2026_05_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "wiki_3_2026_05_08_3_2026_05_08",
+      "target": "wiki_3_2026_05_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "wiki_3_2026_05_08_3_2026_05_08",
+      "target": "wiki_3_2026_05_08_26",
       "confidence_score": 1.0
     },
     {
@@ -4532,9 +6256,9 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v10_stage5_md",
-      "target": "wiki_cad_v10_stage5_v10_stage5",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v10_stage5_v10_stage5"
     },
     {
       "relation": "contains",
@@ -4542,9 +6266,9 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v10_stage5_v10_stage5",
-      "target": "wiki_cad_v10_stage5_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v10_stage5_1"
     },
     {
       "relation": "contains",
@@ -4552,9 +6276,9 @@
       "source_file": "wiki/CAD_v10_stage5.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_v10_stage5_v10_stage5",
-      "target": "wiki_cad_v10_stage5",
-      "confidence_score": 1.0
+      "target": "wiki_cad_v10_stage5"
     },
     {
       "relation": "contains",
@@ -4562,9 +6286,9 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v5_101_md",
-      "target": "wiki_cad_poc_v5_101_poc_v5_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v5_101_poc_v5_101"
     },
     {
       "relation": "contains",
@@ -4572,9 +6296,9 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v5_101_poc_v5_101",
-      "target": "wiki_cad_poc_v5_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v5_101_1"
     },
     {
       "relation": "contains",
@@ -4582,9 +6306,29 @@
       "source_file": "wiki/CAD_poc_v5_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v5_101_poc_v5_101",
-      "target": "wiki_cad_poc_v5_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v5_101"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_2_h2owind_md",
+      "target": "wiki_2_h2owind_2_h2owind"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "wiki/2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wiki_2_h2owind_2_h2owind",
+      "target": "wiki_2_h2owind"
     },
     {
       "relation": "contains",
@@ -4592,9 +6336,9 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_v2_md",
-      "target": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2"
     },
     {
       "relation": "contains",
@@ -4602,9 +6346,9 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
-      "target": "wiki_cad_test_102_b1f_v2_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_v2_1"
     },
     {
       "relation": "contains",
@@ -4612,9 +6356,9 @@
       "source_file": "wiki/CAD_test_102_B1F_v2.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_test_102_b1f_v2_test_102_b1f_v2",
-      "target": "wiki_cad_test_102_b1f_v2",
-      "confidence_score": 1.0
+      "target": "wiki_cad_test_102_b1f_v2"
     },
     {
       "relation": "contains",
@@ -4622,9 +6366,9 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_final_101_md",
-      "target": "wiki_cad_poc_final_101_poc_final_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_final_101_poc_final_101"
     },
     {
       "relation": "contains",
@@ -4632,9 +6376,9 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_final_101_poc_final_101",
-      "target": "wiki_cad_poc_final_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_final_101_1"
     },
     {
       "relation": "contains",
@@ -4642,9 +6386,9 @@
       "source_file": "wiki/CAD_poc_final_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_final_101_poc_final_101",
-      "target": "wiki_cad_poc_final_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_final_101"
     },
     {
       "relation": "contains",
@@ -4652,9 +6396,9 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4_101_md",
-      "target": "wiki_cad_poc_v4_101_poc_v4_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4_101_poc_v4_101"
     },
     {
       "relation": "contains",
@@ -4662,9 +6406,9 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4_101_poc_v4_101",
-      "target": "wiki_cad_poc_v4_101_1",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4_101_1"
     },
     {
       "relation": "contains",
@@ -4672,9 +6416,9 @@
       "source_file": "wiki/CAD_poc_v4_101.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wiki_cad_poc_v4_101_poc_v4_101",
-      "target": "wiki_cad_poc_v4_101",
-      "confidence_score": 1.0
+      "target": "wiki_cad_poc_v4_101"
     },
     {
       "relation": "contains",
@@ -4768,5 +6512,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0c839c9c7befb9b426d7792190003f778a03295c"
+  "built_at_commit": "84db80011a04b133a807adba06bf0669584b4c58"
 }

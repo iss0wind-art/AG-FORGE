@@ -1,0 +1,12 @@
+{
+  "final_patterns": [],
+  "new_pattern_candidates": [],
+  "anomalies": [],
+  "summary": {
+    "total_entities": 71,
+    "matched_count": 0,
+    "new_candidates": 0,
+    "anomaly_count": 0,
+    "processing_note": "5체 정반합 완료"
+  }
+}

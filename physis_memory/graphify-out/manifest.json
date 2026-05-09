@@ -20,8 +20,8 @@
     "hash": "67ce2567d051e5667576d869e38d61e7"
   },
   "/home/nas/AG-Forge/physis_memory/scripts/cma_layer2.py": {
-    "mtime": 1778222063.957426,
-    "hash": "589e49be620de73d9ea63e55973edce0"
+    "mtime": 1778223182.0870388,
+    "hash": "fd4bd2a3b942523ff1fab7a006089142"
   },
   "/home/nas/AG-Forge/physis_memory/CLAUDE.md": {
     "mtime": 1778218652.215782,
@@ -55,6 +55,10 @@
     "mtime": 1778220829.4150922,
     "hash": "887c5582d5516cd081d00b314b86716a"
   },
+  "/home/nas/AG-Forge/physis_memory/working_memory/2026-05-08_handoff.md": {
+    "mtime": 1778223275.3911815,
+    "hash": "37e01110968c8893e67795c86cdfcdb2"
+  },
   "/home/nas/AG-Forge/physis_memory/working_memory/2026-05-03_handoff.md": {
     "mtime": 1778220829.4153652,
     "hash": "fec76008afc7deacc5c29aa00149d888"
@@ -71,6 +75,10 @@
     "mtime": 1778223119.5004113,
     "hash": "fe3360fe0154a607679042bed7dcad38"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/3\uc9c0\uad6d\uc7a5_\uc815\uccb4\uc131.md": {
+    "mtime": 1778286788.5786421,
+    "hash": "ac84861825bc3e9fc8c95d52848b508c"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_complex_master.md": {
     "mtime": 1778223120.094136,
     "hash": "21df8d45eae56e3774a85aa80089f40b"
@@ -84,8 +92,12 @@
     "hash": "c439052fe6ed8804cfa9605f19579598"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/log.md": {
-    "mtime": 1778223133.5089674,
-    "hash": "15d00d84d086fcd064b715d4b09b2991"
+    "mtime": 1778287185.801263,
+    "hash": "77482cd02d2d4901d600c275b53a9a2b"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/3\uc9c0\uad6d_FreeCAD_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md": {
+    "mtime": 1778224762.388185,
+    "hash": "f9fb2dc3301b52954f6b815e4c754924"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v7_boq.md": {
     "mtime": 1778223119.767119,
@@ -95,6 +107,10 @@
     "mtime": 1778223120.2300682,
     "hash": "2f89f54f0a683828593345cfa2e18aff"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/\u5927\u696d_\uc2e0\uace0\uc870\uc120_\uc678\ubd80\ucd9c\uc2dc.md": {
+    "mtime": 1778285048.646479,
+    "hash": "69130f4233ff2084e1f052283c6709a6"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_basement_complex_v3.md": {
     "mtime": 1778223120.2441936,
     "hash": "33711ca2c4c9b98cfe7e3d054ce8895b"
@@ -102,6 +118,10 @@
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v6b_101.md": {
     "mtime": 1778223120.1516273,
     "hash": "c2093f148b489741dd1c7ed1f7b51475"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/NAS_\ud658\uacbd_\uc804\uccb4.md": {
+    "mtime": 1778287185.8008826,
+    "hash": "8128ef626e7b49b923c15b335ec9c67c"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_basement_b1_b2_stack.md": {
     "mtime": 1778223119.643253,
@@ -143,6 +163,10 @@
     "mtime": 1778223119.6438272,
     "hash": "488d05bad124f11178c3d6f26ebf54ed"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/\ub4dc\ub9bc\ud329\ud1a0\ub9ac_\uae30\uc220\uc2a4\ud0dd_\ud504\ub85c\uc81d\ud2b8.md": {
+    "mtime": 1778285048.6460958,
+    "hash": "4269b039d56e5f5a31690773eba58fbe"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v6_101.md": {
     "mtime": 1778223119.928561,
     "hash": "f388027335de4aa3640054f064c5d2b5"
@@ -155,17 +179,53 @@
     "mtime": 1778223120.1624625,
     "hash": "f3e37f1cccdc760c3b317355f0d1e8e8"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/\uc81c\uad6d\uc758_\ube44\uc804_2026.md": {
+    "mtime": 1778287185.801263,
+    "hash": "3c2dbedce03780c3924690a77dd32b77"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v4e_101.md": {
     "mtime": 1778223120.220072,
     "hash": "1b9950e2c8470eb24087a6c032af3234"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\uc2e0\uace0\uc870\uc120_\uc81c\uad6d_\uc804\uccb4_\uad6c\uc870.md": {
+    "mtime": 1778284981.2072928,
+    "hash": "c0a4c442e14f9df065c3f7a384278525"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/Karpathy_LLM_Wiki_\uc6d0\uce59.md": {
+    "mtime": 1778286756.1322606,
+    "hash": "243a75a39362d8969d9a706270329808"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/1\uc9c0\uad6d_BOQ_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md": {
+    "mtime": 1778224762.3877838,
+    "hash": "42ce9a712492b4aca83d4e57a76b17b8"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\uc5ed\uc0ac_2026-05-08_\ub300\uc774\uc804.md": {
+    "mtime": 1778286756.1319704,
+    "hash": "ae03f0245a894c8e61b54e6643c99ade"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v10_b2f_only.md": {
     "mtime": 1778223119.9904356,
     "hash": "f559f7803118dcd878f3c118e9419cc6"
   },
+  "/home/nas/AG-Forge/physis_memory/wiki/\ud64d\uc775\uc778\uac04_0\uc6d0\uce59_\uc0c1\uc138.md": {
+    "mtime": 1778284981.207602,
+    "hash": "32eda928aa11ce4e3898ec145a7fc012"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\ud53c\uc9c0\uc218_\uc0ac\uba85_\uc120\uc5b8.md": {
+    "mtime": 1778286788.5789285,
+    "hash": "21840f223c2569e07e63e77125070bcd"
+  },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_101_combined.md": {
     "mtime": 1778223119.6386056,
     "hash": "f506c99e33c666d8130e1720b0c84c35"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\ud53c\uc9c0\uc218_\ub1cc_\uad6c\uc870.md": {
+    "mtime": 1778286606.0950925,
+    "hash": "cd8e43ea2a9ad206d0c7548c464cf941"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\ud53c\uc9c0\uc218_3\uc9c0\uad6d_\ud30c\uacac_2026-05-08.md": {
+    "mtime": 1778237291.0279455,
+    "hash": "d2c0476d03b8826d944018849d8c571d"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_v10_stage5.md": {
     "mtime": 1778223119.3519244,
@@ -174,6 +234,14 @@
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_poc_v5_101.md": {
     "mtime": 1778223119.868958,
     "hash": "b2124c1762e33d5dd1cefa6e4ed3462f"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/\ub2e8\uad70_\ud589\ub3d9\uc6d0\uce59_\ud5cc\ubc95.md": {
+    "mtime": 1778286606.0953746,
+    "hash": "8869a248b904f3beeb520651e0d1de35"
+  },
+  "/home/nas/AG-Forge/physis_memory/wiki/2\uc9c0\uad6d_H2OWIND_\uc5f0\uacb0\ud14c\uc2a4\ud2b8.md": {
+    "mtime": 1778224762.3880134,
+    "hash": "f25c9158a67f28c88abc2cf26cb4cdb8"
   },
   "/home/nas/AG-Forge/physis_memory/wiki/CAD_test_102_B1F_v2.md": {
     "mtime": 1778223119.779932,

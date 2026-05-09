@@ -1,0 +1,54 @@
+{
+  "final_patterns": [],
+  "new_pattern_candidates": [
+    {
+      "desc": "레이어명에 숫자 접두사(00_) 공통 사용: 그룹 또는 우선순위 표시 가능",
+      "confidence": 0.2,
+      "consensus": 1
+    },
+    {
+      "desc": "슬라브 경계선 레이어: '00_SLAB END + ETC'는 주로 LINE 객체로 구성되어 슬라브 외곽선 및 보조선을 나타냄",
+      "confidence": 0.2,
+      "consensus": 1
+    },
+    {
+      "desc": "슬라브 명칭 레이어: '00_SLAB NAME'의 dominant_type이 ELLIPSE인 점은 텍스트 대신 타원 객체를 사용한 특이한 명명 방식",
+      "confidence": 0.2,
+      "consensus": 1
+    },
+    {
+      "desc": "PC 슬라브 전용 레이어: 'S-PC-SLAB'은 LWPOLYLINE만으로 구성되어 프리캐스트 슬라브 형상을 일관되게 표현",
+      "confidence": 0.2,
+      "consensus": 1
+    },
+    {
+      "desc": "보 레이어 명명 규칙 (Beam Layer Naming Convention)",
+      "confidence": 0.2,
+      "consensus": 1
+    },
+    {
+      "desc": "Multi-unit grid replication",
+      "confidence": 0.2,
+      "consensus": 1
+    }
+  ],
+  "anomalies": [
+    {
+      "entity": "00_SLAB NAME",
+      "reason": "해당 레이어는 슬라브 명칭을 담당하나 dominant_type이 ELLIPSE로, 일반적인 TEXT/MTEXT 대신 타원 객체 사용 – 도면 작성 관행과 상이함",
+      "surprise": 0.8
+    },
+    {
+      "entity": "Layer name encoding",
+      "reason": "Garbled characters in XR layer names (e.g., 'XR吏??븯2痢듯룊硫대룄$0$AH-怨꾨떒?긽遺??꽑') indicate encoding mismatch",
+      "surprise": 0.3
+    }
+  ],
+  "summary": {
+    "total_entities": 71,
+    "matched_count": 0,
+    "new_candidates": 6,
+    "anomaly_count": 2,
+    "processing_note": "5체 정반합 완료"
+  }
+}
