@@ -147,3 +147,21 @@ append_only: true
 - [2026-05-09 10:41] 🔴 CMA BLOCK — 단군_행동원칙_헌법.md: 제7조 위반: '폭주' 감지
 - [2026-05-09 10:41] 🔴 CMA BLOCK — FREECAD_spec_member_manifest_schema.md: 제7조 위반: '폭주' 감지
 - [2026-05-09 10:41] 소급 평가 완료 — 92개 노트 점수 갱신
+- [2026-05-09 10:48] vault_ingest: [[FAIL_BOQ_CONSTITUTION_LEGACY]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_BOQ_DANGUN_BRANCH_SEED_ARCHIVE_2026_04_27]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_BOQ_LEGACY_CONTEXT]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_BOQ_SKETCHUP_REFACTOR_REPORT]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_BOQ_emergency_v21_restore]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_H2OWIND_DANGUN_BRANCH_SEED_ARCHIVE_2026_04_27]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_H2OWIND_SECURITY_INCIDENTS]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_H2OWIND_REVAMP_PLAN_2026_04_26]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_H2OWIND_HANDOFF_2026_05_03]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_CONSTITUTION_ARCHIVE_2026_04_27]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_이천_부임_안내문_ARCHIVE_2026_04_27]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_DANGUN_DISPATCH_2026_05_05_REPORT_RECOVERY]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_support_request_coord_unification]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_coord_unification_trials]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_MANUAL_DRAWING_TO_FREECAD_v1]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_MANUAL_DRAWING_TO_FREECAD_v2]] created
+- [2026-05-09 10:48] vault_ingest: [[FAIL_FREECAD_MANUAL_DRAWING_TO_FREECAD_v3]] created
+- [2026-05-09 10:49] vault_ingest: [[FAIL_종합_분석_2026_05_09]] created
