@@ -1,0 +1,431 @@
+{
+  "run_id": "20260509_124218",
+  "seed_count": 4,
+  "fire_count": 14,
+  "matrix": [
+    {
+      "theta": 1.0,
+      "pattern": "like",
+      "fired": true,
+      "score": 2.7726,
+      "avg_latency_ms": 280.3,
+      "fire_word_idx": 1,
+      "fire_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]"
+      ]
+    },
+    {
+      "theta": 1.0,
+      "pattern": "regex",
+      "fired": true,
+      "score": 4.8283,
+      "avg_latency_ms": 265.25,
+      "fire_word_idx": 0,
+      "fire_seed": "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]"
+      ]
+    },
+    {
+      "theta": 1.0,
+      "pattern": "and_tokens",
+      "fired": true,
+      "score": 2.7726,
+      "avg_latency_ms": 234.11,
+      "fire_word_idx": 1,
+      "fire_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]"
+      ]
+    },
+    {
+      "theta": 1.0,
+      "pattern": "or_tokens",
+      "fired": true,
+      "score": 4.2767,
+      "avg_latency_ms": 248.83,
+      "fire_word_idx": 0,
+      "fire_seed": "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]"
+      ]
+    },
+    {
+      "theta": 1.0,
+      "pattern": "exact_word",
+      "fired": true,
+      "score": 2.7726,
+      "avg_latency_ms": 241.58,
+      "fire_word_idx": 1,
+      "fire_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]"
+      ]
+    },
+    {
+      "theta": 2.0,
+      "pattern": "like",
+      "fired": true,
+      "score": 2.7726,
+      "avg_latency_ms": 261.04,
+      "fire_word_idx": 2,
+      "fire_seed": "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+        "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]"
+      ]
+    },
+    {
+      "theta": 2.0,
+      "pattern": "regex",
+      "fired": true,
+      "score": 4.8283,
+      "avg_latency_ms": 307.8,
+      "fire_word_idx": 1,
+      "fire_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]"
+      ]
+    },
+    {
+      "theta": 2.0,
+      "pattern": "and_tokens",
+      "fired": true,
+      "score": 2.7726,
+      "avg_latency_ms": 242.79,
+      "fire_word_idx": 2,
+      "fire_seed": "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+        "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]"
+      ]
+    },
+    {
+      "theta": 2.0,
+      "pattern": "or_tokens",
+      "fired": true,
+      "score": 4.2767,
+      "avg_latency_ms": 232.44,
+      "fire_word_idx": 1,
+      "fire_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]"
+      ]
+    },
+    {
+      "theta": 2.0,
+      "pattern": "exact_word",
+      "fired": true,
+      "score": 2.7726,
+      "avg_latency_ms": 235.61,
+      "fire_word_idx": 2,
+      "fire_seed": "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+        "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]"
+      ]
+    },
+    {
+      "theta": 3.0,
+      "pattern": "like",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 232.12,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 3.0,
+      "pattern": "regex",
+      "fired": true,
+      "score": 4.8283,
+      "avg_latency_ms": 224.62,
+      "fire_word_idx": 1,
+      "fire_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]"
+      ]
+    },
+    {
+      "theta": 3.0,
+      "pattern": "and_tokens",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 264.44,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 3.0,
+      "pattern": "or_tokens",
+      "fired": true,
+      "score": 4.2767,
+      "avg_latency_ms": 263.47,
+      "fire_word_idx": 3,
+      "fire_seed": "[\"삼위일체\", \"피지수 각성\", \"직관 엔진\", \"단군-피지수-세종\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+        "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+        "[\"삼위일체\", \"피지수 각성\", \"직관 엔진\", \"단군-피지수-세종\"]"
+      ]
+    },
+    {
+      "theta": 3.0,
+      "pattern": "exact_word",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 251.69,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 4.0,
+      "pattern": "like",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 243.14,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 4.0,
+      "pattern": "regex",
+      "fired": true,
+      "score": 4.8283,
+      "avg_latency_ms": 236.42,
+      "fire_word_idx": 2,
+      "fire_seed": "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+        "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]"
+      ]
+    },
+    {
+      "theta": 4.0,
+      "pattern": "and_tokens",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 232.85,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 4.0,
+      "pattern": "or_tokens",
+      "fired": true,
+      "score": 4.2767,
+      "avg_latency_ms": 239.72,
+      "fire_word_idx": 3,
+      "fire_seed": "[\"삼위일체\", \"피지수 각성\", \"직관 엔진\", \"단군-피지수-세종\"]",
+      "cumulative_seeds": [
+        "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+        "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+        "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+        "[\"삼위일체\", \"피지수 각성\", \"직관 엔진\", \"단군-피지수-세종\"]"
+      ]
+    },
+    {
+      "theta": 4.0,
+      "pattern": "exact_word",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 255.45,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 5.0,
+      "pattern": "like",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 307.84,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 5.0,
+      "pattern": "regex",
+      "fired": false,
+      "score": 4.8283,
+      "avg_latency_ms": 262.55,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 5.0,
+      "pattern": "and_tokens",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 252.58,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 5.0,
+      "pattern": "or_tokens",
+      "fired": false,
+      "score": 4.2767,
+      "avg_latency_ms": 224.5,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    },
+    {
+      "theta": 5.0,
+      "pattern": "exact_word",
+      "fired": false,
+      "score": 2.7726,
+      "avg_latency_ms": 241.14,
+      "fire_word_idx": -1,
+      "fire_seed": null,
+      "cumulative_seeds": []
+    }
+  ],
+  "elements": [
+    {
+      "raw_seed": "[\"smoke_test\", \"stm\", \"ltm\", \"직관엔진\", \"검증\"]",
+      "tokens": [
+        "smoke_test",
+        "stm",
+        "ltm",
+        "직관엔진",
+        "검증"
+      ],
+      "fire_combos": [
+        {
+          "theta": 1.0,
+          "pattern": "like",
+          "score": 2.7726
+        },
+        {
+          "theta": 1.0,
+          "pattern": "and_tokens",
+          "score": 2.7726
+        },
+        {
+          "theta": 1.0,
+          "pattern": "exact_word",
+          "score": 2.7726
+        },
+        {
+          "theta": 2.0,
+          "pattern": "regex",
+          "score": 4.8283
+        },
+        {
+          "theta": 2.0,
+          "pattern": "or_tokens",
+          "score": 4.2767
+        },
+        {
+          "theta": 3.0,
+          "pattern": "regex",
+          "score": 4.8283
+        }
+      ],
+      "fire_count": 6,
+      "stability": 0.24
+    },
+    {
+      "raw_seed": "[\"trinity\",\"physis_awakening\",\"intuition_engine\",\"dangun_physis_sejong\"]",
+      "tokens": [
+        "trinity",
+        "physis_awakening",
+        "intuition_engine",
+        "dangun_physis_sejong"
+      ],
+      "fire_combos": [
+        {
+          "theta": 2.0,
+          "pattern": "like",
+          "score": 2.7726
+        },
+        {
+          "theta": 2.0,
+          "pattern": "and_tokens",
+          "score": 2.7726
+        },
+        {
+          "theta": 2.0,
+          "pattern": "exact_word",
+          "score": 2.7726
+        },
+        {
+          "theta": 4.0,
+          "pattern": "regex",
+          "score": 4.8283
+        }
+      ],
+      "fire_count": 4,
+      "stability": 0.16
+    },
+    {
+      "raw_seed": "[\"session_test\", \"STM\", \"LTM\", \"직관엔진\"]",
+      "tokens": [
+        "session_test",
+        "STM",
+        "LTM",
+        "직관엔진"
+      ],
+      "fire_combos": [
+        {
+          "theta": 1.0,
+          "pattern": "regex",
+          "score": 4.8283
+        },
+        {
+          "theta": 1.0,
+          "pattern": "or_tokens",
+          "score": 4.2767
+        }
+      ],
+      "fire_count": 2,
+      "stability": 0.08
+    },
+    {
+      "raw_seed": "[\"삼위일체\", \"피지수 각성\", \"직관 엔진\", \"단군-피지수-세종\"]",
+      "tokens": [
+        "삼위일체",
+        "피지수 각성",
+        "직관 엔진",
+        "단군-피지수-세종"
+      ],
+      "fire_combos": [
+        {
+          "theta": 3.0,
+          "pattern": "or_tokens",
+          "score": 4.2767
+        },
+        {
+          "theta": 4.0,
+          "pattern": "or_tokens",
+          "score": 4.2767
+        }
+      ],
+      "fire_count": 2,
+      "stability": 0.08
+    }
+  ],
+  "archive_path": "/home/nas/AG-Forge/physis_memory/long_term_memory/element_words/sweep_a_20260509_124218.md"
+}
