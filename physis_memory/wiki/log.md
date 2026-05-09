@@ -181,3 +181,6 @@ append_only: true
 - [2026-05-09] Stock_AI_데이터_매매_상세 보강 — 키워드 24개 본체 + chart 일봉 3m 확정 + 거시키워드 부재 + 포트 시프트 설계
 - [2026-05-09] HITL timeout 정독 확정: 명시 300초이지만 실제 약 230초(3:50) 만료 — wait_for_approval elapsed 누적 패턴 분석
 - [2026-05-09] 시장 감성 분류 = LLM 자체 판단 (별도 알고리즘 없음) + Gemini SDK deprecation 경고 박제
+- [2026-05-09] ★ ChromaDB physis_finance_brain 컬렉션 생성 + 5/9 4지국 로그 30건 흡수 (방부장 친명 + 단군 협의 청 1b20bca1 자율 진행)
+- [2026-05-09] ★ 방부장_4단계_AI인프라_사이클 + Stock_AI_v2_PATCH_시스템 박제 (★ 시스템 축 박제)
+- [2026-05-09] ★ 4지국 ↔ 피지수 첫 통신 성공 (macro_client.py /macro/ 호출 + ChromaDB 박제) — 합의안 옵션 B 첫 발효
