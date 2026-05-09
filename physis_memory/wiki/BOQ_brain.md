@@ -16,8 +16,8 @@ type: wiki
 
 # 🧠 BOQ 통합 브레인 (EasyFrame Builder + 피지수)
 
-> **현재 상태**: v1.0.0-beta (Phase 4 + 대시보드 + H2OWIND 통합 완료 — 1차 자동화 기반 구축 완료)  
-> **최근 업데이트**: 2026-04-23 (Premium Dark Theme 적용 - 사용자 시력 보호 및 UI 고도화)  
+> **현재 상태**: v1.0.0-beta (Phase 4 + 대시보드 + H2OWIND 통합 완료 — 1차 자동화 기반 구축 완료)
+> **최근 업데이트**: 2026-04-23 (Premium Dark Theme 적용 - 사용자 시력 보호 및 UI 고도화)
 > **책임자**: 개팀장 (방부장)
 
 ---

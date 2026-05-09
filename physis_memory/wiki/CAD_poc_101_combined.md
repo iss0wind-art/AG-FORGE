@@ -12,7 +12,7 @@ outcome_score: 0.0
 
 ## 구성 부재 (1개)
 
-- **Open CASCADE STEP translator 7.8 1** (PRODUCT) 
+- **Open CASCADE STEP translator 7.8 1** (PRODUCT)
 
 ## 연결
 

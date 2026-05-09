@@ -22,17 +22,17 @@ def create_v21_svg(name, bg_color, text_color, label, font_size=34, y_offset=44,
     # 64x64 캔버스 상에서 부장님 스타일의 둥근 모서리 사각형과 중앙 타이포그래피
     x_pos = (64 - rect_w) // 2
     y_pos = (64 - rect_h) // 2
-    
+
     # 한글(비계, 동바리 등)의 경우 폰트 사이즈와 정렬을 미세 조정
     if len(label) > 1 and any(ord(c) > 127 for c in label):
         font_size = 20 if len(label) == 2 else 14
         y_offset = 40
-        
+
     svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect x="{x_pos}" y="{y_pos}" width="{rect_w}" height="{rect_h}" fill="{bg_color}" rx="8" />
   <text x="32" y="{y_offset}" font-size="{font_size}" font-weight="900" font-family="sans-serif" text-anchor="middle" fill="{text_color}">{label}</text>
 </svg>'''
-    
+
     file_path = os.path.join(save_dir, f'v21_{name}.svg')
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(svg_content)

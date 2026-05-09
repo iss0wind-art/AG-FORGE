@@ -16,8 +16,8 @@ type: wiki
 
 # 구간예측(ZonePrediction) 고도화 기획안
 
-> 작성일: 2026-04-26  
-> 수도: D:\GIT\h2owind  
+> 작성일: 2026-04-26
+> 수도: D:\GIT\h2owind
 > 결재 대상: 방부장 (창조주)
 
 ---

@@ -215,7 +215,7 @@ for each face F of member M (priority P_m):
 
   if hit && distance < 500mm:
     hit_priority = DOMINANCE_TABLE[hit_member.type]
-    if hit_priority > P_m  → :JOINT (콘크리트 
+    if hit_priority > P_m  → :JOINT (콘크리트
 
 ... (잘림 — 원본: `/home/nas/BOQ_2/특허_기술명세서.md`)
 

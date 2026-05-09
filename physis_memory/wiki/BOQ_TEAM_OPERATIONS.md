@@ -16,9 +16,9 @@ type: wiki
 
 # 🚀 가상 개발팀(Multi-Agent) 운영 명세서
 
-> **프로젝트**: BOQ(물량 산출) 자동화 시스템  
-> **버전**: v1.0.0  
-> **최종 수정**: 2026-03-31  
+> **프로젝트**: BOQ(물량 산출) 자동화 시스템
+> **버전**: v1.0.0
+> **최종 수정**: 2026-03-31
 
 ---
 
@@ -30,7 +30,7 @@ graph TD
     A --> C["⚙️ 서지훈 수석"]
     A --> D["🖥️ 권아영 책임"]
     A --> E["👁️ 강동진 박사"]
-    
+
     style A fill:#f96,stroke:#333,stroke-width:4px
     style B fill:#bbf,stroke:#333
     style C fill:#bfb,stroke:#333

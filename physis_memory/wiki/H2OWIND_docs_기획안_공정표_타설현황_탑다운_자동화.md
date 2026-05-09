@@ -178,7 +178,7 @@ CREATE TABLE ProjectSetup (
 ### 기존 테이블 수정: `DashboardStore` (간트차트 데이터)
 ```
 status     TEXT  -- "confirmed" | "planned"
-source     TEXT  -- "topdown-auto" | "manual"  
+source     TEXT  -- "topdown-auto" | "manual"
 isLocked   INTEGER DEFAULT 0  -- 수동 수정 보호 플래그
 ```
 

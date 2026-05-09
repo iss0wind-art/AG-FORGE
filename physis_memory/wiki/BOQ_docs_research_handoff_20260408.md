@@ -16,8 +16,8 @@ type: wiki
 
 # 리서치팀 인계 자료 — BOQ EasyFrame (2026-04-08)
 
-> 작성: 개팀장 (방부장 결재 전)  
-> 엔진 버전: v11.4 Sniper  
+> 작성: 개팀장 (방부장 결재 전)
+> 엔진 버전: v11.4 Sniper
 > 목적: 현재 기술 한계 및 연구 과제 공유
 
 ---
@@ -66,11 +66,11 @@ dz = [cb.max.z, tb.max.z].min - [cb.min.z, tb.min.z].max
 deduct_volume = dx * dy * dz
 ```
 
-**문제점**  
+**문제점**
 바운딩박스(AABB) 겹침으로 공제량 근사. 사선 부재, 경사 슬래브에서 실제 교차 체적과 오차 발생.
 
-**연구 방향**  
-Sutherland-Hodgman(SH) 클리핑 다각형 기반 실측 교차 체적 계산 알고리즘 도입.  
+**연구 방향**
+Sutherland-Hodgman(SH) 클리핑 다각형 기반 실측 교차 체적 계산 알고리즘 도입.
 참고 파일: [trim_manager.rb](../sketchup_plugins/boq_easyframe/src/boq_easyframe/core/trim_manager.rb) — `calc_deduction_volume` 메서드
 
 ---
@@ -87,22 +87,22 @@ cutters.each_with_index do |ci_ent, ci|
 end
 ```
 
-**목표**  
-AABB 기반 Spatial Grid(격자 분할) 도입으로 인접 부재만 검사.  
+**목표**
+AABB 기반 Spatial Grid(격자 분할) 도입으로 인접 부재만 검사.
 1,000개+ 부재 대응, 목표 복잡도 O(n log n) 이하.
 
 ---
 
 ### [R-3] Substance Manager — Raycast 내부 판정
 
-**현재 방식**  
+**현재 방식**
 `container.bounds.contains?(point)` — AABB 바운딩박스 판정
 
-**문제점**  
+**문제점**
 불규칙한 형상의 컨테이너에서 내부/외부 오판정 발생 가능.
 
-**연구 방향**  
-Down/Up Raycast 교차 횟수 홀짝 판정(Jordan Curve Theorem) 기반 정밀 내부 판정.  
+**연구 방향**
+Down/Up Raycast 교차 횟수 홀짝 판정(Jordan Curve Theorem) 기반 정밀 내부 판정.
 참고 파일: [substance_manager.rb](../sketchup_plugins/boq_easyframe/src/boq_easyframe/core/substance_manager.rb)
 
 ---

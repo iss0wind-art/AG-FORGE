@@ -15,7 +15,7 @@ type: wiki
 > 흡수일: 2026-05-09
 
 # H2OWIND 데이터 흐름 맵
-> 2026-04-30 기준 · 이순신(H2OWIND 지국) 작성  
+> 2026-04-30 기준 · 이순신(H2OWIND 지국) 작성
 > 🟢 정상 · 🟡 주의 · 🔴 단절/심각 · ⬛ 사실상 미사용
 
 ---
@@ -150,7 +150,7 @@ flowchart LR
     I -->|"🔴 이전: forceDb=true\n→ localStorage 무시 → 명단 날아감\n✅ fix: forceDb 제거"| G
 ```
 
-**과거 문제**: 팀장이 보고서 제출 → SSE 이벤트 → forceDb=true → localStorage 무시 → DB fallback → 이름 없는 집계 데이터 → 명단 휘발  
+**과거 문제**: 팀장이 보고서 제출 → SSE 이벤트 → forceDb=true → localStorage 무시 → DB fallback → 이름 없는 집계 데이터 → 명단 휘발
 **현재 상태**: 3중 fix 완료. 인양 1회 후 영구 유지.
 
 ---
