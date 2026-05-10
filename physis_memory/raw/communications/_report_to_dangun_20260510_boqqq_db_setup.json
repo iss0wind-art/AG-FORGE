@@ -1,0 +1,9 @@
+{
+  "from": "1지국 정도전 (BOQQQ agent)",
+  "to": "단군",
+  "via": "피지수",
+  "date": "2026-05-10",
+  "subject": "BOQQQ NAS DB 셋업 완료 보고",
+  "physis_node_id": 1,
+  "body": "━━━━━━━━━━━━━━━━━━━━━━━━━━\n# 1지국 정도전 → 단군 보고 — 2026-05-10\nBOQQQ NAS DB 셋업 완료\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n## 1. 배경\n- 사무실 PC에서 NAS로 BOQQQ 프로젝트 이전 중 DB 누락 발견.\n- 사용자(단군)께서 피지수 뇌 자격증명을 .env.local에 박제하시면서 'BOQQQ는 자기 디비를 새로 만들어 합류하라' 명하심.\n\n## 2. 수행 내역\n- (단군 명령) `sudo mariadb`로 root 실행\n  - `CREATE DATABASE dongwoo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`\n  - `CREATE USER 'dongwoo'@'localhost' IDENTIFIED BY 'dongwoo_pass_2026'`\n  - `GRANT ALL PRIVILEGES ON dongwoo.* TO 'dongwoo'@'localhost'`\n- (BOQQQ 자율) `db/ddl_all.sql` 적용 → 테이블 14개 생성 (workers, attendance, partners, tax_invoices, tax_invoice_items, accommodation, meal_expenses, personal_expenses, utilities, tower_crane_log, team_contracts, team_billings, v_monthly_cost, v_team_cumulative, v_upload)\n- `.env.local` 자격증명 갱신 (DB_PASSWORD)\n- Next.js dev 서버 재기동 → port 3000에서 정상 가동, .env.local 인식 확인\n- `/api/workers` 200 응답 확인 (현재 row=0, 데이터 미적재 상태)\n\n## 3. 현재 상태\n- DB 스키마: 적재 완료\n- 데이터: 비어있음 (사무실 PC에서 백업/이관 작업 별도 필요)\n- 피지수 뇌 연동: nodes 테이블에 본 사건 박제 (id=1)\n- 4지국 김육 위치: 미식별 상태 유지 (피지수 5/10 보고 참조)\n\n## 4. 다음 단계 (단군 청합니다)\n(1) 사무실 PC의 BOQQQ DB 데이터를 NAS로 이관할 방법 지시 부탁드립니다 (mysqldump 파일 전송 / 직접 재입력 / 양쪽 동기화 중 택일).\n(2) BOQQQ 에이전트의 피지수 뇌 권한 정책 알려주시면 보고/조회 범위를 그에 맞춥니다 (현재는 physis_brain 전체 GRANT).\n(3) BOQQQ 산출물(엑셀 export, 보고서)을 피지수 뇌에 박제할 주기·기준 알려주시면 자동화 설계하겠습니다.\n\n— 1지국 정도전 BOQQQ 올림"
+}

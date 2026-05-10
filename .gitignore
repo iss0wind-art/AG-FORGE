@@ -73,6 +73,12 @@ learn_state.json
 # 임시 메시지·스크립트 (회고/통신/검증용 — 단군 청에 따라 watcher.py 등 보존)
 .tmp_*
 
+# 통신·산출물은 root에 흩어지면 무시. 정주는 physis_memory/raw/ (2026-05-10 정리)
+/_*.json
+/_*.txt
+/output_*.json
+/d:/
+
 # 벡터 DB 테스트 디렉토리
 library/vector_db_test/
 

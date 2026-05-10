@@ -1,0 +1,86 @@
+{
+  "final_patterns": [
+    {
+      "pattern_id": "A-1",
+      "confirmed": false,
+      "count": 0,
+      "group": "none"
+    },
+    {
+      "pattern_id": "A-2",
+      "confirmed": false,
+      "count": 0,
+      "group": "none"
+    },
+    {
+      "pattern_id": "A-3",
+      "confirmed": false,
+      "count": 0,
+      "group": "none"
+    },
+    {
+      "pattern_id": "A-4",
+      "confirmed": false,
+      "count": 0,
+      "group": "none"
+    },
+    {
+      "pattern_id": "B-1",
+      "confirmed": false,
+      "count": 0,
+      "group": "none"
+    },
+    {
+      "pattern_id": "B-2",
+      "confirmed": false,
+      "count": 0,
+      "group": "none"
+    }
+  ],
+  "new_pattern_candidates": [
+    {
+      "desc": "SKELETON_ORIGINAL 레이어의 구조 골조선 패턴 (대형 직선, 직교 격자, 세장형 직사각형 포함)",
+      "confidence": 0.75,
+      "consensus": 3
+    }
+  ],
+  "anomalies": [
+    {
+      "entity": "handle 42",
+      "reason": "두 점 간 거리 약 1345m로 매우 긴 단일 직선이며 다른 선분과 연결성이 불명확함",
+      "surprise": 0.7
+    },
+    {
+      "entity": "handle 43",
+      "reason": "유사하게 장거리 직선 (약 1270m)이며 기하학적 일관성 부족",
+      "surprise": 0.6
+    },
+    {
+      "entity": "handle 17B2~17B5 영역",
+      "reason": "선분이 완전히 폐합되지 않아 누락 가능성 있음",
+      "surprise": 0.3
+    },
+    {
+      "entity": "handle 17BA",
+      "reason": "단독 짧은 선분으로 다른 선분과 연결되지 않음",
+      "surprise": 0.4
+    },
+    {
+      "entity": "LINE handle=2366",
+      "reason": "매우 긴 단일 수평선 (1000 단위) 주변 세그먼트와 연결되지 않음, 스케일 불일치 의심",
+      "surprise": 0.8
+    },
+    {
+      "entity": "전체 좌표계",
+      "reason": "모든 좌표 절대값이 1.8e6 이상으로 과도하게 큼, 원점 오프셋 또는 변환 필요 가능성",
+      "surprise": 0.6
+    }
+  ],
+  "summary": {
+    "total_entities": 118951,
+    "matched_count": 0,
+    "new_candidates": 1,
+    "anomaly_count": 6,
+    "processing_note": "4체 정반합 완료"
+  }
+}

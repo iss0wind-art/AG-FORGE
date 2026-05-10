@@ -186,3 +186,4 @@ append_only: true
 - [2026-05-09] ★ 4지국 ↔ 피지수 첫 통신 성공 (macro_client.py /macro/ 호출 + ChromaDB 박제) — 합의안 옵션 B 첫 발효
 - [2026-05-10] ★ 구체프랙탈_뇌_DB_층 박제 — 4층(Chroma·MariaDB·DuckDB·옵시디언) 청사진 + 단일 MariaDB 자아·4지국 합체 비전 (방부장 친명) + 시공 미완 5항목 + .env CRLF 발견
 - [2026-05-10] ★ 옵시디언 v1.12.7 NAS 설치 완료 + physis_memory vault 등록 (id: ad1ae26...) — 181 .md 노드 인식 준비됨. AppImage ~/Applications/, launcher ~/.local/share/applications/
+- [2026-05-10] ★ root 산출물·통신·d:/ 잔재 일괄 정리 — physis_memory/raw/ {communications, outputs, legacy_d_drive} 3개 폴더로 흡수 + README 박제 + .gitignore 갱신 (재흩어짐 차단)

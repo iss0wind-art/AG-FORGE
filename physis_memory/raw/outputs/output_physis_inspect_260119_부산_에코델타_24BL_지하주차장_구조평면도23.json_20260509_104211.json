@@ -1,0 +1,126 @@
+{
+  "raw": "{\n  \"final_patterns\": [],\n  \"new_pattern_candidates\": [\n    {\n      \"desc\": \"슬라브 이름(Slab Name) 표기 시, 관련 TEXT 주변을 ELLIPSE(타원)로 감싸는 시각적 강조 패턴. '00_SLAB NAME' 레이어의 주 객체 유형이 TEXT/MTEXT가 아닌 ELLIPSE인 점에서 식별됨.\",\n      \"confidence\": 0.0,\n      \"consensus\": 0\n    },\n    {\n      \"desc\": \"PC(Precast Concrete) 슬라브를 'S-PC-SLAB'이라는 명확한 전용 레이어에 LWPOLYLINE으로 구획하는 패턴. 부재 유형에 따른 레이어 분리 모범 사례.\",\n      \"confidence\": 0.0,\n      \"consensus\": 0\n    },\n    {\n      \"desc\": \"영역별(APT/기타) 보 레이어 분리 패턴. `00_BEAM`은 공용부/지하, `0",
+  "phase1": [
+    {
+      "matched_patterns": [
+        {
+          "pattern_id": "A-1",
+          "count": 0,
+          "samples": []
+        }
+      ],
+      "new_candidates": [],
+      "anomalies": [],
+      "stats": {
+        "total": 2,
+        "layer_group": "벽체",
+        "sample_size": 2
+      }
+    },
+    {
+      "matched_patterns": [],
+      "new_candidates": [
+        {
+          "desc": "슬라브 이름(Slab Name) 표기 시, 관련 TEXT 주변을 ELLIPSE(타원)로 감싸는 시각적 강조 패턴. '00_SLAB NAME' 레이어의 주 객체 유형이 TEXT/MTEXT가 아닌 ELLIPSE인 점에서 식별됨.",
+          "evidence": [
+            "Layer: '00_SLAB NAME', dominant_type: 'ELLIPSE', total_entities: 1128"
+          ]
+        },
+        {
+          "desc": "PC(Precast Concrete) 슬라브를 'S-PC-SLAB'이라는 명확한 전용 레이어에 LWPOLYLINE으로 구획하는 패턴. 부재 유형에 따른 레이어 분리 모범 사례.",
+          "evidence": [
+            "Layer: 'S-PC-SLAB', dominant_type: 'LWPOLYLINE', total_entities: 380"
+          ]
+        }
+      ],
+      "anomalies": [],
+      "stats": {
+        "total": 3,
+        "layer_group": "슬라브",
+        "sample_size": 3
+      }
+    },
+    {
+      "matched_patterns": [
+        {
+          "pattern_id": "A-1",
+          "count": 0,
+          "samples": []
+        }
+      ],
+      "new_candidates": [],
+      "anomalies": [],
+      "stats": {
+        "total": 1,
+        "layer_group": "기둥",
+        "sample_size": 1
+      }
+    },
+    {
+      "matched_patterns": [],
+      "new_candidates": [
+        {
+          "desc": "영역별(APT/기타) 보 레이어 분리 패턴. `00_BEAM`은 공용부/지하, `00_(APT)BEAM`은 아파트 세대부로 추정됨. A-3(영역별 독립 코드 체계) 패턴의 레이어 레벨 버전.",
+          "evidence": [
+            "LAYER: 00_BEAM",
+            "LAYER: 00_(APT)BEAM"
+          ]
+        },
+        {
+          "desc": "PC(프리캐스트 콘크리트) 보와 같은 특정 공법 부재를 위한 전용 레이어(`S-PC-GIRDER`) 사용 패턴. 일반 현장타설 보(`BEAM`)와 구분하여 관리.",
+          "evidence": [
+            "LAYER: S-PC-GIRDER",
+            "DOMINANT_TYPE: LWPOLYLINE"
+          ]
+        }
+      ],
+      "anomalies": [
+        {
+          "entity": "LAYER: 00_(APT)BEAM",
+          "reason": "레이어명에 괄호'()'를 사용하여 명명 규칙의 일관성이 부족하고, 일부 자동화 시스템에서 문제를 유발할 수 있음.",
+          "surprise": 0.2
+        }
+      ],
+      "stats": {
+        "total": 3,
+        "layer_group": "보",
+        "sample_size": 3
+      }
+    },
+    {
+      "matched_patterns": [
+        {
+          "pattern_id": "B-1",
+          "count": 5,
+          "samples": [
+            "XR吏??븯2痢듯룊硫대룄$0$AH-怨꾨떒?긽遺??꽑",
+            "XR吏??븯2痢듯룊硫대룄$0$A-ELEV",
+            "XR吏??븯2痢듯룊硫대룄$0$AH-?듃?젋移?",
+            "XR吏??븯2痢듯룊硫대룄$0$A-STAIR",
+            "XR吏??븯2痢듯룊硫대룄$0$A-HID-1"
+          ]
+        }
+      ],
+      "new_candidates": [
+        {
+          "desc": "격자/그리드 표기 (X/Y+번호+접미사 a/b)",
+          "evidence": [
+            "TEXT: X19b, X13a, X12a, X14a, X15a, X16a, X1a, X19a, X18a, X17a, Y19a, Y19"
+          ]
+        }
+      ],
+      "anomalies": [
+        {
+          "entity": "TEXT 좌표",
+          "reason": "좌표값이 매우 크고(약 10^6 단위) 일정 간격으로 반복됨 (예: X19b가 세 위치에 동일 y값으로 분포)",
+          "surprise": 0.5
+        }
+      ],
+      "stats": {
+        "total": 62,
+        "layer_group": "기타",
+        "sample_size": 62
+      }
+    }
+  ]
+}
