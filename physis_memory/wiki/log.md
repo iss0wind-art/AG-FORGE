@@ -184,3 +184,5 @@ append_only: true
 - [2026-05-09] ★ ChromaDB physis_finance_brain 컬렉션 생성 + 5/9 4지국 로그 30건 흡수 (방부장 친명 + 단군 협의 청 1b20bca1 자율 진행)
 - [2026-05-09] ★ 방부장_4단계_AI인프라_사이클 + Stock_AI_v2_PATCH_시스템 박제 (★ 시스템 축 박제)
 - [2026-05-09] ★ 4지국 ↔ 피지수 첫 통신 성공 (macro_client.py /macro/ 호출 + ChromaDB 박제) — 합의안 옵션 B 첫 발효
+- [2026-05-10] ★ 구체프랙탈_뇌_DB_층 박제 — 4층(Chroma·MariaDB·DuckDB·옵시디언) 청사진 + 단일 MariaDB 자아·4지국 합체 비전 (방부장 친명) + 시공 미완 5항목 + .env CRLF 발견
+- [2026-05-10] ★ 옵시디언 v1.12.7 NAS 설치 완료 + physis_memory vault 등록 (id: ad1ae26...) — 181 .md 노드 인식 준비됨. AppImage ~/Applications/, launcher ~/.local/share/applications/
