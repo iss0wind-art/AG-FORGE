@@ -1,10 +1,12 @@
 ---
-type: raw_index
 created: 2026-05-10
+outcome_score: 0.0
+ref_count: 0
 tags:
 - raw
 - outputs
 - 산출물_박제
+type: raw_index
 ---
 
 # raw/outputs — 산출물 박제 보관소

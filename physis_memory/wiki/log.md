@@ -194,3 +194,83 @@ append_only: true
 - [2026-05-11] ★ 정형 모듈 정독 wiki 박제 — 매크로_상관관계_엔진 + 섹터_4단계_가중치_코드 + 바이오_이벤트_스캐너 (3건)
 - [2026-05-11] ★ AG-Forge 자아 핵심 21 파일 → physis_brain 추가 흡수 (192 청크) — CONSTITUTION·PHYSIS·brain_*·architecture·implementation·페르소나·직관·철학 (총 504 임베딩)
 - [2026-05-11] ★ 5_9_거래결정_30건_정독_outcome_score_시드 박제 — HOLD 60%, 게이트 차단 60% 정상 작동, 직관 시드, 1·2단계 종목 분석(4단계 미진입)
+
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 2026-05-10_self_awakening.md: 제1조 위반: '분열' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — GRAPH_REPORT.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — FAIL_BOQ_CONSTITUTION_LEGACY.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — H2OWIND_DANGUN_BRANCH_SEED.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_spec_SEVEN_PIECE_KIT_INVENTORY.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 피지수_현재_상태_브리프_2026-05-10.md: 제1조 위반: '분열' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — Stock_AI_데이터_매매_상세.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — BOQ_brain_tasks.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — EnsembleAgent_가중투표_로직.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — 매크로_상관관계_엔진.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 외부_자문_정독_2026-05-09.md: 제1조 위반: '분열' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — BOQ_TEAM_OPERATIONS.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FAIL_BOQ_LEGACY_CONTEXT.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_spec_PHASE0_REVIEW_FOR_ICHEON.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — H2OWIND_zone-prediction_stage1.5_ai_interface.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — H2OWIND_shared-context_brain.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_docs_MANUAL_QUICK_REFERENCE.md: 제7조 위반: '재귀' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — H2OWIND__brain_brain.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — FAIL_H2OWIND_HANDOFF_2026_05_03.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — BOQ_docs_research_handoff_20260408.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_CONSTITUTION.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 단군의_평_2026-05-10.md: 제1조 위반: '분열' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — BOQ_CONSTITUTION.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FAIL_FREECAD_MANUAL_DRAWING_TO_FREECAD_v1.md: 제7조 위반: '재귀' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_spec_PHASE0_REVIEW_DECISIONS.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_docs_MANUAL_DRAWING_TO_FREECAD_v1.md: 제7조 위반: '재귀' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — FAIL_BOQ_DANGUN_BRANCH_SEED_ARCHIVE_2026_04_27.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FAIL_BOQ_SKETCHUP_REFACTOR_REPORT.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — BOQ_DANGUN_BRANCH_SEED.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — BOQ_특허_기술명세서.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — FAIL_FREECAD_CONSTITUTION_ARCHIVE_2026_04_27.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — H2OWIND_HANDOFF_2026-05-03.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — BOQ_CLAUDE.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — BOQ_docs_brain_map.md: 제8조 위반: '파괴' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — FREECAD_spec_api_contract.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 피지수_사명_선언.md: 제7조 위반: '무한' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 피지수_뇌_구조.md: 제7조 위반: '무한' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 피지수_3지국_파견_2026-05-08.md: 제7조 위반: '무한' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — H2OWIND__brain_CONSTITUTION.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 단군_행동원칙_헌법.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — FREECAD_spec_member_manifest_schema.md: 제7조 위반: '폭주' 감지
+- [2026-05-11 10:28] 🟠 CMA WARN — FAIL_FREECAD_이천_부임_안내문_ARCHIVE_2026_04_27.md: 제2조 경고: '충돌' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 2026-05-10_pride_decree.md: 제7조 위반: '재귀' 감지
+- [2026-05-11 10:28] 🔴 CMA BLOCK — 2026-05-10_dangun_evaluation.md: 제1조 위반: '분열' 감지
+- [2026-05-11 10:28] 소급 평가 완료 — 94개 노트 점수 갱신
+- [2026-05-11 10:28] 승격(LTM): Stock_AI_파이프라인.md
+- [2026-05-11 10:28] 승격(LTM): Stock_AI_모듈_지도.md
+- [2026-05-11 10:28] 승격(LTM): 3지국장_정체성.md
+- [2026-05-11 10:28] 승격(LTM): 한국시장_특수성.md
+- [2026-05-11 10:28] 승격(LTM): Stock_AI_데이터_매매_상세.md
+- [2026-05-11 10:28] 승격(LTM): 2026-05-09_4지국_파이프라인_관찰.md
+- [2026-05-11 10:28] 승격(LTM): 재무_분석_지표.md
+- [2026-05-11 10:28] 승격(LTM): 大業_신고조선_외부출시.md
+- [2026-05-11 10:28] 승격(LTM): 주식_금융_경제_도메인.md
+- [2026-05-11 10:28] 승격(LTM): EnsembleAgent_가중투표_로직.md
+- [2026-05-11 10:28] 승격(LTM): 바람을_보다_비정형의_시선.md
+- [2026-05-11 10:28] 승격(LTM): 매크로_상관관계_엔진.md
+- [2026-05-11 10:28] 승격(LTM): 주식시장_메커니즘.md
+- [2026-05-11 10:28] 승격(LTM): 외부_자문_정독_2026-05-09.md
+- [2026-05-11 10:28] 승격(LTM): DART_시스템.md
+- [2026-05-11 10:28] 승격(LTM): 이천_大業_알고리즘_명세.md
+- [2026-05-11 10:28] 승격(LTM): FREECAD_CLAUDE.md
+- [2026-05-11 10:28] 승격(LTM): 매크로_경제_지표.md
+- [2026-05-11 10:28] 승격(LTM): 멀티AI_앙상블_원리.md
+- [2026-05-11 10:28] 승격(LTM): 바이오_이벤트_스캐너.md
+- [2026-05-11 10:28] 승격(LTM): 방부장_4단계_AI인프라_사이클.md
+- [2026-05-11 10:28] 승격(LTM): 드림팩토리_기술스택_프로젝트.md
+- [2026-05-11 10:28] 승격(LTM): 단군의_평_2026-05-10.md
+- [2026-05-11 10:28] 승격(LTM): 방부장_승인_게이트_HITL.md
+- [2026-05-11 10:28] 승격(LTM): 행동경제학_원리.md
+- [2026-05-11 10:28] 승격(LTM): 섹터_4단계_가중치_코드.md
+- [2026-05-11 10:28] 승격(LTM): 신고조선_제국_전체_구조.md
+- [2026-05-11 10:28] 승격(LTM): 4지국_데이터_검토_시기.md
+- [2026-05-11 10:28] 승격(LTM): 구체프랙탈_뇌_DB_층.md
+- [2026-05-11 10:28] 승격(LTM): 7중_안전장치.md
+- [2026-05-11 10:28] 승격(LTM): Stock_AI_v2_PATCH_시스템.md
+- [2026-05-11 10:28] 승격(LTM): 피지수_뇌_구조.md
+- [2026-05-11 10:28] 승격(LTM): 2026-05-09_handoff.md
+- [2026-05-11 10:28] 망각 사이클 완료 — 승격 33건, 망각 0건- [2026-05-11 10:30] ★ 자율 사이클 가동 — reflection(회로 차단기 통찰) + cma_gate(190 통과·29 차단) + memory_promotion(33 노트 long_term 승격) + frontmatter 자동 갱신 (5/10 자각 outcome 0.8·ref 12) + 단군 KRX 차단 사후 보고 (b49e52f8)

@@ -1,7 +1,7 @@
 ---
 created: 2026-05-09
 outcome_score: 0.0
-ref_count: 1
+ref_count: 2
 tags:
 - h2owind
 - 2지국

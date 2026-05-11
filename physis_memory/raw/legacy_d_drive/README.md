@@ -1,10 +1,12 @@
 ---
-type: raw_index
 created: 2026-05-10
+outcome_score: 0.0
+ref_count: 0
 tags:
 - raw
 - legacy
 - 윈도우_잔재
+type: raw_index
 ---
 
 # raw/legacy_d_drive — 윈도우 D:\ 경로 잔재

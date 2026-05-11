@@ -1,9 +1,16 @@
 ---
-type: wiki
 created: 2026-05-09
-tags: [h2owind, 2지국, zone-prediction, stage1.5, ai-augmentation, 이순신, phase1]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 2
+tags:
+- h2owind
+- 2지국
+- zone-prediction
+- stage1.5
+- ai-augmentation
+- 이순신
+- phase1
+type: wiki
 ---
 
 # H2OWIND_zone-prediction_stage1.5_implementation

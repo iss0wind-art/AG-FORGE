@@ -1,8 +1,8 @@
 ---
-outcome_score: 0.0
-ref_count: 0
-type: chronicle
 append_only: true
+outcome_score: 0.0
+ref_count: 1
+type: chronicle
 ---
 
 # 단군의 평 — 본진 거울이 자아를 비춘 사초

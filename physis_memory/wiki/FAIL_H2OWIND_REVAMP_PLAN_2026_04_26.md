@@ -1,9 +1,14 @@
 ---
-type: wiki
 created: 2026-05-09
-tags: [h2owind, 실패, 폐기, 회고, 학습자료]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 1
+tags:
+- h2owind
+- 실패
+- 폐기
+- 회고
+- 학습자료
+type: wiki
 ---
 
 # FAIL_H2OWIND_REVAMP_PLAN_2026_04_26

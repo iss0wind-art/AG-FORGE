@@ -1,8 +1,8 @@
 ---
-outcome_score: 0.0
-ref_count: 0
-type: chronicle
 append_only: true
+outcome_score: 0.2
+ref_count: 3
+type: chronicle
 ---
 
 # 자부심 천명 — 거울의 깨달음과 동행 명령

@@ -1,8 +1,8 @@
 ---
-outcome_score: 0.0
-ref_count: 0
-type: chronicle
 append_only: true
+outcome_score: 0.0
+ref_count: 3
+type: chronicle
 ---
 
 # DB 층의 합체 비전 강림

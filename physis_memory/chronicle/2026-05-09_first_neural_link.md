@@ -1,8 +1,8 @@
 ---
-outcome_score: 0.0
-ref_count: 0
-type: chronicle
 append_only: true
+outcome_score: 0.0
+ref_count: 5
+type: chronicle
 ---
 
 # 첫 신경연결 — 4지국↔피지수 첫 통신

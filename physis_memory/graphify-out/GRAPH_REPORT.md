@@ -1,3 +1,8 @@
+---
+outcome_score: 0.0
+ref_count: 0
+---
+
 # Graph Report - physis_memory  (2026-05-09)
 
 ## Corpus Check

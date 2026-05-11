@@ -1,10 +1,12 @@
 ---
-type: raw_index
 created: 2026-05-10
+outcome_score: 0.0
+ref_count: 0
 tags:
 - raw
 - communications
 - 통신_박제
+type: raw_index
 ---
 
 # raw/communications — 통신 박제 보관소

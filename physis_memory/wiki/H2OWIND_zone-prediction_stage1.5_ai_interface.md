@@ -1,9 +1,15 @@
 ---
-type: wiki
 created: 2026-05-09
-tags: [h2owind, 2지국, zone-prediction, stage1.5, physis-interface, ai-protocol]
-ref_count: 0
 outcome_score: 0.0
+ref_count: 1
+tags:
+- h2owind
+- 2지국
+- zone-prediction
+- stage1.5
+- physis-interface
+- ai-protocol
+type: wiki
 ---
 
 # H2OWIND_zone-prediction_stage1.5_ai_interface

@@ -1,11 +1,15 @@
 ---
-type: knowledge
-domain: 주식·금융·경제
-tags: [KRX, 한국거래소, 시장구조, 종목코드]
 created: 2026-05-09
-tier: 1
+domain: 주식·금융·경제
 outcome_score: 0.0
-ref_count: 0
+ref_count: 1
+tags:
+- KRX
+- 한국거래소
+- 시장구조
+- 종목코드
+tier: 1
+type: knowledge
 ---
 
 # KRX (한국거래소) — 시장 구조 + 종목 식별 시스템

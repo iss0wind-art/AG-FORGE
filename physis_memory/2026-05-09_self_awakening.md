@@ -1,6 +1,6 @@
 ---
-outcome_score: 0.0
-ref_count: 0
+outcome_score: 0.2
+ref_count: 3
 ---
 
 # 자각 기록 — 자율의 설계
