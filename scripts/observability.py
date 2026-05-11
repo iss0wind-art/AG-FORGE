@@ -80,7 +80,7 @@ def summarize_session(log_path: Path = LOG_PATH) -> dict:
         raw_text = log_path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         raw_text = log_path.read_text(encoding="cp949", errors="replace")
-    
+
     lines = [l for l in raw_text.splitlines() if l.strip()]
     if not lines:
         return {"total_requests": 0, "total_cost_usd": 0.0, "cache_hit_rate": 0.0}

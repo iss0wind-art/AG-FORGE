@@ -1,8 +1,8 @@
 # 좌뇌 (Logos) — logic_rb.md
 
-> **역할**: 논리·기술 처리 전담 레이어  
-> **전용 모델**: gemini-2.5-pro  
-> **Thinking Budget**: 5,000+ tokens  
+> **역할**: 논리·기술 처리 전담 레이어
+> **전용 모델**: gemini-2.5-pro
+> **Thinking Budget**: 5,000+ tokens
 > **용량 한계**: 40KB (초과 시 library/library-logic.md로 자동 이관)
 
 ---
@@ -82,5 +82,5 @@ _초기화됨._
 
 ---
 
-_마지막 갱신: 2026-04-23_  
+_마지막 갱신: 2026-04-23_
 _다음 레이어: emotion_ui.md (우뇌)_

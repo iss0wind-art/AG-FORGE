@@ -74,7 +74,7 @@ def transplant(target_path: str, role: str = "field_brain", master: str = "", si
     import json
     target_root = Path(target_path).resolve()
     source_root = Path(__file__).parent.parent.resolve()
-    
+
     print(f"🚀 AG-FORGE 브레인 트랜스플랜트 시작...")
     print(f"📦 타겟: {target_root}")
     print(f"🌱 소스: {source_root}")
@@ -91,7 +91,7 @@ def transplant(target_path: str, role: str = "field_brain", master: str = "", si
     for f_name in MEMORY_FILES:
         src_f = source_root / f_name
         dst_f = brain_dir / f_name
-        
+
         if src_f.exists():
             shutil.copy2(src_f, dst_f)
             print(f"  ✅ 기억 복제: {f_name}")

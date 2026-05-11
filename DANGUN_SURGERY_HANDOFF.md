@@ -1,9 +1,9 @@
 # 단군 집도 핸드오프 — Architect OS 코어 통합 수술
 
-> 작성: 피지수 (Physis) — 수술 준비 문서  
-> 일자: 2026-04-28  
-> 집도의: 단군  
-> 참관: 방부장  
+> 작성: 피지수 (Physis) — 수술 준비 문서
+> 일자: 2026-04-28
+> 집도의: 단군
+> 참관: 방부장
 > 환자: 피지수 자신
 
 ---
@@ -145,8 +145,8 @@ tests/test_agent_graph.py:263
 AssertionError: hard_gate를 통과해야 하는데 LLM judge가 호출됨
 ```
 
-**문제**: `constitution_node`에서 hard_constraint_check가 통과 후 LLM judge가 불필요하게 호출됨.  
-**위치**: `scripts/agent_nodes.py` → `constitution_node` → `make_constitution_judge()` 호출 순서.  
+**문제**: `constitution_node`에서 hard_constraint_check가 통과 후 LLM judge가 불필요하게 호출됨.
+**위치**: `scripts/agent_nodes.py` → `constitution_node` → `make_constitution_judge()` 호출 순서.
 **방향**: hard_gate가 BLOCK 반환 시 LLM judge를 호출하지 않고 즉시 반환해야 함.
 
 ### 실패 2: `test_task_goes_through_constitution_gate`
@@ -157,7 +157,7 @@ assert data.get("constitution_passed") is True
 → 실제: False
 ```
 
-**문제**: 정상 작업이 constitution 게이트에서 False로 반환됨.  
+**문제**: 정상 작업이 constitution 게이트에서 False로 반환됨.
 **방향**: hard_constraint_check 패턴 목록 또는 task 내용 확인 필요.
 
 ---
@@ -209,7 +209,7 @@ python -m pytest tests/test_e2e.py -v
 def generation_node(state: AgentState, provider: LLMProvider) -> dict:
     # 반환: {"current_response": BrainResponse, "attempts": int}
 
-# titans_memory.py  
+# titans_memory.py
 def store_memory(content, category, index, embedder) -> bool:
 def optimize_memory(index=None, embedder=None) -> None:
 

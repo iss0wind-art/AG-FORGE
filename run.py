@@ -122,7 +122,7 @@ def main() -> int:
     # 터널 가동 (비동기)
     tunnel_proc = None
     public_url = f"http://localhost:{args.port}"
-    
+
     if args.tunnel:
         try:
             tunnel_proc = open_cloudflare_tunnel(args.port)
@@ -138,7 +138,7 @@ def main() -> int:
         if tunnel_proc:
             print("[Info] 페이퍼 클립 종료 중...")
             tunnel_proc.terminate()
-            
+
     return 0
 
 

@@ -89,7 +89,7 @@ def _call_llm(prompt: str, system: str) -> str:
             resp = httpx.post(url, headers=headers, json=payload, timeout=60)
             resp.raise_for_status()
             data = resp.json()
-            
+
             if "anthropic" in url:
                 return data["content"][0]["text"]
             return data["choices"][0]["message"]["content"]

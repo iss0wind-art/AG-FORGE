@@ -16,7 +16,7 @@ def test_router():
         ("알고리즘 최적화가 필요해", TaskType.CODE),
         ("전체 시스템 아키텍처를 그려줘", TaskType.ARCHITECTURE),
     ]
-    
+
     for task, expected in tasks:
         decision = route(task)
         print(f"작업: '{task}' -> 결과: {decision.task_type} (기대값: {expected})")
@@ -26,7 +26,7 @@ def test_router():
 def test_layer_loading():
     print("--- [테스트 2] 브레인 레이어 로딩 검증 ---")
     from scripts.brain_loader import load_layer
-    
+
     try:
         brain_md = load_layer("brain.md")
         print(f"brain.md 로드 성공 ({len(brain_md)} bytes)")

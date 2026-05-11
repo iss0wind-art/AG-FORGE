@@ -104,14 +104,14 @@ def chunk_document(text: str, chunk_size: int = 500, overlap: int = 50):
 def embed_and_store(doc_id: str, text: str, category: str):
     """텍스트를 임베딩하고 Vector DB에 저장"""
     chunks = chunk_document(text)
-    
+
     for i, chunk in enumerate(chunks):
         # OpenAI 임베딩 생성
         embedding = client.embeddings.create(
             input=chunk,
             model="text-embedding-3-small"
         ).data[0].embedding
-        
+
         # Pinecone에 저장
         pc.Index("ag-forge-memory").upsert(
             vectors=[
@@ -145,30 +145,30 @@ class AgenticRAG:
     def __init__(self, vector_store, llm_client):
         self.vector_store = vector_store
         self.llm = llm_client
-    
+
     def search(self, query: str, top_k: int = 3) -> List[str]:
         """벡터 검색으로 관련 청크 추출"""
         query_embedding = self.llm.embeddings.create(
             input=query,
             model="text-embedding-3-small"
         ).data[0].embedding
-        
+
         results = self.vector_store.query(
             vector=query_embedding,
             top_k=top_k,
             include_metadata=True
         )
-        
+
         return [r["metadata"]["text"] for r in results["matches"]]
-    
+
     def retrieve_and_generate(self, query: str) -> str:
         """Agentic RAG: 검색 → 추론 → 응답"""
         # Step 1: 관련 기억 검색 (200ms)
         relevant_chunks = self.search(query, top_k=3)
-        
+
         # Step 2: 검색 결과 통합
         context = "\n---\n".join(relevant_chunks)
-        
+
         # Step 3: LLM 호출 (기억 컨텍스트 포함)
         response = self.llm.chat.completions.create(
             model="claude-3-5-sonnet",
@@ -183,7 +183,7 @@ class AgenticRAG:
                 }
             ]
         )
-        
+
         return response.choices[0].message.content
 
 # 사용 예시
@@ -210,20 +210,20 @@ def compress_and_archive(source_file: str, target_category: str):
     if check_file_size(source_file):
         with open(source_file, "r") as f:
             content = f.read()
-        
+
         # Vector DB로 이관
         doc_id = f"{target_category}-archived-{datetime.now().strftime('%Y%m%d')}"
         embed_and_store(doc_id, content, target_category)
-        
+
         # 원본 파일 초기화
         with open(source_file, "w") as f:
             f.write(f"# {target_category.title()} - 아카이브됨\n\n")
             f.write(f"벡터 DB에 이관되었습니다. ({doc_id})\n")
             f.write("최근 작업은 아래에만 기록됩니다.\n")
-        
+
         print(f"✅ 자동 아카이브 완료: {doc_id}")
         return True
-    
+
     return False
 
 # 정기 실행 (매일 자정)
@@ -341,16 +341,16 @@ def calculate_cache_savings(usage):
     # Claude 가격 (per 1M tokens)
     regular_cost = 3  # $3/M (입력)
     cache_cost = 0.30  # $0.30/M (캐시 읽기)
-    
+
     regular_tokens = usage.input_tokens
     cache_tokens = usage.cache_read_input_tokens
-    
+
     regular_cost_actual = (regular_tokens / 1_000_000) * regular_cost
     cache_cost_actual = (cache_tokens / 1_000_000) * cache_cost
-    
+
     savings = regular_cost_actual - (regular_cost_actual + cache_cost_actual)
     savings_percent = (1 - (regular_cost_actual + cache_cost_actual) / regular_cost_actual) * 100
-    
+
     print(f"입력 토큰: {regular_tokens}")
     print(f"캐시 읽기 토큰: {cache_tokens}")
     print(f"절감액: ${savings:.4f} ({savings_percent:.1f}%)")
@@ -458,33 +458,33 @@ class TaskDifficulty(Enum):
 class TaskClassifier:
     def classify(self, task_description: str) -> TaskDifficulty:
         """사용자 요청을 분석하여 난이도 판별"""
-        
+
         # 패턴 기반 분류
         simple_keywords = [
             "오타", "텍스트", "텍스트", "색상", "padding",
             "margin", "폰트", "아이콘", "버튼", "하이라이트"
         ]
-        
+
         medium_keywords = [
             "기능 추가", "폼 검증", "API 연결",
             "상태 관리", "라우팅", "필터링"
         ]
-        
+
         complex_keywords = [
             "알고리즘", "DB ", "스키마", "성능 최적화",
             "아키텍처", "마이그레이션", "보안", "캐싱 전략"
         ]
-        
+
         text_lower = task_description.lower()
-        
+
         # 복잡도 점수 계산
         simple_score = sum(1 for kw in simple_keywords if kw in text_lower)
         medium_score = sum(1 for kw in medium_keywords if kw in text_lower)
         complex_score = sum(1 for kw in complex_keywords if kw in text_lower)
-        
+
         # 최고 점수의 난이도 반환
         max_score = max(simple_score, medium_score, complex_score)
-        
+
         if complex_score == max_score and complex_score > 0:
             return TaskDifficulty.COMPLEX
         elif medium_score == max_score and medium_score > 0:
@@ -542,7 +542,7 @@ class DynamicBudgetAllocator:
             priority="quality"
         ),
     }
-    
+
     def allocate(self, difficulty: TaskDifficulty) -> ModelBudget:
         """난이도에 따라 리소스 할당"""
         budget = self.BUDGETS[difficulty]
@@ -568,21 +568,21 @@ from typing import Dict, Any
 
 class JudgmentRouterAgent:
     """소뇌 역할: 작업 판별 → 모델 선택 → 예산 할당"""
-    
+
     def __init__(self):
         self.client = anthropic.Anthropic(api_key="your-key")
         self.classifier = TaskClassifier()
         self.budget_allocator = DynamicBudgetAllocator()
-    
+
     def route_task(self, user_request: str) -> Dict[str, Any]:
         """작업 라우팅 & 리소스 할당"""
-        
+
         # Step 1: 난이도 분류
         difficulty = self.classifier.classify(user_request)
-        
+
         # Step 2: 예산 할당
         budget = self.budget_allocator.allocate(difficulty)
-        
+
         # Step 3: 로깅 및 모니터링
         routing_decision = {
             "user_request": user_request,
@@ -593,14 +593,14 @@ class JudgmentRouterAgent:
             "expected_latency_ms": budget.latency_ms,
             "priority": budget.priority,
         }
-        
+
         print(f"🧠 라우팅 결정:")
         print(f"  난이도: {routing_decision['difficulty']}")
         print(f"  모델: {routing_decision['model']}")
         print(f"  Thinking: {routing_decision['thinking_budget']} tokens")
-        
+
         return routing_decision
-    
+
     def execute_with_budget(self, request: str, budget: ModelBudget) -> str:
         """할당된 예산으로 작업 실행"""
         response = self.client.messages.create(
@@ -750,14 +750,14 @@ tracer = trace.get_tracer("ag-forge")
 
 class BrainLayerTracer:
     """각 뇌 계층의 실행을 추적"""
-    
+
     @staticmethod
     def trace_prefrontal_cortex(decision_logic):
         """전두엽 추적"""
         with tracer.start_as_current_span("prefrontal_cortex") as span:
             span.set_attribute("brain_layer", "frontal_lobe")
             span.set_attribute("role", "decision_making")
-            
+
             try:
                 result = decision_logic()
                 span.set_attribute("status", "success")
@@ -767,14 +767,14 @@ class BrainLayerTracer:
                 span.set_attribute("error.type", type(e).__name__)
                 span.record_exception(e)
                 raise
-    
+
     @staticmethod
     def trace_left_brain(logic_execution):
         """좌뇌(알고리즘) 추적"""
         with tracer.start_as_current_span("left_brain_logic") as span:
             span.set_attribute("brain_layer", "left_hemisphere")
             span.set_attribute("function", "algorithmic_thinking")
-            
+
             try:
                 result = logic_execution()
                 span.set_attribute("status", "success")
@@ -782,14 +782,14 @@ class BrainLayerTracer:
             except Exception as e:
                 span.set_attribute("status", "error")
                 raise
-    
+
     @staticmethod
     def trace_right_brain(creative_execution):
         """우뇌(창의성) 추적"""
         with tracer.start_as_current_span("right_brain_creative") as span:
             span.set_attribute("brain_layer", "right_hemisphere")
             span.set_attribute("function", "creative_thinking")
-            
+
             try:
                 result = creative_execution()
                 span.set_attribute("status", "success")
@@ -823,14 +823,14 @@ class HalluccinationCheck:
 
 class HalluccinationDetector:
     """AI 할루시네이션 및 무한 루프 감지"""
-    
+
     def __init__(self):
         self.max_iterations = 5
         self.iteration_count = 0
-    
+
     def check_consistency(self, claim: str, source_data: dict) -> HalluccinationCheck:
         """생성 내용이 소스 데이터와 일치하는지 확인"""
-        
+
         # 예시: 코드 생성 시 문서와 비교
         if "implements" in claim and "interface" in source_data:
             if source_data["interface"] not in claim:
@@ -840,39 +840,39 @@ class HalluccinationDetector:
                     reason="생성된 코드가 인터페이스 정의와 불일치",
                     mitigation="좌뇌에 재생성 요청"
                 )
-        
+
         return HalluccinationCheck(
             is_suspicious=False,
             confidence=0.95,
             reason="소스 데이터와 일치"
         )
-    
+
     def detect_infinite_loop(self) -> bool:
         """좌뇌↔우뇌 무한 루프 감지"""
         self.iteration_count += 1
-        
+
         if self.iteration_count > self.max_iterations:
             print("⚠️ 경고: 의사 결정 루프가 5회 이상 반복되었습니다.")
             print("   → 루프 중단 & 현재의 최선책으로 결정")
             return True
-        
+
         return False
-    
+
     def validate_output(self, output: str, expected_type: str) -> bool:
         """산출물이 예상 타입과 일치하는지 확인"""
-        
+
         type_checks = {
             "code": lambda x: "{" in x and "}" in x,
             "design": lambda x: "color" in x or "layout" in x or "font" in x,
             "text": lambda x: len(x) > 50 and len(x) < 10000,
         }
-        
+
         if expected_type in type_checks:
             is_valid = type_checks[expected_type](output)
             if not is_valid:
                 print(f"⚠️ 경고: 산출물이 {expected_type} 형식 아님")
                 return False
-        
+
         return True
 
 # 사용

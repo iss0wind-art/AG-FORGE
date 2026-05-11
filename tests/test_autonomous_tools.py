@@ -21,16 +21,16 @@ def test_approval_gate():
         return
 
     provider = DeepSeekProvider(api_key)
-    
+
     # 작업 지시: 파일 수정을 유도함
     task = "현재 프로젝트의 README.md 파일 끝에 'Phase 4 검증 완료'라는 문구를 추가해줘."
-    
+
     print("--- [Physis 도구 승인 게이트 검증 시작] ---")
     print(f"작업 지시: {task}")
-    
+
     from scripts.agent_graph import build_agent_graph
     graph = build_agent_graph(provider)
-    
+
     # 1. 초기 실행 (승인 없이)
     initial_state: AgentState = {
         "task": task,
@@ -46,16 +46,16 @@ def test_approval_gate():
         "approved": False,
         "pending_tool_call": None
     }
-    
+
     print("\n[Step 1] 자율 사고 및 도구 사용 계획 수립 중...")
     # 툴 노드까지만 실행되도록 수동 워크플로우 시뮬레이션 또는 전체 실행
     # 여기서는 전체 실행 후 state 변화 확인
     final_state = graph.invoke(initial_state)
-    
+
     print("\n--- [Physis 사고 결과 보고] ---")
     if final_state.get("current_response"):
         print(f"🤖 Physis의 실제 답변:\n{final_state['current_response'].text}\n")
-    
+
     if final_state.get("needs_approval"):
         print(f"⚠️ 승인 대기 발생!")
         print(f"제안된 작업: {final_state.get('pending_tool_call')}")

@@ -18,7 +18,7 @@ class ChromaDBIndex:
     def __init__(self, collection_name: str = "physis_memory") -> None:
         # DB 경로 보장
         DB_PATH.parent.mkdir(exist_ok=True)
-        
+
         self.client = chromadb.PersistentClient(
             path=str(DB_PATH),
             settings=Settings(allow_reset=True)
@@ -38,7 +38,7 @@ class ChromaDBIndex:
         ids = [v["id"] for v in vectors]
         embeddings = [v["values"] for v in vectors]
         metadatas = [v["metadata"] for v in vectors]
-        
+
         # ChromaDB는 'documents' 필드도 가질 수 있으나, 여기서는 metadata 내부의 'text'를 사용
         self.collection.upsert(
             ids=ids,
@@ -56,7 +56,7 @@ class ChromaDBIndex:
             n_results=top_k,
             include=["metadatas", "distances"]
         )
-        
+
         matches = []
         # results['ids'], results['distances'], results['metadatas']는 리스트의 리스트임 [[...]]
         for i in range(len(results["ids"][0])):
@@ -65,7 +65,7 @@ class ChromaDBIndex:
                 "score": 1.0 - results["distances"][0][i], # cosine distance -> similarity
                 "metadata": results["metadatas"][0][i]
             })
-            
+
         return {"matches": matches}
 
 def get_vector_db() -> ChromaDBIndex:

@@ -1,6 +1,6 @@
 ﻿# AG-Forge: 비용 최적화 가이드
 
-토큰 비용 계산 공식과 단계별 최적화 체크리스트를 제공합니다.  
+토큰 비용 계산 공식과 단계별 최적화 체크리스트를 제공합니다.
 방부장 결재 전 이 문서의 모든 항목을 검증하십시오.
 
 ---
@@ -213,5 +213,5 @@ COST_ALERTS = {
 
 ---
 
-**이전 문서**: `technical-guidelines.md`  
+**이전 문서**: `technical-guidelines.md`
 **다음 문서**: `implementation-roadmap.md`

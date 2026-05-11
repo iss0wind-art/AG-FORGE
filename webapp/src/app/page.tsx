@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { 
-  Timer, 
-  AlertTriangle, 
-  Skull, 
-  Heart, 
-  Activity, 
+import {
+  Timer,
+  AlertTriangle,
+  Skull,
+  Heart,
+  Activity,
   FileText,
   ShieldCheck,
   Zap
@@ -40,7 +40,7 @@ export default function JudgmentDashboard() {
 
       {/* Header */}
       <div className="relative z-10 text-center space-y-4">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500"
@@ -53,7 +53,7 @@ export default function JudgmentDashboard() {
       </div>
 
       <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
+
         {/* Left Column: Metrics */}
         <div className="space-y-6">
           <Card icon={<Activity className="text-primary" />} title="System Metrics">
@@ -80,21 +80,21 @@ export default function JudgmentDashboard() {
           <div className={`relative w-72 h-72 lg:w-96 lg:h-96 rounded-full flex items-center justify-center glass ${isSuspended ? 'border-secondary' : 'border-primary'} glow-primary`}>
             {/* Spinner Progress (Placeholder SVG) */}
             <svg className="absolute w-full h-full -rotate-90">
-              <circle 
-                cx="50%" cy="50%" r="48%" 
-                stroke="currentColor" strokeWidth="2" 
-                fill="transparent" 
+              <circle
+                cx="50%" cy="50%" r="48%"
+                stroke="currentColor" strokeWidth="2"
+                fill="transparent"
                 className={`${isSuspended ? 'text-secondary/20' : 'text-primary/20'}`}
               />
-              <motion.circle 
-                cx="50%" cy="50%" r="48%" 
-                stroke="currentColor" strokeWidth="4" 
-                fill="transparent" 
+              <motion.circle
+                cx="50%" cy="50%" r="48%"
+                stroke="currentColor" strokeWidth="4"
+                fill="transparent"
                 strokeDasharray="100 100"
                 className={`${isSuspended ? 'text-secondary' : 'text-primary'}`}
               />
             </svg>
-            
+
             <div className="text-center z-10">
               {isSuspended ? (
                 <div className="flex flex-col items-center text-secondary">
@@ -110,17 +110,17 @@ export default function JudgmentDashboard() {
               )}
             </div>
           </div>
-          
+
           <div className="mt-8 flex gap-4">
-            <ActionButton 
-              icon={<Heart className="w-5 h-5" />} 
-              label="Clemency" 
+            <ActionButton
+              icon={<Heart className="w-5 h-5" />}
+              label="Clemency"
               color="bg-accent/10 hover:bg-accent/20 text-accent border-accent/20"
               onClick={store.revive}
             />
-            <ActionButton 
-              icon={<Skull className="w-5 h-5" />} 
-              label="Terminate" 
+            <ActionButton
+              icon={<Skull className="w-5 h-5" />}
+              label="Terminate"
               color="bg-secondary/10 hover:bg-secondary/20 text-secondary border-secondary/20"
               onClick={() => {
                 if(confirm("정말로 이 에이전트를 영구 폐기하시겠습니까? 기억이 완전히 프루닝됩니다.")) {
@@ -137,10 +137,10 @@ export default function JudgmentDashboard() {
             <div className="mt-4 space-y-3 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
               <AnimatePresence mode="popLayout">
                 {store.audit_trail.slice().reverse().map((log, i) => (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    key={i} 
+                    key={i}
                     className="p-3 bg-white/5 border border-white/10 rounded-lg text-xs"
                   >
                     <div className="flex justify-between text-gray-500 mb-1">
@@ -161,7 +161,7 @@ export default function JudgmentDashboard() {
 
 function Card({ icon, title, children, className = "" }: { icon: React.ReactNode, title: string, children: React.ReactNode, className?: string }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       className={`glass rounded-2xl p-6 ${className}`}
@@ -186,7 +186,7 @@ function Metric({ label, value, color }: { label: string, value: string | number
 
 function ActionButton({ icon, label, color, onClick }: { icon: React.ReactNode, label: string, color: string, onClick: () => void }) {
   return (
-    <button 
+    <button
       onClick={onClick}
       className={`flex items-center gap-2 px-6 py-3 rounded-xl border transition-all duration-300 active:scale-95 ${color}`}
     >

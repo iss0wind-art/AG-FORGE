@@ -24,7 +24,7 @@
     }
     .brand { display: flex; align-items: center; gap: 12px; }
     .brand h1 { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
-    
+
     /* 뇌 상태 표시등 (LED) */
     .status-indicator {
       display: flex; align-items: center; gap: 8px;
@@ -38,7 +38,7 @@
       box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
     .led.online {
-      background: #10b981; 
+      background: #10b981;
       box-shadow: 0 0 10px #10b981, 0 0 20px rgba(16, 185, 129, 0.4);
       animation: pulse-green 2s infinite;
     }
@@ -60,16 +60,16 @@
     .brain-icon { width: 32px; height: 32px; transition: all 0.5s ease; }
     .brain-path { fill: #444; transition: fill 0.5s; }
     .eye { fill: #fff; transition: all 0.3s ease; transform-origin: center; }
-    
+
     /* 활성 상태 뇌 (눈을 뜬 모습) */
     .status-alive .brain-path { fill: #ff7eb3; filter: drop-shadow(0 0 8px rgba(255, 126, 179, 0.6)); }
     .status-alive .eye { transform: scaleY(1); opacity: 1; }
     .status-alive .brain-icon { animation: brain-beat 3s infinite ease-in-out; }
-    
+
     /* 취침 상태 뇌 (눈을 감은 모습) */
     .status-sleeping .brain-path { fill: #333; }
     .status-sleeping .eye { transform: scaleY(0.1); opacity: 0.5; }
-    
+
     @keyframes brain-beat {
       0%, 100% { transform: scale(1); filter: brightness(1); }
       50% { transform: scale(1.05); filter: brightness(1.2); }
@@ -102,7 +102,7 @@
       display: flex; gap: 8px; border-bottom: 1px solid #222; padding-bottom: 6px;
     }
     .msg.error { background: #2d1616; border-color: #451a1a; color: #f87171; }
-    
+
     #input-area {
       padding: 20px 24px;
       background: #0a0a0a; border-top: 1px solid #1a1a1a;
@@ -142,7 +142,7 @@
       padding: 6px 20px; font-size: 11px; color: #666;
       background: #111; text-align: right;
     }
-    
+
     /* 스크롤바 스타일링 - 더 잘 보이게 수정 */
     #chat::-webkit-scrollbar { width: 8px; }
     #chat::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; border: 2px solid #111; }
@@ -209,7 +209,7 @@
       const led = document.getElementById('led');
       const statusText = document.getElementById('header-status');
       const brainContainer = document.getElementById('brain-container');
-      
+
       try {
         const resp = await fetch('/api/logs', {
           headers: { 'X-API-Key': apiKey }

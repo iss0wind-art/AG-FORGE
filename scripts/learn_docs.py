@@ -19,14 +19,14 @@ def main():
 
     db = get_vector_db()
     embedder = GoogleEmbeddingClient(api_key)
-    
+
     docs_to_learn = [
         ("technical-guidelines.md", "guidelines"),
         ("architecture-overview.md", "architecture"),
         ("brain.md", "brain_core"),
         ("CONSTITUTION.md", "constitution")
     ]
-    
+
     print("--- Physis 해마 학습(Embedding) 시작 ---")
     for filename, category in docs_to_learn:
         filepath = ROOT / filename
@@ -39,7 +39,7 @@ def main():
                 print(f"❌ {filename} 실패: {e}")
         else:
             print(f"⚠️ {filename} 파일을 찾을 수 없습니다.")
-    
+
     print("\n🎉 모든 초기 학습 작업 완료!")
 
 if __name__ == "__main__":

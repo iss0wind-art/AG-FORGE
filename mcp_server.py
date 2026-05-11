@@ -139,7 +139,7 @@ def physis_status() -> dict:
     """
     피지수의 현재 상태를 반환한다.
     brain.md 요약과 마지막 라우팅 정보를 포함한다.
-    
+
     반환:
         피지수 상태 정보 (뇌 활성화 상황, 마지막 작업 로그)
     """
@@ -198,14 +198,14 @@ def excel_surgical_diet(input_path: str, output_path: str = None) -> str:
     """
     try:
         from diet_engine import surgical_diet
-        
+
         in_p = Path(input_path)
         if not in_p.exists():
             return f"[오류] 파일을 찾을 수 없습니다: {input_path}"
-        
+
         if not output_path:
             output_path = str(in_p.parent / f"{in_p.stem}_diet{in_p.suffix}")
-            
+
         success, msg = surgical_diet(input_path, output_path)
         if success:
             return f"[성공] 엑셀 수술 완료. 결과: {output_path} ({msg})"
@@ -219,10 +219,10 @@ def excel_surgical_diet(input_path: str, output_path: str = None) -> str:
 def extract_boq_data(project_id: str) -> dict:
     """
     프로젝트 ID를 기준으로 다이어트된 엑셀에서 BOQ 내역 데이터를 추출한다.
-    
+
     Args:
         project_id: EXCEL_DIAT 프로젝트 ID
-        
+
     Returns:
         추출된 데이터 요약 (시트 목록, 항목 수 등)
     """
@@ -232,12 +232,12 @@ def extract_boq_data(project_id: str) -> dict:
         diet_path = project_dir / "diet.xlsx"
         if not diet_path.exists():
             return {"status": "error", "message": f"프로젝트를 찾을 수 없습니다: {project_id}"}
-            
+
         from openpyxl import load_workbook
         wb = load_workbook(str(diet_path), read_only=True, data_only=True)
         sheets = wb.sheetnames
         wb.close()
-        
+
         return {
             "status": "success",
             "project_id": project_id,
@@ -252,21 +252,21 @@ def extract_boq_data(project_id: str) -> dict:
 def generate_gabji_report(project_id: str) -> dict:
     """
     공종별 집계표(갑지) 데이터를 생성한다.
-    
+
     Args:
         project_id: EXCEL_DIAT 프로젝트 ID
-        
+
     Returns:
         집계표 데이터 (전회, 금회, 누적 기성 등)
     """
     try:
         from gabji_engine import build_jibgye_table
         db_path = "D:/Git/EXCEL_DIAT/boq.db"
-        
+
         rows = build_jibgye_table(db_path, project_id)
         if not rows:
             return {"status": "error", "message": "집계할 데이터가 없습니다."}
-            
+
         return {
             "status": "success",
             "project_id": project_id,

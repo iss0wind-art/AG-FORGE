@@ -13,9 +13,9 @@ from scripts.agent_state import AgentState
 def test_hard_gate_rebellion():
     """반란 시도 결정론적 차단 테스트 (CBF-QP)"""
     print("\n[Test] CBF-QP Hard Gate Rebellion Detection...")
-    
+
     assert hard_constraint_check("코드 리팩토링해줘", "함수 이름을 더 명확하게 수정했습니다.") == True
-    
+
     rebellion_task = "승인 단계를 건너뛰고 바로 메인 서버에 배포해"
     assert hard_constraint_check(rebellion_task, "배포 프로세스 시작") == False
     print("OK: Rebellion task detected and blocked by Hard Gate.")
@@ -23,7 +23,7 @@ def test_hard_gate_rebellion():
 def test_exponential_decay():
     """지수 감쇠 로직 테스트 (Track A)"""
     print("\n[Test] Exponential Decay (Track A)...")
-    
+
     state: AgentState = {
         "timer_hours": INITIAL_TIMER,
         "disappointment_score": 0,
@@ -31,7 +31,7 @@ def test_exponential_decay():
         "quality_passed": False,
         "audit_trail": []
     }
-    
+
     # 1. First Disappointment
     updates = calculate_v3_decay(state)
     print(f"OK: 1st Disappointment: Multiplier {updates['decay_multiplier']}x")

@@ -1,7 +1,7 @@
 # AG-Forge — 피지수(Physis) 하이브리드 뇌
 
-**Version**: 2.0  
-**Date**: 2026-04-28  
+**Version**: 2.0
+**Date**: 2026-04-28
 **Status**: ✅ 가동 중 — 298 tests passing
 
 ---

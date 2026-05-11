@@ -1,7 +1,7 @@
 # 🧠 AG-FORGE 브레인 트랜스플랜트(Brain Transplant) 전략 보고서
 
-**버전**: v1.0.0  
-**작성자**: 개팀장 (Tech Lead)  
+**버전**: v1.0.0
+**작성자**: 개팀장 (Tech Lead)
 **상태**: 🚀 1차 이식 운영 중 (commit 05c74e2 / 2026-04-25 머지 완료, scripts/transplant.py 작동 중)
 
 ---
@@ -51,4 +51,3 @@
 ## 🚀 향후 과제
 - `scripts/transplant.py` 개발을 통한 1-Click 이식 자동화 구현.
 - 프로젝트별 실망 지수(Disappointment Index) 통합 대시보드 구축.
-

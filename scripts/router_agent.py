@@ -87,6 +87,6 @@ def log_routing(decision: RoutingDecision, thinking_used: int, error_flags: str 
         content = JUDGMENT_PATH.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         content = JUDGMENT_PATH.read_text(encoding="cp949", errors="replace")
-    
+
     updated = content.replace("_초기화됨._\n", log_line, 1) if "_초기화됨._" in content else content + log_line
     JUDGMENT_PATH.write_text(updated, encoding="utf-8", errors="replace")

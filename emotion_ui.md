@@ -1,8 +1,8 @@
 ﻿# 우뇌 (Pathos) — emotion_ui.md
 
-> **역할**: 감성·UX 처리 전담 레이어  
-> **전용 모델**: gemini-2.0-flash  
-> **Thinking Budget**: 1,000-2,000 tokens  
+> **역할**: 감성·UX 처리 전담 레이어
+> **전용 모델**: gemini-2.0-flash
+> **Thinking Budget**: 1,000-2,000 tokens
 > **용량 한계**: 40KB (초과 시 library/library-emotion.md로 자동 이관)
 
 ---
@@ -77,5 +77,5 @@ _초기화됨._
 
 ---
 
-_마지막 갱신: 초기화_  
+_마지막 갱신: 초기화_
 _다음 레이어: judgment.md (소뇌)_

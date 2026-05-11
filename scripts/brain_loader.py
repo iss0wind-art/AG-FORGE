@@ -388,7 +388,7 @@ class ChainedProvider(LLMProvider):
                 response_text = ""
                 if hasattr(e, "response") and hasattr(e.response, "text"):
                     response_text = e.response.text.lower()
-                
+
                 if ("429" in error_str or "quota" in error_str or "rate" in error_str or
                     "credit" in response_text or "balance" in response_text or "400" in error_str):
                     last_exc = e

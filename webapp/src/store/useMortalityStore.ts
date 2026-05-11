@@ -9,7 +9,7 @@ interface MortalityState {
   audit_trail: any[]
   isLoading: boolean
   error: string | null
-  
+
   fetchStatus: () => Promise<void>
   revive: () => Promise<void>
   terminate: () => Promise<void>

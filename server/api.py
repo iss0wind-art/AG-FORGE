@@ -60,7 +60,7 @@ class _InternalProvider(LLMProvider):
 def _build_provider() -> LLMProvider:
     """Claude→Qwen→DeepSeek→Groq→Gemini 순서의 ChainedProvider 반환. 쿼터 소진 시 자동 폴백."""
     from scripts.brain_loader import (
-        GroqProvider, DeepSeekProvider, GeminiProvider, 
+        GroqProvider, DeepSeekProvider, GeminiProvider,
         QwenProvider, ClaudeProvider, ChainedProvider
     )
 
@@ -113,7 +113,7 @@ async def mobile_ui():
             status_code=403,
             media_type="text/html; charset=utf-8"
         )
-    
+
     try:
         # utf-8-sig를 사용하여 Windows BOM 문제 해결
         ui_content = UI_PATH.read_text(encoding="utf-8-sig")
@@ -122,7 +122,7 @@ async def mobile_ui():
             ui_content = UI_PATH.read_text(encoding="utf-8")
         except Exception:
             ui_content = UI_PATH.read_text(encoding="cp949", errors="replace")
-            
+
     return HTMLResponse(content=ui_content, media_type="text/html; charset=utf-8")
 
 
@@ -224,7 +224,7 @@ async def get_physis_status():
         return {"status": "offline", "mission": "상황판 파일 없음", "last_update": "-"}
 
     content = physis_path.read_text(encoding="utf-8")
-    
+
     # 간단한 파싱
     mission = "미션 없음"
     m = re.search(r"## 🎯 현재 미션 \(Current Mission\)\n(.*?)\n\n", content, re.DOTALL)

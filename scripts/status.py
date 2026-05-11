@@ -10,13 +10,13 @@ def print_status():
     print("\n" + "="*50)
     print("       📡 PHYSIS LIVE STATUS REPORT")
     print("="*50 + "\n")
-    
+
     try:
         content = status_file.read_text(encoding="utf-8")
         print(content)
     except Exception as e:
         print(f"❌ 오류 발생: {e}")
-    
+
     print("\n" + "="*50 + "\n")
 
 if __name__ == "__main__":

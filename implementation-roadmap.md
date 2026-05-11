@@ -1,6 +1,6 @@
 ﻿# AG-Forge: 구현 로드맵
 
-**리팀장(최태산) 주도 단계별 구현 계획**  
+**리팀장(최태산) 주도 단계별 구현 계획**
 **목표**: 4주 내 MVP 완료 → 방부장 최종 결재
 
 ---
@@ -50,11 +50,11 @@ BRAIN_DIR = Path("ag-forge/brain")
 
 def load_brain_with_cache(task: str) -> anthropic.types.Message:
     client = anthropic.Anthropic()
-    
+
     brain = (BRAIN_DIR / "brain.md").read_text(encoding="utf-8")
     logic = (BRAIN_DIR / "logic_rb.md").read_text(encoding="utf-8")
     emotion = (BRAIN_DIR / "emotion_ui.md").read_text(encoding="utf-8")
-    
+
     return client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=4096,
@@ -78,7 +78,7 @@ def test_kv_cache_hit():
     """동일 파일을 2회 호출 시 캐시 히트 확인"""
     r1 = load_brain_with_cache("테스트 쿼리")
     r2 = load_brain_with_cache("테스트 쿼리 2")
-    
+
     assert r2.usage.cache_read_input_tokens > 0, "캐시 히트 없음"
     print(f"캐시 히트율 확인: {r2.usage.cache_read_input_tokens} tokens 절감")
 ```
@@ -131,10 +131,10 @@ def test_rag_retrieval():
     """과거 기억 검색 정확도 확인"""
     rag = AgenticRAG(...)
     results = rag.search("Ruby on Rails 최적화 패턴", top_k=3)
-    
+
     assert len(results) == 3, "Top-3 결과 미반환"
     assert all(r["score"] > 0.75 for r in results), "유사도 임계값 미달"
-    
+
     # 토큰 효율 확인
     token_count = count_tokens("\n".join(results))
     assert token_count < 500, f"RAG 결과가 너무 큼: {token_count} tokens"
@@ -207,10 +207,10 @@ def classify_task(task: str) -> TaskComplexity:
 def route(task: str) -> RoutingDecision:
     complexity = classify_task(task)
     decision = ROUTING_TABLE[complexity]
-    
+
     # judgment.md에 라우팅 기록
     log_routing_decision(task, complexity, decision)
-    
+
     return decision
 ```
 
@@ -226,11 +226,11 @@ def test_routing_accuracy():
         ("전체 아키텍처 결정", TaskComplexity.DECISION),
         # ... 17개 추가
     ]
-    
+
     correct = sum(1 for task, expected in test_cases
                   if classify_task(task) == expected)
     accuracy = correct / len(test_cases)
-    
+
     assert accuracy >= 0.9, f"라우팅 정확도 미달: {accuracy:.1%}"
 
 def test_budget_guard():
@@ -260,7 +260,7 @@ def traced_brain_request(task: str) -> dict:
     routing = route(task)
     rag_results = rag.search(task)
     response = load_brain_with_cache(task)
-    
+
     return {
         "task": task,
         "model_used": routing.model,
@@ -292,23 +292,23 @@ Register-ScheduledTask -TaskName "AG-Forge Auto Archive" -Action $action -Trigge
 def test_full_pipeline():
     """전체 파이프라인 E2E 검증"""
     task = "사용자 대시보드의 로딩 속도를 최적화하고, UX 개선안도 제시해줘"
-    
+
     # 1. 소뇌 라우팅
     routing = route(task)
     assert routing.model == "claude-sonnet-4-6"
-    
+
     # 2. 해마 RAG 검색
     memories = rag.search(task)
     assert len(memories) > 0
-    
+
     # 3. 뇌 계층 로드 (캐싱)
     response = load_brain_with_cache(task)
     assert response.usage.cache_read_input_tokens > 0
-    
+
     # 4. 비용 확인
     cost = calculate_cost(response.usage)
     assert cost < 0.10, f"단일 요청 비용 초과: ${cost:.4f}"
-    
+
     print(f"통합 테스트 통과: ${cost:.4f}/요청")
 ```
 
@@ -350,5 +350,5 @@ Phase 2와 Phase 3은 Phase 1 완료 후 **병렬 진행** 가능합니다.
 
 ---
 
-**이전 문서**: `cost-optimization-guide.md`  
+**이전 문서**: `cost-optimization-guide.md`
 **돌아가기**: `README.md`

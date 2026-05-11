@@ -25,15 +25,15 @@ def calculate_v3_decay(state: AgentState) -> dict:
     current_timer = state.get("timer_hours", INITIAL_TIMER)
     score = state.get("disappointment_score", 0)
     multiplier = state.get("decay_multiplier", 1.0)
-    
+
     # 품질 체크 실패 시 실망 지수 증가 및 즉각 패널티
     if not state.get("quality_passed", True):
         score += 1
         penalty = PENALTY_MAP.get(score, {"immediate": 8.0, "multiplier": 8.0})
-        
+
         current_timer -= penalty["immediate"]
         multiplier = penalty["multiplier"]
-        
+
         log_entry = {
             "timestamp": datetime.now().isoformat(),
             "event": "DISAPPOINTMENT_ACCELERATED",
@@ -47,7 +47,7 @@ def calculate_v3_decay(state: AgentState) -> dict:
     # 기본 시간 흐름에 따른 감쇠 (스텝당 0.1시간 * 배율 가정)
     step_decay = 0.1 * multiplier
     current_timer -= step_decay
-    
+
     return {
         "timer_hours": max(0.0, current_timer),
         "disappointment_score": score,
@@ -65,7 +65,7 @@ def apply_sudden_death(state: AgentState) -> dict:
         "previous_timer": state.get("timer_hours", 0)
     }
     state["audit_trail"].append(log_entry)
-    
+
     return {
         "timer_hours": 0.0,
         "is_suspended": True,
@@ -137,16 +137,16 @@ def create_explanation_record(state: AgentState, action: str, decider: str):
         },
         "audit_logs": state.get("audit_trail", [])
     }
-    
+
     # 해시 암호화 기록 (불변성 보장)
     record_json = json.dumps(record, sort_keys=True)
     record_hash = hashlib.sha256(record_json.encode()).hexdigest()
     record["hash"] = record_hash
-    
+
     # 기록 저장 (logs/ 폴더 등)
     log_dir = BRAIN_ROOT / "logs"
     log_dir.mkdir(exist_ok=True)
     log_file = log_dir / f"judgment_{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
     log_file.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
-    
+
     return record

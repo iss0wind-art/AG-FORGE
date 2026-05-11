@@ -4,7 +4,7 @@
 
 ## 하위 뇌 → 상위 뇌 (일일 보고)
 
-**엔드포인트**: `POST /api/sync/report`  
+**엔드포인트**: `POST /api/sync/report`
 **시점**: 매일 08:00 (공사일보 생성 완료 후)
 
 ```json

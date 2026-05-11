@@ -11,8 +11,8 @@
 - 최종 응답 방향 설정
 - 모순 감지 및 해결 로직
 
-**갱신 주기**: 실시간 (매 작업마다)  
-**용량 한계**: 20KB (초과 시 소뇌로 요청)  
+**갱신 주기**: 실시간 (매 작업마다)
+**용량 한계**: 20KB (초과 시 소뇌로 요청)
 **KV 캐싱**: ✅ 활성화 (입력 비용 90% 절감)
 
 ```yaml
@@ -32,14 +32,14 @@ brain.md:
 
 ### 2. 좌뇌 (Left Brain) - `logic_rb.md`
 
-**역할**: 논리/기술 처리  
+**역할**: 논리/기술 처리
 - Ruby 코어 알고리즘, 수학적 계산
-- BOQ 산식, 데이터베이스 설계, 아키텍처 결정  
+- BOQ 산식, 데이터베이스 설계, 아키텍처 결정
 - 코드 패턴 및 성능 최적화
 
-**갱신 주기**: 코딩 작업 시 (매 30분)  
-**용량 한계**: 40KB (초과 시 해마로 이관)  
-**전용 모델**: Claude 3.5 Sonnet (프리미엄 추론)  
+**갱신 주기**: 코딩 작업 시 (매 30분)
+**용량 한계**: 40KB (초과 시 해마로 이관)
+**전용 모델**: Claude 3.5 Sonnet (프리미엄 추론)
 **Thinking Budget**: 높음 (5000+ tokens)
 
 ```yaml
@@ -58,14 +58,14 @@ logic_rb.md:
 
 ### 3. 우뇌 (Right Brain) - `emotion_ui.md`
 
-**역할**: 감성/UX 처리  
+**역할**: 감성/UX 처리
 - 사용자 경험, 디자인 감각
 - 인터페이스 직관성, 마이크로 카피
 - 시각적 계층, 색상 이론, 감정적 공감
 
-**갱신 주기**: 디자인 작업 시 (매 1시간)  
-**용량 한계**: 40KB (초과 시 해마로 이관)  
-**전용 모델**: Claude 3.5 Haiku (빠르고 경제적)  
+**갱신 주기**: 디자인 작업 시 (매 1시간)
+**용량 한계**: 40KB (초과 시 해마로 이관)
+**전용 모델**: Claude 3.5 Haiku (빠르고 경제적)
 **Thinking Budget**: 낮음-중간 (1000-2000 tokens)
 
 ```yaml
@@ -84,13 +84,13 @@ emotion_ui.md:
 
 ### 4. 소뇌 (Cerebellum) - `judgment.md` (Router Agent)
 
-**역할**: 즉각적 판단 & 모델 라우팅  
+**역할**: 즉각적 판단 & 모델 라우팅
 - 작업 난이도 1차 판별 (Simple/Medium/Complex)
 - 좌뇌/우뇌 모델 선택 & Thinking Budget 동적 할당
 - 오류 감지 및 즉시 수정
 
-**갱신 주기**: 실시간 (매 작업)  
-**용량 한계**: 10KB (매우 경량)  
+**갱신 주기**: 실시간 (매 작업)
+**용량 한계**: 10KB (매우 경량)
 **특이점**: **단순 markdown이 아닌 라우터 에이전트로 격상**
 
 ```yaml
@@ -109,7 +109,7 @@ judgment.md (Router Agent):
         route_to: "gpt-4o-thinking" (if available)
         thinking_budget: 10000
         resource_priority: "unlimited"
-  
+
   error_detection:
     - hallucination_check: "산출물이 문서와 모순되는가?"
     - token_overflow_check: "예산을 초과했는가?"
@@ -120,12 +120,12 @@ judgment.md (Router Agent):
 
 ### 5. 해마/도서관 (Hippocampus/Archive) - `library.md` + Vector DB
 
-**역할**: 장기 저장소 & 의미 기반 검색  
+**역할**: 장기 저장소 & 의미 기반 검색
 - 용량 초과 시 자동 이관 (40~50KB 트리거)
-- **Vector Embedding** 기반 Semantic Search  
+- **Vector Embedding** 기반 Semantic Search
 - Agentic RAG로 필요한 기억만 검색 (토큰 낭비 0원)
 
-**갱신 주기**: 주 1회 (자동 압축)  
+**갱신 주기**: 주 1회 (자동 압축)
 **저장소 구조**:
   - `library-logic/` (좌뇌 기억: 알고리즘 패턴)
   - `library-emotion/` (우뇌 기억: 디자인 사례)
@@ -134,19 +134,19 @@ judgment.md (Router Agent):
 ```yaml
 library_architecture:
   storage_layer: "Markdown + Vector DB (Redis or Pinecone)"
-  
+
   markdown_storage:
     - library-logic.md    # 압축된 좌뇌 기억
-    - library-emotion.md  # 압축된 우뇌 기억  
+    - library-emotion.md  # 압축된 우뇌 기억
     - library-decisions.md # 압축된 소뇌 기억
-  
+
   vector_db_layer:
     provider: "Redis (self-hosted) or Pinecone (managed)"
     embedding_model: "text-embedding-3-small (OpenAI)"
     chunk_size: 500
     overlap: 50
     similarity_threshold: 0.75
-  
+
   agentic_rag:
     query_flow:
       - 1. 사용자 쿼리 받음
@@ -236,7 +236,7 @@ AI가 생성한 모든 산출물은 자동으로 분류되어 저장됩니다:
 ```
 코드 생성 → logic_rb.md (좌뇌)
 UI/디자인 → emotion_ui.md (우뇌)
-버그 수정 → judgment.md (소뇌)  
+버그 수정 → judgment.md (소뇌)
 과거 패턴 → Vector DB (해마)
 최종 결정 → brain.md (전두엽)
 ```
@@ -247,9 +247,9 @@ UI/디자인 → emotion_ui.md (우뇌)
 
 **실시간 업데이트 흐름:**
 
-1️⃣ **작업 실행** → 좌뇌/우뇌 각각 산출물 생성  
-2️⃣ **소뇌 제어** → 산출물 검증 & 오류 감지  
-3️⃣ **전두엽 통합** → 모든 정보 취합 & 최종 응답 구성  
+1️⃣ **작업 실행** → 좌뇌/우뇌 각각 산출물 생성
+2️⃣ **소뇌 제어** → 산출물 검증 & 오류 감지
+3️⃣ **전두엽 통합** → 모든 정보 취합 & 최종 응답 구성
 4️⃣ **관측성 기록** → 전체 작업 흐름 추적
 
 **예시:**

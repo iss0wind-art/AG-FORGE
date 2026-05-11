@@ -106,7 +106,7 @@ def migrate_library(
             break
         except UnicodeDecodeError:
             continue
-            
+
     if text is None:
         text = filepath.read_text(encoding="utf-8", errors="replace")
 
