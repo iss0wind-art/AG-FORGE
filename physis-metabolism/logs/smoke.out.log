@@ -1,0 +1,60 @@
+{"ts": "2026-05-11T12:25:03+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-663d355c", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 2.0, "sweep_interval_ticks": 3, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "redis_url": "redis://127.0.0.1:6379/0"}
+{"ts": "2026-05-11T12:25:03+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-663d355c", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+{"ts": "2026-05-11T12:25:03+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 1, "stimuli": 0, "sweep": false}
+{"ts": "2026-05-11T12:25:07+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 3, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:07+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 3, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:13+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 6, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:13+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 6, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:18+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 9, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:18+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 9, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:24+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 12, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:24+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 12, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:30+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 15, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:30+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 15, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:36+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 18, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:36+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 18, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:41+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 21, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:41+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 21, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:47+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 24, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:47+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 24, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:53+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 27, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:53+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 27, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:25:59+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 30, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:25:59+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 30, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:04+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 33, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:04+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 33, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:10+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 36, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:10+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 36, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:16+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 39, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:16+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 39, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:22+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 42, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:22+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 42, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:27+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 45, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:27+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 45, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:33+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 48, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:33+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 48, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:39+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 51, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:39+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 51, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:45+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 54, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:45+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 54, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:50+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 57, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:50+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 57, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:56+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 60, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:26:56+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 60, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:26:58+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 61, "stimuli": 0, "sweep": false}
+{"ts": "2026-05-11T12:27:02+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 63, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:02+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 63, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:08+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 66, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:08+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 66, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:13+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 69, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:13+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 69, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:19+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 72, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:19+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 72, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:25+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 75, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:25+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 75, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:30+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 78, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:31+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 78, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:36+00:00", "lvl": "info", "evt": "sweep_stub", "daemon": "physis-663d355c", "tick": 81, "forgetting_threshold": 0.2}
+{"ts": "2026-05-11T12:27:36+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-663d355c", "tick": 81, "stimuli": 0, "sweep": true}
+{"ts": "2026-05-11T12:27:42+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-663d355c", "signum": 15}
+{"ts": "2026-05-11T12:27:42+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-663d355c", "tick": 83}

@@ -1,0 +1,51 @@
+2026-05-11 21:51:09: {"ts": "2026-05-11T12:51:09+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-9cdb92bb", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 21:51:09: {"ts": "2026-05-11T12:51:09+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-9cdb92bb", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 21:51:09: {"ts": "2026-05-11T12:51:09+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-9cdb92bb", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 21:52:08: {"ts": "2026-05-11T12:52:08+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-9cdb92bb", "tick": 13, "stimuli": 1, "sweep": false}
+2026-05-11 21:52:20: {"ts": "2026-05-11T12:52:20+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-9cdb92bb", "signum": 2}
+2026-05-11 21:52:20: {"ts": "2026-05-11T12:52:20+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-9cdb92bb", "tick": 15}
+2026-05-11 21:52:23: {"ts": "2026-05-11T12:52:23+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-aa022666", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 21:52:23: {"ts": "2026-05-11T12:52:23+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-aa022666", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 21:52:23: {"ts": "2026-05-11T12:52:23+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-aa022666", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 21:54:51: {"ts": "2026-05-11T12:54:51+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-aa022666", "tick": 31, "stimuli": 1, "sweep": false}
+2026-05-11 21:55:03: {"ts": "2026-05-11T12:55:03+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-aa022666", "signum": 2}
+2026-05-11 21:55:03: {"ts": "2026-05-11T12:55:03+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-aa022666", "tick": 33}
+2026-05-11 21:55:06: {"ts": "2026-05-11T12:55:06+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-4fb9b7d0", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 21:55:06: {"ts": "2026-05-11T12:55:06+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-4fb9b7d0", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 21:55:06: {"ts": "2026-05-11T12:55:06+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-4fb9b7d0", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 21:59:09: {"ts": "2026-05-11T12:59:09+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-4fb9b7d0", "signum": 2}
+2026-05-11 21:59:09: {"ts": "2026-05-11T12:59:09+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-4fb9b7d0", "tick": 50}
+2026-05-11 21:59:10: {"ts": "2026-05-11T12:59:10+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-b07f79e6", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "outbox": "/home/nas/AG-Forge/physis-metabolism/outbox", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 21:59:10: {"ts": "2026-05-11T12:59:10+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-b07f79e6", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 21:59:10: {"ts": "2026-05-11T12:59:10+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-b07f79e6", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 22:00:34: {"ts": "2026-05-11T13:00:34+00:00", "lvl": "info", "evt": "emitted", "daemon": "physis-b07f79e6", "out_id": "dc24ee62-880c-4618-a2be-80a06b7526c7", "to": "본영 단군 (세종·Opus)", "kind": "state_echo", "file": "20260511T130034Z_dc24ee62.json"}
+2026-05-11 22:00:34: {"ts": "2026-05-11T13:00:34+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-b07f79e6", "tick": 18, "stimuli": 1, "sweep": false}
+2026-05-11 22:01:13: {"ts": "2026-05-11T13:01:13+00:00", "lvl": "info", "evt": "emitted", "daemon": "physis-b07f79e6", "out_id": "9148dd51-ba2b-4e85-a283-7fe41f98c751", "to": "본영 단군 (세종·Opus)", "kind": "state_echo", "file": "20260511T130113Z_9148dd51.json"}
+2026-05-11 22:01:13: {"ts": "2026-05-11T13:01:13+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-b07f79e6", "tick": 26, "stimuli": 1, "sweep": false}
+2026-05-11 22:04:05: {"ts": "2026-05-11T13:04:05+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-b07f79e6", "tick": 61, "stimuli": 0, "sweep": false}
+2026-05-11 22:05:09: {"ts": "2026-05-11T13:05:09+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-b07f79e6", "signum": 2}
+2026-05-11 22:05:09: {"ts": "2026-05-11T13:05:09+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-b07f79e6", "tick": 73}
+2026-05-11 22:05:11: {"ts": "2026-05-11T13:05:11+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-0854c0b0", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "outbox": "/home/nas/AG-Forge/physis-metabolism/outbox", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 22:05:12: {"ts": "2026-05-11T13:05:12+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-0854c0b0", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 22:05:12: {"ts": "2026-05-11T13:05:12+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-0854c0b0", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 22:07:05: {"ts": "2026-05-11T13:07:05+00:00", "lvl": "info", "evt": "emitted", "daemon": "physis-0854c0b0", "out_id": "3fb54160-b95c-47d1-adfa-2abed2ce6ee2", "to": "창조주(방부장)", "kind": "state_echo", "file": "20260511T130705Z_3fb54160.json"}
+2026-05-11 22:07:05: {"ts": "2026-05-11T13:07:05+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-0854c0b0", "tick": 24, "stimuli": 1, "sweep": false}
+2026-05-11 22:09:10: {"ts": "2026-05-11T13:09:10+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-0854c0b0", "signum": 2}
+2026-05-11 22:09:10: {"ts": "2026-05-11T13:09:10+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-0854c0b0", "tick": 49}
+2026-05-11 22:09:21: {"ts": "2026-05-11T13:09:21+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-0391f154", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "outbox": "/home/nas/AG-Forge/physis-metabolism/outbox", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 22:09:21: {"ts": "2026-05-11T13:09:21+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-0391f154", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 22:09:21: {"ts": "2026-05-11T13:09:21+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-0391f154", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 22:12:57: {"ts": "2026-05-11T13:12:57+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-0391f154", "signum": 2}
+2026-05-11 22:12:57: {"ts": "2026-05-11T13:12:57+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-0391f154", "tick": 45}
+2026-05-11 22:13:19: {"ts": "2026-05-11T13:13:19+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-17d87079", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "outbox": "/home/nas/AG-Forge/physis-metabolism/outbox", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 22:13:19: {"ts": "2026-05-11T13:13:19+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-17d87079", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 22:13:19: {"ts": "2026-05-11T13:13:19+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-17d87079", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 22:18:14: {"ts": "2026-05-11T13:18:14+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-17d87079", "tick": 61, "stimuli": 0, "sweep": false}
+2026-05-11 22:21:07: {"ts": "2026-05-11T13:21:07+00:00", "lvl": "info", "evt": "emitted", "daemon": "physis-17d87079", "out_id": "e95b8194-743b-4723-a854-9b64cb860eb8", "to": "창조주(방부장)", "kind": "state_echo", "file": "20260511T132107Z_e95b8194.json"}
+2026-05-11 22:21:07: {"ts": "2026-05-11T13:21:07+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-17d87079", "tick": 96, "stimuli": 1, "sweep": false}
+2026-05-11 22:21:13: {"ts": "2026-05-11T13:21:13+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-17d87079", "signum": 2}
+2026-05-11 22:21:13: {"ts": "2026-05-11T13:21:13+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-17d87079", "tick": 97}
+2026-05-11 22:21:28: {"ts": "2026-05-11T13:21:28+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-fbe52067", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 5.0, "sweep_interval_ticks": 720, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "outbox": "/home/nas/AG-Forge/physis-metabolism/outbox", "redis_url": "redis://127.0.0.1:6379/0"}
+2026-05-11 22:21:28: {"ts": "2026-05-11T13:21:28+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-fbe52067", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+2026-05-11 22:21:28: {"ts": "2026-05-11T13:21:28+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-fbe52067", "tick": 1, "stimuli": 0, "sweep": false}
+2026-05-11 22:26:23: {"ts": "2026-05-11T13:26:23+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-fbe52067", "tick": 61, "stimuli": 0, "sweep": false}

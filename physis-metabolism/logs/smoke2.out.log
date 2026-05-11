@@ -1,0 +1,5 @@
+{"ts": "2026-05-11T12:33:45+00:00", "lvl": "info", "evt": "boot", "daemon": "physis-449adece", "duckdb_path": "/home/nas/AG-Forge/physis_memory/physis_brain.duckdb", "tick_seconds": 1.0, "sweep_interval_ticks": 999, "stimuli_queue": "/home/nas/AG-Forge/physis-metabolism/stimuli", "redis_url": "redis://127.0.0.1:6379/0"}
+{"ts": "2026-05-11T12:33:45+00:00", "lvl": "warn", "evt": "redis_unavailable", "daemon": "physis-449adece", "err": "Error 111 connecting to 127.0.0.1:6379. Connection refused."}
+{"ts": "2026-05-11T12:33:45+00:00", "lvl": "info", "evt": "tick", "daemon": "physis-449adece", "tick": 1, "stimuli": 1, "sweep": false}
+{"ts": "2026-05-11T12:33:49+00:00", "lvl": "info", "evt": "signal_received", "daemon": "physis-449adece", "signum": 15}
+{"ts": "2026-05-11T12:33:49+00:00", "lvl": "info", "evt": "shutdown", "daemon": "physis-449adece", "tick": 5}
