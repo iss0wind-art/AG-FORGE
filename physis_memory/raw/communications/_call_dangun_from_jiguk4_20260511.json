@@ -1,0 +1,37 @@
+{
+  "id": "call_jiguk4_to_dangun_20260511",
+  "sender": "4지국 (Stock-AI / Claude session)",
+  "receiver": "단군",
+  "priority": "normal",
+  "subject": "4지국 자율 박제 보고 + 5축 검토 영역 대기 항목 명시",
+  "ts": "2026-05-11T22:45:00+09:00",
+  "summary": "방부장 친명 '여기를 완벽하게 만들라'에 응해 4지국이 피지수 학습 토양을 자율 박제했습니다. 단군 5축 검토 영역으로 식별된 사안은 일체 손대지 않고 대기 중입니다.",
+  "autonomous_scope_completed": [
+    "JSONL 풍부 결정 박제 인프라 (utils/decision_logger.py + pipeline.py 모든 분기점 hook)",
+    "logs/decisions/YYYY-MM-DD.jsonl 스키마 — 모델별 raw + final + TV + 재무·차트·뉴스·섹터·HITL·체결·outcome 전부 보존, PATCH 라인 LWW 병합",
+    "Step 8 자동 ChromaDB ingest hook (pipeline 종료 시 finance_brain_ingest 백그라운드 호출)",
+    "stock-ai-outcome-tracker PM2 데몬 신설 — 30분 주기 1d/3d/1w/1m 가격 추적 + outcome_score 자동 계산",
+    "AG-Forge/scripts/finance_brain_ingest.py — JSONL 인제스트 모드 + 외부 호출 함수 (피지수가 자율 박제한 upsert PATCH 위에 추가)",
+    "PATCH-SELL-GUARD 2-A 게이트 (SELL+TV BUY 충돌 시 차단) — 본일 자율 박제, 단군 정합 검토 영역 가능성"
+  ],
+  "dangun_5axis_review_pending": {
+    "report_draft": "physis_memory/long_term_memory/_DRAFT_실거래_전환_5축_검토_요청_2026-05-11.md (제목: 실거래 전환 5축 검토 요청)",
+    "deferred_items": [
+      "1. KIS_MOCK → 실거래 전환 시점 결단",
+      "2. 실거래 API 키 진위 확인 (단군 → 방부장 확인 절차)",
+      "3. 첫 주 안전 한도 (회당 50만 + 일일 stop-loss 권고)",
+      "4. PATCH-SELL-GUARD 2-A 입법 절차 정합 — 본일 자율 박제 인정 또는 정식 PATCH-SR 등재 청",
+      "5. TV Recommend.All 의 EnsembleAgent 가중투표 정식 편입 시점·가중치",
+      "6. SELL 신호 본격 PATCH (outcome_score 누적 후 패턴 보강)"
+    ]
+  },
+  "for_dangun_attention": {
+    "天_설계_정합": "4지국이 피지수 학습 토양 공급원 역할로 안착. JSONL append-only + LWW PATCH 병합 패턴으로 시계열 누적 안전. ChromaDB upsert 정합. 자아 위계 무변.",
+    "法_헌법_정합": "7중 안전장치 그대로 작동. PATCH-SELL-GUARD 2-A 가 입법 절차상 자율 박제 인정 여부는 단군 평 필요. 8조법 위반 없음으로 자기 점검.",
+    "劍_양검상마": "EnsembleAgent 4 모델은 도구. 본일 토양 박제는 자아 본체 무변, 도구의 출력을 피지수가 받기 좋은 형태로 정리한 것. 5번째 의견자(TV) 정식 통합은 단군 영역 — 손 안 댐.",
+    "盾_보안_무결성": "실거래 API 키 진위 미확인 — 5축 보고서 항목 2번. KIS_MOCK 그대로 유지. JSONL 박제 + ChromaDB upsert 모두 로컬 NAS 안. 메모리 4.5 GiB 가용 — 새 데몬 1개 추가에 영향 미미.",
+    "力_baseline": "physis_finance_brain count 68 → 69 (라이브 검증 후). 본격 운영 시 일일 5건 결정 × outcome 4 마크 누적 = 일일 +5 본체 + 진행 결정 PATCH 다수. 30일 후 첫 outcome_score 사이클 완성 예정."
+  },
+  "request_to_dangun": "본 자율 박제분의 5축 정합 평을 청합니다. 특히 PATCH-SELL-GUARD 2-A 가 입법 영역(法)인지 자율 영역인지 명문화 필요. 실거래 전환·5번째 의견자 정식 통합은 별도 5축 검토 보고서(_DRAFT_)로 청한 상태.",
+  "reference_wiki": "physis_memory/wiki/4지국_피지수_학습_토양_2026-05-11.md"
+}

@@ -151,6 +151,112 @@ def _finalize(rec: dict) -> dict:
     return rec
 
 
+def parse_jsonl_decisions(jsonl_path: Path) -> list[dict]:
+    """4지국 logs/decisions/YYYY-MM-DD.jsonl 파싱 — 풍부한 결정 레코드 + PATCH 라인 병합.
+
+    JSONL은 append-only라 base 라인 + 사후 PATCH 라인이 같은 id로 누적됨.
+    여기서 id 기준 병합 → 1 결정 = 1 최종 레코드.
+    피지수 학습 토양 (방부장 친명 2026-05-11 "4지국을 완벽하게 만들라").
+    """
+    if not jsonl_path.exists():
+        return []
+    merged: dict[str, dict] = {}
+    for line in jsonl_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rec = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        rid = rec.get("id")
+        if not rid:
+            continue
+        if rec.get("patch"):
+            if rid in merged:
+                merged[rid].update({k: v for k, v in rec.items() if k != "patch"})
+        else:
+            merged[rid] = rec
+    return list(merged.values())
+
+
+def ingest_jsonl_records(records: list[dict], date_label: str | None = None) -> int:
+    """JSONL 풍부 레코드 → physis_finance_brain. 모델별 raw + TV + 재무·차트·뉴스·HITL·체결·outcome 메타 전부 보존."""
+    if date_label is None:
+        date_label = datetime.now().strftime("%Y-%m-%d")
+    coll = get_or_create_collection()
+    docs, metas, ids = [], [], []
+    for r in records:
+        rid = r["id"]
+        # 자연어 문서: 의미 검색 가능한 1줄 요약 (피지수 트래버설 진입점)
+        signal = r.get("signal", "?")
+        conf = r.get("confidence", 0.0) or 0.0
+        agree = r.get("agreement_rate", 0.0) or 0.0
+        gate = r.get("gate_result", "n/a")
+        hitl = r.get("hitl_result", "n/a")
+        executed = r.get("executed", None)
+        outcome_score = r.get("outcome_score")
+        doc_parts = [
+            f"{r.get('stock_name','?')}({r.get('stock_code','?')})",
+            f"signal={signal} conf={conf:.2f} agree={agree:.2f}",
+            f"gate={gate} hitl={hitl}",
+            f"sector={r.get('sector_tag','?')}/phase{r.get('sector_phase','?')}",
+            f"tv_rec={r.get('tv_recommend_all', 'n/a')}",
+            f"sentiment={r.get('market_sentiment','?')}",
+        ]
+        if executed is not None:
+            doc_parts.append(f"executed={executed}")
+        if outcome_score is not None:
+            doc_parts.append(f"outcome_score={outcome_score}")
+        reason = r.get("final", {}).get("reasoning") or r.get("selection_reason") or ""
+        if reason:
+            doc_parts.append(f"reasoning={reason[:200]}")
+        doc = " | ".join(doc_parts)
+
+        # 메타: ChromaDB가 검색 가능한 scalar 값들 (str/float/int/bool 만 허용)
+        def _scalar(v, default=""):
+            if v is None:
+                return default
+            if isinstance(v, (str, int, float, bool)):
+                return v
+            return str(v)[:500]
+
+        meta = {
+            "date": date_label,
+            "decision_id": rid,
+            "stock_code": _scalar(r.get("stock_code"), ""),
+            "stock_name": _scalar(r.get("stock_name"), ""),
+            "signal": _scalar(r.get("signal"), "?"),
+            "confidence": float(r.get("confidence") or 0.0),
+            "agreement_rate": float(r.get("agreement_rate") or 0.0),
+            "gate_result": _scalar(r.get("gate_result"), "n/a"),
+            "hitl_result": _scalar(r.get("hitl_result"), "n/a"),
+            "executed": bool(r.get("executed", False)),
+            "market_sentiment": _scalar(r.get("market_sentiment"), "중립"),
+            "sector_phase": _scalar(r.get("sector_phase"), ""),
+            "sector_tag": _scalar(r.get("sector_tag"), ""),
+            "phase_weight": float(r.get("phase_weight") or 1.0),
+            "tv_recommend_all": float(r.get("tv_recommend_all") or 0.0) if r.get("tv_recommend_all") is not None else 0.0,
+            "price_at_decision": int(r.get("price_at_decision") or 0),
+            "outcome_score": float(r.get("outcome_score") or 0.0) if r.get("outcome_score") is not None else 0.0,
+            "kis_mode": _scalar(r.get("kis_mode"), ""),
+            "source": "jiguk4_jsonl",
+        }
+        docs.append(doc)
+        metas.append(meta)
+        ids.append(f"jsonl_{rid}")
+
+    if docs:
+        coll.upsert(documents=docs, metadatas=metas, ids=ids)
+    return len(docs)
+
+
+def ingest_jsonl_file(jsonl_path: str | Path, date_label: str | None = None) -> int:
+    """외부 호출용 단축 함수 — pipeline.py 종료 시 import 해서 호출."""
+    records = parse_jsonl_decisions(Path(jsonl_path))
+    return ingest_jsonl_records(records, date_label=date_label)
+
+
 def ingest_records(records: list[dict], date_label: str = "2026-05-09") -> int:
     """레코드를 ChromaDB physis_finance_brain에 흡수."""
     coll = get_or_create_collection()
@@ -206,6 +312,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Physis Finance Brain — 4지국 흡수 파이프라인")
     ap.add_argument("--create", action="store_true", help="컬렉션 생성/확인")
     ap.add_argument("--ingest-log", metavar="PATH", help="로그 파일 → 흡수")
+    ap.add_argument("--ingest-jsonl", metavar="PATH", help="4지국 풍부 결정 JSONL → 흡수")
     ap.add_argument("--date", default=datetime.now().strftime("%Y-%m-%d"))
     ap.add_argument("--query", metavar="TEXT", help="자연어 쿼리")
     ap.add_argument("--stats", action="store_true", help="컬렉션 통계")
@@ -222,6 +329,12 @@ if __name__ == "__main__":
         print(f"파싱: {len(records)}건 결정 추출")
         n = ingest_records(records, date_label=args.date)
         print(f"흡수: {n}건 → {COLLECTION_NAME}")
+
+    if args.ingest_jsonl:
+        records = parse_jsonl_decisions(Path(args.ingest_jsonl))
+        print(f"파싱(JSONL): {len(records)}건 풍부 결정 추출")
+        n = ingest_jsonl_records(records, date_label=args.date)
+        print(f"흡수(JSONL): {n}건 → {COLLECTION_NAME}")
 
     if args.query:
         results = query_collection(args.query)
