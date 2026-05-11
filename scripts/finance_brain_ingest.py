@@ -177,7 +177,8 @@ def ingest_records(records: list[dict], date_label: str = "2026-05-09") -> int:
         ids.append(rec_id)
 
     if docs:
-        coll.add(documents=docs, metadatas=metas, ids=ids)
+        # PATCH 2026-05-11: coll.add → coll.upsert. ID 동일 시 덮어씀 → cron 매일 가동 시 dedupe.
+        coll.upsert(documents=docs, metadatas=metas, ids=ids)
     return len(docs)
 
 
