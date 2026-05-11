@@ -1,0 +1,114 @@
+{
+  "date": "2026-05-11",
+  "purpose": "TradingView 시범 가동 — 4지국 EnsembleAgent 신호와 정합 비교",
+  "results": [
+    {
+      "code": "396500",
+      "name": "TIGER 반도체TOP10",
+      "signal": "SELL",
+      "conf": 0.81,
+      "tv": {
+        "recommendation": "STRONG_BUY",
+        "buy_signals": 17,
+        "sell_signals": 2,
+        "neutral_signals": 7,
+        "oscillators": "BUY",
+        "moving_averages": "STRONG_BUY",
+        "indicators": {
+          "RSI": 85.62,
+          "MACD": 3551.4222,
+          "MACD_signal": 2615.1046,
+          "ADX": 37.58,
+          "Stoch_K": 98.02,
+          "Stoch_D": 98.64,
+          "close": 48970,
+          "open": 48285,
+          "volume": 21688597,
+          "change": 5.6
+        }
+      },
+      "match": "❌ 충돌"
+    },
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "signal": "BUY",
+      "conf": 0.74,
+      "tv": {
+        "recommendation": "BUY",
+        "buy_signals": 15,
+        "sell_signals": 1,
+        "neutral_signals": 10,
+        "oscillators": "BUY",
+        "moving_averages": "STRONG_BUY",
+        "indicators": {
+          "RSI": 63.05,
+          "MACD": 275.1773,
+          "MACD_signal": 249.9652,
+          "ADX": 34.9,
+          "Stoch_K": 87.54,
+          "Stoch_D": 93.72,
+          "close": 2775,
+          "open": 2880,
+          "volume": 35642531,
+          "change": -3.98
+        }
+      },
+      "match": "✅ 정합"
+    },
+    {
+      "code": "018880",
+      "name": "한온시스템",
+      "signal": "BUY",
+      "conf": 0.76,
+      "tv": {
+        "recommendation": "STRONG_BUY",
+        "buy_signals": 16,
+        "sell_signals": 0,
+        "neutral_signals": 10,
+        "oscillators": "BUY",
+        "moving_averages": "STRONG_BUY",
+        "indicators": {
+          "RSI": 71.15,
+          "MACD": 306.5271,
+          "MACD_signal": 180.4448,
+          "ADX": 31.85,
+          "Stoch_K": 66.39,
+          "Stoch_D": 69.49,
+          "close": 5730,
+          "open": 4850,
+          "volume": 111376710,
+          "change": 20.13
+        }
+      },
+      "match": "✅ 정합"
+    },
+    {
+      "code": "011000",
+      "name": "진원생명과학",
+      "signal": "SELL",
+      "conf": 0.88,
+      "tv": {
+        "recommendation": "BUY",
+        "buy_signals": 13,
+        "sell_signals": 4,
+        "neutral_signals": 9,
+        "oscillators": "BUY",
+        "moving_averages": "BUY",
+        "indicators": {
+          "RSI": 62.31,
+          "MACD": 6.8738,
+          "MACD_signal": -23.7121,
+          "ADX": 25.97,
+          "Stoch_K": 36.39,
+          "Stoch_D": 23.59,
+          "close": 1259,
+          "open": 1304,
+          "volume": 23372548,
+          "change": 11.51
+        }
+      },
+      "match": "❌ 충돌"
+    }
+  ]
+}
