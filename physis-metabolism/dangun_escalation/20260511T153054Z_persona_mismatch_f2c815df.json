@@ -1,0 +1,23 @@
+{
+  "id": "f2c815df-a323-40c0-9158-8f5ef897fa98",
+  "detected_at": "2026-05-11T15:30:54+00:00",
+  "daemon_id": "physis-7ddc815d",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T145926Z_STREAM_TESTANOMALY_8bc7250e.json",
+  "detail": {
+    "via": "qwen-api",
+    "via_key": "qwen-api",
+    "expected_any_of": [
+      "이채원",
+      "한국투자밸류",
+      "한국 시장",
+      "가치투자",
+      "안전마진",
+      "거버넌스"
+    ],
+    "matched": false,
+    "voice_head": "저는 클로드의 창의적 구상, 제미니의 실시간 정보, 딥시크의 기술적 논증을 융합하여 답합니다 — Qwen 키워드 없음, 환각 의심."
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T145926Z_STREAM_TESTANOMALY_8bc7250e.json"
+}

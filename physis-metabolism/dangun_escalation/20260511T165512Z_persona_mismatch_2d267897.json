@@ -1,0 +1,18 @@
+{
+  "id": "2d267897-c296-40fa-905b-44f987528b49",
+  "detected_at": "2026-05-11T16:55:12+00:00",
+  "daemon_id": "physis-6cf658b9",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T165510Z_STREAM_gemini-api_e9dd91e5.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.125,
+    "domain_hits": 1,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n\n즉시 점검 및 박제할 것은 '미해결 watchdog 이상 128건'과 최근 인제스트된 'data/news_scraper.py', 'data/chart_scraper.py' 코드의 직접적 "
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T165510Z_STREAM_gemini-api_e9dd91e5.json"
+}

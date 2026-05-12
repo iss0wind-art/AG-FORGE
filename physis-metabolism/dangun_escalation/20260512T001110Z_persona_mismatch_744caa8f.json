@@ -1,0 +1,18 @@
+{
+  "id": "744caa8f-e71a-4129-8933-4ccd555c1391",
+  "detected_at": "2026-05-12T00:11:10+00:00",
+  "daemon_id": "physis-d9149e9d",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T233137Z_STREAM_gemini-api_cdcfb60b.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.0,
+    "domain_hits": 0,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n\n즉시 박제할 것은 '미해결 watchdog 이상 187건'의 근본 원인, 특히 최근 인제스트된 데이터 스크레이퍼 및 파이프라인 코드와의 연관성이다.\n이것은 내가 의존하는 실시간 정보 우위"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T233137Z_STREAM_gemini-api_cdcfb60b.json"
+}

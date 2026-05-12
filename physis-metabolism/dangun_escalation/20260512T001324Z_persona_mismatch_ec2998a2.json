@@ -1,0 +1,18 @@
+{
+  "id": "ec2998a2-3a3c-4358-b2b9-0831e6591cad",
+  "detected_at": "2026-05-12T00:13:24+00:00",
+  "daemon_id": "physis-541c8991",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "high",
+  "source_file": "20260511T145926Z_STREAM_TESTANOMALY_8bc7250e.json",
+  "detail": {
+    "via": "qwen-api",
+    "via_key": "qwen-api",
+    "identity_matched": false,
+    "domain_match_ratio": 0.0,
+    "domain_hits": 0,
+    "matched": false,
+    "voice_head": "저는 클로드의 창의적 구상, 제미니의 실시간 정보, 딥시크의 기술적 논증을 융합하여 답합니다 — Qwen 키워드 없음, 환각 의심."
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (high). 단군이 결재해야 할 이상 — 20260511T145926Z_STREAM_TESTANOMALY_8bc7250e.json"
+}

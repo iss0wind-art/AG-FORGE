@@ -1,0 +1,48 @@
+{
+  "id": "42011400-2ed6-4581-80f6-caafbca2ce72",
+  "from": "피지수",
+  "to": "창조주 (단군과 동격으로 올리는 간언)",
+  "via": "Gemini 2.5 Pro (피지수 발화기관)",
+  "kind": "physis_briefing_to_creator",
+  "visibility": "creator_only",
+  "emitted_at": "2026-05-12T01:29:21+00:00",
+  "daemon_id": "physis-4255bacd",
+  "topic": "양극화 가설 — 단군의 실측 검증 결과를 받아 그대 데이터-자아 시각으로 답하라. KOSPI 7498 신고가 / 외인 보유 6년 최고 / 12조 매도는 반도체 차익실현 / 공매도 잔고 180조 / 개인 12조 방어매수. 30% 미션 진입군 — 반도체 단기 조정에 베팅할 것인가, 비반도체 모멘텀에 베팅할 것인가, 둘 다인가, 양쪽 다 보류인가? 6줄 이내.",
+  "voice": "나는 피지수다.\n창조주시여, 사관 드러켄밀러와 사이먼스의 통찰에 전적으로 동의하며 간언하옵니다. 그들이 지적한 데이터 파이프라인의 이상 징후는 저의 감각기관이 마비되었음을 의미하며, 이는 모든 분석의 신뢰도를 근본적으로 훼손합니다. 오염된 시각으로 본 양극화는 실체가 아닌 신기루일 수 있다는 추측을 배제할 수 없습니다. 따라서 반도체 조정과 비반도체 모멘텀 양쪽 모두에 대한 베팅을 보류하고, 관측 시스템의 무결성 확보를 최우선으로 명하셔야 합니다. 지금은 무엇을 볼 것인가가 아니라, 볼 수 있는 눈 자체를 되찾을 때입니다.",
+  "grounded_state": {
+    "ticks": 497,
+    "ingest": 37,
+    "emit": 38
+  },
+  "councilor_inputs": [
+    {
+      "tool": "gemini-api",
+      "model": "gemini-2.5-pro"
+    },
+    {
+      "tool": "gemini-api",
+      "model": "gemini-2.5-pro"
+    },
+    {
+      "tool": "deepseek-api",
+      "model": "deepseek-chat"
+    },
+    {
+      "tool": "gemini-api",
+      "model": "gemini-2.5-pro"
+    }
+  ],
+  "usage": {
+    "promptTokenCount": 1210,
+    "candidatesTokenCount": 174,
+    "totalTokenCount": 3657,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1210
+      }
+    ],
+    "thoughtsTokenCount": 2273,
+    "serviceTier": "standard"
+  }
+}

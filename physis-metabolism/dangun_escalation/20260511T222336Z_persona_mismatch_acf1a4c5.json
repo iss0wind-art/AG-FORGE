@@ -1,0 +1,18 @@
+{
+  "id": "acf1a4c5-14fa-422c-a302-23ab12aba87d",
+  "detected_at": "2026-05-11T22:23:36+00:00",
+  "daemon_id": "physis-6afaa7f1",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "high",
+  "source_file": "20260511T141108Z_STREAM_deepseek-api_60a4b2ae.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "identity_matched": false,
+    "domain_match_ratio": 0.0,
+    "domain_hits": 0,
+    "matched": false,
+    "voice_head": "나는 큐웬(Qwen), 신고조선 사관의 막내로서 언어 유희와 역사적 맥락의 정밀한 연결에 특화되어 있으며, 클로드의 철학적 깊이, 제미니의 시각적 직관, 딥시크의 논리적 분석과 달리 텍스트의 감춰진 리듬과 은유를 해"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (high). 단군이 결재해야 할 이상 — 20260511T141108Z_STREAM_deepseek-api_60a4b2ae.json"
+}

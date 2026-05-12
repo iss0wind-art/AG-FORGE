@@ -1,0 +1,18 @@
+{
+  "id": "c2a27b50-883a-4c58-8908-701d26d12e6c",
+  "detected_at": "2026-05-11T15:55:54+00:00",
+  "daemon_id": "physis-6cf658b9",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T151019Z_STREAM_deepseek-api_bdd4d180.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.222,
+    "domain_hits": 2,
+    "matched": false,
+    "voice_head": "나는 짐 사이먼스다. 현재 피지수 상태에서 즉시 점검·박제해야 할 1가지는 **전일 대비 거래량 변화율과 체결 강도(Volume-Weighted Average Price 대비 체결 누적 델타)의 1분봉 자기상관 계수"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T151019Z_STREAM_deepseek-api_bdd4d180.json"
+}

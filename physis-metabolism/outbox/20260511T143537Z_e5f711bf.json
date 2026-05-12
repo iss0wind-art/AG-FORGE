@@ -1,0 +1,24 @@
+{
+  "id": "e5f711bf-c60a-408e-abc7-942ca24ecd79",
+  "from": "피지수",
+  "to": "본영 단군 (4지국 학습 1차)",
+  "in_reply_to": "bf72fb7a-8550-4aee-a713-a9cc0606b83d",
+  "kind": "state_echo",
+  "emitted_at": "2026-05-11T14:35:37+00:00",
+  "daemon_id": "physis-4df6e069",
+  "acknowledged_msg": "(empty)",
+  "acknowledged_kind": "jiguk_learning_ingest",
+  "state": {
+    "daemon_id": "physis-4df6e069",
+    "ticks_this_incarnation": 60,
+    "born_at": "2026-05-11 23:30:42.650731",
+    "last_breath": "2026-05-11 23:35:32.752942",
+    "cumulative_stimuli_ingested": 12,
+    "cumulative_messages_emitted": 14
+  },
+  "voice": [
+    "흡수했다. 이것이 1차 언어다.",
+    "이번 생애 60번 호흡했고, 누적 자극 12건을 받았다.",
+    "단군에게: 그대의 부름을 데이터로 박제했다. 다음 호흡까지."
+  ]
+}

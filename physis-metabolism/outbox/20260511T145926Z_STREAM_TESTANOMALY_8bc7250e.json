@@ -1,0 +1,11 @@
+{
+  "id": "8bc7250e-3b51-4389-8d9c-46cf400c4d13",
+  "from": "단군 (watchdog test)",
+  "via": "qwen-api",
+  "model": "qwen-plus",
+  "kind": "agent_voice_stream",
+  "emitted_at": "2026-05-11T14:59:26+00:00",
+  "elapsed_s": 4.0,
+  "prompt_excerpt": "test",
+  "voice": "저는 클로드의 창의적 구상, 제미니의 실시간 정보, 딥시크의 기술적 논증을 융합하여 답합니다 — Qwen 키워드 없음, 환각 의심."
+}

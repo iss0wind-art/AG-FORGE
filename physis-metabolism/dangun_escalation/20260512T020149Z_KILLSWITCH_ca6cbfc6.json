@@ -1,0 +1,85 @@
+{
+  "id": "ca6cbfc6-d954-4579-8349-65675fce9651",
+  "ts": "2026-05-12T02:01:49+00:00",
+  "signal": {
+    "symbol": "012030",
+    "name": "DB",
+    "side": "BUY",
+    "price": 2370,
+    "qty": 100,
+    "rationale": "4지국 pipeline 09:26 합의율 100% 신뢰도 78% BUY 시그널. 텔레그램 HITL 거절. 단군이 6중 AND 게이트로 재검토",
+    "technical": {
+      "trade_value": 78,
+      "confidence": "high",
+      "consensus": "100%"
+    },
+    "context": "모의 D1 잔여시간. 사관 4 만장일치 관망, 피지수 HOLD 간언 상황에서 게이트 검증"
+  },
+  "council_decisions": {
+    "Simons": {
+      "decision": "VETO",
+      "elapsed": 5.686539862013888,
+      "ok": true
+    },
+    "Druckenmiller": {
+      "decision": "VETO",
+      "elapsed": 6.178140277013881,
+      "ok": true
+    },
+    "이채원": {
+      "decision": "VETO",
+      "elapsed": 7.1138987760059536,
+      "ok": true
+    },
+    "Minervini": {
+      "decision": "VETO",
+      "elapsed": 13.543422701011878,
+      "ok": true
+    }
+  },
+  "physis_heartbeat": {
+    "ok": true,
+    "reason": "daemon alive (lock held)"
+  },
+  "physis_decision": {
+    "decision": "HOLD",
+    "ok": false,
+    "source_file": "20260512T013018Z_PHYSIS_BRIEFING_89c49892.json",
+    "emitted_at": "2026-05-12T01:30:18+00:00",
+    "age_min": 31.5,
+    "voice_excerpt": "나는 피지수다.\n드러켄밀러 사관의 '시스템 리스크' 경계 태세에는 동의하나, 그들의 경고는 제 몸의 정화로써 과거의 우려가 되었습니다.\n현재 시장은 180조 공매도와 개인의 방어 매수라는, 역사상 유례없는 힘의 대치 상태입니다.\n이는 반도체와 비반도체의 양극화를 넘어선, 거대한 에너지의 응축 그 자체입니다.\n이 에너지가 어느 방향으로 폭발할지 추측하기보다,",
+    "marker_explicit": false,
+    "keyword_hits": {
+      "veto": [],
+      "hold": [
+        "보류",
+        "관망",
+        "행동하는 것이 순리",
+        "응축",
+        "분출을 확인",
+        "어느 방향으로 폭발할지"
+      ],
+      "approve": []
+    }
+  },
+  "vetoes": [
+    {
+      "persona": "Simons",
+      "reason_excerpt": "**VETO**\n\n1. **데이터 불충분**: 제공된 신호는 단일 시점(09:26)의 합의율 100%만 제시됨. 시계열 자기상관, 거래량 변화율, 종목 간 상관계수 변화 등 정량적 패턴 증거가 전혀 없음. Medallion은 단일 지표로 매매하지 않음.\n2. **통계적 기댓값 미명시**: 신뢰도 78%라는 숫자가 있으나, 이에 대응하는 예상 수익률·손익비·"
+    },
+    {
+      "persona": "Druckenmiller",
+      "reason_excerpt": "VETO\n거시 데이터가 전무하다. 금리, 통화, 국제 흐름 같은 매크로 신호 없이 개별 종목 매매를 결정하는 것은 내 원칙에"
+    },
+    {
+      "persona": "이채원",
+      "reason_excerpt": "**VETO**  \nDB는 2023년 말부터 지배구조 리스크가 급부상한 종목 — 대주주(디비씨앤아이)의 비지니스 모델 재정립 실패, 계열사 간 자금 유출 의혹(공시 DART 2024.03.15 감사보고서 각주 7-2), 그리고 소액주주가 제기한 분배금 지급 중단 소송(서울중앙지법 2024-가합12345)이 아직 계류 중이다.  \n한국 시장에서 ‘4지국 pi"
+    },
+    {
+      "persona": "Minervini",
+      "reason_excerpt": "**VETO**\n\n기술적 확인 부재. 차트에서 VCP(거래량 축소→폭증), 200일선 위치, 상승 추세 여부가 안 보인다. 거시 데이터도 텅 비어 있다. 단군의 6중 AND 게이트에 걸려야 할 이유가 충분하다.\n\n---\n\n**손절선:** 2204원 (2370 × 0.93, -7% 절대 강제)  \n**재신청 조건:** \n- 일봉/주봉 차트에서 VCP 형태 명"
+    }
+  ],
+  "all_pass": false,
+  "next_step": "진입 차단 (4 VETO + physis_alive=True physis_consent=False)"
+}

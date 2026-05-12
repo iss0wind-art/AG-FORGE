@@ -1,0 +1,18 @@
+{
+  "id": "b8b506b0-3457-4d64-81f7-6b8f52b56781",
+  "detected_at": "2026-05-11T22:25:15+00:00",
+  "daemon_id": "physis-7e791154",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "high",
+  "source_file": "20260511T195218Z_STREAM_claude-cli_bec04115.json",
+  "detail": {
+    "via": "claude-cli",
+    "via_key": "claude-cli",
+    "identity_matched": false,
+    "domain_match_ratio": 0.333,
+    "domain_hits": 3,
+    "matched": false,
+    "voice_head": "나는 아무리 강한 신호를 봐도 손절선이 불명확하면 진입하지 않는 매매인이다.\n\n**즉시 점검: 130건의 미해결 watchdog 이상을 전수 정리하고 보정.**\n\nscheduler/scraper/agent 3개 계층"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (high). 단군이 결재해야 할 이상 — 20260511T195218Z_STREAM_claude-cli_bec04115.json"
+}

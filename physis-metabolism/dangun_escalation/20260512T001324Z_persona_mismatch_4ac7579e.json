@@ -1,0 +1,18 @@
+{
+  "id": "4ac7579e-3a49-452b-bfb1-df7429f16c04",
+  "detected_at": "2026-05-12T00:13:24+00:00",
+  "daemon_id": "physis-541c8991",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T144239Z_STREAM_gemini-api_4b6aee98.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.25,
+    "domain_hits": 2,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n\n첫 번째 필터는 **'최근 20일 일평균 거래대금 100억 원 미만 종목 제외'**다. 내 게임은 거시적 확신이 섰을 때 큰 자본으로 빠르게 진입하고, 틀렸다고 판단되면 더 빠르게 빠져나"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T144239Z_STREAM_gemini-api_4b6aee98.json"
+}

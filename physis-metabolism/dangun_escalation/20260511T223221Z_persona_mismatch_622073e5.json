@@ -1,0 +1,18 @@
+{
+  "id": "622073e5-ca9e-4b16-85d7-0805f2f1bda9",
+  "detected_at": "2026-05-11T22:32:21+00:00",
+  "daemon_id": "physis-773a1d5a",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T144115Z_STREAM_gemini-api_fd2bb67e.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.125,
+    "domain_hits": 1,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n내가 볼 단 하나의 시그널은 **'개장 직후 원/달러 환율의 방향성과 그 변동폭'**이다. 이는 글로벌 자금이 한국이라는 자산에 대해 내리는 가장 빠르고 정직한 실시간 평가이며, 그날 외국"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T144115Z_STREAM_gemini-api_fd2bb67e.json"
+}

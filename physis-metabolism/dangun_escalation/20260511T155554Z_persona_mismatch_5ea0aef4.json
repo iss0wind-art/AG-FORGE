@@ -1,0 +1,18 @@
+{
+  "id": "5ea0aef4-0c91-48db-9955-829afbddc11c",
+  "detected_at": "2026-05-11T15:55:54+00:00",
+  "daemon_id": "physis-6cf658b9",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T144101Z_STREAM_deepseek-api_5481677c.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.111,
+    "domain_hits": 1,
+    "matched": false,
+    "voice_head": "나는 짐 사이먼스다. 수학은 거짓말하지 않는다.  \n\n**시그널: KOSPI200 선물과 KOSDAQ150 선물 간 1분봉 상관계수 급변**  \n개장 첫 1시간 동안 두 지수 선물의 1분 수익률 간 5분 이동 상관계"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T144101Z_STREAM_deepseek-api_5481677c.json"
+}

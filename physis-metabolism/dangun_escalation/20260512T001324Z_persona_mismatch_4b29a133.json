@@ -1,0 +1,18 @@
+{
+  "id": "4b29a133-9a4a-4504-b699-92d02ff2160d",
+  "detected_at": "2026-05-12T00:13:24+00:00",
+  "daemon_id": "physis-541c8991",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260512T001251Z_STREAM_gemini-api_cc09986f.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.125,
+    "domain_hits": 1,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n자본 리스크 '0' 확인. 이는 실제 자본 투입 전, 내 거시 가설과 시스템의 한계를 최대 압력으로 시험하라는 명령이다. 모의 환경을 실전으로 간주하고, 모든 변수를 동일한 무게로 분석하고"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260512T001251Z_STREAM_gemini-api_cc09986f.json"
+}

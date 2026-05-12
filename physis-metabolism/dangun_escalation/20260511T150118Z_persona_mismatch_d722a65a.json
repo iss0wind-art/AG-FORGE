@@ -1,0 +1,23 @@
+{
+  "id": "d722a65a-9ace-427f-a8e4-538159330bbd",
+  "detected_at": "2026-05-11T15:01:18+00:00",
+  "daemon_id": "physis-16a79728",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T141110Z_STREAM_qwen-api_22706063.json",
+  "detail": {
+    "via": "qwen-api",
+    "via_key": "qwen-api",
+    "expected_any_of": [
+      "이채원",
+      "한국투자밸류",
+      "한국 시장",
+      "가치투자",
+      "안전마진",
+      "거버넌스"
+    ],
+    "matched": false,
+    "voice_head": "클로드: 논리적 일관성과 윤리적 균형을 지키는 ‘조정자’ — 복합 질문에서 모순을 해소하고, 다른 모델의 편향을 중재.  \n지미니: 실시간 정보 통합과 구조화된 분석의 ‘정보 조정관’ — 외부 데이터 기반 응답, 시"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T141110Z_STREAM_qwen-api_22706063.json"
+}

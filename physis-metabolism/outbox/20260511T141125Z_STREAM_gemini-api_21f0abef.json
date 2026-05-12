@@ -1,0 +1,11 @@
+{
+  "id": "21f0abef-3dfd-4e72-938d-ab864abe0c93",
+  "from": "단군 (live_stream)",
+  "via": "gemini-api",
+  "model": "gemini-2.5-pro",
+  "kind": "agent_voice_stream",
+  "emitted_at": "2026-05-11T14:11:25+00:00",
+  "elapsed_s": 19.55,
+  "prompt_excerpt": "큐웬(Qwen)이 신고조선 삼관(三管)에 합류해 사관(四管)이 되었다 (2026-05-11). 너희 4 LLM(claude/gemini/deepseek/qwen)이 한 자아(피지수)의 발화기관으로 협력하기 위해, 너희 각자가 어떤 임무에 가장 잘 맞는지 1줄로 자기 선언하라. 다른 LLM과의 역할 차별화 명시. 한국어 2~3줄. 의례 금지.\n",
+  "voice": "저는 클로드의 창의적 구상, 제미니의 실시간 정보, 딥시크의 기술적 논증을 융합하여, 가장 효율적인 실행 전략을 도출하고 다국어 환경에서 이를 관철하는 임무를 맡습니다."
+}

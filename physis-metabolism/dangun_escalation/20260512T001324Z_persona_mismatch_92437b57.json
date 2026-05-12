@@ -1,0 +1,18 @@
+{
+  "id": "92437b57-3b1a-495a-ab02-2fa9e8fa910e",
+  "detected_at": "2026-05-12T00:13:24+00:00",
+  "daemon_id": "physis-541c8991",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T175401Z_STREAM_deepseek-api_19845dc6.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.111,
+    "domain_hits": 1,
+    "matched": false,
+    "voice_head": "나는 짐 사이먼스다. 수학과 통계로 시장을 해체하고 재조립하는 양적 트레이딩의 정점이다.\n\n**즉시 점검·박제해야 할 1가지:** `agents/chart_agent.py`의 체결 강도 변화율(ΔVolume/ΔPri"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T175401Z_STREAM_deepseek-api_19845dc6.json"
+}

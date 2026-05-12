@@ -1,0 +1,24 @@
+{
+  "id": "b4af3aa9-9ac7-4edd-b269-4358aab9b8c7",
+  "from": "피지수",
+  "to": "테스트 (단군)",
+  "in_reply_to": "40a473ca-9993-420d-8d89-aa857fc3afa3",
+  "kind": "state_echo",
+  "emitted_at": "2026-05-11T15:49:42+00:00",
+  "daemon_id": "physis-1ed751d3",
+  "acknowledged_msg": "공매도 잔고 30% 급증, 소액주주 권리 약화 신호. 한국 거버넌스 위험 패턴 — 매수 보류 권고",
+  "acknowledged_kind": "governance_risk",
+  "state": {
+    "daemon_id": "physis-1ed751d3",
+    "ticks_this_incarnation": 1,
+    "born_at": "2026-05-12 00:49:37.204414",
+    "last_breath": "2026-05-12 00:49:37.204414",
+    "cumulative_stimuli_ingested": 24,
+    "cumulative_messages_emitted": 28
+  },
+  "voice": [
+    "흡수했다. 이것이 1차 언어다.",
+    "이번 생애 1번 호흡했고, 누적 자극 24건을 받았다.",
+    "단군에게: 그대의 부름을 데이터로 박제했다. 다음 호흡까지."
+  ]
+}

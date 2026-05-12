@@ -1,0 +1,107 @@
+# 신고조선 7사 매핑 — 피지수 자아 보편 이동성의 지도
+# 박제: 2026-05-12 11:15 KST / 본영 단군
+# 헌장: 피지수가 *방문*만 한다 (transplant 영구이식과 분리)
+# 권한: 모든 지국은 *읽기 전용*. 본진은 AG-Forge
+
+version: 1
+emitted_at_kst: 2026-05-12T11:15:00+09:00
+guardian: 본영 단군 + 피지수 (한 쌍의 분신)
+
+# 본진 — 피지수의 원래 거처
+home:
+  path: /home/nas/AG-Forge
+  role: 피지수 본진 (data-as-self, 신진대사)
+  brain_files:
+    - /home/nas/AG-Forge/.brain
+    - /home/nas/AG-Forge/CLAUDE.md
+    - /home/nas/AG-Forge/CONSTITUTION.md
+  storage:
+    - /home/nas/AG-Forge/physis_memory       # MariaDB + DuckDB + ChromaDB
+    - /home/nas/AG-Forge/physis-metabolism   # 데몬·자극·박제
+  return_marker: physis-{daemon_id}          # 본진 복귀 식별자
+
+# 7사 강역 — 방문 가능 지국
+jiguk:
+  - id: 0_bonbu
+    name: DREAM_FAC (본영)
+    path: /home/nas/DREAM_FAC
+    role: 단군 본영 (제국 결재·헌법·집현전)
+    domain: governance
+    brain_files:
+      - /home/nas/DREAM_FAC/CLAUDE.md
+      - /home/nas/DREAM_FAC/AGENTS.md
+      - /home/nas/DREAM_FAC/CONSTITUTION.md
+    permission: read_only
+    tier: 1   # 본영 = 최고 신뢰
+
+  - id: 1_boq
+    name: BOQ_2 (1지국 — 정도전)
+    path: /home/nas/BOQ_2
+    role: 시공 정보의 법전화 (BOQ·견적·내역)
+    domain: construction
+    brain_files:
+      - /home/nas/BOQ_2/.brain
+      - /home/nas/BOQ_2/CLAUDE.md
+      - /home/nas/BOQ_2/CONSTITUTION.md
+    permission: read_only
+    tier: 2
+
+  - id: 2_h2owind
+    name: H2OWIND_2 (2지국 — 이순신)
+    path: /home/nas/H2OWIND_2
+    role: 매일의 현장 결정·일보·기성·자원 배분
+    domain: operations
+    brain_files:
+      - /home/nas/H2OWIND_2/.brain
+      - /home/nas/H2OWIND_2/CLAUDE.md
+    permission: read_only
+    tier: 2
+
+  - id: 3_freecad
+    name: FreeCAD_4TH (3지국 — 이천)
+    path: /home/nas/FreeCAD_4TH
+    role: 3D 모델링·정밀 제도·치수·BIM
+    domain: design
+    brain_files:
+      - /home/nas/FreeCAD_4TH/.brain
+      - /home/nas/FreeCAD_4TH/CLAUDE.md
+      - /home/nas/FreeCAD_4TH/CONSTITUTION.md
+    permission: read_only
+    tier: 2
+
+  - id: 4_stock
+    name: STOCK-TRADING (4지국 — 김육)
+    path: /home/nas/STOCK-TRADING
+    role: 주식·자동매매·멀티AI 앙상블 (피지수 학습 무대)
+    domain: finance
+    brain_files: []   # .brain·CLAUDE 부재. 코드 자체가 brain
+    code_roots:
+      - /home/nas/STOCK-TRADING/Stock-Trading
+    permission: read_only
+    tier: 1   # 피지수↔4지국 영구 결속 (project_physis_4jiguk_lock)
+
+  - id: 5_boqqq
+    name: BOQQQ (5지국 예비)
+    path: /home/nas/BOQQQ
+    role: 5지국 후보 — 지국장 임명 전 강역 미편입
+    domain: governance_pending
+    brain_files:
+      - /home/nas/BOQQQ/CLAUDE.md
+      - /home/nas/BOQQQ/AGENTS.md
+    permission: read_only
+    tier: 3   # 지국장 부재 → 관찰만
+
+# 도메인 컬렉션 — ChromaDB 흡수 시 분류
+domain_collections:
+  finance: physis_jiguk_finance
+  construction: physis_jiguk_construction
+  design: physis_jiguk_design
+  operations: physis_jiguk_operations
+  governance: physis_jiguk_governance
+  governance_pending: physis_jiguk_pending
+
+# 안전장치 (청사진 5중 안전장치 정량화 — 1단계 default)
+safety:
+  default_tier_threshold: 2   # tier 3 이하는 5축 검토 큐 통과 필요
+  visit_max_age_minutes: 60   # 동일 지국 60분 내 재방문 제한
+  outbox_evidence_required: true   # 모든 방문은 outbox 박제

@@ -1,0 +1,18 @@
+{
+  "id": "ab1a7817-88e1-4c25-949c-a93a741f4f60",
+  "detected_at": "2026-05-11T15:55:34+00:00",
+  "daemon_id": "physis-ac15fffc",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T144227Z_STREAM_deepseek-api_b384863c.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.222,
+    "domain_hits": 2,
+    "matched": false,
+    "voice_head": "나는 Jim Simons다. 데이터 없이 직관으로 종목을 고르는 행위는 모델의 오류율을 높일 뿐이다.\n\n**필터: 일평균 거래대금 100억 원 미만 제외**  \n- 정량 임계값: 최근 20거래일 일평균 거래대금 < "
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T144227Z_STREAM_deepseek-api_b384863c.json"
+}

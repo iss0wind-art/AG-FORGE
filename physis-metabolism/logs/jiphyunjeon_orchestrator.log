@@ -1,0 +1,13 @@
+{"ts": "2026-05-11T13:43:28+00:00", "evt": "jiphyunjeon_opening", "note": "집현전 4분할 1단계 — 13사 미래"}
+{"ts": "2026-05-11T13:43:28+00:00", "evt": "session_opened", "session": "jiphyunjeon", "panes": 4}
+{"ts": "2026-05-11T13:43:28+00:00", "evt": "panes_booted", "boot_set": [0, 1, 3, "2 will receive task next"]}
+{"ts": "2026-05-11T13:43:32+00:00", "evt": "dispatch_task", "task_id": "3c1dba8e", "pane": 2, "target": "4지국 STOCK"}
+{"ts": "2026-05-11T13:43:32+00:00", "evt": "stimulus_dropped", "task_id": "3c1dba8e", "file": "jiphyunjeon_dispatch_3c1dba8e.json"}
+{"ts": "2026-05-11T13:43:32+00:00", "evt": "jiphyunjeon_open", "session": "jiphyunjeon", "attach_cmd": "tmux attach -t jiphyunjeon"}
+{"ts": "2026-05-11T13:45:44+00:00", "evt": "jiphyunjeon_opening", "note": "집현전 4분할 1단계 — 13사 미래"}
+{"ts": "2026-05-11T13:45:44+00:00", "evt": "old_session_killed", "session": "jiphyunjeon"}
+{"ts": "2026-05-11T13:45:44+00:00", "evt": "session_opened", "session": "jiphyunjeon", "panes": 4}
+{"ts": "2026-05-11T13:45:44+00:00", "evt": "panes_booted", "boot_set": [0, 1, 3, "2 will receive task next"]}
+{"ts": "2026-05-11T13:45:47+00:00", "evt": "dispatch_task", "task_id": "affed9e2", "pane": 2, "target": "4지국 STOCK"}
+{"ts": "2026-05-11T13:45:47+00:00", "evt": "stimulus_dropped", "task_id": "affed9e2", "file": "jiphyunjeon_dispatch_affed9e2.json"}
+{"ts": "2026-05-11T13:45:47+00:00", "evt": "jiphyunjeon_open", "session": "jiphyunjeon", "attach_cmd": "tmux attach -t jiphyunjeon"}

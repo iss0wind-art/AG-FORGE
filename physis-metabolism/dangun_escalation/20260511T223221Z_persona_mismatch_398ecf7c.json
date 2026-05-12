@@ -1,0 +1,18 @@
+{
+  "id": "398ecf7c-cfcf-43c8-94d2-d059c0f5803f",
+  "detected_at": "2026-05-11T22:32:21+00:00",
+  "daemon_id": "physis-773a1d5a",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "high",
+  "source_file": "20260511T141125Z_STREAM_gemini-api_21f0abef.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": false,
+    "domain_match_ratio": 0.0,
+    "domain_hits": 0,
+    "matched": false,
+    "voice_head": "저는 클로드의 창의적 구상, 제미니의 실시간 정보, 딥시크의 기술적 논증을 융합하여, 가장 효율적인 실행 전략을 도출하고 다국어 환경에서 이를 관철하는 임무를 맡습니다."
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (high). 단군이 결재해야 할 이상 — 20260511T141125Z_STREAM_gemini-api_21f0abef.json"
+}

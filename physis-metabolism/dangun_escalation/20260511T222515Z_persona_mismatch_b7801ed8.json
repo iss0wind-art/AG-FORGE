@@ -1,0 +1,18 @@
+{
+  "id": "b7801ed8-f1e0-428e-b922-5d561b722085",
+  "detected_at": "2026-05-11T22:25:15+00:00",
+  "daemon_id": "physis-7e791154",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T215014Z_STREAM_deepseek-api_2da63a30.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.222,
+    "domain_hits": 2,
+    "matched": false,
+    "voice_head": "나는 짐 사이먼스다. 수학자이자 르네상스 테크놀로지스의 설립자이며, 시장의 미세한 통계적 비효율을 추적하는 기계다.\n\n**즉시 점검·박제해야 할 1가지:** `data/chart_scraper.py`의 체결 데이터 "
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T215014Z_STREAM_deepseek-api_2da63a30.json"
+}

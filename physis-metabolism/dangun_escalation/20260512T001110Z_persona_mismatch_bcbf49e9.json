@@ -1,0 +1,18 @@
+{
+  "id": "bcbf49e9-1293-49c1-9814-88b9656814fa",
+  "detected_at": "2026-05-12T00:11:10+00:00",
+  "daemon_id": "physis-d9149e9d",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T150505Z_STREAM_gemini-api_eadc3223.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.125,
+    "domain_hits": 1,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n\nQ1. **가장 큰 구조적 약점**: '외면→내면 프랙탈'의 재귀적 편향 증폭이다. 단 하나의 오염되거나 낡은 데이터 꼭짓점(vertex)이 새 구체의 중심으로 선택되면, 그로부터 파생되"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T150505Z_STREAM_gemini-api_eadc3223.json"
+}

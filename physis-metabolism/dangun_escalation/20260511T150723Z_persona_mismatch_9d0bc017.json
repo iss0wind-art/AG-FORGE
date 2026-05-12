@@ -1,0 +1,23 @@
+{
+  "id": "9d0bc017-2a7e-4c10-9951-ee1c4902074b",
+  "detected_at": "2026-05-11T15:07:23+00:00",
+  "daemon_id": "physis-b0926a57",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T143938Z_STREAM_claude-cli_5caeeff2.json",
+  "detail": {
+    "via": "claude-cli",
+    "via_key": "claude-cli",
+    "expected_any_of": [
+      "미너비니",
+      "minervini",
+      "내 27년",
+      "VCP",
+      "신고가",
+      "내 몫"
+    ],
+    "matched": false,
+    "voice_head": "나는 리스크를 먼저 본다. 당신의 앙상블이 5개 LLM의 투표로 \"매수\"를 결정했을 때, 그 합의가 **손절선을 설정하는가?** 손절선이 LLM 투표에 종속되면 안 된다. 손절선과 포지션 사이징은 진입 신호 **이전"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T143938Z_STREAM_claude-cli_5caeeff2.json"
+}

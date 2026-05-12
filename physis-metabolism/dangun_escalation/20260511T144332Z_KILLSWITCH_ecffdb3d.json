@@ -1,0 +1,67 @@
+{
+  "id": "ecffdb3d-5b6e-450b-8a14-04052df114bb",
+  "ts": "2026-05-11T14:43:32+00:00",
+  "signal": {
+    "symbol": "005930",
+    "name": "삼성전자",
+    "side": "BUY",
+    "price": 83000,
+    "qty": 12,
+    "rationale": "AI 메모리 수요 + 1Q 실적",
+    "technical": {
+      "price_vs_200ma": "+3%",
+      "vol_ratio_50d": 1.8,
+      "rsi": 58
+    },
+    "macro": {
+      "환율": "1378",
+      "외인_순매수_5d": "+800억"
+    }
+  },
+  "council_decisions": {
+    "이채원": {
+      "decision": "VETO",
+      "elapsed": 5.203569160992629,
+      "ok": true
+    },
+    "Druckenmiller": {
+      "decision": "VETO",
+      "elapsed": 6.694066740004928,
+      "ok": true
+    },
+    "Simons": {
+      "decision": "VETO",
+      "elapsed": 9.60052059800364,
+      "ok": true
+    },
+    "Minervini": {
+      "decision": "VETO",
+      "elapsed": 16.470256970002083,
+      "ok": true
+    }
+  },
+  "physis_heartbeat": {
+    "ok": true,
+    "reason": "daemon alive (lock held)"
+  },
+  "vetoes": [
+    {
+      "persona": "이채원",
+      "reason_excerpt": "**VETO**  \n삼성전자는 본질 가치 대비 83,000원은 안전마진이 부족하다 — 현재 PER 17.2x, PBR 1.4x는 AI 수요 기대감으로 과도하게 프리미엄 반영된 상태.  \n한국 시장 고유 위험: **지배구조 불투명성 + 분기 어닝 쇼크 패턴** — 1Q 실적은 외인 순매수와 환율 호재로 일시적 흐름일 뿐, 2분기부터 메모리 가격 하락세 재개 "
+    },
+    {
+      "persona": "Druckenmiller",
+      "reason_excerpt": "**VETO**\n거시 시각에서 매수 포지션을 크게 가져갈 만한 명확한 확신이 부족하다. 환율 1378은 한국 시장에"
+    },
+    {
+      "persona": "Simons",
+      "reason_excerpt": "**VETO**\n\n1. **신호의 질적 근거 과다, 정량적 신호 부재**: \"AI 메모리 수요 + 1Q 실적\"은 직관적 판단이며, 모델 내에서 측정 가능한 통계적 anomaly가 아님. Medallion은 뉴스나 실적 발표를 직접 신호로 쓰지 않음 — 대신 해당 이벤트 전후의 미시 가격·호가 패턴 변화를 포착함. 현재 데이터로는 그런 패턴이 검증되지 않음."
+    },
+    {
+      "persona": "Minervini",
+      "reason_excerpt": "**VETO**\n\n삼성전자는 초대형주로, 내 패턴(소형주·중형주 단기 모멘텀)이 먹히지 않는다. 거래량 1.8배는 좋으나 **VCP 완성(22주 신고가 + 50% 폭증) 미확인**, earnings momentum도 구체 수치 없다. 외인 매수는 강하나, Risk First 원칙상 데이터 불명확할 땐 진입하지 않는다. \n\n**손절선**: 83000 -7% "
+    }
+  ],
+  "all_pass": false,
+  "next_step": "진입 차단 (4 VETO + physis: pass)"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "98dd9f80-11a1-4936-bf6e-d48d61d516be",
+  "detected_at": "2026-05-11T15:54:07+00:00",
+  "daemon_id": "physis-376caf32",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T143950Z_STREAM_gemini-api_00da2504.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.0,
+    "domain_hits": 0,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n핵심 점검사항: 당신의 앙상블 시스템이 개별 LLM의 '독단적 확신(high conviction)' 신호를 다수결의 논리로 뭉개버리지는 않는가?\n하나의 비범한 소수 의견이 아홉의 평범한 다"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T143950Z_STREAM_gemini-api_00da2504.json"
+}

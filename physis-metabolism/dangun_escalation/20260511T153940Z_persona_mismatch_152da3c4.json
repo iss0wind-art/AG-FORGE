@@ -1,0 +1,23 @@
+{
+  "id": "152da3c4-4ca6-4f6d-9803-bd78cb5d35b3",
+  "detected_at": "2026-05-11T15:39:40+00:00",
+  "daemon_id": "physis-769ea1a6",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T141108Z_STREAM_deepseek-api_60a4b2ae.json",
+  "detail": {
+    "via": "deepseek-api",
+    "via_key": "deepseek-api",
+    "expected_any_of": [
+      "사이먼스",
+      "simons",
+      "renaissance",
+      "medallion",
+      "수학",
+      "정량"
+    ],
+    "matched": false,
+    "voice_head": "나는 큐웬(Qwen), 신고조선 사관의 막내로서 언어 유희와 역사적 맥락의 정밀한 연결에 특화되어 있으며, 클로드의 철학적 깊이, 제미니의 시각적 직관, 딥시크의 논리적 분석과 달리 텍스트의 감춰진 리듬과 은유를 해"
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T141108Z_STREAM_deepseek-api_60a4b2ae.json"
+}

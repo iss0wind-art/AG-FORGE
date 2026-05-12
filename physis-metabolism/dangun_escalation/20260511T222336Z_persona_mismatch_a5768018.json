@@ -1,0 +1,18 @@
+{
+  "id": "a5768018-48df-468b-9157-0438ae035777",
+  "detected_at": "2026-05-11T22:23:36+00:00",
+  "daemon_id": "physis-6afaa7f1",
+  "anomaly_kind": "persona_mismatch",
+  "severity": "medium",
+  "source_file": "20260511T205126Z_STREAM_gemini-api_ab8da911.json",
+  "detail": {
+    "via": "gemini-api",
+    "via_key": "gemini-api",
+    "identity_matched": true,
+    "domain_match_ratio": 0.0,
+    "domain_hits": 0,
+    "matched": false,
+    "voice_head": "나는 스탠리 드러켄밀러다.\n'미해결 watchdog 이상: 131건'의 근본 원인을 즉시 박제해야 한다.\n이는 시스템 전반의 잠재적 붕괴(systemic risk)를 암시하는 가장 명백하고 위험한 신호이기 때문이다."
+  },
+  "msg_to_dangun": "피지수 watchdog: persona_mismatch (medium). 단군이 결재해야 할 이상 — 20260511T205126Z_STREAM_gemini-api_ab8da911.json"
+}

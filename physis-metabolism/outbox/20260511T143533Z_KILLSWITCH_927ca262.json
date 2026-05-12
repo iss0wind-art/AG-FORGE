@@ -1,0 +1,67 @@
+{
+  "id": "927ca262-dd7c-4d42-9a79-e18c307f277f",
+  "ts": "2026-05-11T14:35:33+00:00",
+  "signal": {
+    "symbol": "000100",
+    "name": "유한양행",
+    "side": "BUY",
+    "price": 80000,
+    "qty": 12,
+    "rationale": "DART 신약 임상 3상 진입 공시 + KIS 거래량 1.5배 증가",
+    "technical": {
+      "price_vs_200ma": "+5%",
+      "vol_ratio_50d": 1.5,
+      "rsi": 62
+    },
+    "macro": {
+      "환율": "1380",
+      "외인_순매수_5d": "+1200억"
+    }
+  },
+  "council_decisions": {
+    "이채원": {
+      "decision": "VETO",
+      "elapsed": 6.077698620996671,
+      "ok": true
+    },
+    "Druckenmiller": {
+      "decision": "VETO",
+      "elapsed": 7.792486350997933,
+      "ok": true
+    },
+    "Simons": {
+      "decision": "VETO",
+      "elapsed": 9.810236427991185,
+      "ok": true
+    },
+    "Minervini": {
+      "decision": "VETO",
+      "elapsed": 22.025298356005806,
+      "ok": true
+    }
+  },
+  "physis_heartbeat": {
+    "ok": true,
+    "reason": "daemon alive (lock held)"
+  },
+  "vetoes": [
+    {
+      "persona": "이채원",
+      "reason_excerpt": "**VETO**  \n유한양행(000100)은 *지배구조 리스크*가 명확히 존재하는 종목 — 대주주인 유한회사의 지분 32.7% 중 28.4%는 유한양행이 보유한 자기주식으로, 실질적 소유·통제력이 흐릿하고, 소액주주 권리 행사는 사실상 제한적이다.  \n단기 30% 목표는 임상 3상 진입 공시에 대한 *시장의 과잉 반응*을 전제로 하며, 본질 가치 대비 현재"
+    },
+    {
+      "persona": "Druckenmiller",
+      "reason_excerpt": "VETO\n\n거시 시각에서 한국 환율 1380은 여전히 부담스러운 수준이며, 글로벌 매크로의 불확실성을 해소할 명확한 신"
+    },
+    {
+      "persona": "Simons",
+      "reason_excerpt": "**VETO**\n\n**이유:**\n1. **신호의 근거가 질적 판단에 의존** — DART 임상 3상 진입 공시는 이미 시장에 알려진 정보로, 가격에 선반영되었을 가능성이 높음. Medallion은 공시 이벤트를 단독 신호로 사용하지 않음. 거래량 1.5배 증가는 시장의 관심을 확인해줄 뿐, 예측 가능한 알파가 아님.\n2. **기술적 지표가 모호함** — R"
+    },
+    {
+      "persona": "Minervini",
+      "reason_excerpt": "**VETO**\n\n**근거:**\n\n1. **52주 신고가 데이터 부재** — VCP의 절대 요소. 80000이 신고가 근처인지, 그곳에서 돌파인지 미확인.\n\n2. **거래량 1.5배는 경계선 수준** — 내 기준은 \"축소 후 50% 이상 폭증\". 1.5배(+50%)는 임계값 정확히 맞지만, 선행 축소 기간(보통 3~5주) 확인 부재.\n\n3. **펀더멘탈만으"
+    }
+  ],
+  "all_pass": false,
+  "next_step": "진입 차단 (4 VETO + physis: pass)"
+}
