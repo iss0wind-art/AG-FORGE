@@ -1,0 +1,126 @@
+{
+  "kind": "d2_intuition_21_check",
+  "emitted_at_kst": "2026-05-13T12:35:11.799381",
+  "results": [
+    {
+      "code": "066570",
+      "name": "LG전자",
+      "score": 4.5,
+      "base_5_12": 184900,
+      "now": 191400,
+      "change_pct": 3.515413737155219
+    },
+    {
+      "code": "319400",
+      "name": "현대모벡스",
+      "score": 4.5,
+      "base_5_12": 42500,
+      "now": 43050,
+      "change_pct": 1.2941176470588236
+    },
+    {
+      "code": "090710",
+      "name": "휴림로봇",
+      "score": 4.5,
+      "base_5_12": 12970,
+      "now": 12790,
+      "change_pct": -1.3878180416345411
+    },
+    {
+      "code": "332570",
+      "name": "Pentastone",
+      "score": 4.5,
+      "base_5_12": 12120,
+      "now": 14260,
+      "change_pct": 17.656765676567655
+    },
+    {
+      "code": "012860",
+      "name": "MOBASE",
+      "score": 4.0,
+      "base_5_12": 6030,
+      "now": 6050,
+      "change_pct": 0.33167495854063017
+    },
+    {
+      "code": "012200",
+      "name": "Keyang",
+      "score": 4.0,
+      "base_5_12": 10990,
+      "now": 13260,
+      "change_pct": 20.65514103730664
+    },
+    {
+      "code": "007610",
+      "name": "선도전기",
+      "score": 4.0,
+      "base_5_12": 14600,
+      "now": 14170,
+      "change_pct": -2.945205479452055
+    },
+    {
+      "code": "065440",
+      "name": "ELUON",
+      "score": 4.0,
+      "base_5_12": 4845,
+      "now": 4550,
+      "change_pct": -6.0887512899896805
+    },
+    {
+      "code": "253840",
+      "name": "Sugentech",
+      "score": 4.0,
+      "base_5_12": 6850,
+      "now": 6960,
+      "change_pct": 1.6058394160583942
+    },
+    {
+      "code": "142280",
+      "name": "GC Medical",
+      "score": 4.0,
+      "base_5_12": 4755,
+      "now": 4685,
+      "change_pct": -1.4721345951629863
+    },
+    {
+      "code": "037030",
+      "name": "Powernet",
+      "score": 4.0,
+      "base_5_12": 8890,
+      "now": 9040,
+      "change_pct": 1.687289088863892
+    },
+    {
+      "code": "052900",
+      "name": "KX HITECH",
+      "score": 4.0,
+      "base_5_12": 1486,
+      "now": 1676,
+      "change_pct": 12.78600269179004
+    },
+    {
+      "code": "145170",
+      "name": "Nobland",
+      "score": 4.0,
+      "base_5_12": 5150,
+      "now": 5290,
+      "change_pct": 2.7184466019417477
+    },
+    {
+      "code": "010100",
+      "name": "KOREA MOVENEX",
+      "score": 3.5,
+      "base_5_12": 5180,
+      "now": 5420,
+      "change_pct": 4.633204633204633
+    },
+    {
+      "code": "101330",
+      "name": "Mobase Co.",
+      "score": 3.5,
+      "base_5_12": 5900,
+      "now": 5550,
+      "change_pct": -5.932203389830509
+    }
+  ]
+}

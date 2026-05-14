@@ -82,6 +82,35 @@ learn_state.json
 # 벡터 DB 테스트 디렉토리
 library/vector_db_test/
 
+# ── physis_memory — 바이너리/대용량 제외, 마크다운은 포함 ─────────────
+# ChromaDB 임베딩 벡터 (56MB 바이너리 — 재생성 가능)
+physis_memory/.chromadb/
+
+# DuckDB 바이너리 DB + WAL (재생성 가능)
+physis_memory/physis_brain.duckdb
+physis_memory/physis_brain.duckdb.wal
+physis_memory/physis_brain.duckdb.tmp
+
+# library/vector_db (24MB 바이너리 — 이미 tracked이지만 불필요)
+library/vector_db/
+
+# ── physis-metabolism 상태 파일 (로컬 전용) ──────────────────────────
+physis-metabolism/.obsidian_sync_state.json
+physis-metabolism/.outbox_to_obsidian_state.json
+physis-metabolism/.dangun_last_polled
+physis-metabolism/.lint_last_run
+
+# metabolism 로그 (로컬 전용, 대용량)
+physis-metabolism/logs/
+physis-metabolism/dangun_escalation/
+physis-metabolism/stimuli/
+physis-metabolism/outbox/
+physis-metabolism/patches/
+
+# Obsidian 개인 설정 (선택적 — workspace는 기기마다 다름)
+physis_memory/.obsidian/workspace.json
+physis_memory/.obsidian/workspace-mobile.json
+
 # 야간학습 자동 갱신 파일 (단군 권고 b — baseline은 commit 91e670e에 박혀 있음)
 .titans_state.json
 brain.md
